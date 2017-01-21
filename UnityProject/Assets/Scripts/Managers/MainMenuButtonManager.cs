@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class MainMenuButtonManager : MonoBehaviour {
 
-    public static void CarregaMenuPrincipal()
+    public void CarregaMenuPrincipal()
     {
         Basicas_2.CarregaCena.CarregaMenuPrincipal();
     }
 
-    public static void CarregaGameplay()
+    public void CarregaGameplay()
     {
         Basicas_2.CarregaCena.CarregaGameplay();
     }
 
-    public static void FechaJogo()
+    public void FechaJogo()
     {
         Basicas_2.CarregaCena.FechaJogo();
     }
