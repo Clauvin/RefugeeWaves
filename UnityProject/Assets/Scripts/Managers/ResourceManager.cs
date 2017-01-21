@@ -22,30 +22,133 @@ public class ResourceManager : MonoBehaviour {
 	public int numberOfAvailableHouses=0;//number of vacant houses for immigrants
 	public int numberOfTotalHouses=0; //total number of houses player has built for helping refugees
 	public float costOfHouse=100; 
-	public float socialExpenses=100; //number of social expenses 'units' player has to give out to refugees
-	public float costOfSocialExpense = 20;
+	public float socialResources=100; //number of social expenses 'units' player has to give out to refugees
+	public float costOfSocialResource = 20;
 
 	//closed borders
-	public int numberOfAvailableBorderOfficials=0; //number of officials not busy at the moment
-	public int numberOfTotalBorderOfficials=0; //total number of officials player currently has employed
-	public float costOfBorderOfficial = 30;
+	public int numberOfAvailableBorderOfficers=0; //number of officers not busy at the moment
+	public int numberOfTotalBorderOfficers=0; //total number of officers player currently has employed
+	public float costOfBorderOfficer = 30;
 
-	public float borderExpenses=100; //number of border expenses 'units' player has to maintain borders running
-	public float costOfBorderExpense = 25;
+	public float borderResources=100; //number of border expenses 'units' player has to maintain borders running
+	public float costOfBorderResource = 25;
 
 	//======================================= MAIN RESOURCES METHODS =============================================
 
+	//OPEN BORDERS
 	public bool buyHouses(int numberOfHouses)
 	{
 		if (numberOfHouses * costOfHouse <= playerCurrentMoney)
 		{
 			//can buy, bought
 			playerCurrentMoney -= numberOfHouses*costOfHouse;
+			//add them to list
+			numberOfAvailableHouses+=numberOfHouses;
+			numberOfTotalHouses += numberOfHouses;
 			return true;
 		}
 		//can't buy 
 		return false;
+	}
 
+	public bool sellHouses(int numberOfHouses)
+	{
+		if (numberOfHouses <= 0)
+			return false;//just because
+
+		//if number> houses you own, just sell all
+		if (numberOfHouses > numberOfTotalHouses)
+		{
+			numberOfHouses = numberOfTotalHouses;
+		}
+		//sells for half-price
+		playerCurrentMoney+=numberOfHouses*costOfHouse/2;
+		return true;
+	}
+
+	public bool buySocialResources(int numberOfSocialResources)
+	{
+		if (numberOfSocialResources * costOfSocialResource <= playerCurrentMoney)
+		{
+			//can buy, bought
+			playerCurrentMoney -= numberOfSocialResources*costOfSocialResource;
+			socialResources += numberOfSocialResources;
+			return true;
+		}
+		//can't buy 
+		return false;
+	}
+
+	public bool sellSocialResources(int numberOfSocialResources)
+	{
+		if (numberOfSocialResources <= 0)
+			return false;//just because
+
+		//if number> houses you own, just sell all
+		if (numberOfSocialResources > socialResources)
+		{
+			numberOfSocialResources = socialResources;
+		}
+		//sells for half-price
+		playerCurrentMoney+=numberOfSocialResources*costOfSocialResource/2;
+		return true;
+	}
+
+	//CLOSED BORDERS
+	public bool hireBorderOfficers(int numberOfOfficers)
+	{
+		if (numberOfOfficers * costOfBorderOfficer <= playerCurrentMoney)
+		{
+			//can buy, bought
+			playerCurrentMoney -= numberOfOfficers*costOfHouse;
+
+			numberOfAvailableBorderOfficers += numberOfOfficers;
+			numberOfTotalBorderOfficers += numberOfOfficers;
+			return true;
+		}
+		//can't buy 
+		return false;
+	}
+
+	public bool fireBorderOfficers(int numberOfOfficers)
+	{
+		if (numberOfOfficers <= 0)
+			return false;//just because
+
+		//if number> houses you own, just sell all
+		if (numberOfOfficers > numberOfTotalBorderOfficers)
+		{
+			numberOfOfficers = numberOfTotalBorderOfficers;
+		}
+		//sells for half-price
+		playerCurrentMoney+=numberOfOfficers*costOfBorderOfficer/2;
+		return true;
+	}
+
+	public bool buyBorderResources(int numberOfBorderResources)
+	{
+		if (numberOfBorderResources * costOfBorderResource <= playerCurrentMoney)
+		{
+			//can buy, bought
+			playerCurrentMoney -= numberOfBorderResources*costOfBorderResource;
+			return true;
+		}
+		//can't buy 
+		return false;
+	}
+	public bool sellBorderResources(int numberOfBorderResources)
+	{
+		if (numberOfBorderResources <= 0)
+			return false;//just because
+
+		//if number> houses you own, just sell all
+		if (numberOfBorderResources > borderResources)
+		{
+			numberOfBorderResources = borderResources;
+		}
+		//sells for half-price
+		playerCurrentMoney+=numberOfBorderResources*costOfBorderResource/2;
+		return true;
 	}
 
 
