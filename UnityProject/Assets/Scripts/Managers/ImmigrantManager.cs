@@ -37,8 +37,9 @@ public class ImmigrantManager : MonoBehaviour {
 				legalWaves.Remove(immigrant);
 			}
 		}
-
 	}
+
+
 
 	// Use this for initialization
 	void Start () {

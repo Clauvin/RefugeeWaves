@@ -16,7 +16,7 @@ public class ImmigrantWave {
 
 	public bool checkIfBecameLegal()
 	{
-		if (Time.time - timeOfArrival >= timeToBecomeLegal)
+		if (isLegalWave && Time.time - timeOfArrival >= timeToBecomeLegal)
 			return true;
 		return false;
 	}

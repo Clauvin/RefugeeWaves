@@ -12,19 +12,27 @@ public class StatsManager : MonoBehaviour {
 
 	//Visible variables(to the player)
 
-	double playerCurrentMoney; //because the world revolves around it
-	double playerMonthlyBudget; //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
-	int legalPopulation;//how many legal, tax paying ppl are living in your country atm
+	public double playerCurrentMoney; //because the world revolves around it
+	public double playerMonthlyBudget; //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
+	public int legalPopulation;//how many legal, tax paying ppl are living in your country atm
 
 	//invisible variables
-	int numberOfIllegalImmigrants;
-	double taxPerCitizen; //how much each citizen pays
-	double BudgetBaseValue;
+	public int numberOfIllegalImmigrants;
+	public double baseTaxPerCitizen; //how much each citizen pays(base)
+	public double realTaxPerCitizen; //How much they pay(with possible extra variation)
+	public double taxVariation; //i.e., inflation. Dumbass.
+	public double BudgetBaseValue;
 
+
+	public void recalculateTax()
+	{
+		realTaxPerCitizen = baseTaxPerCitizen * taxVariation;
+	}
 
 	public void recalculateBudget()//recalculate budget based on taxPerCitizen and BudgetBaseValue
 	{
-		playerMonthlyBudget = taxPerCitizen * legalPopulation + BudgetBaseValue;
+		recalculateTax ();
+		playerMonthlyBudget = realTaxPerCitizen * legalPopulation + BudgetBaseValue;
 	}
 
 	public void receiveNewBudget()
@@ -45,6 +53,9 @@ public class StatsManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		instance = this;
+		taxVariation = 1;
+		recalculateTax ();
+		recalculateBudget ();
 	}
 	
 	// Update is called once per frame
