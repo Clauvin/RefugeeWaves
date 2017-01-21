@@ -20,6 +20,22 @@ namespace Basicas_2
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(cena);
         }
+
+        public static void CarregaMenuPrincipal()
+        {
+            Carrega((int)Cenas_do_Jogo.Main_Menu);
+        }
+
+        public static void CarregaGameplay()
+        {
+            Carrega((int)Cenas_do_Jogo.Main_GamePlay);
+        }
+
+        public static void FechaJogo()
+        {
+            Application.Quit();
+        }
+
     }
 
     /// <summary>
