@@ -14,7 +14,7 @@ public class StatsManager : MonoBehaviour {
 
 	double playerCurrentMoney; //because the world revolves around it
 	double playerMonthlyBudget; //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
-	double legalPopulation;//how many legal, tax paying ppl are living in your country atm
+	int legalPopulation;//how many legal, tax paying ppl are living in your country atm
 
 	//invisible variables
 	int numberOfIllegalImmigrants;
