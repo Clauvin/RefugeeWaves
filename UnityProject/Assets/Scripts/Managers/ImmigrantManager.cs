@@ -40,7 +40,7 @@ public class ImmigrantManager : MonoBehaviour {
 			if (immigrant.checkIfBecameLegal ())//if this immigrant wave can become part of the country now
 			{
 				StatsManager.instance.legalPopulation+= immigrant.numberOfImmigrants;
-				numberOfNaturalizedImmigrants+= immigrant.numberOfImmigrants;
+				numberOfNaturalizedImmigrants+= immigrant.numberOfImmigrants;//to be used as statistics in the end
 				//delete wave of immigrants; part of the country now
 				legalWaves.Remove(immigrant);
 			}

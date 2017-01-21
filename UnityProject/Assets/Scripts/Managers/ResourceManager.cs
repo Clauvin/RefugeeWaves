@@ -21,17 +21,17 @@ public class ResourceManager : MonoBehaviour {
 	//open borders
 	public int numberOfAvailableHouses=0;//number of vacant houses for immigrants
 	public int numberOfTotalHouses=0; //total number of houses player has built for helping refugees
-	public float costOfHouse=100; 
-	public float socialResources=100; //number of social expenses 'units' player has to give out to refugees
-	public float costOfSocialResource = 20;
+	public int costOfHouse=100; 
+	public int socialResources=100; //number of social expenses 'units' player has to give out to refugees
+	public int costOfSocialResource = 20;
 
 	//closed borders
 	public int numberOfAvailableBorderOfficers=0; //number of officers not busy at the moment
 	public int numberOfTotalBorderOfficers=0; //total number of officers player currently has employed
-	public float costOfBorderOfficer = 30;
+	public int costOfBorderOfficer = 30;
 
-	public float borderResources=100; //number of border expenses 'units' player has to maintain borders running
-	public float costOfBorderResource = 25;
+	public int borderResources=100; //number of border expenses 'units' player has to maintain borders running
+	public int costOfBorderResource = 25;
 
 	//======================================= MAIN RESOURCES METHODS =============================================
 
