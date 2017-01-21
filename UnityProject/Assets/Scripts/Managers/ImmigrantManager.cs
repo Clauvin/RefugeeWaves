@@ -9,19 +9,27 @@ public class ImmigrantManager : MonoBehaviour {
 	public List<ImmigrantWave> legalWaves;//holds the waves of legal immigrants
 	public List<ImmigrantWave> illegalWaves;
 
-	public int numberOfLegalizedImmigrants;//how many immigrants you have legalized
+
+	public int numberOfLegalImmigrants;
+	public int numberOfIllegalImmigrants;
+
+	public int numberOfNaturalizedImmigrants;//how many immigrants you have helped get citizenship
 
 
 	public void illegalWaveArrived(ImmigrantWave illegalW)
 	{
 		//illegal wave arrived in country
 		illegalWaves.Add(illegalW);
+		//add that to total illegals
+		numberOfIllegalImmigrants+= illegalW.numberOfImmigrants;
 	}
 
 	public void legalWaveArrived (ImmigrantWave legalW)
 	{
 		//legal wave arrived in country
 		legalWaves.Add(legalW);
+		//add that to total legals
+		numberOfLegalImmigrants+= legalW.numberOfImmigrants;
 	}
 
 	public void checkForLegalizedImmigrantsVisas()
@@ -32,7 +40,7 @@ public class ImmigrantManager : MonoBehaviour {
 			if (immigrant.checkIfBecameLegal ())//if this immigrant wave can become part of the country now
 			{
 				StatsManager.instance.legalPopulation+= immigrant.numberOfImmigrants;
-				numberOfLegalizedImmigrants+= immigrant.numberOfImmigrants;
+				numberOfNaturalizedImmigrants+= immigrant.numberOfImmigrants;
 				//delete wave of immigrants; part of the country now
 				legalWaves.Remove(immigrant);
 			}
@@ -46,7 +54,9 @@ public class ImmigrantManager : MonoBehaviour {
 		instance = this;
 		legalWaves = new List<ImmigrantWave> ();
 		illegalWaves = new List<ImmigrantWave> ();
-		numberOfLegalizedImmigrants = 0;
+		numberOfNaturalizedImmigrants = 0;
+		numberOfLegalImmigrants = 0;
+		numberOfIllegalImmigrants = 0;
 	}
 	
 	// Update is called once per frame
