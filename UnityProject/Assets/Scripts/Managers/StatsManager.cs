@@ -27,14 +27,15 @@ public class StatsManager : MonoBehaviour {
 		legalPopulation = 80000 + (int)(40000 * Random.value);//from 80k to 120k
 		unemployementRate = 0.04 + 0.04 * Random.value;//from 4% to 8%
 		criminalityRate = 0.02 + 0.02*Random.value; //from 2% to 4%
-		publicOpinionOnImmigrants = 0.3+0.4*Random.value;//from 30% to 70%
-		internationalOpinion = 0.5+0.2*Random.value;//from 50% to 70%
+		publicOpinionOnImmigrants = 0.3 + 0.4*Random.value;//from 30% to 70%
+		internationalOpinion = 0.5 + 0.2*Random.value;//from 50% to 70%
 	}
 
 	//Used when month ends, recalculates all values based on current values
 	public void calculateStatsValues()
 	{
 		//TODO: Get EXACTLY how each variable affects the other
+
 
 	}
 
