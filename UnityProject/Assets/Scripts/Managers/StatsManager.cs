@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class StatsManager : MonoBehaviour {
@@ -22,10 +23,13 @@ public class StatsManager : MonoBehaviour {
     //GO's, Text, Sliders...
 
     public GameObject legalPopulationGO, publicOpinionOnImmigrantsGO, internationalOpinionGO;
-
     public GameObject unemployementRateGO, criminalityRateGO;
 
-	public void randomizeStartingStats()
+    Text legalPopulationText;
+    Slider publicOpinionOnImmigrantsSlider, internationalOpinionSlider;
+    Text unemployementRateText, criminalityRateText;
+
+    public void randomizeStartingStats()
 	{
 		//randomizes values of the starting stats
 		//TODO
@@ -44,6 +48,35 @@ public class StatsManager : MonoBehaviour {
 
 	}
 
+    public void UpdateFrontLegalPopulation() {
+
+        legalPopulationText.text = legalPopulation.ToString();
+
+    }
+
+    public void UpdateFrontPublicOpinionOnImmigrantsGO() {
+
+        
+
+    }
+
+    public void UpdateFrontInternationalOpinionGO() {
+
+    }
+
+    public void UpdateFrontUnemployementRateGO() {
+
+        unemployementRateText.text = System.Math.Round(unemployementRate*100, 1).ToString() + "%";
+
+    }
+
+    public void UpdateFrontCriminalityRateGO() {
+
+        criminalityRateText.text = System.Math.Round(criminalityRate * 100, 1).ToString() + "%";
+
+
+    }
+
     void Awake()
     {
         instance = this;
@@ -52,10 +85,20 @@ public class StatsManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		randomizeStartingStats ();
-	}
+
+        legalPopulationText = legalPopulationGO.GetComponent<Text>();
+        publicOpinionOnImmigrantsSlider = publicOpinionOnImmigrantsGO.GetComponent<Slider>();
+        internationalOpinionSlider = internationalOpinionGO.GetComponent<Slider>();
+        unemployementRateText = unemployementRateGO.GetComponent<Text>();
+        criminalityRateText = criminalityRateGO.GetComponent<Text>();
+}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        UpdateFrontLegalPopulation();
+        UpdateFrontPublicOpinionOnImmigrantsGO();
+        UpdateFrontInternationalOpinionGO();
+        UpdateFrontUnemployementRateGO();
+        UpdateFrontCriminalityRateGO();
+    }
 }
