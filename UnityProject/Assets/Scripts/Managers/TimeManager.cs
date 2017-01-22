@@ -10,7 +10,7 @@ public class TimeManager : MonoBehaviour {
 	public bool gamePaused;
 	public float timeLastPaused, timeLastUnpaused;//when started counting again; new 0
 	public float timeElapsed;//saves time already elapsed in case user pauses
-	public float weekLength = 15.0f;//in seconds
+	public float weekLength = 5.0f;//in seconds
 	public int year, month, week; // all start at 1
 	public int gameDuration = 2;//in years
 	public bool gameOver;
@@ -18,7 +18,7 @@ public class TimeManager : MonoBehaviour {
 
 	//GO's and Text
 
-	GameObject weekGO, monthGO, yearGO;
+	public GameObject weekGO, monthGO, yearGO;
 	Text weekText, monthText, yearText; 
 
 
@@ -121,6 +121,16 @@ public class TimeManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		checkForPassageOfWeek ();
+		if(!gamePaused)
+			checkForPassageOfWeek ();
+
+		if (Input.GetKeyDown (KeyCode.P))
+		{
+			if (gamePaused)
+				unpauseGame ();
+			else
+				pauseGame ();
+		}
+
 	}
 }
