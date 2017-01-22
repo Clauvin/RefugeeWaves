@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class ImmigrantWave {
+public class ImmigrantWave : MonoBehaviour {
 
 
 	//Holds information for an immigrant wave(can be big or small)
