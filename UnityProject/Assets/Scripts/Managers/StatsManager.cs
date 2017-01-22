@@ -127,6 +127,13 @@ public class StatsManager : MonoBehaviour {
         if (publicOpinionOnImmigrants > 0.7)
             internationalOpinion += (publicOpinionOnImmigrants - 0.7) * 0.5;
 
+         //Se população legal +, orçamento +
+         //Se + imposto, orçamento +
+         //Se - imposto, orçamento -
+         //Se valor base +, orçamento +
+         //Se + orçamento, + dinheiro
+         //Se - orçamento, - dinheiro
+         //Tudo isso é consequência do cálculo em ResourceManager.
 
     }
 
