@@ -16,6 +16,61 @@ public class ImmigrantManager : MonoBehaviour {
 
 	public int numberOfNaturalizedImmigrants;//how many immigrants you have helped get citizenship
 
+    public void WaveReceived(GameObject onda)
+    {
+
+        //Receber onda de imigrantes
+        ImmigrantWave imigrantes = onda.GetComponent<ImmigrantWave>();
+
+        //Quantos imigrantes temos?
+        int quant_imigrantes = imigrantes.numberOfImmigrants;
+
+        //Temos casas disponíveis?
+        if (ResourceManager.instance.numberOfAvailableHouses > 0)
+        {
+            //Temos casas suficientes?
+            if (ResourceManager.instance.numberOfAvailableHouses >= quant_imigrantes)
+            {
+                //Se sim, resolvido.
+                ResourceManager.instance.numberOfAvailableHouses -= quant_imigrantes;
+                legalWaveArrived(new ImmigrantWave(quant_imigrantes, Time.time, true));
+                quant_imigrantes = 0;
+            }
+            else
+            {
+                //Se não, em frente.
+                legalWaveArrived(new ImmigrantWave(ResourceManager.instance.numberOfAvailableHouses, Time.time, true));
+                quant_imigrantes -= ResourceManager.instance.numberOfAvailableHouses;
+                ResourceManager.instance.numberOfAvailableHouses = 0;
+            }
+        }
+
+        //já cuidamos de todos?
+        if (quant_imigrantes > 0)
+        {
+            //Hora da defesa.
+            //Temos soldados suficientes?
+            if (ResourceManager.instance.numberOfAvailableBorderOfficers >= quant_imigrantes)
+            {
+                //Se sim, ok.
+                ResourceManager.instance.numberOfAvailableBorderOfficers -= quant_imigrantes;
+                quant_imigrantes = 0;
+            }
+            else
+            {
+                //Se não...
+                quant_imigrantes -= ResourceManager.instance.numberOfAvailableBorderOfficers;
+                ResourceManager.instance.numberOfAvailableBorderOfficers = 0;
+            }
+        }
+
+        //temos ilegais?
+        if (quant_imigrantes > 0)
+        {
+            illegalWaveArrived(new ImmigrantWave(quant_imigrantes, Time.time, false));
+        }
+
+    }
 
 	public void illegalWaveArrived(ImmigrantWave illegalW)
 	{

@@ -22,5 +22,10 @@ public class MovingToTheObjective : MonoBehaviour {
         tempo_passado += Time.time - ultimo_tempo;
         ultimo_tempo = Time.time;
         transform.position = Vector3.Lerp(objetivo_inicial, objetivo_final, tempo_passado / tempo);
+        if (tempo_passado / tempo >= 1.0f)
+        {
+            ImmigrantManager.instance.WaveReceived(this.gameObject);
+            Destroy(this.gameObject);
+        }
 	}
 }
