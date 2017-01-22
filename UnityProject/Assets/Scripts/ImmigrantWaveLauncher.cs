@@ -16,6 +16,10 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
     public GameObject saida_refugiados_1, saida_refugiados_2;
     public GameObject entrada_refugiados_1, entrada_refugiados_2;
+    public float tempo_atual = 0.0f;
+    public float ultimo_tempo;
+    public float tempo_para_proxima = 0.0f;
+
 
     void InstanciarIconeDeRefugiados(int quant_de_refugiados, GameObject saida, GameObject entrada, float tempo_em_segundos,
             float escala = 1.0f)
@@ -80,13 +84,26 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        InstanciaAleatoriaInstantaneaDeOnda();
-        InstanciaAleatoriaInstantaneaDeOnda();
-        InstanciaAleatoriaInstantaneaDeOnda();
+        tempo_para_proxima = Random.Range(30.0f, 60.0f);
+        ultimo_tempo = Time.time;
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
+        tempo_atual += Time.time - ultimo_tempo;
+        ultimo_tempo = Time.time;
+
+        if (tempo_atual >= tempo_para_proxima)
+        {
+            InstanciaAleatoriaInstantaneaDeOnda();
+            tempo_atual = 0.0f;
+            if (TimeManager.instance.year == 1)
+            {
+                tempo_para_proxima = Random.Range(30.0f, 60.0f);
+            } else
+            {
+                tempo_para_proxima = Random.Range(15.0f, 30.0f);
+            }
+        }
 	}
 }
