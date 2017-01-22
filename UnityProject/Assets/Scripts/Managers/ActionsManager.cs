@@ -11,12 +11,12 @@ public class ActionsManager : MonoBehaviour {
 	public List<GameObject> buttons;//buttons to be assigned to each action
 
 
-	public float weekLength = TimeManager.instance.weekLength;
+	public float weekLength = 15.0f;
 
 
 	public void executeAction(int actionIndex)
 	{
-		possibleActions [actionIndex-1].actionUsed ();
+		possibleActions[actionIndex-1].actionUsed ();
 	}
 
 

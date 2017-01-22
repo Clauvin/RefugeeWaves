@@ -171,6 +171,7 @@ public class PlayerAction {
 
 	public void actionUsed()
 	{
+		Debug.Log ("Did " + actionName);
 		//if it's still in cooldown, do nothing
 		if (!isActive)
 			return;
@@ -179,7 +180,7 @@ public class PlayerAction {
 		ResourceManager.instance.playerCurrentMoney-=actionCost;
 
 		//turn off button
-		assignedButton.GetComponent<Button>().enabled=false;
+		assignedButton.SetActive(false);
 
 		//gets time used, make action inactive
 		timeLastUsed= Time.time;
@@ -195,7 +196,7 @@ public class PlayerAction {
 		if (Time.time - timeLastUsed >= actionCooldownPeriod)
 		{
 			isActive = true;
-			assignedButton.GetComponent<Button> ().enabled = true;
+			//assignedButton.SetActive(true);
 			return true;
 		}
 		return false;

@@ -4199,7 +4199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f983dcbf5ac9f1d4f87e903c1d773a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCurrentMoney: 0
+  playerCurrentMoney: 100000
   playerMonthlyBudget: 0
   baseTaxPerCitizen: 10
   realTaxPerCitizen: 0
