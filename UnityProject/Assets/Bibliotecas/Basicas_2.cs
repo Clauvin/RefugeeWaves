@@ -31,6 +31,16 @@ namespace Basicas_2
             Carrega((int)Cenas_do_Jogo.Main_GamePlay);
         }
 
+        public static void CarregaVictoryScreen()
+        {
+            Carrega((int)Cenas_do_Jogo.Victory_Screen);
+        }
+
+        public static void CarregaDefeatScreen()
+        {
+            Carrega((int)Cenas_do_Jogo.Defeat_Screen);
+        }
+
         public static void FechaJogo()
         {
             Application.Quit();
