@@ -67,7 +67,10 @@ public class TimeManager : MonoBehaviour {
 			month++;
 			monthText.text = month.ToString();
 
-			checkForPassageOfYear ();
+            StatsManager.instance.calculateStatsValues();
+            ResourceManager.instance.receiveNewBudget();
+
+            checkForPassageOfYear ();
 		}
 	}
 
@@ -126,7 +129,7 @@ public class TimeManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if(!gamePaused)
 			checkForPassageOfWeek ();
 
