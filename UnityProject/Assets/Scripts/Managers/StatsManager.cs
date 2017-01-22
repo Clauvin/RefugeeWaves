@@ -78,15 +78,18 @@ public class StatsManager : MonoBehaviour {
         if (ResourceManager.instance.playerCurrentMoney < 0)
             criminalityRate += ResourceManager.instance.playerCurrentMoney * -1 * 0.01f;
 
-        //Se variação do imposto +, desemprego -
-        //CORRIGIR NO DIAGRAMA
+        //Se variação do imposto +, desemprego +
         if (ResourceManager.instance.taxVariation > 1.1)
             unemployementRate += (ResourceManager.instance.taxVariation - 1.1) * 50f;
 
+        //Se variação do imposto -, desemprego -
+        if (ResourceManager.instance.taxVariation < 0.9)
+            unemployementRate -= (0.9 - ResourceManager.instance.taxVariation) * 50f;
+
         //Se desemprego +, variação do imposto -
         //CORRIGIR NO DIAGRAMA
-        if (ResourceManager.instance.taxVariation < 0.9)
-            unemployementRate -= (1.1 - ResourceManager.instance.taxVariation) * 50f;
+        if (unemployementRate > 0.1)
+            ResourceManager.instance.taxVariation -= (unemployementRate - 0.1) * 0.5;
 
         //Se taxa de desemprego +, criminalidade >
         if (unemployementRate > 0.1)
