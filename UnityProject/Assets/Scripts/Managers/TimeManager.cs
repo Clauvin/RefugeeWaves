@@ -98,9 +98,14 @@ public class TimeManager : MonoBehaviour {
 		}
 	}
 
+    void Awake()
+    {
+        instance = this;
+    }
+
 	// Use this for initialization
 	void Start () {
-		instance = this;
+		
 		year = 1;
 		month = 1;
 		week = 1;

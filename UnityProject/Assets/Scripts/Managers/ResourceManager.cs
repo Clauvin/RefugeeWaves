@@ -175,12 +175,14 @@ public class ResourceManager : MonoBehaviour {
 		playerCurrentMoney +=playerMonthlyBudget;
 	}
 
-
+    void Awake ()
+    {
+        instance = this;
+    }
 
 	// Use this for initialization
 	void Start () {
-		instance = this;
-
+		
 		taxVariation = 1;
 		recalculateTax ();
 		recalculateBudget ();

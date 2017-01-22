@@ -39,9 +39,13 @@ public class StatsManager : MonoBehaviour {
 
 	}
 
+    void Awake()
+    {
+        instance = this;
+    }
+
 	// Use this for initialization
 	void Start () {
-		instance = this;
 		randomizeStartingStats ();
 	}
 	

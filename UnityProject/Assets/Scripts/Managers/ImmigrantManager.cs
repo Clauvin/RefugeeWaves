@@ -48,11 +48,14 @@ public class ImmigrantManager : MonoBehaviour {
 		}
 	}
 
-
+    void Awake()
+    {
+        instance = this;
+    }
 
 	// Use this for initialization
 	void Start () {
-		instance = this;
+
 		legalWaves = new List<ImmigrantWave> ();
 		illegalWaves = new List<ImmigrantWave> ();
 		numberOfNaturalizedImmigrants = 0;
