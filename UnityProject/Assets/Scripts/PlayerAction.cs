@@ -150,6 +150,7 @@ public class PlayerAction {
 
 	public PlayerAction(string name, string desc, float cooldown, MiscInfo.variableTypes varType1, 
 						float var1Consequence, MiscInfo.variableTypes varType2 = MiscInfo.variableTypes.NULL, 
+						float var2Consequence = 0.0f)
 	{
 		actionName = name;
 		actionDescription = desc;
