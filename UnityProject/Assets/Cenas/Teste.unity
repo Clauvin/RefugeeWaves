@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 78805682}
   - component: {fileID: 78805683}
   m_Layer: 0
-  m_Name: Slider (1)
+  m_Name: Slider - Xenofobia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -925,7 +925,7 @@ GameObject:
   - component: {fileID: 178436483}
   - component: {fileID: 178436482}
   m_Layer: 0
-  m_Name: "Canvas de Opini\xE3o Profissional"
+  m_Name: "Canvas de Opini\xE3o Internacional"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 284144034}
   - component: {fileID: 284144033}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Texto - Desemprego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1194,9 +1194,9 @@ RectTransform:
   m_Children:
   - {fileID: 158010042}
   - {fileID: 66887552}
-  - {fileID: 1893101716}
   - {fileID: 468415834}
   - {fileID: 2097084995}
+  - {fileID: 1893101716}
   - {fileID: 693514948}
   - {fileID: 1207257041}
   - {fileID: 107982461}
@@ -1259,7 +1259,7 @@ GameObject:
   - component: {fileID: 438908024}
   - component: {fileID: 438908023}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Texto - Criminalidade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1351,7 +1351,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 385935209}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1895,7 +1895,7 @@ GameObject:
   - component: {fileID: 697671068}
   - component: {fileID: 697671067}
   m_Layer: 0
-  m_Name: Text
+  m_Name: "Texto - Popula\xE7\xE3o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2951,6 +2951,11 @@ MonoBehaviour:
   internationalOpinion: 0
   unemployementRate: 0
   criminalityRate: 0
+  legalPopulationGO: {fileID: 697671065}
+  publicOpinionOnImmigrantsGO: {fileID: 78805681}
+  internationalOpinionGO: {fileID: 1935425556}
+  unemployementRateGO: {fileID: 284144031}
+  criminalityRateGO: {fileID: 438908021}
 --- !u!224 &1289387827
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4590,7 +4595,7 @@ RectTransform:
   - {fileID: 1601395700}
   - {fileID: 1431739817}
   m_Father: {fileID: 385935209}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -4663,7 +4668,7 @@ GameObject:
   - component: {fileID: 1935425557}
   - component: {fileID: 1935425558}
   m_Layer: 0
-  m_Name: Slider
+  m_Name: "Slider - Opini\xE3o Internacional"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5105,7 +5110,7 @@ RectTransform:
   m_LocalScale: {x: 1.000009, y: 1.000009, z: 1.000009}
   m_Children: []
   m_Father: {fileID: 385935209}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
