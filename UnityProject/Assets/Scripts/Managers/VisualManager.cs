@@ -25,19 +25,14 @@ public class VisualManager : MonoBehaviour {
     }
 
 
-	public void showActionsPanel()
+	public void toggleActionsPanel()
 	{
 		foreach(Transform t in actionsGO.transform)
 		{
-			t.gameObject.SetActive(true);
+			t.gameObject.SetActive(!t.gameObject.activeSelf);
 		}
 	}
-	public void hideActionsPanel() {
-		foreach(Transform t in actionsGO.transform)
-		{
-			t.gameObject.SetActive(false);
-		}
-	}
+
 
 
 	public void showHousePanel()
@@ -129,7 +124,7 @@ public class VisualManager : MonoBehaviour {
 
 	public void hideAllPanels()
 	{
-		hideActionsPanel ();
+		toggleActionsPanel ();
 		hideCriminalityPanel ();
 		hideHousePanel ();
 		hideMoneyPanel ();
