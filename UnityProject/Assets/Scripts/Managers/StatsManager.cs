@@ -19,6 +19,11 @@ public class StatsManager : MonoBehaviour {
 	public double unemployementRate; //from 0 to 1(if 1, boy, are you screwed)
 	public double criminalityRate; //from 0 to 1(if 1, boy, are you dead)
 
+    //GO's, Text, Sliders...
+
+    public GameObject legalPopulationGO, publicOpinionOnImmigrantsGO, internationalOpinionGO;
+
+    public GameObject unemployementRateGO, criminalityRateGO;
 
 	public void randomizeStartingStats()
 	{
