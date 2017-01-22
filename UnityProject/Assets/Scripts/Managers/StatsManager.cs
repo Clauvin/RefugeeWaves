@@ -56,11 +56,13 @@ public class StatsManager : MonoBehaviour {
 
     public void UpdateFrontPublicOpinionOnImmigrantsGO() {
 
-        
+        publicOpinionOnImmigrantsSlider.value = (float)publicOpinionOnImmigrants;
 
     }
 
     public void UpdateFrontInternationalOpinionGO() {
+
+        internationalOpinionSlider.value = (float)internationalOpinion;
 
     }
 
