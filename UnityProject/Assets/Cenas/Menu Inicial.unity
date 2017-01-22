@@ -1065,7 +1065,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "brian_confessor@poli.ufrj.br\n\n\n*email* \n\n\n*email*\n"
+  m_Text: 'brian_confessor@poli.ufrj.br
+
+
+
+    clauvin_almeida@hotmail.com
+
+
+    vsakane@gmail.com
+
+'
 --- !u!222 &1166492443
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2039,7 +2048,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Brian Confessor\n\n\nClauvin \n\n\nVeronica Sakane\n\n"
+  m_Text: 'Brian Confessor
+
+
+
+    Clauvin Erlan
+
+
+
+    Veronica Sakane
+
+
+'
 --- !u!222 &2058767543
 CanvasRenderer:
   m_ObjectHideFlags: 0
