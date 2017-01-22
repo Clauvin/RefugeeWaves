@@ -7,7 +7,7 @@ public class ResourceManager : MonoBehaviour {
 
 	public static ResourceManager instance;
 
-	public double playerCurrentMoney=0; //because the world revolves around it
+	public double playerCurrentMoney = 0; //because the world revolves around it
 	public double playerMonthlyBudget; //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
 
 	//invisible variables
@@ -33,6 +33,18 @@ public class ResourceManager : MonoBehaviour {
 
 	public int borderResources=100; //number of border expenses 'units' player has to maintain borders running
 	public int costOfBorderResource = 25;
+
+	//Game Objects
+	public GameObject playerCurrentMoneyGO;
+	public GameObject playerMonthlyBudgetGO;
+	public GameObject realTaxPerCitizenGO;
+	public GameObject numberOfAvailableHousesGO;
+	public GameObject numberOfTotalHousesGO;
+	public GameObject socialResourcesGO;
+	public GameObject numberOfAvailableBorderOfficersGO;
+	public GameObject numberOfTotalBorderOfficersGO;
+	public GameObject borderResourceGO;
+
 
 	//======================================= MAIN RESOURCES METHODS =============================================
 
