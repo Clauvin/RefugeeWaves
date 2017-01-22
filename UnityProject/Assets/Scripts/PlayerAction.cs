@@ -1,21 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Actions the player can do, like researches, purchase of objects, etc
 public class PlayerAction {
-
-
-
-
 	//actions have names, descriptions(?), consequences and cooldown period
 
 	public string actionName;
 	public string actionDescription;
 	public double actionCost;
 
-	//how to do consequences?
-	//TODO: Consequences of actions!!
+	public GameObject assignedButton;//button assigned to this Action
 
 	public MiscInfo.variableTypes consequenceVar1;
 	public double consequenceValue1;
@@ -182,7 +178,8 @@ public class PlayerAction {
 		//deduct cost
 		ResourceManager.instance.playerCurrentMoney-=actionCost;
 
-
+		//turn off button
+		assignedButton.GetComponent<Button>().enabled=false;
 
 		//gets time used, make action inactive
 		timeLastUsed= Time.time;
@@ -198,16 +195,18 @@ public class PlayerAction {
 		if (Time.time - timeLastUsed >= actionCooldownPeriod)
 		{
 			isActive = true;
+			assignedButton.GetComponent<Button> ().enabled = true;
 			return true;
 		}
 		return false;
 
 	}
 
-	public PlayerAction(string name, string desc, double cost, float cooldown, MiscInfo.variableTypes varType1, 
+	public PlayerAction(GameObject buttonGO, string name, string desc, double cost, float cooldown, MiscInfo.variableTypes varType1, 
 		double var1Consequence, MiscInfo.variableTypes varType2 = MiscInfo.variableTypes.NULL, 
 						double var2Consequence = 0.0)
 	{
+		buttonGO = assignedButton;
 		actionName = name;
 		actionDescription = desc;
 		actionCost = cost;
