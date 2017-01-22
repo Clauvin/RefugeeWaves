@@ -132,14 +132,31 @@ public class StatsManager : MonoBehaviour {
         if (publicOpinionOnImmigrants > 0.7)
             internationalOpinion += (publicOpinionOnImmigrants - 0.7) * 0.5;
 
-         //Se população legal +, orçamento +
-         //Se + imposto, orçamento +
-         //Se - imposto, orçamento -
-         //Se valor base +, orçamento +
-         //Se + orçamento, + dinheiro
-         //Se - orçamento, - dinheiro
-         //Tudo isso é consequência do cálculo em ResourceManager.
+        //Se população legal +, orçamento +
+        //Se + imposto, orçamento +
+        //Se - imposto, orçamento -
+        //Se valor base +, orçamento +
+        //Se + orçamento, + dinheiro
+        //Se - orçamento, - dinheiro
+        //Tudo isso é consequência do cálculo em ResourceManager.
 
+        StatsLimitChecker();
+
+    }
+
+    public void StatsLimitChecker()
+    {
+        if (publicOpinionOnImmigrants < 0) publicOpinionOnImmigrants = 0;
+        if (publicOpinionOnImmigrants > 1) publicOpinionOnImmigrants = 1;
+
+        if (internationalOpinion < 0) internationalOpinion = 0;
+        if (internationalOpinion > 1) internationalOpinion = 1;
+
+        if (unemployementRate < 0) unemployementRate = 0;
+        if (unemployementRate > 1) unemployementRate = 1;
+
+        if (criminalityRate < 0) criminalityRate = 0;
+        if (criminalityRate > 1) criminalityRate = 1;
     }
 
     public void UpdateFrontLegalPopulation() {
