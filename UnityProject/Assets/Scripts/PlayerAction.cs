@@ -174,7 +174,11 @@ public class PlayerAction {
 		Debug.Log ("Did " + actionName);
 		//if it's still in cooldown, do nothing
 		if (!isActive)
-			return;
+        {
+            Debug.Log("e está inativo");
+            return;
+        }
+			
 
 		//deduct cost
 		ResourceManager.instance.playerCurrentMoney-=actionCost;
@@ -205,7 +209,7 @@ public class PlayerAction {
 
 	public PlayerAction(GameObject buttonGO, string name, string desc, double cost, float cooldown, MiscInfo.variableTypes varType1, 
 		double var1Consequence, MiscInfo.variableTypes varType2 = MiscInfo.variableTypes.NULL, 
-						double var2Consequence = 0.0)
+						double var2Consequence = 0.0, bool active = true)
 	{
 		buttonGO = assignedButton;
 		actionName = name;
@@ -221,7 +225,7 @@ public class PlayerAction {
 		consequenceValue2 = var2Consequence;
 
 		timeLastUsed = 0.0f;
-		isActive = false;
+		isActive = active;
 	}
 
 
