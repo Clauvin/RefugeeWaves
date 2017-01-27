@@ -193,17 +193,19 @@ public class StatsManager : MonoBehaviour {
     void Awake()
     {
         instance = this;
-    }
 
-	// Use this for initialization
-	void Start () {
-		randomizeStartingStats ();
+        randomizeStartingStats();
 
         legalPopulationText = legalPopulationGO.GetComponent<Text>();
         publicOpinionOnImmigrantsSlider = publicOpinionOnImmigrantsGO.GetComponent<Slider>();
         internationalOpinionSlider = internationalOpinionGO.GetComponent<Slider>();
         unemployementRateText = unemployementRateGO.GetComponent<Text>();
         criminalityRateText = criminalityRateGO.GetComponent<Text>();
+    }
+
+	// Use this for initialization
+	void Start () {
+		
 }
 	
 	// Update is called once per frame
