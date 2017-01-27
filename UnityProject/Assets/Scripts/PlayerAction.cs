@@ -211,7 +211,7 @@ public class PlayerAction {
 		double var1Consequence, MiscInfo.variableTypes varType2 = MiscInfo.variableTypes.NULL, 
 						double var2Consequence = 0.0, bool active = true)
 	{
-		buttonGO = assignedButton;
+        assignedButton = buttonGO;
 		actionName = name;
 		actionDescription = desc;
 		actionCost = cost;
