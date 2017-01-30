@@ -10,6 +10,9 @@ public class VisualManager : MonoBehaviour {
 
 	public static VisualManager instance;
 
+    //At the moment, does nothing.
+    public bool action_panel_is_active = false;
+
 	public void showMoneyPanel()
     {
 		foreach(Transform t in moneyGO.transform)
@@ -31,7 +34,34 @@ public class VisualManager : MonoBehaviour {
 		{
 			t.gameObject.SetActive(!t.gameObject.activeSelf);
 		}
-	}
+
+        //Trying to solve the problem of action buttons showing up after pressed and their menu is closed.
+        //TRYING.
+        /*if (!action_panel_is_active)
+        {
+            foreach (Transform t in actionsGO.transform)
+            {
+                if (t.GetComponent<Button>().onClick. != null)
+                {
+                    if (t.GetComponent<PlayerAction>().checkIfCooledDown())
+                    {
+                        t.gameObject.SetActive(true);
+                    }
+                }
+                else
+                {
+                    t.gameObject.SetActive(true);
+                }
+            }
+        }
+        else
+        {
+            foreach (Transform t in actionsGO.transform)
+            {
+                t.gameObject.SetActive(false);
+            }
+        }*/
+    }
 
 
 
