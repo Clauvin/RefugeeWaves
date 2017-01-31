@@ -16,58 +16,58 @@ public class ImmigrantManager : MonoBehaviour {
 
 	public int numberOfNaturalizedImmigrants;//how many immigrants you have helped get citizenship
 
-    public void WaveReceived(GameObject onda)
+    public void WaveReceived(GameObject wave)
     {
 
         //Receber onda de imigrantes
-        ImmigrantWave imigrantes = onda.GetComponent<ImmigrantWave>();
+        ImmigrantWave immigrants = wave.GetComponent<ImmigrantWave>();
 
         //Quantos imigrantes temos?
-        int quant_imigrantes = imigrantes.numberOfImmigrants;
+        int immigrants_quantity = immigrants.numberOfImmigrants;
 
         //Temos casas disponíveis?
         if (ResourceManager.instance.numberOfAvailableHouses > 0)
         {
             //Temos casas suficientes?
-            if (ResourceManager.instance.numberOfAvailableHouses >= quant_imigrantes)
+            if (ResourceManager.instance.numberOfAvailableHouses >= immigrants_quantity)
             {
                 //Se sim, resolvido.
-                ResourceManager.instance.numberOfAvailableHouses -= quant_imigrantes;
-                legalWaveArrived(new ImmigrantWave(quant_imigrantes, Time.time, true));
-                quant_imigrantes = 0;
+                ResourceManager.instance.numberOfAvailableHouses -= immigrants_quantity;
+                legalWaveArrived(new ImmigrantWave(immigrants_quantity, Time.time, true));
+                immigrants_quantity = 0;
             }
             else
             {
                 //Se não, em frente.
                 legalWaveArrived(new ImmigrantWave(ResourceManager.instance.numberOfAvailableHouses, Time.time, true));
-                quant_imigrantes -= ResourceManager.instance.numberOfAvailableHouses;
+                immigrants_quantity -= ResourceManager.instance.numberOfAvailableHouses;
                 ResourceManager.instance.numberOfAvailableHouses = 0;
             }
         }
 
         //já cuidamos de todos?
-        if (quant_imigrantes > 0)
+        if (immigrants_quantity > 0)
         {
             //Hora da defesa.
             //Temos soldados suficientes?
-            if (ResourceManager.instance.numberOfAvailableBorderOfficers >= quant_imigrantes)
+            if (ResourceManager.instance.numberOfAvailableBorderOfficers >= immigrants_quantity)
             {
                 //Se sim, ok.
-                ResourceManager.instance.numberOfAvailableBorderOfficers -= quant_imigrantes;
-                quant_imigrantes = 0;
+                ResourceManager.instance.numberOfAvailableBorderOfficers -= immigrants_quantity;
+                immigrants_quantity = 0;
             }
             else
             {
                 //Se não...
-                quant_imigrantes -= ResourceManager.instance.numberOfAvailableBorderOfficers;
+                immigrants_quantity -= ResourceManager.instance.numberOfAvailableBorderOfficers;
                 ResourceManager.instance.numberOfAvailableBorderOfficers = 0;
             }
         }
 
         //temos ilegais?
-        if (quant_imigrantes > 0)
+        if (immigrants_quantity > 0)
         {
-            illegalWaveArrived(new ImmigrantWave(quant_imigrantes, Time.time, false));
+            illegalWaveArrived(new ImmigrantWave(immigrants_quantity, Time.time, false));
         }
 
     }
