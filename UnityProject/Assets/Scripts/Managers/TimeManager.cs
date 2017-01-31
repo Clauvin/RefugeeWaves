@@ -52,6 +52,10 @@ public class TimeManager : MonoBehaviour {
 			//one week has passed
 			week++;
 			weekText.text = week.ToString();
+            foreach (PlayerAction pa in ActionsManager.instance.possibleActions)
+            {
+                pa.checkIfCooledDown();
+            }
 			checkForPassageOfMonth ();
 		}
 	}
