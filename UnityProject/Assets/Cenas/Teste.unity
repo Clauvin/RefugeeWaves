@@ -1056,6 +1056,7 @@ MonoBehaviour:
   BOGO: {fileID: 689775310}
   SocialResGO: {fileID: 129900219}
   BorderResGO: {fileID: 1891364053}
+  action_panel_is_active: 1
 --- !u!1 &157373057
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class VisualManager : MonoBehaviour {
+
     public GameObject moneyGO, actionsGO, houseGO, unemployementGO, criminalityGO,
 	BOGO, SocialResGO, BorderResGO;
-
 
 	public static VisualManager instance;
 
     //At the moment, does nothing.
-    public bool action_panel_is_active = false;
+    public bool action_panel_is_active;
 
 	public void showMoneyPanel()
     {
@@ -27,45 +27,21 @@ public class VisualManager : MonoBehaviour {
 		}
     }
 
-
 	public void toggleActionsPanel()
 	{
-		foreach(Transform t in actionsGO.transform)
-		{
-			t.gameObject.SetActive(!t.gameObject.activeSelf);
-		}
+        //invert value of action_panel_is_active
+        action_panel_is_active = action_panel_is_active != true;
 
-        //Trying to solve the problem of action buttons showing up after pressed and their menu is closed.
-        //TRYING.
-        /*if (!action_panel_is_active)
+        foreach (Transform t in actionsGO.transform)
         {
-            foreach (Transform t in actionsGO.transform)
-            {
-                if (t.GetComponent<Button>().onClick. != null)
-                {
-                    if (t.GetComponent<PlayerAction>().checkIfCooledDown())
-                    {
-                        t.gameObject.SetActive(true);
-                    }
-                }
-                else
-                {
-                    t.gameObject.SetActive(true);
-                }
-            }
+            t.gameObject.SetActive(action_panel_is_active);
         }
-        else
-        {
-            foreach (Transform t in actionsGO.transform)
-            {
-                t.gameObject.SetActive(false);
-            }
-        }*/
+
     }
 
 
 
-	public void showHousePanel()
+    public void showHousePanel()
 	{
 		foreach(Transform t in houseGO.transform)
 		{
