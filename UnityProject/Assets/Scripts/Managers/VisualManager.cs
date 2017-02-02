@@ -34,7 +34,16 @@ public class VisualManager : MonoBehaviour {
 
         foreach (Transform t in actionsGO.transform)
         {
-            t.gameObject.SetActive(action_panel_is_active);
+            if ((t.GetComponent<Button>() != null) && (action_panel_is_active))
+            {
+                if (ActionsManager.instance.possibleActions
+                        [t.GetComponent<PositionInFunctionArray>().position - 1].isActive)
+                            t.gameObject.SetActive(action_panel_is_active);
+            }
+            else
+            {
+                t.gameObject.SetActive(action_panel_is_active);
+            } 
         }
 
     }
