@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class ResourceManager : MonoBehaviour {
@@ -45,11 +46,21 @@ public class ResourceManager : MonoBehaviour {
 	public GameObject numberOfTotalBorderOfficersGO;
 	public GameObject borderResourceGO;
 
+    //User Interface Fields
+    Text textPlayerCurrentMoney;
+    Text textPlayerMonthlyBudget;
+    Text textRealTaxPerCitizen;
+    Text textNumberOfAvailableHouses;
+    Text textNumberOfTotalHouses;
+    Text textSocialResources;
+    Text textNumberOfAvailableBorderOfficers;
+    Text textNumberOfTotalBorderOfficers;
+    Text textBorderResource;
 
-	//======================================= MAIN RESOURCES METHODS =============================================
+    //======================================= MAIN RESOURCES METHODS =============================================
 
-	//OPEN BORDERS
-	public bool buyHouses(int numberOfHouses)
+    //OPEN BORDERS
+    public bool buyHouses(int numberOfHouses)
 	{
 		if (numberOfHouses * costOfHouse <= playerCurrentMoney)
 		{
@@ -187,9 +198,36 @@ public class ResourceManager : MonoBehaviour {
 		playerCurrentMoney +=playerMonthlyBudget;
 	}
 
+    //======================================= USER INTERFACE UPDATE METHODS =============================================
+
+    /* Text textPlayerCurrentMoney;
+    Text textPlayerMonthlyBudget;
+    Text textRealTaxPerCitizen;
+    Text textNumberOfAvailableHouses;
+    Text textNumberOfTotalHouses;
+    Text textSocialResources;
+    Text textNumberOfAvailableBorderOfficers;
+    Text textNumberOfTotalBorderOfficers;
+    Text textBorderResource;*/
+
+    void UpdatePlayerCurrentMoneyGO()
+    {
+        textPlayerCurrentMoney.text = playerCurrentMoney.ToString();
+    }
+
     void Awake ()
     {
         instance = this;
+
+        textPlayerCurrentMoney = playerCurrentMoneyGO.GetComponent<Text>();
+        textPlayerMonthlyBudget = playerMonthlyBudgetGO.GetComponent<Text>(); ;
+        textRealTaxPerCitizen = realTaxPerCitizenGO.GetComponent<Text>(); ;
+        textNumberOfAvailableHouses = numberOfAvailableHousesGO.GetComponent<Text>(); ;
+        textNumberOfTotalHouses = numberOfTotalHousesGO.GetComponent<Text>(); ;
+        textSocialResources = socialResourcesGO.GetComponent<Text>(); ;
+        textNumberOfAvailableBorderOfficers = numberOfAvailableBorderOfficersGO.GetComponent<Text>(); ;
+        textNumberOfTotalBorderOfficers = numberOfTotalBorderOfficersGO.GetComponent<Text>(); ;
+        textBorderResource = borderResourceGO.GetComponent<Text>(); ;
     }
 
 	// Use this for initialization
@@ -206,6 +244,8 @@ public class ResourceManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+        UpdatePlayerCurrentMoneyGO();
+
+    }
 }
