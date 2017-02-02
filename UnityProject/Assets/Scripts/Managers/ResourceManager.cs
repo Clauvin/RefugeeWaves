@@ -215,19 +215,24 @@ public class ResourceManager : MonoBehaviour {
         textPlayerCurrentMoney.text = playerCurrentMoney.ToString();
     }
 
+    void UpdatePlayerMonthlyBudgetGO()
+    {
+        textPlayerMonthlyBudget.text = playerMonthlyBudget.ToString();
+    }
+
     void Awake ()
     {
         instance = this;
 
         textPlayerCurrentMoney = playerCurrentMoneyGO.GetComponent<Text>();
-        textPlayerMonthlyBudget = playerMonthlyBudgetGO.GetComponent<Text>(); ;
-        textRealTaxPerCitizen = realTaxPerCitizenGO.GetComponent<Text>(); ;
-        textNumberOfAvailableHouses = numberOfAvailableHousesGO.GetComponent<Text>(); ;
-        textNumberOfTotalHouses = numberOfTotalHousesGO.GetComponent<Text>(); ;
-        textSocialResources = socialResourcesGO.GetComponent<Text>(); ;
-        textNumberOfAvailableBorderOfficers = numberOfAvailableBorderOfficersGO.GetComponent<Text>(); ;
-        textNumberOfTotalBorderOfficers = numberOfTotalBorderOfficersGO.GetComponent<Text>(); ;
-        textBorderResource = borderResourceGO.GetComponent<Text>(); ;
+        textPlayerMonthlyBudget = playerMonthlyBudgetGO.GetComponent<Text>();
+        textRealTaxPerCitizen = realTaxPerCitizenGO.GetComponent<Text>();
+        textNumberOfAvailableHouses = numberOfAvailableHousesGO.GetComponent<Text>();
+        textNumberOfTotalHouses = numberOfTotalHousesGO.GetComponent<Text>();
+        textSocialResources = socialResourcesGO.GetComponent<Text>();
+        textNumberOfAvailableBorderOfficers = numberOfAvailableBorderOfficersGO.GetComponent<Text>();
+        textNumberOfTotalBorderOfficers = numberOfTotalBorderOfficersGO.GetComponent<Text>();
+        textBorderResource = borderResourceGO.GetComponent<Text>();
     }
 
 	// Use this for initialization
@@ -246,6 +251,7 @@ public class ResourceManager : MonoBehaviour {
 	void Update () {
 
         UpdatePlayerCurrentMoneyGO();
+        UpdatePlayerMonthlyBudgetGO();
 
     }
 }
