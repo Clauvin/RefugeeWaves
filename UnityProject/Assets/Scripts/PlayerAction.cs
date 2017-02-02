@@ -192,16 +192,18 @@ public class PlayerAction {
 		applyConsequences ();
 	}
 
-
-
 	public bool checkIfCooledDown()
 	{
 		//compare current time with time last used, if bigger than cooldown period, can be used again
 		if (Time.time - timeLastUsed >= actionCooldownPeriod)
 		{
 			isActive = true;
-			//assignedButton.SetActive(true);
-			return true;
+            if (VisualManager.instance.action_panel_is_active)
+            {
+                assignedButton.SetActive(true);
+            }
+
+            return true;
 		}
 		return false;
 
