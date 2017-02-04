@@ -44,7 +44,7 @@ public class ResourceManager : MonoBehaviour {
 	public GameObject socialResourcesGO;
 	public GameObject numberOfAvailableBorderOfficersGO;
 	public GameObject numberOfTotalBorderOfficersGO;
-	public GameObject borderResourceGO;
+	public GameObject borderResourcesGO;
 
     //User Interface Fields
     Text textPlayerCurrentMoney;
@@ -55,7 +55,7 @@ public class ResourceManager : MonoBehaviour {
     Text textSocialResources;
     Text textNumberOfAvailableBorderOfficers;
     Text textNumberOfTotalBorderOfficers;
-    Text textBorderResource;
+    Text textBorderResources;
 
     //======================================= MAIN RESOURCES METHODS =============================================
 
@@ -235,6 +235,26 @@ public class ResourceManager : MonoBehaviour {
         textNumberOfTotalHouses.text = numberOfTotalHouses.ToString();
     }
 
+    void UpdateSocialResources()
+    {
+        textSocialResources.text = socialResources.ToString();
+    }
+
+    void UpdateNumberOfAvailableBorderOfficers()
+    {
+        textNumberOfAvailableBorderOfficers.text = numberOfAvailableBorderOfficers.ToString();
+    }
+
+    void UpdateNumberOfTotalBorderOfficers()
+    {
+        textNumberOfTotalBorderOfficers.text = numberOfTotalBorderOfficers.ToString();
+    }
+
+    void UpdateNumberOfBorderResources()
+    {
+        textBorderResources.text = borderResources.ToString();
+    }
+
     void Awake ()
     {
         instance = this;
@@ -247,7 +267,7 @@ public class ResourceManager : MonoBehaviour {
         textSocialResources = socialResourcesGO.GetComponent<Text>();
         textNumberOfAvailableBorderOfficers = numberOfAvailableBorderOfficersGO.GetComponent<Text>();
         textNumberOfTotalBorderOfficers = numberOfTotalBorderOfficersGO.GetComponent<Text>();
-        textBorderResource = borderResourceGO.GetComponent<Text>();
+        textBorderResources = borderResourcesGO.GetComponent<Text>();
     }
 
 	// Use this for initialization
@@ -270,6 +290,9 @@ public class ResourceManager : MonoBehaviour {
         UpdateRealTaxPerCitizenGO();
         UpdateNumberOfAvailableHouses();
         UpdateNumberOfTotalHouses();
-
+        UpdateSocialResources();
+        UpdateNumberOfAvailableBorderOfficers();
+        UpdateNumberOfTotalBorderOfficers();
+        UpdateNumberOfBorderResources();
     }
 }
