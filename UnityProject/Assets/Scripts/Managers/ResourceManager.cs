@@ -220,6 +220,21 @@ public class ResourceManager : MonoBehaviour {
         textPlayerMonthlyBudget.text = playerMonthlyBudget.ToString();
     }
 
+    void UpdateRealTaxPerCitizenGO()
+    {
+        textRealTaxPerCitizen.text = realTaxPerCitizen.ToString();
+    }
+
+    void UpdateNumberOfAvailableHouses()
+    {
+        textNumberOfAvailableHouses.text = numberOfAvailableHouses.ToString();
+    }
+
+    void UpdateNumberOfTotalHouses()
+    {
+        textNumberOfTotalHouses.text = numberOfTotalHouses.ToString();
+    }
+
     void Awake ()
     {
         instance = this;
@@ -252,6 +267,9 @@ public class ResourceManager : MonoBehaviour {
 
         UpdatePlayerCurrentMoneyGO();
         UpdatePlayerMonthlyBudgetGO();
+        UpdateRealTaxPerCitizenGO();
+        UpdateNumberOfAvailableHouses();
+        UpdateNumberOfTotalHouses();
 
     }
 }

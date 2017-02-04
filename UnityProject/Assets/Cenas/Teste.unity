@@ -4285,7 +4285,7 @@ MonoBehaviour:
   playerMonthlyBudgetGO: {fileID: 195145684}
   realTaxPerCitizenGO: {fileID: 413858917}
   numberOfAvailableHousesGO: {fileID: 1561555528}
-  numberOfTotalHousesGO: {fileID: 2032781952}
+  numberOfTotalHousesGO: {fileID: 2138047870}
   socialResourcesGO: {fileID: 11656218}
   numberOfAvailableBorderOfficersGO: {fileID: 11656218}
   numberOfTotalBorderOfficersGO: {fileID: 1067859126}
