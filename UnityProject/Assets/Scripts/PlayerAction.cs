@@ -39,9 +39,11 @@ public class PlayerAction {
 		{
 		case MiscInfo.variableTypes.availableBO:
 			ResourceManager.instance.numberOfAvailableBorderOfficers += (int)consequenceValue1;
+            ResourceManager.instance.numberOfTotalBorderOfficers += (int)consequenceValue1;
 			break;
 		case MiscInfo.variableTypes.availableHouses:
 			ResourceManager.instance.numberOfAvailableHouses += (int)consequenceValue1;
+            ResourceManager.instance.numberOfTotalHouses += (int)consequenceValue1;
 			break;
 		case MiscInfo.variableTypes.baseTaxPerCitizen:
 			ResourceManager.instance.baseTaxPerCitizen += consequenceValue1;
@@ -97,8 +99,6 @@ public class PlayerAction {
 		default:
 			break;
 
-			
-
 		}
 
 		if (consequenceVar2 != MiscInfo.variableTypes.NULL)
@@ -107,10 +107,12 @@ public class PlayerAction {
 			{
 			case MiscInfo.variableTypes.availableBO:
                 ResourceManager.instance.numberOfAvailableBorderOfficers += (int)consequenceValue2;
+                ResourceManager.instance.numberOfTotalBorderOfficers += (int)consequenceValue2;
                 break;
 			case MiscInfo.variableTypes.availableHouses:
 				ResourceManager.instance.numberOfAvailableHouses += (int)consequenceValue2;
-				break;
+                ResourceManager.instance.numberOfTotalHouses += (int)consequenceValue2;
+                break;
 			case MiscInfo.variableTypes.baseTaxPerCitizen:
 				ResourceManager.instance.baseTaxPerCitizen += consequenceValue2;
 				break;
