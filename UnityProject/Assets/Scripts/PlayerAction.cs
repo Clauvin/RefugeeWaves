@@ -38,7 +38,7 @@ public class PlayerAction {
 		switch (consequenceVar1)
 		{
 		case MiscInfo.variableTypes.availableBO:
-			
+			ResourceManager.instance.numberOfAvailableBorderOfficers += (int)consequenceValue1;
 			break;
 		case MiscInfo.variableTypes.availableHouses:
 			ResourceManager.instance.numberOfAvailableHouses += (int)consequenceValue1;
@@ -106,8 +106,8 @@ public class PlayerAction {
 			switch (consequenceVar2)
 			{
 			case MiscInfo.variableTypes.availableBO:
-
-				break;
+                ResourceManager.instance.numberOfAvailableBorderOfficers += (int)consequenceValue2;
+                break;
 			case MiscInfo.variableTypes.availableHouses:
 				ResourceManager.instance.numberOfAvailableHouses += (int)consequenceValue2;
 				break;
