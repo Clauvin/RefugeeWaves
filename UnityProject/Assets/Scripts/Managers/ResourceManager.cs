@@ -200,16 +200,6 @@ public class ResourceManager : MonoBehaviour {
 
     //======================================= USER INTERFACE UPDATE METHODS =============================================
 
-    /* Text textPlayerCurrentMoney;
-    Text textPlayerMonthlyBudget;
-    Text textRealTaxPerCitizen;
-    Text textNumberOfAvailableHouses;
-    Text textNumberOfTotalHouses;
-    Text textSocialResources;
-    Text textNumberOfAvailableBorderOfficers;
-    Text textNumberOfTotalBorderOfficers;
-    Text textBorderResource;*/
-
     void UpdatePlayerCurrentMoneyGO()
     {
         textPlayerCurrentMoney.text = playerCurrentMoney.ToString();
