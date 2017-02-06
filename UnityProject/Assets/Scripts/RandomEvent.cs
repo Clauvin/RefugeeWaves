@@ -182,7 +182,6 @@ public class RandomEvent {
 		consequenceValue1 = consequence1;
 		consequenceVariable2 = var2;
 		consequenceValue2 = consequence2;
-		hasHappened = false;
 	}
 
 
