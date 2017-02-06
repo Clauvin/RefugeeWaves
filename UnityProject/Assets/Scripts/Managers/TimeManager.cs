@@ -26,19 +26,27 @@ public class TimeManager : MonoBehaviour {
 
 	public void pauseGame()
 	{
-		Debug.Log ("Game Paused");
-		gamePaused = true;
-		//saves elapsed time
-		timeElapsed = Time.time -timeLastUnpaused;
-		timeLastPaused = Time.time;
+		//only happens if game was unpaused
+		if (!gamePaused)
+		{
+			Debug.Log ("Game Paused");
+			gamePaused = true;
+			//saves elapsed time
+			timeElapsed = Time.time - timeLastUnpaused;
+			timeLastPaused = Time.time;
+		}
 	}
 
 	public void unpauseGame()
 	{
-		Debug.Log ("Game Unpaused");
+		//only happens if game was paused
+		if (gamePaused)
+		{
+			Debug.Log ("Game Unpaused");
 
-		gamePaused = false;
-		timeLastUnpaused = Time.time;
+			gamePaused = false;
+			timeLastUnpaused = Time.time;
+		}
 	}
 
 
@@ -76,6 +84,10 @@ public class TimeManager : MonoBehaviour {
             ResourceManager.instance.receiveNewBudget();
 
             checkForPassageOfYear ();
+
+			//after every end of month, check if a random event has occurred
+			RandomEventManager.instance.CheckForRandomEvents();
+
 		}
 	}
 
