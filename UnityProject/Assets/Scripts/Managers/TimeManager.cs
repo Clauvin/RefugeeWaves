@@ -23,6 +23,11 @@ public class TimeManager : MonoBehaviour {
 	public GameObject weekGO, monthGO, yearGO;
 	Text weekText, monthText, yearText; 
 
+    public void PauseOrUnpause()
+    {
+        if (!gamePaused) pauseGame();
+        else unpauseGame();
+    }
 
 	public void pauseGame()
 	{
