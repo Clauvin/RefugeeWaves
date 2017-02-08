@@ -73,7 +73,6 @@ public class TimeManager : MonoBehaviour {
 		}
 	}
 
-
 	public void checkForPassageOfMonth()
 	{
 		if (week > 4)
