@@ -69,7 +69,8 @@ public class TimeManager : MonoBehaviour {
             {
                 pa.checkIfCooledDown();
             }
-			checkForPassageOfMonth ();
+            ImmigrantManager.instance.checkForLegalizedImmigrantsVisas();
+            checkForPassageOfMonth ();
 		}
 	}
 
