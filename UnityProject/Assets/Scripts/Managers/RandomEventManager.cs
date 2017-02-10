@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Saves Random Events and checks to see if they happen
 public class RandomEventManager : MonoBehaviour {
@@ -10,15 +11,38 @@ public class RandomEventManager : MonoBehaviour {
 	List<RandomEvent> randomEvents = new List<RandomEvent>();//holds all events
 	List<RandomEvent> eventsYetToHappen = new List<RandomEvent>();//starts as a copy of all events; gets smaller as events happen
 
+	public GameObject randomEventPrefab;
 
 	//creates them all
 	public void CreateRandomEvents ()
 	{
 		//TODO: Create Random Events
-
+		randomEvents.Add(new RandomEvent("Your mom called!", "Your mom is worried sick about you for never calling her!"+
+			"She nagged you on the phone so much, you missed an important call about some clandestine refugees wreaking havok in the capital."+
+			"\nConsequence: Criminality Rate +10%",MiscInfo.variableTypes.criminalityRate,0.1f));
 
 		//in the end of the creation, make a copy at eventsYetToHappen
 		eventsYetToHappen = randomEvents;
+	}
+
+	public void createVisualRandomEvent(string title, string description)
+	{
+		//intantiates the GO associated with this Random Event in the middle of the screen, pauses game
+		//must pause game at this point
+		TimeManager.instance.pauseGame();
+
+
+		//instantiates a prefab with the info of the event
+		GameObject newEvent = (GameObject)Instantiate(randomEventPrefab);
+
+		//make it a child of the MainCanvas and adjust its scale
+		newEvent.transform.SetParent(GameObject.Find("MainCanvas").transform,false);
+		//newEvent.transform.localScale = new Vector3 (1, 1, 1);
+
+		//change the values of the text boxes
+		newEvent.transform.Find ("RandomEventPanel/EventTitle").GetComponent<Text>().text = title;
+		newEvent.transform.Find ("RandomEventPanel/EventDescription").GetComponent<Text>().text = description;
+
 	}
 
 	//every week, this needs to be checked
@@ -30,12 +54,20 @@ public class RandomEventManager : MonoBehaviour {
 
 		if (randomNum <= 10 && eventsYetToHappen.Count>0)//within 10% && there are still events that haven't happened
 		{
+
+
 			//get one random event of the group and makes it happen
 			int eventToHappen = Random.Range(0,eventsYetToHappen.Count-1);
 			eventsYetToHappen [eventToHappen].applyConsequences ();
 
+			//For Debug purposes
+			Debug.Log("Event Happened.");
+			Debug.Log ("Title: " + eventsYetToHappen [eventToHappen].name);
+
+
 			//since event happened, need to show its popup
-			eventsYetToHappen [eventToHappen].showEventPopup ();
+			createVisualRandomEvent(eventsYetToHappen[eventToHappen].name, eventsYetToHappen[eventToHappen].description);
+
 
 			//remove it from the list
 			eventsYetToHappen.RemoveAt(eventToHappen);
@@ -45,13 +77,7 @@ public class RandomEventManager : MonoBehaviour {
 
 	}
 
-	public void PressedOKEventButton()
-	{
-		//method runs when player hits 'OK' button on the Random Event Popup
-		//since Popup pauses the game, it needs to be unpaused
-		TimeManager.instance.unpauseGame();
 
-	}
 
 	// Use this for initialization
 	void Start () {

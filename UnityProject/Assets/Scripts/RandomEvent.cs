@@ -15,26 +15,14 @@ public class RandomEvent {
 	float consequenceValue2;
 
 
-	public GameObject randomEventPrefab; //because we will need one
 
 
-	public void showEventPopup()
-	{
-		//intantiates the GO associated with this Random Event in the middle of the screen, pauses game
 
-		//TODO: Instantiate the Random Event GO(as soon as we make one)
-
-
-		//must pause game at this point
-		TimeManager.instance.pauseGame();
-
-	}
 
 	public void applyConsequences()
 	{
 		//always SUMS the consequence value with the consequence variable, so need to pass the right value
-		//right value to be passed will be seen in ACTIONSMANAGER
-
+		//Remember to update the displays after this happens
 
 
 		switch (consequenceVariable1)
