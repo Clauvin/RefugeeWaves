@@ -399,7 +399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 177, y: -24}
+  m_AnchoredPosition: {x: 200, y: -15.45}
   m_SizeDelta: {x: 159, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &66887553
@@ -634,7 +634,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 438, y: 412.8}
+  m_AnchoredPosition: {x: 495, y: 449}
   m_SizeDelta: {x: -525.2, y: -273.3}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &115822633
@@ -1325,7 +1325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 530, y: 412.85}
+  m_AnchoredPosition: {x: 587, y: 449}
   m_SizeDelta: {x: -429, y: -271.95}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &186722965
@@ -2317,7 +2317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -269.00003, y: 70.7}
+  m_AnchoredPosition: {x: -272, y: 88}
   m_SizeDelta: {x: 38, y: 38}
   m_Pivot: {x: 0.5, y: 0.49999988}
 --- !u!114 &468415835
@@ -3477,7 +3477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 356.99994, y: 412.84985}
+  m_AnchoredPosition: {x: 414, y: 449}
   m_SizeDelta: {x: -522, y: -273.35}
   m_Pivot: {x: 0.000000007450581, y: -0.000000007450581}
 --- !u!114 &693514952
@@ -4211,7 +4211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 829.2, y: 391.5}
+  m_AnchoredPosition: {x: 887, y: 428}
   m_SizeDelta: {x: -539.2, y: -273.3}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &922459030
@@ -4568,7 +4568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 530, y: 394.45}
+  m_AnchoredPosition: {x: 587, y: 431}
   m_SizeDelta: {x: -429, y: -271.95}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1004501065
@@ -5243,7 +5243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 356.99994, y: 395.8}
+  m_AnchoredPosition: {x: 414, y: 432}
   m_SizeDelta: {x: -522, y: -273.3}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1210034827
@@ -5560,7 +5560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 719, y: 395.8}
+  m_AnchoredPosition: {x: 776, y: 432}
   m_SizeDelta: {x: -539.2, y: -273.3}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1269837381
@@ -6510,7 +6510,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 831, y: 412.85}
+  m_AnchoredPosition: {x: 888, y: 449}
   m_SizeDelta: {x: -539.2, y: -273.3}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1456236509
@@ -6684,7 +6684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 438, y: 395.8}
+  m_AnchoredPosition: {x: 495, y: 432}
   m_SizeDelta: {x: -539.2, y: -273.3}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &1511244921
@@ -8590,7 +8590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 719, y: 412.85}
+  m_AnchoredPosition: {x: 776, y: 449}
   m_SizeDelta: {x: -539.2, y: -273.3}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &2006232620
@@ -9279,7 +9279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -269.00003, y: 117.2}
+  m_AnchoredPosition: {x: -272, y: 134}
   m_SizeDelta: {x: 38, y: 38}
   m_Pivot: {x: 0.5, y: 0.49999988}
 --- !u!114 &2097084996
