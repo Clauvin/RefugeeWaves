@@ -90,17 +90,19 @@ public class ImmigrantManager : MonoBehaviour {
 
 	public void checkForLegalizedImmigrantsVisas()
 	{
-		//Beginning of a new month. Check if (legal) immigrants cn get visas
-		foreach (ImmigrantWave immigrant in legalWaves)
+        //Beginning of a new month. Check if (legal) immigrants cn get visas
+		for(int i = 0; i < legalWaves.Count; i+=0)
 		{
-			if (immigrant.checkIfBecameLegal ())//if this immigrant wave can become part of the country now
-			{
-				StatsManager.instance.legalPopulation += immigrant.numberOfImmigrants;
-				numberOfNaturalizedImmigrants += immigrant.numberOfImmigrants;//to be used as statistics in the end
+            ImmigrantWave immigrant = legalWaves[i];
+            if (immigrant.checkIfBecameLegal())//if this immigrant wave can become part of the country now
+            {
+                StatsManager.instance.legalPopulation += immigrant.numberOfImmigrants;
+                numberOfNaturalizedImmigrants += immigrant.numberOfImmigrants;//to be used as statistics in the end
                 ResourceManager.instance.numberOfAvailableHouses += immigrant.numberOfImmigrants;
-				//delete wave of immigrants; part of the country now
-				legalWaves.Remove(immigrant);
-			}
+                //delete wave of immigrants; part of the country now
+                legalWaves.Remove(immigrant);
+            }
+            else i++;
 		}
 	}
 
