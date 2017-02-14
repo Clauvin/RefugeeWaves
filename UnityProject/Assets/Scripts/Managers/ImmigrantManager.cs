@@ -49,18 +49,23 @@ public class ImmigrantManager : MonoBehaviour {
         if (immigrants_quantity > 0)
         {
             //Hora da defesa.
-            //Temos soldados suficientes?
-            if (ResourceManager.instance.numberOfAvailableBorderOfficers >= immigrants_quantity)
+            
+            //Temos recursos suficientes?
+            if (ResourceManager.instance.borderResources > 0)
             {
-                //Se sim, ok.
-                ResourceManager.instance.numberOfAvailableBorderOfficers -= immigrants_quantity;
-                immigrants_quantity = 0;
-            }
-            else
-            {
-                //Se não...
-                immigrants_quantity -= ResourceManager.instance.numberOfAvailableBorderOfficers;
-                ResourceManager.instance.numberOfAvailableBorderOfficers = 0;
+                //Temos soldados suficientes?
+                if (ResourceManager.instance.numberOfAvailableBorderOfficers >= immigrants_quantity)
+                {
+                    //Se sim, ok.
+                    //ResourceManager.instance.numberOfAvailableBorderOfficers -= immigrants_quantity;
+                    immigrants_quantity = 0;
+                }
+                else
+                {
+                    //Se não...
+                    immigrants_quantity -= ResourceManager.instance.numberOfAvailableBorderOfficers;
+                    //ResourceManager.instance.numberOfAvailableBorderOfficers = 0;
+                }
             }
         }
 

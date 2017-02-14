@@ -175,11 +175,13 @@ public class ResourceManager : MonoBehaviour {
 		return true;
 	}
 
+    public void UpdateResourcesSpentInBorderOfficers()
+    {
+        borderResources -= numberOfAvailableBorderOfficers;
+    }
 
-
-
-	//======================================TAX AND BUDGET METHODS ============================================
-	public void recalculateTax()
+    //======================================TAX AND BUDGET METHODS ============================================
+    public void recalculateTax()
 	{
 		realTaxPerCitizen = baseTaxPerCitizen * taxVariation;
 	}

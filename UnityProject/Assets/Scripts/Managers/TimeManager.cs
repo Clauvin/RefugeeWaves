@@ -70,6 +70,7 @@ public class TimeManager : MonoBehaviour {
                 pa.checkIfCooledDown();
             }
             ImmigrantManager.instance.checkForLegalizedImmigrantsVisas();
+            ResourceManager.instance.UpdateResourcesSpentInBorderOfficers();
             checkForPassageOfMonth ();
 		}
 	}
