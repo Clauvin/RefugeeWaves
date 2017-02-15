@@ -1,0 +1,21 @@
+<graph version="v4.05" name="" author="" interval="1" timeMode="asynchronous" distributionMode="fixed speed" speed="100" actions="1" dice="D6" skill="" strategy="" multiplayer="" width="700" height="660" numberOfRuns="100" visibleRuns="25" colorCoding="0">
+  <node symbol="Pool" x="344" y="269" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="0" capacity="-1"/>
+  <node symbol="Pool" x="342" y="185" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black" startingResources="0" capacity="-1"/>
+  <node symbol="Source" x="491" y="185" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="interactive" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <connection type="Resource Connection" start="2" end="1" label="1" position="0.5" color="Black" thickness="2"/>
+  <node symbol="TextLabel" x="345" y="214" color="Black" caption="Imigrantes Ilegais"/>
+  <node symbol="TextLabel" x="349" y="299" color="Black" caption="Imigrantes Legais"/>
+  <connection type="State Connection" start="1" end="9" label="-1" position="0.5" color="Black" thickness="2"/>
+  <node symbol="TextLabel" x="204" y="151" color="Black" caption="Opiniãao Publica"/>
+  <node symbol="TextLabel" x="96" y="12" color="Black" caption="Criminalidade"/>
+  <node symbol="Pool" x="204" y="181" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="9999" capacity="-1"/>
+  <connection type="State Connection" start="17" end="15" label="&lt;50" position="0.5" color="Black" thickness="2"/>
+  <connection type="Resource Connection" start="15" end="14" label="1" position="0.5" color="Black" thickness="2"/>
+  <connection type="Resource Connection" start="14" end="16" label="-1" position="0.5" color="Black" thickness="2"/>
+  <connection type="State Connection" start="17" end="16" label=">50" position="0.5" color="Black" thickness="2"/>
+  <node symbol="Pool" x="94" y="47" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black" startingResources="9999" capacity="-1"/>
+  <node symbol="Source" x="228" y="50" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="interactive" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <node symbol="Drain" x="228" y="108" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="interactive" pullMode="pull any" actions="1"/>
+  <node symbol="Pool" x="340" y="72" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="0" capacity="-1"/>
+  <node symbol="TextLabel" x="418" y="64" color="Black" caption="Casas Disponíveis|(O valor aqui -50)"/>
+</graph>
