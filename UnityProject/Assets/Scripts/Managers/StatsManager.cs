@@ -55,10 +55,6 @@ public class StatsManager : MonoBehaviour {
         if (ImmigrantManager.instance.numberOfIllegalImmigrants > 0)
             publicOpinionOnImmigrants -= ImmigrantManager.instance.numberOfIllegalImmigrants * 0.01f;
 
-        //Se moradia < 0, criminalidade >
-        if (ResourceManager.instance.numberOfAvailableHouses < 0)
-            criminalityRate += (ResourceManager.instance.numberOfAvailableHouses * -1 * 0.01f);
-
         //Se social expenses < 0, criminalidade >
         //Yes, -10000 social resources = DOOM
         if (ResourceManager.instance.socialResources < 0)
