@@ -44,14 +44,14 @@ public class StatsManager : MonoBehaviour {
 	public void calculateStatsValues()
 	{
         //TODO: Get EXACTLY how each variable affects the other
-        //TODO: Se possível, que os imigrantes se tornando cidadãos
-        // virem ANTES desses cálculos, quando ambos ocorrerem no mesmo mês.
+        //TODO: If possible, that the immigrants becoming citizens
+        // come BEFORE this calculations, when both happen in the same month
 
-        //Em ordem, a partir do um valor que não muda
+        //In order, starting of a value that doesn't end.
 
-        //Se + imigrantes ilegais, opinião sobre imigrantes cai
-        //MAYBE: Reduzir a opinião pública pela porcentagem de imigrantes ilegais/população total?
-        //BYTHEWAY: número mágico de imigrantes ilegais ferrando o país por enquanto: 10000.
+        //If + illegal immigrants, opinion about immigrants fall.
+        //MAYBE: Reucing the public opinion by the percentage of immigrants/total population?
+        //BYTHEWAY: magic number of illegal immigrants screwing the country by now: 10000
         if (ImmigrantManager.instance.numberOfIllegalImmigrants > 0)
             publicOpinionOnImmigrants -= ImmigrantManager.instance.numberOfIllegalImmigrants * 0.01f;
 
