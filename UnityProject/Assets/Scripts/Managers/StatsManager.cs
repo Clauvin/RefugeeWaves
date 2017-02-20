@@ -50,91 +50,91 @@ public class StatsManager : MonoBehaviour {
         //In order, starting of a value that doesn't end.
 
         //If + illegal immigrants, opinion about immigrants fall.
-        //MAYBE: Reucing the public opinion by the percentage of immigrants/total population?
+        //MAYBE: Reducing the public opinion by the percentage of immigrants/total population?
         //BYTHEWAY: magic number of illegal immigrants screwing the country by now: 10000
         if (ImmigrantManager.instance.numberOfIllegalImmigrants > 0)
             publicOpinionOnImmigrants -= ImmigrantManager.instance.numberOfIllegalImmigrants * 0.01f;
 
-        //Se social expenses < 0, criminalidade >
+        //If social expenses < 0, crime >
         //Yes, -10000 social resources = DOOM
         if (ResourceManager.instance.socialResources < 0)
             criminalityRate += ResourceManager.instance.socialResources * -1 * 0.01f;
 
-        //Se border expenses < 0, criminalidade 2x >
+        //If border expenses < 0, crime 2x >
         //Yes, -10000 border resources = DOOM
         if (ResourceManager.instance.borderResources < 0)
             criminalityRate += ResourceManager.instance.borderResources * -1 * 0.01f;
 
-        //Se border officials < onda de imigrantes, criminalidade 2x >
-        //Peraí, não faz sentido. Se o cálculo sobre as ondas é feito no momento de contato, então esse
-        // criminalidade 2x precisa ser é feito na hora da colisão da onda, seja isso onde for.
+        //If border officials < immigrants wave, crime 2x >
+        //Wait, this makes no sense. If the calculus about the waves is made in the contact moment, so this
+        // crime 2x needs to be done when the collision happens, wherever this is.
         //if (ResourceManager.instance.numberOfAvailableBorderOfficers)
 
-        //Se dinheiro < 0, criminalidade >
+        //If money < 0, crime >
         if (ResourceManager.instance.playerCurrentMoney < 0)
             criminalityRate += ResourceManager.instance.playerCurrentMoney * -1 * 0.01f;
 
-        //Se variação do imposto +, desemprego +
+        //If taxes variation +, unemployment +
         if (ResourceManager.instance.taxVariation > 1.1)
             unemployementRate += (ResourceManager.instance.taxVariation - 1.1) * 50f;
 
-        //Se variação do imposto -, desemprego -
+        //If taxes variation -, unemployment -
         if (ResourceManager.instance.taxVariation < 0.9)
             unemployementRate -= (0.9 - ResourceManager.instance.taxVariation) * 50f;
 
-        //Se desemprego +, variação do imposto -
+        //If unemployment +, taxes variation -
         //CORRIGIR NO DIAGRAMA
         if (unemployementRate > 0.1)
             ResourceManager.instance.taxVariation -= (unemployementRate - 0.1) * 0.5;
 
-        //Se taxa de desemprego +, criminalidade >
+        //If unemployment tax +, crime >
         if (unemployementRate > 0.1)
             criminalityRate += (unemployementRate - 0.1f) * 0.1f;
 
-        //Se taxa de desemprego -, criminalidade <
+        //If unemployment tax -, crime <
         if (unemployementRate < 0.1)
             criminalityRate -= (0.1 - unemployementRate) * 0.1f;
 
-        //Se taxa de desemprego >, imposto p/ cidadão <
+        //If unemployment tax >, tax p/ citizen <
         if (unemployementRate > 0.12)
             ResourceManager.instance.taxVariation -= unemployementRate - 0.12;
 
-        //Se + criminalidade, Opinião Sobre Imigrantes -
+        //If + crime, opinion about immigrants  -
         //Yes. A 20% crimeRate means a 5% fall in publicOpinion, a 30% crimeRate means a 15% fall, and so on.
         if (criminalityRate > 0.1)
             publicOpinionOnImmigrants -= (criminalityRate - 0.1) * 0.5;
 
-        //Se - criminalidade, Opinião Sobre Imigrantes +
+        //If - crime, opinion about immigrants +
         if (criminalityRate < 0.04)
             publicOpinionOnImmigrants += (0.04 - criminalityRate);
 
-        //Se + criminalidade, Variação do Imposto Sobre População -
+        //If + crime, taxes variation over population -
         if (criminalityRate > 0.1)
             ResourceManager.instance.taxVariation -= unemployementRate - 0.1;
 
-        //Se variação do imposto +, imposto p/ cidadão +
-        //Se variação do imposto -, imposto p/ cidadão -
+        //If taxes variation +, citizen tax +
+        //If taxes variation -, citizen tax -
         //CALMA AÊ. Isso é uma consequência da equação, não é algo a ser calculado no fim do mês
 
-        //Se + VARIAÇÃO DO IMPOSTO, Opinião Sobre Imigrantes -
+        //If + taxes variation, opinion about immigrants -
         if (ResourceManager.instance.taxVariation > 1.1)
             publicOpinionOnImmigrants -= ResourceManager.instance.taxVariation - 1.1;
 
-        //Se + opinião sobre imigrantes, Opinião Internacional +
+        //If + opinion about immigrants, international opinion +
         if (publicOpinionOnImmigrants < 0.3)
             internationalOpinion -= (0.3 - publicOpinionOnImmigrants) * 0.5;
 
-        //Se - opinião sobre imigrantes, Opinião Internacional -
+        //If - opinion about immigrants, international opinion -
         if (publicOpinionOnImmigrants > 0.7)
             internationalOpinion += (publicOpinionOnImmigrants - 0.7) * 0.5;
 
-        //Se população legal +, orçamento +
-        //Se + imposto, orçamento +
-        //Se - imposto, orçamento -
-        //Se valor base +, orçamento +
-        //Se + orçamento, + dinheiro
-        //Se - orçamento, - dinheiro
-        //Tudo isso é consequência do cálculo em ResourceManager.
+        //If legal population +, budget +
+        //If + taxes, budget +
+        //If - taxes, budget -
+        //If valor base +, budget +
+        //If + budget, + money
+        //If - budget, - money
+        //All this is consequence of the calculations in ResourceManager.
 
         StatsLimitChecker();
 
