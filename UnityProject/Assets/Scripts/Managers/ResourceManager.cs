@@ -17,7 +17,6 @@ public class ResourceManager : MonoBehaviour {
 	public double taxVariation=1; //i.e., inflation. Dumbass.
 	public double BudgetBaseValue=1000;
 
-
 	//Resources
 
 	//open borders
@@ -189,7 +188,9 @@ public class ResourceManager : MonoBehaviour {
 	public void recalculateBudget()//recalculate budget based on taxPerCitizen and BudgetBaseValue
 	{
 		recalculateTax ();
-		playerMonthlyBudget = realTaxPerCitizen * StatsManager.instance.legalPopulation*(1-StatsManager.instance.unemployementRate) + BudgetBaseValue;
+        playerMonthlyBudget = realTaxPerCitizen;
+        playerMonthlyBudget *= 1 / 10 * StatsManager.instance.legalPopulation * (1 - StatsManager.instance.unemployementRate);
+        playerMonthlyBudget += BudgetBaseValue;
 	}
 
 	public void receiveNewBudget()
