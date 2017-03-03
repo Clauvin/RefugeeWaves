@@ -84,7 +84,7 @@ public class RandomEvent {
 			ResourceManager.instance.numberOfTotalHouses+=(int)consequenceValue1;
 			break;
 		case MiscInfo.variableTypes.unemployementRate:
-			StatsManager.instance.unemployementRate+=consequenceValue1;
+			StatsManager.instance.unemploymentRate+=consequenceValue1;
 			break;
 		default:
 			break;
@@ -152,7 +152,7 @@ public class RandomEvent {
 				ResourceManager.instance.numberOfTotalHouses += (int)consequenceValue2;
 				break;
 			case MiscInfo.variableTypes.unemployementRate:
-				StatsManager.instance.unemployementRate += consequenceValue2;
+				StatsManager.instance.unemploymentRate += consequenceValue2;
 				break;
 			default:
 				break;

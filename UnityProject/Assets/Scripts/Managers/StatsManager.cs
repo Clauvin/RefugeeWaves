@@ -17,13 +17,13 @@ public class StatsManager : MonoBehaviour {
 	public double publicOpinionOnImmigrants; //goes from 0 to 1
 	public double internationalOpinion; //goes from 0 to 1, affects your chances of getting international help
 
-	public double unemployementRate; //from 0 to 1(if 1, boy, are you screwed)
+	public double unemploymentRate; //from 0 to 1(if 1, boy, are you screwed)
 	public double criminalityRate; //from 0 to 1(if 1, boy, are you dead)
 
     //GO's, Text, Sliders...
 
     public GameObject legalPopulationGO, publicOpinionOnImmigrantsGO, internationalOpinionGO;
-    public GameObject unemployementRateGO, criminalityRateGO;
+    public GameObject unemploymentRateGO, criminalityRateGO;
 
     Text legalPopulationText;
     Slider publicOpinionOnImmigrantsSlider, internationalOpinionSlider;
@@ -34,7 +34,7 @@ public class StatsManager : MonoBehaviour {
 		//randomizes values of the starting stats
 		//TODO
 		legalPopulation = 80000 + (int)(40000 * Random.value);//from 80k to 120k
-		unemployementRate = 0.04 + 0.04 * Random.value;//from 4% to 8%
+		unemploymentRate = 0.04 + 0.04 * Random.value;//from 4% to 8%
 		criminalityRate = 0.02 + 0.02*Random.value; //from 2% to 4%
 		publicOpinionOnImmigrants = 0.3 + 0.4*Random.value;//from 30% to 70%
 		internationalOpinion = 0.5 + 0.2*Random.value;//from 50% to 70%
@@ -76,28 +76,28 @@ public class StatsManager : MonoBehaviour {
 
         //If taxes variation +, unemployment +
         if (ResourceManager.instance.taxVariation > 1.1)
-            unemployementRate += (ResourceManager.instance.taxVariation - 1.1) * 50f;
+            unemploymentRate += (ResourceManager.instance.taxVariation - 1.1) * 50f;
 
         //If taxes variation -, unemployment -
         if (ResourceManager.instance.taxVariation < 0.9)
-            unemployementRate -= (0.9 - ResourceManager.instance.taxVariation) * 50f;
+            unemploymentRate -= (0.9 - ResourceManager.instance.taxVariation) * 50f;
 
         //If unemployment +, taxes variation -
         //CORRIGIR NO DIAGRAMA
-        if (unemployementRate > 0.1)
-            ResourceManager.instance.taxVariation -= (unemployementRate - 0.1) * 0.5;
+        if (unemploymentRate > 0.1)
+            ResourceManager.instance.taxVariation -= (unemploymentRate - 0.1) * 0.5;
 
         //If unemployment tax +, crime >
-        if (unemployementRate > 0.1)
-            criminalityRate += (unemployementRate - 0.1f) * 0.1f;
+        if (unemploymentRate > 0.1)
+            criminalityRate += (unemploymentRate - 0.1f) * 0.1f;
 
         //If unemployment tax -, crime <
-        if (unemployementRate < 0.1)
-            criminalityRate -= (0.1 - unemployementRate) * 0.1f;
+        if (unemploymentRate < 0.1)
+            criminalityRate -= (0.1 - unemploymentRate) * 0.1f;
 
         //If unemployment tax >, tax p/ citizen <
-        if (unemployementRate > 0.12)
-            ResourceManager.instance.taxVariation -= unemployementRate - 0.12;
+        if (unemploymentRate > 0.12)
+            ResourceManager.instance.taxVariation -= unemploymentRate - 0.12;
 
         //If + crime, opinion about immigrants  -
         //Yes. A 20% crimeRate means a 5% fall in publicOpinion, a 30% crimeRate means a 15% fall, and so on.
@@ -110,7 +110,7 @@ public class StatsManager : MonoBehaviour {
 
         //If + crime, taxes variation over population -
         if (criminalityRate > 0.1)
-            ResourceManager.instance.taxVariation -= unemployementRate - 0.1;
+            ResourceManager.instance.taxVariation -= unemploymentRate - 0.1;
 
         //If taxes variation +, citizen tax +
         //If taxes variation -, citizen tax -
@@ -148,11 +148,15 @@ public class StatsManager : MonoBehaviour {
         if (internationalOpinion < 0) internationalOpinion = 0;
         if (internationalOpinion > 1) internationalOpinion = 1;
 
-        if (unemployementRate < 0) unemployementRate = 0;
-        if (unemployementRate > 1) unemployementRate = 1;
+        if (unemploymentRate < 0) unemploymentRate = 0;
+        if (unemploymentRate > 1) unemploymentRate = 1;
 
         if (criminalityRate < 0) criminalityRate = 0;
         if (criminalityRate > 1) criminalityRate = 1;
+    }
+    public double GetEmploymentRate()
+    {
+        return 1 - unemploymentRate;
     }
 
     public void UpdateFrontLegalPopulation() {
@@ -175,7 +179,7 @@ public class StatsManager : MonoBehaviour {
 
     public void UpdateFrontUnemployementRateGO() {
 
-        unemployementRateText.text = System.Math.Round(unemployementRate*100, 1).ToString() + "%";
+        unemployementRateText.text = System.Math.Round(unemploymentRate*100, 1).ToString() + "%";
 
     }
 
@@ -195,7 +199,7 @@ public class StatsManager : MonoBehaviour {
         legalPopulationText = legalPopulationGO.GetComponent<Text>();
         publicOpinionOnImmigrantsSlider = publicOpinionOnImmigrantsGO.GetComponent<Slider>();
         internationalOpinionSlider = internationalOpinionGO.GetComponent<Slider>();
-        unemployementRateText = unemployementRateGO.GetComponent<Text>();
+        unemployementRateText = unemploymentRateGO.GetComponent<Text>();
         criminalityRateText = criminalityRateGO.GetComponent<Text>();
     }
 

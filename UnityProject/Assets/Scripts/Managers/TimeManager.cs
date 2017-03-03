@@ -171,7 +171,7 @@ public class TimeManager : MonoBehaviour {
         if (year >= 3)
         {
             Basicas_2.CarregaCena.CarregaVictoryScreen();
-        } else if ((StatsManager.instance.criminalityRate >= 0.575f) && (StatsManager.instance.unemployementRate >= 0.575f))
+        } else if ((StatsManager.instance.criminalityRate >= 0.575f) && (StatsManager.instance.unemploymentRate >= 0.575f))
         {
             Basicas_2.CarregaCena.CarregaDefeatScreen();
         }

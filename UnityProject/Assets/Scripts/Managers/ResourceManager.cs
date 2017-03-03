@@ -189,7 +189,7 @@ public class ResourceManager : MonoBehaviour {
 	{
 		recalculateTax ();
         playerMonthlyBudget = realTaxPerCitizen;
-        playerMonthlyBudget *= 0.005f * StatsManager.instance.legalPopulation * (1 - StatsManager.instance.unemployementRate);
+        playerMonthlyBudget *= 0.005f * StatsManager.instance.legalPopulation * StatsManager.instance.GetEmploymentRate();
         playerMonthlyBudget += BudgetBaseValue;
 	}
 
