@@ -900,7 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d9934ec6b4f1c47915e9d971d6a5ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  creditsGO: {fileID: 0}
+  creditsGO: {fileID: 120504486}
 --- !u!4 &2088303625
 Transform:
   m_ObjectHideFlags: 0

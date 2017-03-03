@@ -22,7 +22,6 @@ public class MainMenuButtonManager : MonoBehaviour {
         Basicas_2.CarregaCena.FechaJogo();
     }
 
-
 	public void showResponsibles()
 	{
 		creditsGO.SetActive (true);
@@ -35,7 +34,6 @@ public class MainMenuButtonManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		hideResponsibles ();
 	}
 	
 	// Update is called once per frame
