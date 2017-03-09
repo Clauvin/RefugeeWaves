@@ -5728,12 +5728,12 @@ MonoBehaviour:
   legalPopulation: 0
   publicOpinionOnImmigrants: 0
   internationalOpinion: 0
-  unemployementRate: 0
+  unemploymentRate: 0
   criminalityRate: 0
   legalPopulationGO: {fileID: 697671065}
   publicOpinionOnImmigrantsGO: {fileID: 78805681}
   internationalOpinionGO: {fileID: 1935425556}
-  unemployementRateGO: {fileID: 284144031}
+  unemploymentRateGO: {fileID: 284144031}
   criminalityRateGO: {fileID: 438908021}
 --- !u!224 &1289387827
 RectTransform:
