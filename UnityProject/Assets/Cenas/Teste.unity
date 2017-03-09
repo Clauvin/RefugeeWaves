@@ -835,7 +835,7 @@ GameObject:
   - component: {fileID: 141976103}
   - component: {fileID: 141976106}
   m_Layer: 0
-  m_Name: Button (2)
+  m_Name: Public Security Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,7 +853,7 @@ RectTransform:
   m_Children:
   - {fileID: 2076050107}
   m_Father: {fileID: 468415834}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1751,7 +1751,7 @@ GameObject:
   - component: {fileID: 344443942}
   - component: {fileID: 344443945}
   m_Layer: 0
-  m_Name: Button (7)
+  m_Name: Social Expenses Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1769,7 +1769,7 @@ RectTransform:
   m_Children:
   - {fileID: 715401795}
   m_Father: {fileID: 468415834}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1958,7 +1958,7 @@ GameObject:
   - component: {fileID: 385935211}
   - component: {fileID: 385935210}
   m_Layer: 0
-  m_Name: BackgroundMap
+  m_Name: Background Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2285,7 +2285,7 @@ GameObject:
   - component: {fileID: 468415836}
   - component: {fileID: 468415835}
   m_Layer: 0
-  m_Name: ActionsButton
+  m_Name: Actions Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2304,15 +2304,15 @@ RectTransform:
   - {fileID: 1376309137}
   - {fileID: 715060210}
   - {fileID: 1213029609}
-  - {fileID: 2024872332}
   - {fileID: 141976102}
+  - {fileID: 2024872332}
+  - {fileID: 1786898827}
+  - {fileID: 1745510657}
   - {fileID: 773743249}
   - {fileID: 572142653}
-  - {fileID: 1745510657}
-  - {fileID: 1786898827}
-  - {fileID: 1269837382}
   - {fileID: 344443941}
   - {fileID: 922459031}
+  - {fileID: 1269837382}
   m_Father: {fileID: 385935209}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2845,7 +2845,7 @@ GameObject:
   - component: {fileID: 572142654}
   - component: {fileID: 572142657}
   m_Layer: 0
-  m_Name: Button (4)
+  m_Name: Houses Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2863,7 +2863,7 @@ RectTransform:
   m_Children:
   - {fileID: 1194477802}
   m_Father: {fileID: 468415834}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3615,7 +3615,7 @@ GameObject:
   - component: {fileID: 715060211}
   - component: {fileID: 715060214}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Public Works Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3888,7 +3888,7 @@ GameObject:
   - component: {fileID: 773743250}
   - component: {fileID: 773743253}
   m_Layer: 0
-  m_Name: Button (3)
+  m_Name: International Help Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3906,7 +3906,7 @@ RectTransform:
   m_Children:
   - {fileID: 363266886}
   m_Father: {fileID: 468415834}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4228,7 +4228,7 @@ GameObject:
   - component: {fileID: 922459032}
   - component: {fileID: 922459035}
   m_Layer: 0
-  m_Name: Button (9)
+  m_Name: Border Officials Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4246,7 +4246,7 @@ RectTransform:
   m_Children:
   - {fileID: 494212933}
   m_Father: {fileID: 468415834}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5327,7 +5327,7 @@ GameObject:
   - component: {fileID: 1213029610}
   - component: {fileID: 1213029613}
   m_Layer: 0
-  m_Name: Button
+  m_Name: StartUps Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5576,7 +5576,7 @@ GameObject:
   - component: {fileID: 1269837383}
   - component: {fileID: 1269837386}
   m_Layer: 0
-  m_Name: Button (8)
+  m_Name: Border Expenses Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5594,7 +5594,7 @@ RectTransform:
   m_Children:
   - {fileID: 570242760}
   m_Father: {fileID: 468415834}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7558,7 +7558,7 @@ GameObject:
   - component: {fileID: 1745510658}
   - component: {fileID: 1745510661}
   m_Layer: 0
-  m_Name: Button (5)
+  m_Name: Anti-Immigrants Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7576,7 +7576,7 @@ RectTransform:
   m_Children:
   - {fileID: 578990356}
   m_Father: {fileID: 468415834}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7693,7 +7693,7 @@ GameObject:
   - component: {fileID: 1786898828}
   - component: {fileID: 1786898831}
   m_Layer: 0
-  m_Name: Button (6)
+  m_Name: Pro-Immigrants Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7711,7 +7711,7 @@ RectTransform:
   m_Children:
   - {fileID: 1078852428}
   m_Father: {fileID: 468415834}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8709,7 +8709,7 @@ GameObject:
   - component: {fileID: 2024872333}
   - component: {fileID: 2024872336}
   m_Layer: 0
-  m_Name: Button (1)
+  m_Name: International Help Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8727,7 +8727,7 @@ RectTransform:
   m_Children:
   - {fileID: 635893062}
   m_Father: {fileID: 468415834}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
