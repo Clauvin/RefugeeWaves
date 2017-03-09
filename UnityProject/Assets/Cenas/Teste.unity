@@ -3888,7 +3888,7 @@ GameObject:
   - component: {fileID: 773743250}
   - component: {fileID: 773743253}
   m_Layer: 0
-  m_Name: International Help Button
+  m_Name: Good Marketing Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5998,10 +5998,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Creation Public Works\nCreation of Edicts for Start-ups\nInvestiment in
     Public Security \nGet Internation Help\nCreate Campain Criar Campanha In Favour
-    of Noun-Refugee Immigrant\nCreate Campain Criar Campanha In Favour of Noun-Refugee
-    Immigrant\nCreate Campain Criar Campanha In Favour of The Ondest\xE3o\nInvest
-    In Houses\nInvest In Social Expenses\nInvest In Border Officials\nInvest In Border
-    Expenses"
+    of Noun-Refugee Immigrant\nCreate Campain Criar Campanha In Favour of The Ondest\xE3o\nCreate
+    Campaign Pro-Ondest\xE3o For The World\nInvest In Houses\nInvest In Social Expenses\nInvest
+    In Border Officials\nInvest In Border Expenses"
 --- !u!222 &1376309139
 CanvasRenderer:
   m_ObjectHideFlags: 0
