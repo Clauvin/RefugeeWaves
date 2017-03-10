@@ -71,8 +71,8 @@ public class StatsManager : MonoBehaviour {
         //if (ResourceManager.instance.numberOfAvailableBorderOfficers)
 
         //If money < 0, crime >
-        if (ResourceManager.instance.playerCurrentMoney < 0)
-            criminalityRate += ResourceManager.instance.playerCurrentMoney * -1 * 0.01f;
+        //if (ResourceManager.instance.playerCurrentMoney < 0)
+        //    criminalityRate += ResourceManager.instance.playerCurrentMoney * -1 * 0.01f;
 
         //If taxes variation +, unemployment +
         if (ResourceManager.instance.taxVariation > 1.1)
