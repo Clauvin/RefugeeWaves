@@ -1,0 +1,34 @@
+<graph version="v4.05" name="" author="" interval="1" timeMode="asynchronous" distributionMode="fixed speed" speed="100" actions="1" dice="D6" skill="" strategy="" multiplayer="" width="700" height="660" numberOfRuns="100" visibleRuns="25" colorCoding="1">
+  <node symbol="TextLabel" x="458" y="538" color="Black" caption="Imigrantes Legais"/>
+  <connection type="Resource Connection" start="19" end="20" label="1" position="0.5" color="Black" thickness="2"/>
+  <connection type="Resource Connection" start="14" end="20" label="1" position="0.5" color="Black" thickness="2"/>
+  <connection type="Resource Connection" start="14" end="15" label="" position="0.5" color="Red" thickness="2"/>
+  <connection type="Resource Connection" start="16" end="13" label="1" position="0.5" color="Red" thickness="2"/>
+  <connection type="Resource Connection" start="19" end="21" label="1" position="0.5" color="Black" thickness="2"/>
+  <connection type="State Connection" start="15" end="13" label="+1" position="0.5" color="Red" thickness="2"/>
+  <connection type="Resource Connection" start="13" end="14" label="1" position="0.5" color="Red" thickness="2"/>
+  <connection type="Resource Connection" start="21" end="14" label="0" position="0.5" color="Black" thickness="2"/>
+  <connection type="State Connection" start="13" end="8" label="+1" position="0.5" color="Black" thickness="2"/>
+  <node symbol="TextLabel" x="260" y="275" color="Black" caption="Opiniãao Publica"/>
+  <node symbol="Pool" x="453" y="508" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="0" capacity="-1"/>
+  <node symbol="TextLabel" x="440" y="387" color="Black" caption="Imigrantes Ilegais"/>
+  <node symbol="Pool" x="440" y="355" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Red" startingResources="0" capacity="-1"/>
+  <node symbol="Trader" x="348" y="270" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="interactive" pullMode="pull all" actions="1" resourceColor="Black"/>
+  <node symbol="Pool" x="440" y="217" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Red" startingResources="0" capacity="-1"/>
+  <node symbol="Source" x="560" y="360" color="Red" caption="" thickness="2" captionPos="0.25" activationMode="interactive" pullMode="pull any" actions="1" resourceColor="Red"/>
+  <node symbol="TextLabel" x="329" y="131" color="Black" caption="Tax Variation"/>
+  <connection type="State Connection" start="22" end="23" label="+1" position="0.5" color="Black" thickness="2"/>
+  <node symbol="Source" x="271" y="108" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="onstart" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <node symbol="Pool" x="248" y="359" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black" startingResources="9999" capacity="-1"/>
+  <node symbol="Pool" x="300" y="195" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="9999" capacity="-1"/>
+  <node symbol="Pool" x="412" y="109" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="push any" actions="1" resourceColor="Black" startingResources="0" capacity="-1"/>
+  <connection type="Resource Connection" start="27" end="28" label="-1100" position="0.5" color="Black" thickness="2"/>
+  <connection type="State Connection" start="28" end="25" label="+50" position="0.5" color="Black" thickness="2"/>
+  <connection type="Resource Connection" start="30" end="29" label="0" position="0.5" color="Black" thickness="2"/>
+  <connection type="Resource Connection" start="19" end="22" label="1110" position="0.5" color="Black" thickness="2"/>
+  <node symbol="Source" x="456" y="36" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="interactive" pullMode="push any" actions="1" resourceColor="Black"/>
+  <node symbol="Pool" x="582" y="34" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black" startingResources="0" capacity="-1"/>
+  <node symbol="Pool" x="593" y="148" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="passive" pullMode="pull any" actions="1" resourceColor="Black" startingResources="500" capacity="-1"/>
+  <node symbol="Source" x="612" y="84" color="Black" caption="" thickness="2" captionPos="0.25" activationMode="interactive" pullMode="pull any" actions="1" resourceColor="Black"/>
+  <node symbol="TextLabel" x="591" y="182" color="Black" caption="Desemprego"/>
+</graph>
