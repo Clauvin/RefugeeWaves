@@ -57,8 +57,8 @@ public class StatsManager : MonoBehaviour {
 
         //If social expenses < 0, crime >
         //Yes, -10000 social resources = DOOM
-        if (ResourceManager.instance.socialResources < 0)
-            criminalityRate += ResourceManager.instance.socialResources * -1 * 0.01f;
+        //if (ResourceManager.instance.socialResources < 0)
+        //    criminalityRate += ResourceManager.instance.socialResources * -1 * 0.01f;
 
         //If border expenses < 0, crime 2x >
         //Yes, -10000 border resources = DOOM
