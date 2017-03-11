@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 138280567}
   - component: {fileID: 138280569}
   - component: {fileID: 138280568}
+  - component: {fileID: 138280570}
   m_Layer: 5
   m_Name: Text (1)
   m_TagString: Untagged
@@ -375,8 +376,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -38.5}
-  m_SizeDelta: {x: 589, y: 245}
+  m_AnchoredPosition: {x: -1, y: -38.5}
+  m_SizeDelta: {x: 661, y: 245}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &138280568
 MonoBehaviour:
@@ -410,16 +411,31 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Thanks to a horrid administration, the Ondest\xE3o's population can't\ncall
-    their motherland home anymore. They are refugees now, looking\nfor a new place
-    to live. Will they have a better reception than the\none they game to the refugees?
-    Only time will tell."
+  m_Text: "Thanks to a horrid administration, the Ondest\xE3o's population can't call
+    their motherland home anymore.\n\nThey are refugees now, looking for a new place
+    to live. \n\nWill they have a better reception than the one they gave the refugees?
+    \nOnly time will tell. . . "
 --- !u!222 &138280569
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 138280566}
+--- !u!114 &138280570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 138280566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb5dc5b14de1d498f8de63d412e607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: 
+  letterPause: 0.07
+  fullStopPause: 0.65
+  click: {fileID: 0}
 --- !u!1 &296135153
 GameObject:
   m_ObjectHideFlags: 0
