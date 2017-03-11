@@ -238,7 +238,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 95f8dbaf453830f42b5c46df52c52aff, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -829,8 +829,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: 
-  letterPause: 0.1
-  fullStopPause: 0.4
+  letterPause: 0.07
+  fullStopPause: 0.35
   click: {fileID: 0}
 --- !u!82 &1899495087
 AudioSource:
