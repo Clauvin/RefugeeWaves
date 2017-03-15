@@ -53,26 +53,15 @@ public class StatsManager : MonoBehaviour {
         //MAYBE: Reducing the public opinion by the percentage of immigrants/total population?
         //BYTHEWAY: magic number of illegal immigrants screwing the country by now: 10000
         if (ImmigrantManager.instance.numberOfIllegalImmigrants > 0)
+        {
             publicOpinionOnImmigrants -= ImmigrantManager.instance.numberOfIllegalImmigrants * 0.01f;
-
-        //If social expenses < 0, crime >
-        //Yes, -10000 social resources = DOOM
-        //if (ResourceManager.instance.socialResources < 0)
-        //    criminalityRate += ResourceManager.instance.socialResources * -1 * 0.01f;
+            criminalityRate += ImmigrantManager.instance.numberOfIllegalImmigrants * 0.01;
+        }
 
         //If border expenses < 0, crime 2x >
         //Yes, -10000 border resources = DOOM
         if (ResourceManager.instance.borderResources < 0)
             criminalityRate += ResourceManager.instance.borderResources * -1 * 0.01f;
-
-        //If border officials < immigrants wave, crime 2x >
-        //Wait, this makes no sense. If the calculus about the waves is made in the contact moment, so this
-        // crime 2x needs to be done when the collision happens, wherever this is.
-        //if (ResourceManager.instance.numberOfAvailableBorderOfficers)
-
-        //If money < 0, crime >
-        //if (ResourceManager.instance.playerCurrentMoney < 0)
-        //    criminalityRate += ResourceManager.instance.playerCurrentMoney * -1 * 0.01f;
 
         //If taxes variation +, unemployment +
         if (ResourceManager.instance.taxVariation > 1.1)
