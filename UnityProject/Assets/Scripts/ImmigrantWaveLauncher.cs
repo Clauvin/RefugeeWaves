@@ -60,18 +60,18 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         if (TimeManager.instance.year == 1)
         {
             quant_de_refugiados = (int)(Random.Range(1.0f, 2.0f) * quantidade_padrao_de_refugiados);
-            tempo_em_segundos = 30 + 30 * Random.Range(0.0f, 1.0f);
+            tempo_em_segundos = Random.Range(1.0f, 2.0f) * tempo_padrao_em_segundos;
         }
         else if (Random.Range(0.0f, 1.0f) < 0.05f)
         {
             quant_de_refugiados = (int)(Random.Range(15.0f, 20.0f) * quantidade_padrao_de_refugiados);
-            tempo_em_segundos = 150 + (int)(150 * Random.Range(0.0f, 1.0f));
+            tempo_em_segundos =  Random.Range(5.0f, 10.0f) * tempo_padrao_em_segundos;
             escala *= 3;
         }
         else
         {
             quant_de_refugiados = (int)(Random.Range(3.0f, 4.0f) * quantidade_padrao_de_refugiados);
-            tempo_em_segundos = 15 + 15 * Random.Range(0.0f, 1.0f);
+            tempo_em_segundos = Random.Range(0.5f, 1.0f) * tempo_padrao_em_segundos;
         }
 
         if (Random.Range(0.0f, 1.0f) < 0.5f)
