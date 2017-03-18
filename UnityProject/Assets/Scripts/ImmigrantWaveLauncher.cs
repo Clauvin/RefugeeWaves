@@ -20,6 +20,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     public float ultimo_tempo;
     public float tempo_para_proxima = 0.0f;
     public int quantidade_padrao_de_refugiados = 50;
+    public float tempo_padrao_em_segundos = 30.0f;
 
 
 
