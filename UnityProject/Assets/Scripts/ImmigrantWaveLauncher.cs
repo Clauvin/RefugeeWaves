@@ -91,19 +91,23 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        present_time += Time.time - last_time;
-        last_time = Time.time;
-
-        if (present_time >= time_for_next)
+        if (!TimeManager.instance.gamePaused)
         {
-            RandomInstantaneousWaveInstance();
-            present_time = 0.0f;
-            if (TimeManager.instance.year == 1)
+            present_time += Time.time - last_time;
+            last_time = Time.time;
+
+            if (present_time >= time_for_next)
             {
-                time_for_next = Random.Range(30.0f, 60.0f);
-            } else
-            {
-                time_for_next = Random.Range(15.0f, 30.0f);
+                RandomInstantaneousWaveInstance();
+                present_time = 0.0f;
+                if (TimeManager.instance.year == 1)
+                {
+                    time_for_next = Random.Range(30.0f, 60.0f);
+                }
+                else
+                {
+                    time_for_next = Random.Range(15.0f, 30.0f);
+                }
             }
         }
 	}
