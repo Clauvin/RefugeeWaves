@@ -44,43 +44,43 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
     void RandomInstantaneousWaveInstance()
     {
-        int quant_de_refugiados;
+        int refugee_quantity;
         //Ano 1: de 50 a 150 refugiados por onda.
         //Ano 2: de 150 a 200 refugiados por onda.
-        GameObject saida, entrada;
-        float tempo_em_segundos;
+        GameObject exit, entrance;
+        float time_in_seconds;
         //Ano 1: de 30 a 60 segundos.
         //Ano 2: de 15 a 30 segundos.
-        float escala = 1.0f;
+        float scale = 1.0f;
 
         //Superonda: 750 a 1000 refugiados, de 150 a 300 segundos. Sprite 3x maior.
 
         if (TimeManager.instance.year == 1)
         {
-            quant_de_refugiados = (int)(Random.Range(1.0f, 2.0f) * default_quantity_of_refugees);
-            tempo_em_segundos = Random.Range(1.0f, 2.0f) * default_time_in_seconds;
+            refugee_quantity = (int)(Random.Range(1.0f, 2.0f) * default_quantity_of_refugees);
+            time_in_seconds = Random.Range(1.0f, 2.0f) * default_time_in_seconds;
         }
         else if (Random.Range(0.0f, 1.0f) < 0.05f)
         {
-            quant_de_refugiados = (int)(Random.Range(15.0f, 20.0f) * default_quantity_of_refugees);
-            tempo_em_segundos =  Random.Range(5.0f, 10.0f) * default_time_in_seconds;
-            escala *= 3;
+            refugee_quantity = (int)(Random.Range(15.0f, 20.0f) * default_quantity_of_refugees);
+            time_in_seconds =  Random.Range(5.0f, 10.0f) * default_time_in_seconds;
+            scale *= 3;
         }
         else
         {
-            quant_de_refugiados = (int)(Random.Range(3.0f, 4.0f) * default_quantity_of_refugees);
-            tempo_em_segundos = Random.Range(0.5f, 1.0f) * default_time_in_seconds;
+            refugee_quantity = (int)(Random.Range(3.0f, 4.0f) * default_quantity_of_refugees);
+            time_in_seconds = Random.Range(0.5f, 1.0f) * default_time_in_seconds;
         }
 
         if (Random.Range(0.0f, 1.0f) < 0.5f)
         {
-            saida = refugees_exit_1; entrada = refugees_entrance_1;
+            exit = refugees_exit_1; entrance = refugees_entrance_1;
         } else
         {
-            saida = refugees_exit_2; entrada = refugees_entrance_2;
+            exit = refugees_exit_2; entrance = refugees_entrance_2;
         }
 
-        InstantiateNewRefugeeWave(quant_de_refugiados, saida, entrada, tempo_em_segundos, escala);
+        InstantiateNewRefugeeWave(refugee_quantity, exit, entrance, time_in_seconds, scale);
     }
 
     // Use this for initialization
