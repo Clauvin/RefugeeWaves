@@ -22,21 +22,21 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     public int default_quantity_of_refugees = 50;
     public float default_time_in_seconds = 30.0f;
 
-    void InstantiateNewRefugeeWave(int quant_de_refugiados, GameObject saida, GameObject entrada, float tempo_em_segundos,
-            float escala = 1.0f)
+    void InstantiateNewRefugeeWave(int refugee_quantity, GameObject exit, GameObject entrance, float time_in_seconds,
+            float scale = 1.0f)
     {
         GameObject icone = Instantiate<GameObject>(Resources.Load<GameObject>("Onda De Imigrantes"));
-        icone.transform.position = new Vector3(saida.transform.position.x,
-                                               saida.transform.position.y,
-                                               saida.transform.position.z);
-        icone.GetComponent<ImmigrantWave>().numberOfImmigrants = quant_de_refugiados;
-        icone.GetComponent<MovingToTheObjective>().objetivo_final = entrada.transform.position;
-        icone.GetComponent<MovingToTheObjective>().tempo = tempo_em_segundos;
-        icone.name = "Icone de Refugiados - ID " + nextWaveId;
-        if (escala > 1.0f)
+        icone.transform.position = new Vector3(exit.transform.position.x,
+                                               exit.transform.position.y,
+                                               exit.transform.position.z);
+        icone.GetComponent<ImmigrantWave>().numberOfImmigrants = refugee_quantity;
+        icone.GetComponent<MovingToTheObjective>().objetivo_final = entrance.transform.position;
+        icone.GetComponent<MovingToTheObjective>().tempo = time_in_seconds;
+        icone.name = "Refugee Wave - ID " + nextWaveId;
+        if (scale > 1.0f)
         {
-            icone.transform.localScale = new Vector3(icone.transform.localScale.x * escala,
-                                                     icone.transform.localScale.y * escala,
+            icone.transform.localScale = new Vector3(icone.transform.localScale.x * scale,
+                                                     icone.transform.localScale.y * scale,
                                                      1);
         }
         nextWaveId++;
