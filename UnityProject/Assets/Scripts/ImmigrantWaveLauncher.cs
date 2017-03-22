@@ -22,9 +22,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     public int default_quantity_of_refugees = 50;
     public float default_time_in_seconds = 30.0f;
 
-
-
-    void InstanciarIconeDeRefugiados(int quant_de_refugiados, GameObject saida, GameObject entrada, float tempo_em_segundos,
+    void InstantiateNewRefugeeWave(int quant_de_refugiados, GameObject saida, GameObject entrada, float tempo_em_segundos,
             float escala = 1.0f)
     {
         GameObject icone = Instantiate<GameObject>(Resources.Load<GameObject>("Onda De Imigrantes"));
@@ -44,7 +42,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         nextWaveId++;
     }
 
-    void InstanciaAleatoriaInstantaneaDeOnda()
+    void RandomInstantaneousWaveInstance()
     {
         int quant_de_refugiados;
         //Ano 1: de 50 a 150 refugiados por onda.
@@ -82,7 +80,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
             saida = refugees_exit_2; entrada = refugees_entrance_2;
         }
 
-        InstanciarIconeDeRefugiados(quant_de_refugiados, saida, entrada, tempo_em_segundos, escala);
+        InstantiateNewRefugeeWave(quant_de_refugiados, saida, entrada, tempo_em_segundos, escala);
     }
 
     // Use this for initialization
@@ -98,7 +96,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
         if (present_time >= time_for_next)
         {
-            InstanciaAleatoriaInstantaneaDeOnda();
+            RandomInstantaneousWaveInstance();
             present_time = 0.0f;
             if (TimeManager.instance.year == 1)
             {
