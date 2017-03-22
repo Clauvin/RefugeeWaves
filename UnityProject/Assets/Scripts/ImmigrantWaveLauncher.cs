@@ -12,12 +12,12 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     ///     d) Velocidade para chegar
     /// </summary>
 
-    public int idDoProximoIcone = 0;
+    public int nextWaveId = 0;
 
-    public GameObject saida_refugiados_1, saida_refugiados_2;
-    public GameObject entrada_refugiados_1, entrada_refugiados_2;
-    public float tempo_atual = 0.0f;
-    public float ultimo_tempo;
+    public GameObject refugees_exit_1, refugees_exit_2;
+    public GameObject refugees_entrance_1, refugees_entrance_2;
+    public float present_time = 0.0f;
+    public float last_time;
     public float tempo_para_proxima = 0.0f;
     public int quantidade_padrao_de_refugiados = 50;
     public float tempo_padrao_em_segundos = 30.0f;
@@ -34,14 +34,14 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         icone.GetComponent<ImmigrantWave>().numberOfImmigrants = quant_de_refugiados;
         icone.GetComponent<MovingToTheObjective>().objetivo_final = entrada.transform.position;
         icone.GetComponent<MovingToTheObjective>().tempo = tempo_em_segundos;
-        icone.name = "Icone de Refugiados - ID " + idDoProximoIcone;
+        icone.name = "Icone de Refugiados - ID " + nextWaveId;
         if (escala > 1.0f)
         {
             icone.transform.localScale = new Vector3(icone.transform.localScale.x * escala,
                                                      icone.transform.localScale.y * escala,
                                                      1);
         }
-        idDoProximoIcone++;
+        nextWaveId++;
     }
 
     void InstanciaAleatoriaInstantaneaDeOnda()
@@ -76,10 +76,10 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
         if (Random.Range(0.0f, 1.0f) < 0.5f)
         {
-            saida = saida_refugiados_1; entrada = entrada_refugiados_1;
+            saida = refugees_exit_1; entrada = refugees_entrance_1;
         } else
         {
-            saida = saida_refugiados_2; entrada = entrada_refugiados_2;
+            saida = refugees_exit_2; entrada = refugees_entrance_2;
         }
 
         InstanciarIconeDeRefugiados(quant_de_refugiados, saida, entrada, tempo_em_segundos, escala);
@@ -88,18 +88,18 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     // Use this for initialization
     void Start () {
         tempo_para_proxima = Random.Range(30.0f, 60.0f);
-        ultimo_tempo = Time.time;
+        last_time = Time.time;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        tempo_atual += Time.time - ultimo_tempo;
-        ultimo_tempo = Time.time;
+        present_time += Time.time - last_time;
+        last_time = Time.time;
 
-        if (tempo_atual >= tempo_para_proxima)
+        if (present_time >= tempo_para_proxima)
         {
             InstanciaAleatoriaInstantaneaDeOnda();
-            tempo_atual = 0.0f;
+            present_time = 0.0f;
             if (TimeManager.instance.year == 1)
             {
                 tempo_para_proxima = Random.Range(30.0f, 60.0f);
