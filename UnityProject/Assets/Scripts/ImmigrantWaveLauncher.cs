@@ -42,7 +42,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         nextWaveId++;
     }
 
-    void RandomInstantaneousWaveInstance()
+    public void RandomInstantaneousWaveInstance()
     {
         int refugee_quantity;
         //Ano 1: de 50 a 150 refugiados por onda.
