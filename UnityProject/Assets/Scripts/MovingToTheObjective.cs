@@ -7,7 +7,7 @@ public class MovingToTheObjective : MonoBehaviour {
     public Vector3 objetivo_inicial;
     public Vector3 objetivo_final;
     public float tempo;
-    private float tempo_passado;
+    public float tempo_passado;
     private float ultimo_tempo;
 
 	// Use this for initialization
