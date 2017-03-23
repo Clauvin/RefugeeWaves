@@ -19,8 +19,8 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     public float present_time = 0.0f;
     public float last_time;
     public float time_for_next = 0.0f;
-    public int default_quantity_of_refugees = 50;
-    public float default_time_in_seconds = 30.0f;
+    public int def_quant_of_refugees = 50;
+    public float def_time_in_seconds = 30.0f;
 
     void InstantiateNewRefugeeWave(int refugee_quantity, GameObject exit, GameObject entrance, float time_in_seconds,
             float scale = 1.0f)
@@ -57,19 +57,19 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
         if (TimeManager.instance.year == 1)
         {
-            refugee_quantity = (int)(Random.Range(1.0f, 2.0f) * default_quantity_of_refugees);
-            time_in_seconds = Random.Range(1.0f, 2.0f) * default_time_in_seconds;
+            refugee_quantity = (int)(Random.Range(1.0f, 2.0f) * def_quant_of_refugees);
+            time_in_seconds = Random.Range(1.0f, 2.0f) * def_time_in_seconds;
         }
         else if (Random.Range(0.0f, 1.0f) < 0.05f)
         {
-            refugee_quantity = (int)(Random.Range(15.0f, 20.0f) * default_quantity_of_refugees);
-            time_in_seconds =  Random.Range(5.0f, 10.0f) * default_time_in_seconds;
+            refugee_quantity = (int)(Random.Range(15.0f, 20.0f) * def_quant_of_refugees);
+            time_in_seconds =  Random.Range(5.0f, 10.0f) * def_time_in_seconds;
             scale *= 3;
         }
         else
         {
-            refugee_quantity = (int)(Random.Range(3.0f, 4.0f) * default_quantity_of_refugees);
-            time_in_seconds = Random.Range(0.5f, 1.0f) * default_time_in_seconds;
+            refugee_quantity = (int)(Random.Range(3.0f, 4.0f) * def_quant_of_refugees);
+            time_in_seconds = Random.Range(0.5f, 1.0f) * def_time_in_seconds;
         }
 
         if (Random.Range(0.0f, 1.0f) < 0.5f)
