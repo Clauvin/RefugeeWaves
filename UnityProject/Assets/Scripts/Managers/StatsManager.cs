@@ -98,8 +98,8 @@ public class StatsManager : MonoBehaviour {
             publicOpinionOnImmigrants += (0.04 - criminalityRate);
 
         //If + crime, taxes variation over population -
-        if (criminalityRate > 0.1)
-            ResourceManager.instance.taxVariation -= unemploymentRate - 0.1;
+        if (criminalityRate > 0.2)
+            ResourceManager.instance.taxVariation -= (criminalityRate - 0.2)/5;
 
         //If taxes variation +, citizen tax +
         //If taxes variation -, citizen tax -
