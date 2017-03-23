@@ -42,7 +42,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         nextWaveId++;
     }
 
-    public void RandomInstantaneousWaveInstance()
+    public void RandomInstantaneousWaveInstance(bool super_wave = false)
     {
         int refugee_quantity;
         //Ano 1: de 50 a 150 refugiados por onda.
@@ -55,12 +55,12 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
         //Superonda: 750 a 1000 refugiados, de 150 a 300 segundos. Sprite 3x maior.
 
-        if (TimeManager.instance.year == 1)
+        if ((TimeManager.instance.year == 1) && (!super_wave))
         {
             refugee_quantity = (int)(Random.Range(1.0f, 2.0f) * def_quant_of_refugees);
             time_in_seconds = Random.Range(1.0f, 2.0f) * def_time_in_seconds;
         }
-        else if (Random.Range(0.0f, 1.0f) < 0.05f)
+        else if ((Random.Range(0.0f, 1.0f) < 0.05f) || (super_wave))
         {
             refugee_quantity = (int)(Random.Range(15.0f, 20.0f) * def_quant_of_refugees);
             time_in_seconds =  Random.Range(5.0f, 10.0f) * def_time_in_seconds;
