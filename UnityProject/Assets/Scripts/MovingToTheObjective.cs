@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class MovingToTheObjective : MonoBehaviour {
 
-    public Vector3 objetivo_inicial;
-    public Vector3 objetivo_final;
-    public float tempo;
-    public float tempo_passado;
-    private float ultimo_tempo;
+    public Vector3 initial_position;
+    public Vector3 final_objective;
+    public float time_to_reach_objective;
+    public float passed_time;
+    private float time_counted;
 
 	// Use this for initialization
 	void Start () {
-        objetivo_inicial = new Vector2(transform.position.x, transform.position.y);
-        tempo_passado = 0;
-        ultimo_tempo = Time.time;
+        initial_position = new Vector2(transform.position.x, transform.position.y);
+        passed_time = 0;
+        time_counted = Time.time;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (!TimeManager.instance.gamePaused) { 
 
-            tempo_passado += Time.time - ultimo_tempo;
-            ultimo_tempo = Time.time;
-            transform.position = Vector3.Lerp(objetivo_inicial, objetivo_final, tempo_passado / tempo);
+            passed_time += Time.time - time_counted;
+            time_counted = Time.time;
+            transform.position = Vector3.Lerp(initial_position, final_objective, passed_time / time_to_reach_objective);
 
-            if (tempo_passado / tempo >= 1.0f)
+            if (passed_time / time_to_reach_objective >= 1.0f)
             {
                 ImmigrantManager.instance.WaveReceived(this.gameObject);
                 Destroy(this.gameObject);
