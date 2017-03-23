@@ -17,10 +17,10 @@ public class WaveLauncherButtons : Editor
             myScript.RandomInstantaneousWaveInstance();
         }
 
-        /*if (GUILayout.Button("New Super Wave"))
+        if (GUILayout.Button("New Super Wave"))
         {
-
-        }*/
+            myScript.RandomInstantaneousWaveInstance(true);
+        }
 
     }
 
