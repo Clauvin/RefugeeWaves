@@ -1643,16 +1643,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0acd61e59c7edfa49a635bba50d5c78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextWaveId: 0
+  nextWaveId: 6
   refugees_exit_1: {fileID: 1386134960}
   refugees_exit_2: {fileID: 461821770}
   refugees_entrance_1: {fileID: 750842164}
   refugees_entrance_2: {fileID: 1813293234}
   present_time: 0
   last_time: 0
-  tempo_para_proxima: 0
-  quantidade_padrao_de_refugiados: 50
-  tempo_padrao_em_segundos: 30
+  time_for_next: 0
+  def_quant_of_refugees: 50
+  def_time_in_seconds: 30
 --- !u!4 &278915675
 Transform:
   m_ObjectHideFlags: 0
