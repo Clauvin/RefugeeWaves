@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public class Timer : MonoBehaviour {
 
-    public int tempo = 100;
+    public int time = 100;
 
     private float time_passed = 0.0f;
     private float start_time = 0.0f;
@@ -26,7 +26,7 @@ public class Timer : MonoBehaviour {
         // Pegar código de passagem de tempo lá do Not Valentine
         while (time_passed >= 1.0f)
         {
-            tempo -= 1;
+            time -= 1;
             time_passed -= 1.0f;
         }
 
