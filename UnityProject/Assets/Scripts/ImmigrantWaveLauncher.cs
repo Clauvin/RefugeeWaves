@@ -22,6 +22,14 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     public int def_quant_of_refugees = 50;
     public float def_time_in_seconds = 30.0f;
 
+    private bool wave_instantiation_timer = true;
+
+    public bool GetWaveInstantiationTimer() { return wave_instantiation_timer; }
+
+    public void SetWaveInstantiationTimer(bool wit) { wave_instantiation_timer = wit; }
+
+    public void ToggleWaveInstantiationTimer() { wave_instantiation_timer = !wave_instantiation_timer; }
+
     void InstantiateNewRefugeeWave(int refugee_quantity, GameObject exit, GameObject entrance, float time_in_seconds,
             float scale = 1.0f)
     {
@@ -93,7 +101,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!TimeManager.instance.gamePaused)
+        if ((!TimeManager.instance.gamePaused) && (wave_instantiation_timer))
         {
             present_time += Time.time - last_time;
             last_time = Time.time;

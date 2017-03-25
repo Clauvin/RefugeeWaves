@@ -6,6 +6,10 @@ using UnityEngine;
 [CustomEditor(typeof(ImmigrantWaveLauncher))]
 public class WaveLauncherButtons : Editor
 {
+    private string activate_timer = "Activate Timer";
+    private string deactivate_timer = "Deactivate Timer";
+
+    private string which_string;
 
     public override void OnInspectorGUI()
     {
@@ -20,6 +24,20 @@ public class WaveLauncherButtons : Editor
         if (GUILayout.Button("New Super Wave"))
         {
             myScript.RandomInstantaneousWaveInstance(true);
+        }
+
+        if (myScript.GetWaveInstantiationTimer())
+        {
+            which_string = deactivate_timer;
+        }
+        else
+        {
+            which_string = activate_timer;
+        }
+
+        if (GUILayout.Button(which_string))
+        {
+            myScript.ToggleWaveInstantiationTimer();
         }
 
     }
