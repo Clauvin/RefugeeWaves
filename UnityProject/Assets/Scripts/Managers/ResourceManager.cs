@@ -181,6 +181,7 @@ public class ResourceManager : MonoBehaviour {
 
     public void UpdateResourcesSpentInSocialResources()
     {
+        socialResources -= numberOfAvailableHouses;
     }
 
     //======================================TAX AND BUDGET METHODS ============================================

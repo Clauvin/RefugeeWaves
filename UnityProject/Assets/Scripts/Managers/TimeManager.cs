@@ -71,6 +71,7 @@ public class TimeManager : MonoBehaviour {
             }
             ImmigrantManager.instance.checkForLegalizedImmigrantsVisas();
             ResourceManager.instance.UpdateResourcesSpentInBorderOfficers();
+            ResourceManager.instance.UpdateResourcesSpentInSocialResources();
             checkForPassageOfMonth ();
 		}
 	}
