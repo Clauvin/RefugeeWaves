@@ -179,6 +179,10 @@ public class ResourceManager : MonoBehaviour {
         borderResources -= numberOfAvailableBorderOfficers;
     }
 
+    public void UpdateResourcesSpentInSocialResources()
+    {
+    }
+
     //======================================TAX AND BUDGET METHODS ============================================
     public void recalculateTax()
 	{
