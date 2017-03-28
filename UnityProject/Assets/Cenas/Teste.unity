@@ -609,7 +609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107982461}
   m_Layer: 0
-  m_Name: Canvas de Oficiais de Fronteira
+  m_Name: Frontier Officers Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1300,7 +1300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 178436481}
   m_Layer: 0
-  m_Name: "Canvas de Opini\xE3o Internacional"
+  m_Name: International Opinion Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3455,7 +3455,7 @@ GameObject:
   - component: {fileID: 693514948}
   - component: {fileID: 693514952}
   m_Layer: 0
-  m_Name: Canvas de Moradia
+  m_Name: Houses Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4191,7 +4191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 915282953}
   m_Layer: 0
-  m_Name: "Canvas de Popula\xE7\xE3o"
+  m_Name: Population Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4546,7 +4546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996577580}
   m_Layer: 0
-  m_Name: Canvas de Xenofobia
+  m_Name: Canvas de Xenophobia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5222,7 +5222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1207257041}
   m_Layer: 0
-  m_Name: Canvas de Comida
+  m_Name: Food Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5539,7 +5539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1231442181}
   m_Layer: 0
-  m_Name: Canvas de Criminalidade
+  m_Name: Crime Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6488,7 +6488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447528708}
   m_Layer: 0
-  m_Name: Canvas de Dinheiro
+  m_Name: Money Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6662,7 +6662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462441294}
   m_Layer: 0
-  m_Name: Canvas de Recursos de Fronteira
+  m_Name: Frontier Resources Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8371,7 +8371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893101716}
   m_Layer: 0
-  m_Name: "Canvas de Espa\xE7o de Tempo"
+  m_Name: Time Space Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8568,7 +8568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952229642}
   m_Layer: 0
-  m_Name: Canvas de Desemprego
+  m_Name: Unemployment Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8985,7 +8985,7 @@ GameObject:
   - component: {fileID: 2062672848}
   - component: {fileID: 2062672846}
   m_Layer: 0
-  m_Name: PauseElements
+  m_Name: Pause Window Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
