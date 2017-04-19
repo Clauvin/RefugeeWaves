@@ -183,7 +183,7 @@ public class PlayerAction {
 			
 
 		//deduct cost
-		ResourceManager.instance.playerCurrentMoney-=actionCost;
+		ResourceManager.instance.playerCurrentMoney-= (long)actionCost;
 
 		//turn off button
 		assignedButton.SetActive(false);
