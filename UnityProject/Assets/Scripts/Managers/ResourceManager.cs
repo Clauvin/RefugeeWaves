@@ -8,8 +8,14 @@ public class ResourceManager : MonoBehaviour {
 
 	public static ResourceManager instance;
 
-    //WARNING: both values originally were double, this can generate possible bugs in the future
+    /// <remarks>
+    /// This variable originally was a double, this can generate possible bugs in the future
+    /// </remarks>
 	public long playerCurrentMoney = 0; //because the world revolves around it
+
+    /// <remarks>
+    /// This variable originally was a double, this can generate possible bugs in the future
+    /// </remarks>
 	public long playerMonthlyBudget; //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
 
 	//invisible variables
@@ -60,6 +66,7 @@ public class ResourceManager : MonoBehaviour {
     //======================================= MAIN RESOURCES METHODS =============================================
 
     //OPEN BORDERS
+    
     public bool buyHouses(int numberOfHouses)
 	{
 		if (numberOfHouses * costOfHouse <= playerCurrentMoney)
@@ -77,6 +84,8 @@ public class ResourceManager : MonoBehaviour {
 
 	public bool sellHouses(int numberOfHouses)
 	{
+
+        play
 		if (numberOfHouses <= 0)
 			return false;//just because
 
