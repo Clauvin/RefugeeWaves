@@ -8,8 +8,9 @@ public class ResourceManager : MonoBehaviour {
 
 	public static ResourceManager instance;
 
-	public double playerCurrentMoney = 0; //because the world revolves around it
-	public double playerMonthlyBudget; //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
+    //WARNING: both values originally were double, this can generate possible bugs in the future
+	public long playerCurrentMoney = 0; //because the world revolves around it
+	public long playerMonthlyBudget; //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
 
 	//invisible variables
 	public double baseTaxPerCitizen=10; //how much each citizen pays(base)
@@ -193,9 +194,9 @@ public class ResourceManager : MonoBehaviour {
 	public void recalculateBudget()//recalculate budget based on taxPerCitizen and BudgetBaseValue
 	{
 		recalculateTax ();
-        playerMonthlyBudget = realTaxPerCitizen;
-        playerMonthlyBudget *= 0.005f * StatsManager.instance.legalPopulation * StatsManager.instance.GetEmploymentRate();
-        playerMonthlyBudget += BudgetBaseValue;
+        playerMonthlyBudget =   (long)
+                                ((0.005f * StatsManager.instance.legalPopulation * StatsManager.instance.GetEmploymentRate())
+                                    * realTaxPerCitizen + BudgetBaseValue);
 	}
 
 	public void receiveNewBudget()

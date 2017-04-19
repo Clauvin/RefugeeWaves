@@ -21,8 +21,8 @@ public class GameInstance  {
 
 
 	//Resource variables
-	public double playerCurrentMoney; //because the world revolves around it
-	public double playerMonthlyBudget; //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
+	public long playerCurrentMoney; //because the world revolves around it
+	public long playerMonthlyBudget; //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
 
 	//invisible variables
 	public double baseTaxPerCitizen; //how much each citizen pays(base)
