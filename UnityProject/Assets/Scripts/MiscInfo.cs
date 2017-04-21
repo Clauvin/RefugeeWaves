@@ -6,7 +6,6 @@ public static class MiscInfo {
 
 	//holds random info, like variable types
 
-
 	public enum variableTypes{
 		//int and float "normal" values(i.e., not percentage)
 		legalPopulation,
@@ -24,14 +23,12 @@ public static class MiscInfo {
 		borderResources,
 		costOfBorderResources,
 
-
 		//percentage values
 		publicOpinion,
 		internationalOpinion,
 		criminalityRate,
 		unemployementRate,
 		taxVariation,
-
 
 		NULL
 	}
