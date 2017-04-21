@@ -21,9 +21,9 @@ public class RandomEventManager : MonoBehaviour {
             " wreaking havok in the capital."+
 			"\nConsequence: Criminality Rate +10%",MiscInfo.variableTypes.criminalityRate,0.1f));
 
-        randomEvents.Add(new RandomEvent("Interstellar war", "The until now unknown planet Ondesterra entered in a" +
+        randomEvents.Add(new RandomEvent("Interstellar war", "The until now unknown planet of Ondesterra entered in a" +
             " World War, and their habitants are looking for a batter place to live." + 
-            " Thanks to the organization of cosmic rays, they are being forced to arrive... in the Guerrestão." +
+            " Thanks to the strong cosmic rays, they are being forced to arrive... in the Guerrestão." +
             " Prepare yourself for more refugees. A lot of them." +
             "\nConsequence: Refugee Waves sizes x3", MiscInfo.variableTypes.criminalityRate, 0.1f));
 
