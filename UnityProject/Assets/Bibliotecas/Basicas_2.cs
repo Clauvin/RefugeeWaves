@@ -49,12 +49,12 @@ namespace Basicas_2
     }
 
     /// <summary>
-    /// Classe Conversoes.
+    /// Classe Conversions.
     /// 
-    /// Responsável por conversões de valores para outros valores.
+    /// Manages value conversion.
     /// </summary>
 
-    public static class Conversoes
+    public static class Conversions
     {
 
         public static float DeGrauParaRadiano(float grau)
