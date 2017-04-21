@@ -25,24 +25,25 @@ public class RandomEventManager : MonoBehaviour {
             " World War, and their habitants are looking for a batter place to live." + 
             " Thanks to the strong cosmic rays, they are being forced to arrive... in the Guerrestão." +
             " Prepare yourself for more refugees. A lot of them." +
-            "\nConsequence: Refugee Waves sizes x3", MiscInfo.variableTypes.criminalityRate, 0.1f));
+            "\nConsequence: Refugee Waves sizes x3", MiscInfo.variableTypes.waveVariation, 3.0f));
 
+        //Need to be improved so Events change TWO or more fields.
         randomEvents.Add(new RandomEvent("Chemical Weapons", "The Guerrestão's government crossed a line and used" +
             " chemical weapons in civilian areas. The damages inflicted in the population plus such weapons being" +
             " banned by the United Nations since decades ago made two things: first, more Guerrestão citzens are" +
             " considering leaving their country. Second, the United Nations are mobilizing to help countries" +
             " dealing with the crisis." +
-            "\nConsequence: Refugees coming +25%, more money from UN", MiscInfo.variableTypes.criminalityRate, 0.1f));
+            "\nConsequence: Refugees coming +25%, more money from UN", MiscInfo.variableTypes.waveVariation, 1.25f));
 
         randomEvents.Add(new RandomEvent("The world acts", "Impressed with the crisis size, the countries started" +
             " mobilizing themselves to receive refugees in their territories. This increases the travelling options" +
             " of the people, who don't need so much to pass by or stay in Ondestão to be safe." +
-            "\nConsequence: Refugees coming -25%", MiscInfo.variableTypes.criminalityRate, 0.1f));
+            "\nConsequence: Refugees coming -25%", MiscInfo.variableTypes.waveVariation, 0.75f));
 
         randomEvents.Add(new RandomEvent("But almost nobody came", "Fear, untrust and prejudice, by now, surpassed" +
             " hope and kindness. In this refugee crisis, the other countries prefer not to help. It's up now to the" +
             " few countries that keep their borders open to who need them." +
-            "\nConsequence: Refugees coming +25%", MiscInfo.variableTypes.criminalityRate, 0.1f));
+            "\nConsequence: Refugees coming +25%", MiscInfo.variableTypes.waveVariation, 1.25f));
 
         //in the end of the creation, make a copy at eventsYetToHappen
         eventsYetToHappen = randomEvents;
