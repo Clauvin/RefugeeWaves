@@ -10,9 +10,7 @@ public class ActionsManager : MonoBehaviour {
 
 	public List<GameObject> buttons;//buttons to be assigned to each action
 
-
 	public float weekLength = 15.0f;
-
 
 	public void executeAction(int actionIndex)
 	{
@@ -29,11 +27,13 @@ public class ActionsManager : MonoBehaviour {
 		//'Research' actions
 		possibleActions.Add(new PlayerAction(buttons[0],"Build unnecessary landmarks",
 			"No, we don't need new bridges. But people like looking at them and need work, so we'll have one anyway",300.0,
-			4*weekLength,MiscInfo.variableTypes.unemployementRate,-1*0.1*StatsManager.instance.unemploymentRate));
+			4*weekLength,MiscInfo.variableTypes.unemployementRate,
+            -1*0.1*StatsManager.instance.unemploymentRate));
 
 		possibleActions.Add(new PlayerAction(buttons[1],"Encourage young professionals",
 			"Make those teenagers get off their phones and work a little",400,3*weekLength,MiscInfo.variableTypes.unemployementRate,
-			-1*0.07*StatsManager.instance.unemploymentRate,MiscInfo.variableTypes.baseTaxPerCitizen,0.05*ResourceManager.instance.baseTaxPerCitizen));
+			-1*0.07*StatsManager.instance.unemploymentRate,
+            MiscInfo.variableTypes.baseTaxPerCitizen,0.05*ResourceManager.instance.baseTaxPerCitizen));
 
 		possibleActions.Add (new PlayerAction (buttons[2],"Call the police!",
 			"New police officers should be just what these recent crime waves need!", 600, 4 * weekLength,
@@ -44,7 +44,8 @@ public class ActionsManager : MonoBehaviour {
 			+"(Obs: This likely won't work if you've been a bad boy internationally)",500,24*weekLength,
 			MiscInfo.variableTypes.playerCurrentMoney,4000));
 
-		possibleActions.Add(new PlayerAction(buttons[4],"Hola gringo!","Show people Wavestan is a nice place to live (and lure some professionals while you're at it",
+		possibleActions.Add(new PlayerAction(buttons[4],"Hola gringo!",
+            "Show people Wavestan is a nice place to live (and lure some professionals while you're at it",
 			1000,6*weekLength,MiscInfo.variableTypes.legalPopulation,1000,
 			MiscInfo.variableTypes.publicOpinion,
 			-0.15*StatsManager.instance.publicOpinionOnImmigrants));
@@ -69,9 +70,6 @@ public class ActionsManager : MonoBehaviour {
 
 		possibleActions.Add(new PlayerAction(buttons[10],"Build Border Resources","Fuel and ammo aren't free, you know.",
 			75,1*weekLength,MiscInfo.variableTypes.borderResources,1));
-
-
-
 	}
 	
 	// Update is called once per frame
