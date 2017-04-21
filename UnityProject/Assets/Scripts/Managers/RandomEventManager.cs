@@ -36,11 +36,11 @@ public class RandomEventManager : MonoBehaviour {
 
         randomEvents.Add(new RandomEvent("The world acts", "Impressed with the crisis size, the countries started" +
             " mobilizing themselves to receive refugees in their territories. This increases the travelling options" +
-            " of the refugees, who don't need so much to pass by or stay in Ondestão to be safe." +
+            " of the people, who don't need so much to pass by or stay in Ondestão to be safe." +
             "\nConsequence: Refugees coming -25%", MiscInfo.variableTypes.criminalityRate, 0.1f));
 
         randomEvents.Add(new RandomEvent("But almost nobody came", "Fear, untrust and prejudice, by now, surpassed" +
-            " hope and kindness. In this refugee crisis, the other countries prefer to not help. It's up now to the" +
+            " hope and kindness. In this refugee crisis, the other countries prefer not to help. It's up now to the" +
             " few countries that keep their borders open to who need them." +
             "\nConsequence: Refugees coming +25%", MiscInfo.variableTypes.criminalityRate, 0.1f));
 
