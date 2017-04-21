@@ -7,27 +7,27 @@ public class MainMenuButtonManager : MonoBehaviour {
 	public GameObject creditsGO;
 
 
-    public void CarregaMenuPrincipal()
+    public void LoadMainMenu()
     {
         Basics_2.LoadScene.LoadMainMenu();
     }
 
-    public void CarregaGameplay()
+    public void LoadMainGameplay()
     {
         Basics_2.LoadScene.LoadMainGameplay();
     }
 
-    public void FechaJogo()
+    public void CloseGame()
     {
         Basics_2.LoadScene.CloseGame();
     }
 
-	public void showResponsibles()
+	public void ShowResponsibles()
 	{
 		creditsGO.SetActive (true);
 	}
 
-	public void hideResponsibles()
+	public void HideResponsibles()
 	{
 		creditsGO.SetActive (false);
 	}
