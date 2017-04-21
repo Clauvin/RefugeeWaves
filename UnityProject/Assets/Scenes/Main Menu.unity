@@ -1400,7 +1400,7 @@ GameObject:
   - component: {fileID: 1315204478}
   - component: {fileID: 1315204477}
   m_Layer: 0
-  m_Name: "\xCDcone N\xE3o-Refugiado"
+  m_Name: Non-Refugee Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1960,7 +1960,7 @@ GameObject:
   - component: {fileID: 1828953140}
   - component: {fileID: 1828953139}
   m_Layer: 0
-  m_Name: "\xCDcone Refugiado"
+  m_Name: Refugee Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
