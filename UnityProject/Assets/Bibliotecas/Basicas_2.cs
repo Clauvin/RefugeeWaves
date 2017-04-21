@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Biblioteca para prototipagem rápida na Unity.
+/// Library in progress for fast prototyping in Unity.
 /// 
-/// Versão 2, criada para uso no jogo 2, pra Global Game Jam 2017.
+/// Version 2, created for use in the game 2, for the Global Game Jam 2017.
 /// </summary>
 namespace Basicas_2
 {
