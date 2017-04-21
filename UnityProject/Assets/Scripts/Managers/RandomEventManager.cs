@@ -21,16 +21,17 @@ public class RandomEventManager : MonoBehaviour {
             " wreaking havok in the capital."+
 			"\nConsequence: Criminality Rate +10%",MiscInfo.variableTypes.criminalityRate,0.1f));
 
-        randomEvents.Add(new RandomEvent("Guerra Interestelar", "O até então desconhecido planeta de Ondesterra entrou em" +
-            " Guerra Mundial, e seus habitantes estão procurando um local melhor para viver." + 
-            " Graças à conjuntura dos raios cósmicos galáticos, eles estão pousando...no Guerrestão." +
-            " Prepare - se para mais refugiados." +
+        randomEvents.Add(new RandomEvent("Interstellar war", "The until now unknown planet Ondesterra entered in a" +
+            " World War, and their habitants are looking for a batter place to live." + 
+            " Thanks to the organization of cosmic rays, they are being forced to arrive... in the Guerrestão." +
+            " Prepare yourself for more refugees. A lot of them." +
             "\nConsequence: Refugee Waves sizes x3", MiscInfo.variableTypes.criminalityRate, 0.1f));
 
-        randomEvents.Add(new RandomEvent("Armas Químicas", "O governo do Guerrestão cruzou uma linha e utilizou armas" +
-            " químicas em território civil. Além de causar danos incuráveis a parte da população, tais armas são banidas" +
-            " pelas Nações Unidas. Isso fez com que duas entidades também cruzassem linhas: os cidadãos do Guerrestão" +
-            " consideram mais sair de seu país, e as Nações Unidas resolveram se mobilizar para lidar melhor com a crise." +
+        randomEvents.Add(new RandomEvent("Chemical Weapons", "The Guerrestão's government crossed a line and used" +
+            " chemical weapons in civilian areas. The damages inflicted in the population plus such weapons being" +
+            " banned by the United Nations since decades ago made two things: first, more Guerrestão citzens are" +
+            " considering leaving their country. Second, the United Nations are mobilizing to help countries" +
+            " dealing with the crisis." +
             "\nConsequence: Refugees coming +25%, more money from UN", MiscInfo.variableTypes.criminalityRate, 0.1f));
 
         randomEvents.Add(new RandomEvent("O Mundo se move", "Diante do tamanho da crise, os países começaram a se" +
