@@ -10,11 +10,11 @@ public class TimeManager : MonoBehaviour {
 	public static TimeManager instance;
 
 	public bool gamePaused;
-	public float timeLastPaused, timeLastUnpaused;//when started counting again; new 0
-	public float timeElapsed;//saves time already elapsed in case user pauses
-	public float weekLength = 5.0f;//in seconds
+	public float timeLastPaused, timeLastUnpaused; //when started counting again; new 0
+	public float timeElapsed; //saves time already elapsed in case user pauses
+	public float weekLength = 5.0f; //in seconds
 	public int year, month, week; // all start at 1
-	public int gameDuration = 2;//in years
+	public int gameDuration = 2; //in years
 	public bool gameOver;
 
 
