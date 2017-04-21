@@ -1466,7 +1466,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Imposto:'
+  m_Text: 'Taxes:'
 --- !u!222 &189811208
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2065,7 +2065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32.2, y: -0.2}
+  m_AnchoredPosition: {x: 22.3, y: -0.2}
   m_SizeDelta: {x: 21.9, y: 10.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413858919
@@ -9240,7 +9240,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Or\xE7amento mensal: "
+  m_Text: 'Monthly budget: '
 --- !u!222 &2092721408
 CanvasRenderer:
   m_ObjectHideFlags: 0
