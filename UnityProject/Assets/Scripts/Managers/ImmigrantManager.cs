@@ -7,69 +7,69 @@ public class ImmigrantManager : MonoBehaviour {
 
 	public static ImmigrantManager instance;
 
-	public List<ImmigrantWave> legalWaves;//holds the waves of legal immigrants
+	public List<ImmigrantWave> legalWaves; //holds the waves of legal immigrants
 	public List<ImmigrantWave> illegalWaves;
 
 
 	public int numberOfLegalImmigrants;
 	public int numberOfIllegalImmigrants;
 
-	public int numberOfNaturalizedImmigrants;//how many immigrants you have helped get citizenship
+	public int numberOfNaturalizedImmigrants; //how many immigrants you have helped get citizenship
 
     public void WaveReceived(GameObject wave)
     {
 
-        //Receber onda de imigrantes
+        //Receive immigrant waves
         ImmigrantWave immigrants = wave.GetComponent<ImmigrantWave>();
 
-        //Quantos imigrantes temos?
+        //How many immigrant do we have?
         int immigrants_quantity = immigrants.numberOfImmigrants;
 
-        //Temos casas disponíveis?
+        //Do we have homes?
         if (ResourceManager.instance.numberOfAvailableHouses > 0)
         {
-            //Temos casas suficientes?
+            //Do we have ENOUGH homes?
             if (ResourceManager.instance.numberOfAvailableHouses >= immigrants_quantity)
             {
-                //Se sim, resolvido.
+                //If yes, solved.
                 ResourceManager.instance.numberOfAvailableHouses -= immigrants_quantity;
                 legalWaveArrived(new ImmigrantWave(immigrants_quantity, Time.time, true));
                 immigrants_quantity = 0;
             }
             else
             {
-                //Se não, em frente.
+                //If not, go ahead.
                 legalWaveArrived(new ImmigrantWave(ResourceManager.instance.numberOfAvailableHouses, Time.time, true));
                 immigrants_quantity -= ResourceManager.instance.numberOfAvailableHouses;
                 ResourceManager.instance.numberOfAvailableHouses = 0;
             }
         }
 
-        //já cuidamos de todos?
+        //We took care of everybody?
         if (immigrants_quantity > 0)
         {
-            //Hora da defesa.
+            //Time to block people entering.
             
-            //Temos recursos suficientes?
+            //Do we have enough resources?
             if (ResourceManager.instance.borderResources > 0)
             {
-                //Temos soldados suficientes?
+                //Do we have enough soldiers?
                 if (ResourceManager.instance.numberOfAvailableBorderOfficers >= immigrants_quantity)
                 {
-                    //Se sim, ok.
+                    //If yes, ok.
                     //ResourceManager.instance.numberOfAvailableBorderOfficers -= immigrants_quantity;
                     immigrants_quantity = 0;
                 }
                 else
                 {
-                    //Se não...
+                    //If not...
                     immigrants_quantity -= ResourceManager.instance.numberOfAvailableBorderOfficers;
                     //ResourceManager.instance.numberOfAvailableBorderOfficers = 0;
                 }
             }
         }
 
-        //temos ilegais?
+        //Do we have illegals?
         if (immigrants_quantity > 0)
         {
             illegalWaveArrived(new ImmigrantWave(immigrants_quantity, Time.time, false));
@@ -102,7 +102,7 @@ public class ImmigrantManager : MonoBehaviour {
             if (immigrant.checkIfBecameLegal())//if this immigrant wave can become part of the country now
             {
                 StatsManager.instance.legalPopulation += immigrant.numberOfImmigrants;
-                numberOfNaturalizedImmigrants += immigrant.numberOfImmigrants;//to be used as statistics in the end
+                numberOfNaturalizedImmigrants += immigrant.numberOfImmigrants; //to be used as statistics in the end
                 ResourceManager.instance.numberOfAvailableHouses += immigrant.numberOfImmigrants;
                 //delete wave of immigrants; part of the country now
                 legalWaves.Remove(immigrant);
