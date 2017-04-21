@@ -38,7 +38,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         icone.transform.position = new Vector3(exit.transform.position.x,
                                                exit.transform.position.y,
                                                exit.transform.position.z);
-        icone.GetComponent<ImmigrantWave>().numberOfImmigrants = (int)(refugee_quantity * refugees_multiplier);
+        icone.GetComponent<ImmigrantWave>().numberOfImmigrants = refugee_quantity;
         icone.GetComponent<MovingToTheObjective>().final_objective = entrance.transform.position;
         icone.GetComponent<MovingToTheObjective>().time_to_reach_objective = time_in_seconds;
         icone.name = "Refugee";
@@ -89,6 +89,13 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         } else
         {
             exit = refugees_exit_2; entrance = refugees_entrance_2;
+        }
+
+        refugee_quantity = (int)(refugee_quantity * refugees_multiplier);
+
+        if (refugee_quantity >= 15.0f * def_quant_of_refugees)
+        {
+            scale *= 2;
         }
 
         InstantiateNewRefugeeWave(refugee_quantity, exit, entrance, time_in_seconds, scale);
