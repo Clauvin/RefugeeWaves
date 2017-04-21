@@ -171,10 +171,10 @@ public class TimeManager : MonoBehaviour {
     {
         if (year >= 3)
         {
-            Basicas_2.LoadScene.CarregaVictoryScreen();
+            Basicas_2.LoadScene.LoadVictoryScreen();
         } else if ((StatsManager.instance.criminalityRate >= 0.575f) && (StatsManager.instance.unemploymentRate >= 0.575f))
         {
-            Basicas_2.LoadScene.CarregaDefeatScreen();
+            Basicas_2.LoadScene.LoadDefeatScreen();
         }
     }
 }

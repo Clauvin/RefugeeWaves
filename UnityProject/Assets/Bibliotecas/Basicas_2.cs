@@ -16,32 +16,32 @@ namespace Basicas_2
     /// </summary>
     public static class LoadScene
     {
-        public static void Carrega(int cena)
+        public static void Load(int cena)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(cena);
         }
 
-        public static void CarregaMenuPrincipal()
+        public static void LoadMainMenu()
         {
-            Carrega((int)Cenas_do_Jogo.Main_Menu);
+            Load((int)Cenas_do_Jogo.Main_Menu);
         }
 
-        public static void CarregaGameplay()
+        public static void LoadMainGameplay()
         {
-            Carrega((int)Cenas_do_Jogo.Main_GamePlay);
+            Load((int)Cenas_do_Jogo.Main_GamePlay);
         }
 
-        public static void CarregaVictoryScreen()
+        public static void LoadVictoryScreen()
         {
-            Carrega((int)Cenas_do_Jogo.Victory_Screen);
+            Load((int)Cenas_do_Jogo.Victory_Screen);
         }
 
-        public static void CarregaDefeatScreen()
+        public static void LoadDefeatScreen()
         {
-            Carrega((int)Cenas_do_Jogo.Defeat_Screen);
+            Load((int)Cenas_do_Jogo.Defeat_Screen);
         }
 
-        public static void FechaJogo()
+        public static void CloseGame()
         {
             Application.Quit();
         }
