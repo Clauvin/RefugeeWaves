@@ -18,7 +18,8 @@ public class RandomEventManager : MonoBehaviour {
 	{
 		//TODO: Create Random Events
 		randomEvents.Add(new RandomEvent("Your mom called!", "Your mom is worried sick about you for never calling her!"+
-			"She nagged you on the phone so much, you missed an important call about some clandestine refugees wreaking havok in the capital."+
+			"She nagged you on the phone so much, you missed an important call about some clandestine refugees" +
+            " wreaking havok in the capital."+
 			"\nConsequence: Criminality Rate +10%",MiscInfo.variableTypes.criminalityRate,0.1f));
 
 		//in the end of the creation, make a copy at eventsYetToHappen
