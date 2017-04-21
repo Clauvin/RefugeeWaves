@@ -30,6 +30,8 @@ public static class MiscInfo {
 		unemployementRate,
 		taxVariation,
 
+        waveVariation,
+
 		NULL
 	}
 
