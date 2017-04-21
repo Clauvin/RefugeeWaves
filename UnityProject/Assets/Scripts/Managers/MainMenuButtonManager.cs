@@ -9,17 +9,17 @@ public class MainMenuButtonManager : MonoBehaviour {
 
     public void CarregaMenuPrincipal()
     {
-        Basicas_2.CarregaCena.CarregaMenuPrincipal();
+        Basicas_2.LoadScene.CarregaMenuPrincipal();
     }
 
     public void CarregaGameplay()
     {
-        Basicas_2.CarregaCena.CarregaGameplay();
+        Basicas_2.LoadScene.CarregaGameplay();
     }
 
     public void FechaJogo()
     {
-        Basicas_2.CarregaCena.FechaJogo();
+        Basicas_2.LoadScene.FechaJogo();
     }
 
 	public void showResponsibles()

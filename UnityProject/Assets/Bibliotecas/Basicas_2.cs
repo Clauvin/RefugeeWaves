@@ -10,11 +10,11 @@ using UnityEngine;
 namespace Basicas_2
 {
     /// <summary>
-    /// Classe Reset.
+    /// Class LoadScene.
     /// 
-    /// Responsável por carregar cenas, recarregando uma cena específica.
+    /// Responsible for loading scenes.
     /// </summary>
-    public static class CarregaCena
+    public static class LoadScene
     {
         public static void Carrega(int cena)
         {
