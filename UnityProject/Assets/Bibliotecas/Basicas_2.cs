@@ -57,14 +57,14 @@ namespace Basicas_2
     public static class Conversions
     {
 
-        public static float DeGrauParaRadiano(float grau)
+        public static float DegreeToRadian(float degree)
         {
-            return grau * Mathf.PI / 180;
+            return degree * Mathf.PI / 180;
         }
 
-        public static float DeRadianoParaGrau(float radiano)
+        public static float RadianToDegree(float radian)
         {
-            return radiano * 180 / Mathf.PI;
+            return radian * 180 / Mathf.PI;
         }
     }
 
