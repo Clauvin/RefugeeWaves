@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Script possível candidato à fazer companhia à biblioteca Básicas, é responsável por servir de timer para
-/// outras funções.
+/// Possible script to make company to the Basics library.
+/// Is responsible for being a timer for other functions.
 /// </summary>
 public class Timer : MonoBehaviour {
 
@@ -23,7 +23,6 @@ public class Timer : MonoBehaviour {
 
         time_passed += Time.time - start_time;
         start_time = Time.time;
-        // Pegar código de passagem de tempo lá do Not Valentine
         while (time_passed >= 1.0f)
         {
             time -= 1;
