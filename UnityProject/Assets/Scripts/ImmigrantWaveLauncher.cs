@@ -21,6 +21,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     public float time_for_next = 0.0f;
     public int def_quant_of_refugees = 50;
     public float def_time_in_seconds = 30.0f;
+    public float refugees_multiplier = 1.0f; // this number multiplies the number of refugees in each new wave
 
     private bool wave_instantiation_timer = true;
 
@@ -37,7 +38,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         icone.transform.position = new Vector3(exit.transform.position.x,
                                                exit.transform.position.y,
                                                exit.transform.position.z);
-        icone.GetComponent<ImmigrantWave>().numberOfImmigrants = refugee_quantity;
+        icone.GetComponent<ImmigrantWave>().numberOfImmigrants = (int)(refugee_quantity * refugees_multiplier);
         icone.GetComponent<MovingToTheObjective>().final_objective = entrance.transform.position;
         icone.GetComponent<MovingToTheObjective>().time_to_reach_objective = time_in_seconds;
         icone.name = "Refugee";
