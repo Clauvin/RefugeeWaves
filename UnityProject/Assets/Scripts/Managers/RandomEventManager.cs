@@ -34,14 +34,14 @@ public class RandomEventManager : MonoBehaviour {
             " dealing with the crisis." +
             "\nConsequence: Refugees coming +25%, more money from UN", MiscInfo.variableTypes.criminalityRate, 0.1f));
 
-        randomEvents.Add(new RandomEvent("O Mundo se move", "Diante do tamanho da crise, os países começaram a se" +
-            " mobilizar para receber refugiado em seus países. Isso amplia as opções de" +
-            " locomoção dos refugiados, que não precisam passar tanto assim ou ficar no Ondestão para estar em segurança." +
+        randomEvents.Add(new RandomEvent("The world acts", "Impressed with the crisis size, the countries started" +
+            " mobilizing themselves to receive refugees in their territories. This increases the travelling options" +
+            " of the refugees, who don't need so much to pass by or stay in Ondestão to be safe." +
             "\nConsequence: Refugees coming -25%", MiscInfo.variableTypes.criminalityRate, 0.1f));
 
-        randomEvents.Add(new RandomEvent("O Mundo não se move", "Medo, desconfiança e preconceito por ora superam" +
-            " a esperança e bondade. Nesta crise de refugiados, os outros países preferem não ajudar. Sobrou para" +
-            " os países que mantém suas fronteiras abertas." +
+        randomEvents.Add(new RandomEvent("But almost nobody came", "Fear, untrust and prejudice, by now, surpassed" +
+            " hope and kindness. In this refugee crisis, the other countries prefer to not help. It's up now to the" +
+            " few countries that keep their borders open to who need them." +
             "\nConsequence: Refugees coming +25%", MiscInfo.variableTypes.criminalityRate, 0.1f));
 
         //in the end of the creation, make a copy at eventsYetToHappen
