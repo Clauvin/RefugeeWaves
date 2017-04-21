@@ -85,7 +85,6 @@ public class ResourceManager : MonoBehaviour {
 	public bool sellHouses(int numberOfHouses)
 	{
 
-        play
 		if (numberOfHouses <= 0)
 			return false;//just because
 
