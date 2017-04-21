@@ -33,7 +33,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     void InstantiateNewRefugeeWave(int refugee_quantity, GameObject exit, GameObject entrance, float time_in_seconds,
             float scale = 1.0f)
     {
-        GameObject icone = Instantiate<GameObject>(Resources.Load<GameObject>("Onda De Imigrantes"));
+        GameObject icone = Instantiate<GameObject>(Resources.Load<GameObject>("Immigrant Wave Object"));
         icone.transform.position = new Vector3(exit.transform.position.x,
                                                exit.transform.position.y,
                                                exit.transform.position.z);
