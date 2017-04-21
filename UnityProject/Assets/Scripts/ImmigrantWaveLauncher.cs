@@ -5,11 +5,11 @@ using UnityEngine;
 public class ImmigrantWaveLauncher : MonoBehaviour {
 
     /// <summary>
-    /// Instancia um Ícone de Refugiados, com:
-    ///     a) Número de Imigrantes; (semi randomizado com base em valores)
-    ///     b) Ponto de instância
-    ///     c) Ponto de chegada
-    ///     d) Velocidade para chegar
+    /// Creates an instance of a Immigrant Wave Object, with:
+    ///     a) Number of immigrants; (semi randomized based in values)
+    ///     b) Instance creation point
+    ///     c) Finish point
+    ///     d) Speed to reach
     /// </summary>
 
     public int nextWaveId = 0;
@@ -55,15 +55,15 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     public void RandomInstantaneousWaveInstance(bool super_wave = false)
     {
         int refugee_quantity;
-        //Ano 1: de 50 a 150 refugiados por onda.
-        //Ano 2: de 150 a 200 refugiados por onda.
+        //Year 1: 50 to 150 refugees per wave.
+        //Year 2: 150 to 200 refugees per wave.
         GameObject exit, entrance;
         float time_in_seconds;
-        //Ano 1: de 30 a 60 segundos.
-        //Ano 2: de 15 a 30 segundos.
+        //Year 1: between 30 to 60 seconds.
+        //Year 2: between 15 to 30 seconds.
         float scale = 1.0f;
 
-        //Superonda: 750 a 1000 refugiados, de 150 a 300 segundos. Sprite 3x maior.
+        //Superwave: 750 to 1000 refugees, between 150 to 300 seconds. Sprite 3x bigger.
 
         if ((TimeManager.instance.year == 1) && (!super_wave))
         {
