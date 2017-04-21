@@ -16,14 +16,35 @@ public class RandomEventManager : MonoBehaviour {
 	//creates them all
 	public void CreateRandomEvents ()
 	{
-		//TODO: Create Random Events
 		randomEvents.Add(new RandomEvent("Your mom called!", "Your mom is worried sick about you for never calling her!"+
 			"She nagged you on the phone so much, you missed an important call about some clandestine refugees" +
             " wreaking havok in the capital."+
 			"\nConsequence: Criminality Rate +10%",MiscInfo.variableTypes.criminalityRate,0.1f));
 
-		//in the end of the creation, make a copy at eventsYetToHappen
-		eventsYetToHappen = randomEvents;
+        randomEvents.Add(new RandomEvent("Guerra Interestelar", "O até então desconhecido planeta de Ondesterra entrou em" +
+            " Guerra Mundial, e seus habitantes estão procurando um local melhor para viver." + 
+            " Graças à conjuntura dos raios cósmicos galáticos, eles estão pousando...no Guerrestão." +
+            " Prepare - se para mais refugiados." +
+            "\nConsequence: Refugee Waves sizes x3", MiscInfo.variableTypes.criminalityRate, 0.1f));
+
+        randomEvents.Add(new RandomEvent("Armas Químicas", "O governo do Guerrestão cruzou uma linha e utilizou armas" +
+            " químicas em território civil. Além de causar danos incuráveis a parte da população, tais armas são banidas" +
+            " pelas Nações Unidas. Isso fez com que duas entidades também cruzassem linhas: os cidadãos do Guerrestão" +
+            " consideram mais sair de seu país, e as Nações Unidas resolveram se mobilizar para lidar melhor com a crise." +
+            "\nConsequence: Refugees coming +25%, more money from UN", MiscInfo.variableTypes.criminalityRate, 0.1f));
+
+        randomEvents.Add(new RandomEvent("O Mundo se move", "Diante do tamanho da crise, os países começaram a se" +
+            " mobilizar para receber refugiado em seus países. Isso amplia as opções de" +
+            " locomoção dos refugiados, que não precisam passar tanto assim ou ficar no Ondestão para estar em segurança." +
+            "\nConsequence: Refugees coming -25%", MiscInfo.variableTypes.criminalityRate, 0.1f));
+
+        randomEvents.Add(new RandomEvent("O Mundo não se move", "Medo, desconfiança e preconceito por ora superam" +
+            " a esperança e bondade. Nesta crise de refugiados, os outros países preferem não ajudar. Sobrou para" +
+            " os países que mantém suas fronteiras abertas." +
+            "\nConsequence: Refugees coming +25%", MiscInfo.variableTypes.criminalityRate, 0.1f));
+
+        //in the end of the creation, make a copy at eventsYetToHappen
+        eventsYetToHappen = randomEvents;
 	}
 
 	public void createVisualRandomEvent(string title, string description)
