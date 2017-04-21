@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114783591952017092}
   - component: {fileID: 82179543891329120}
   m_Layer: 0
-  m_Name: Onda De Imigrantes
+  m_Name: Immigrant Wave Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,9 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37cbc546fc0fa474eb38855ae58ed2d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objetivo_inicial: {x: 0, y: 0, z: 0}
-  objetivo_final: {x: 0, y: 0, z: 0}
-  tempo: 0
+  initial_position: {x: 0, y: 0, z: 0}
+  final_objective: {x: 0, y: 0, z: 0}
+  time_to_reach_objective: 0
+  passed_time: 0
 --- !u!212 &212579389973466518
 SpriteRenderer:
   m_ObjectHideFlags: 1

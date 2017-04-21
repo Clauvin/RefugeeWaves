@@ -168,7 +168,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1106641518}
-        m_MethodName: hideResponsibles
+        m_MethodName: HideResponsibles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -802,7 +802,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1106641518}
-        m_MethodName: CarregaGameplay
+        m_MethodName: LoadMainGameplay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -936,7 +936,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1106641518}
-        m_MethodName: FechaJogo
+        m_MethodName: CloseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2094,7 +2094,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1106641518}
-        m_MethodName: showResponsibles
+        m_MethodName: ShowResponsibles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
