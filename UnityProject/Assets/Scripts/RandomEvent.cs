@@ -14,11 +14,6 @@ public class RandomEvent {
 	MiscInfo.variableTypes consequenceVariable2;//Possible second variable that suffers from this event
 	float consequenceValue2;
 
-
-
-
-
-
 	public void applyConsequences()
 	{
 		//always SUMS the consequence value with the consequence variable, so need to pass the right value
