@@ -78,28 +78,28 @@ public class RandomEventManager : MonoBehaviour {
 
 		if (randomNum <= 10 && eventsYetToHappen.Count>0)//within 10% && there are still events that haven't happened
 		{
-
-
-			//get one random event of the group and makes it happen
-			int eventToHappen = Random.Range(0,eventsYetToHappen.Count-1);
-			eventsYetToHappen [eventToHappen].applyConsequences ();
-
-			//For Debug purposes
-			Debug.Log("Event Happened.");
-			Debug.Log ("Title: " + eventsYetToHappen [eventToHappen].name);
-
-
-			//since event happened, need to show its popup
-			createVisualRandomEvent(eventsYetToHappen[eventToHappen].name, eventsYetToHappen[eventToHappen].description);
-
-
-			//remove it from the list
-			eventsYetToHappen.RemoveAt(eventToHappen);
-
-
+            AnEventHappens();
 		}
 
 	}
+
+    //function to make an event show up
+    public void AnEventHappens()
+    {
+        //get one random event of the group and makes it happen
+        int eventToHappen = Random.Range(0, eventsYetToHappen.Count - 1);
+        eventsYetToHappen[eventToHappen].applyConsequences();
+
+        //For Debug purposes
+        Debug.Log("Event Happened.");
+        Debug.Log("Title: " + eventsYetToHappen[eventToHappen].name);
+
+        //since event happened, need to show its popup
+        createVisualRandomEvent(eventsYetToHappen[eventToHappen].name, eventsYetToHappen[eventToHappen].description);
+
+        //remove it from the list
+        eventsYetToHappen.RemoveAt(eventToHappen);
+    }
 
 
 
