@@ -12,6 +12,8 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     ///     d) Speed to reach
     /// </summary>
 
+    public static ImmigrantWaveLauncher instance;
+
     public int nextWaveId = 0;
 
     public GameObject refugees_exit_1, refugees_exit_2;
@@ -99,6 +101,11 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         }
 
         InstantiateNewRefugeeWave(refugee_quantity, exit, entrance, time_in_seconds, scale);
+    }
+
+    void Awake()
+    {
+        instance = this;
     }
 
     // Use this for initialization
