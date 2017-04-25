@@ -86,6 +86,8 @@ public class RandomEvent {
 		case MiscInfo.variableTypes.unemployementRate:
 			StatsManager.instance.unemploymentRate+=consequenceValue1;
 			break;
+        case MiscInfo.variableTypes.waveVariation:
+            break;
 		default:
 			break;
 
@@ -154,6 +156,8 @@ public class RandomEvent {
 			case MiscInfo.variableTypes.unemployementRate:
 				StatsManager.instance.unemploymentRate += consequenceValue2;
 				break;
+            case MiscInfo.variableTypes.waveVariation:
+                break;
 			default:
 				break;
 			}
