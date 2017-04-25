@@ -166,7 +166,8 @@ public class RandomEvent {
 
 
 
-	public RandomEvent(string n, string desc, MiscInfo.variableTypes var1, float consequence1, MiscInfo.variableTypes var2=MiscInfo.variableTypes.NULL, float consequence2=0.0f)
+	public RandomEvent(string n, string desc, MiscInfo.variableTypes var1, float consequence1,
+        MiscInfo.variableTypes var2 = MiscInfo.variableTypes.NULL, float consequence2 = 0.0f)
 	{
 		name = n;
 		description = desc;
