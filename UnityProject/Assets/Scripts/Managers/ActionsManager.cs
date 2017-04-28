@@ -41,7 +41,7 @@ public class ActionsManager : MonoBehaviour {
 
 		possibleActions.Add(new PlayerAction(buttons[3],"Can I haz some help?",
 			"Since the UN wants you to help, nothing is more fair than if they help with the bills."
-			+"(Obs: This likely won't work if you've been a bad boy internationally)",500,24*weekLength,
+			+"(Obs: This likely won't work if you've been a bad boy internationally)",0,24*weekLength,
 			MiscInfo.variableTypes.playerCurrentMoney,
             ResourceManager.instance.UNHelpBaseValue * ResourceManager.instance.UNHelpVariation));
 
