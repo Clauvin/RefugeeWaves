@@ -30,7 +30,8 @@ public class RandomEventManager : MonoBehaviour {
         randomEvents.Add(new RandomEvent("Chemical Weapons", "The Guerrestão used" +
             " chemical weapons in civilian areas. The use of deadly banned weapons by the United Nations since decades" +
             "ago made more Guerrestão citzens consider leaving their country and the United Nations move." +
-            "\nConsequence: + 25% refugees, more money from UN", MiscInfo.variableTypes.waveVariation, 0.25f));
+            "\nConsequence: + 25% refugees, more money from UN", MiscInfo.variableTypes.waveVariation, 0.25f,
+            MiscInfo.variableTypes.unitedNationsHelpVariation, 1.0f));
 
         randomEvents.Add(new RandomEvent("The world acts", "Impressed with the crisis size, the countries started" +
             " mobilizing themselves to receive refugees in their territories. This increases the travelling options" +

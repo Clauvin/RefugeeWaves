@@ -85,6 +85,7 @@ public class RandomEvent {
             ImmigrantWaveLauncher.instance.refugees_multiplier += consequenceValue1;
             break;
         case MiscInfo.variableTypes.unitedNationsHelpVariation:
+            ResourceManager.instance.UNHelpVariation += consequenceValue1;
             break;
 		default:
 			break;
@@ -158,6 +159,7 @@ public class RandomEvent {
                 ImmigrantWaveLauncher.instance.refugees_multiplier += consequenceValue2;
                 break;
             case MiscInfo.variableTypes.unitedNationsHelpVariation:
+                ResourceManager.instance.UNHelpVariation += consequenceValue2;
                 break;
 			default:
 				break;
