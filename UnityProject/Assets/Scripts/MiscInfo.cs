@@ -32,6 +32,8 @@ public static class MiscInfo {
 
         waveVariation,
 
+        unitedNationsHelpVariation,
+
 		NULL
 	}
 
