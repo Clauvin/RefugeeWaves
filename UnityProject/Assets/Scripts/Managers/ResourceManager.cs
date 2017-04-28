@@ -23,6 +23,8 @@ public class ResourceManager : MonoBehaviour {
 	public double realTaxPerCitizen; //How much they pay(with possible extra variation)
 	public double taxVariation=1; //i.e., inflation. Dumbass.
 	public double BudgetBaseValue=1000;
+    public double UNHelpBaseValue = 4000; // how much the United Nations give when help is asked?
+    public double UNHelpVariation = 1.0f; // how much the United Nations give more, or less using the base value?
 
 	//Resources
 
