@@ -68,7 +68,27 @@ namespace Assets.Scripts
         }
         #endregion
 
+        #region Can I Haz Some Help
+        public static double CanIHazSomeHelpResult()
+        {
+            return ResourceManager.instance.UNHelpBaseValue
+                * ResourceManager.instance.UNHelpVariation;
+        }
 
+        public static PlayerAction CanIHazSomeHelp()
+        {
+            return new PlayerAction(ActionsManager.instance.buttons[3],
+                "Can I haz some help?",
+            "Since the UN wants you to help, nothing is more fair than" +
+            " if they help with the bills."
+            + "(Obs: This likely won't work if you've been a bad boy internationally)",
+            0, 24 * ActionsManager.instance.weekLength,
+            MiscInfo.variableTypes.playerCurrentMoney,
+            CanIHazSomeHelpResult);
+        }
+        #endregion
+
+        
 
 
     }
