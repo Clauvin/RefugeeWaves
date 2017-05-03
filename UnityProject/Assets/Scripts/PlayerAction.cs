@@ -82,71 +82,73 @@ public class PlayerAction {
 
     public void applyConsequences()
 	{
-		//always SUMS the consequence value with the consequence variable, so need to pass the right value
-		//right value to be passed will be seen in ACTIONSMANAGER
+        //always SUMS the consequence value with the consequence variable, so need to pass the right value
+        //right value to be passed will be seen in ACTIONSMANAGER
 
-
+        double consequenceFinalValue1 = 0.0f;
+        if (consequenceFunction1 == null) consequenceFinalValue1 = consequenceValue1;
+        else consequenceFinalValue1 = consequenceFunction1();
 
 		switch (consequenceVar1)
 		{
 		case MiscInfo.variableTypes.availableBO:
-			ResourceManager.instance.numberOfAvailableBorderOfficers += (int)consequenceValue1;
-            ResourceManager.instance.numberOfTotalBorderOfficers += (int)consequenceValue1;
+			ResourceManager.instance.numberOfAvailableBorderOfficers += (int)consequenceFinalValue1;
+            ResourceManager.instance.numberOfTotalBorderOfficers += (int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.availableHouses:
-			ResourceManager.instance.numberOfAvailableHouses += (int)consequenceValue1;
-            ResourceManager.instance.numberOfTotalHouses += (int)consequenceValue1;
+			ResourceManager.instance.numberOfAvailableHouses += (int)consequenceFinalValue1;
+            ResourceManager.instance.numberOfTotalHouses += (int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.baseTaxPerCitizen:
-			ResourceManager.instance.baseTaxPerCitizen += consequenceValue1;
+			ResourceManager.instance.baseTaxPerCitizen += consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.borderResources:
-			ResourceManager.instance.borderResources += (int)consequenceValue1;
+			ResourceManager.instance.borderResources += (int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.budgetBaseValue:
-			ResourceManager.instance.BudgetBaseValue += consequenceValue1;
+			ResourceManager.instance.BudgetBaseValue += consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.costOfBO:
-			ResourceManager.instance.costOfBorderOfficer += (int)consequenceValue1;
+			ResourceManager.instance.costOfBorderOfficer += (int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.costOfBorderResources:
-			ResourceManager.instance.costOfBorderResource+=(int)consequenceValue1;
+			ResourceManager.instance.costOfBorderResource+=(int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.costOfHouse:
-			ResourceManager.instance.costOfHouse+=(int)consequenceValue1;
+			ResourceManager.instance.costOfHouse+=(int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.costOfSocialResources:
-			ResourceManager.instance.costOfSocialResource+=(int)consequenceValue1;
+			ResourceManager.instance.costOfSocialResource+=(int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.criminalityRate:
-			StatsManager.instance.criminalityRate += consequenceValue1;
+			StatsManager.instance.criminalityRate += consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.internationalOpinion:
-			StatsManager.instance.internationalOpinion+=consequenceValue1;
+			StatsManager.instance.internationalOpinion+=consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.legalPopulation:
-			StatsManager.instance.legalPopulation+=(int)consequenceValue1;
+			StatsManager.instance.legalPopulation+=(int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.playerCurrentMoney:
-			ResourceManager.instance.playerCurrentMoney+=(int)consequenceValue1;
+			ResourceManager.instance.playerCurrentMoney+=(int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.publicOpinion:
-			StatsManager.instance.publicOpinionOnImmigrants+=consequenceValue1;
+			StatsManager.instance.publicOpinionOnImmigrants+=consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.socialResources:
-			ResourceManager.instance.socialResources+=(int)consequenceValue1;
+			ResourceManager.instance.socialResources+=(int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.taxVariation:
-			ResourceManager.instance.taxVariation+=consequenceValue1;
+			ResourceManager.instance.taxVariation+=consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.totalBO:
-			ResourceManager.instance.numberOfTotalBorderOfficers+=(int)consequenceValue1;
+			ResourceManager.instance.numberOfTotalBorderOfficers+=(int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.totalHouses:
-			ResourceManager.instance.numberOfTotalHouses+=(int)consequenceValue1;
+			ResourceManager.instance.numberOfTotalHouses+=(int)consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.unemployementRate:
-			StatsManager.instance.unemploymentRate+=consequenceValue1;
+			StatsManager.instance.unemploymentRate+=consequenceFinalValue1;
 			break;
 		default:
 			break;
@@ -155,66 +157,70 @@ public class PlayerAction {
 
 		if (consequenceVar2 != MiscInfo.variableTypes.NULL)
 		{
-			switch (consequenceVar2)
+            double consequenceFinalValue2 = 0.0f;
+            if (consequenceFunction2 == null) consequenceFinalValue2 = consequenceValue2;
+            else consequenceFinalValue2 = consequenceFunction2();
+
+            switch (consequenceVar2)
 			{
 			case MiscInfo.variableTypes.availableBO:
-                ResourceManager.instance.numberOfAvailableBorderOfficers += (int)consequenceValue2;
-                ResourceManager.instance.numberOfTotalBorderOfficers += (int)consequenceValue2;
+                ResourceManager.instance.numberOfAvailableBorderOfficers += (int)consequenceFinalValue2;
+                ResourceManager.instance.numberOfTotalBorderOfficers += (int)consequenceFinalValue2;
                 break;
 			case MiscInfo.variableTypes.availableHouses:
-				ResourceManager.instance.numberOfAvailableHouses += (int)consequenceValue2;
-                ResourceManager.instance.numberOfTotalHouses += (int)consequenceValue2;
+				ResourceManager.instance.numberOfAvailableHouses += (int)consequenceFinalValue2;
+                ResourceManager.instance.numberOfTotalHouses += (int)consequenceFinalValue2;
                 break;
 			case MiscInfo.variableTypes.baseTaxPerCitizen:
-				ResourceManager.instance.baseTaxPerCitizen += consequenceValue2;
+				ResourceManager.instance.baseTaxPerCitizen += consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.borderResources:
-				ResourceManager.instance.borderResources += (int)consequenceValue2;
+				ResourceManager.instance.borderResources += (int)consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.budgetBaseValue:
-				ResourceManager.instance.BudgetBaseValue += consequenceValue2;
+				ResourceManager.instance.BudgetBaseValue += consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.costOfBO:
-				ResourceManager.instance.costOfBorderOfficer += (int)consequenceValue2;
+				ResourceManager.instance.costOfBorderOfficer += (int)consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.costOfBorderResources:
-				ResourceManager.instance.costOfBorderResource += (int)consequenceValue2;
+				ResourceManager.instance.costOfBorderResource += (int)consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.costOfHouse:
-				ResourceManager.instance.costOfHouse += (int)consequenceValue2;
+				ResourceManager.instance.costOfHouse += (int)consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.costOfSocialResources:
-				ResourceManager.instance.costOfSocialResource += (int)consequenceValue2;
+				ResourceManager.instance.costOfSocialResource += (int)consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.criminalityRate:
-				StatsManager.instance.criminalityRate += consequenceValue2;
+				StatsManager.instance.criminalityRate += consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.internationalOpinion:
-				StatsManager.instance.internationalOpinion += consequenceValue2;
+				StatsManager.instance.internationalOpinion += consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.legalPopulation:
-				StatsManager.instance.legalPopulation += (int)consequenceValue2;
+				StatsManager.instance.legalPopulation += (int)consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.playerCurrentMoney:
-				ResourceManager.instance.playerCurrentMoney += (int)consequenceValue2;
+				ResourceManager.instance.playerCurrentMoney += (int)consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.publicOpinion:
-				StatsManager.instance.publicOpinionOnImmigrants += consequenceValue2;
+				StatsManager.instance.publicOpinionOnImmigrants += consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.socialResources:
-				ResourceManager.instance.socialResources += (int)consequenceValue2;
+				ResourceManager.instance.socialResources += (int)consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.taxVariation:
-				ResourceManager.instance.taxVariation += consequenceValue2;
+				ResourceManager.instance.taxVariation += consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.totalBO:
-				ResourceManager.instance.numberOfTotalBorderOfficers += (int)consequenceValue2;
+				ResourceManager.instance.numberOfTotalBorderOfficers += (int)consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.totalHouses:
-				ResourceManager.instance.numberOfTotalHouses += (int)consequenceValue2;
+				ResourceManager.instance.numberOfTotalHouses += (int)consequenceFinalValue2;
 				break;
 			case MiscInfo.variableTypes.unemployementRate:
-				StatsManager.instance.unemploymentRate += consequenceValue2;
+				StatsManager.instance.unemploymentRate += consequenceFinalValue2;
 				break;
 			default:
 				break;
