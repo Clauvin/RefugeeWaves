@@ -89,7 +89,6 @@ namespace Assets.Scripts
         #endregion
 
         #region Hola Gringo
-
         public static double HolaGringoFirstResult()
         {
             return 1000.0f;
@@ -113,6 +112,23 @@ namespace Assets.Scripts
         }
         #endregion
 
+        #region They Don't Look So Bad
+        public static double TheyDontLookSoBadResult()
+        {
+            return StatsManager.instance.publicOpinionOnImmigrants * 0.8;
+        }
+
+        public static PlayerAction TheyDontLookSoBad()
+        {
+            return new PlayerAction(ActionsManager.instance.buttons[5],
+                "They don't look so bad, right?",
+            "Help your people see just how nice those foreigners may be",
+            600,
+            8 * ActionsManager.instance.weekLength,
+            MiscInfo.variableTypes.publicOpinion,
+            TheyDontLookSoBadResult);
+        }
+        #endregion
 
     }
 }

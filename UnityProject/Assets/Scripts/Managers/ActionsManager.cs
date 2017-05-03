@@ -36,9 +36,7 @@ public class ActionsManager : MonoBehaviour {
 
 		possibleActions.Add(ActionConstructor.HolaGringo());
 
-		possibleActions.Add(new PlayerAction(buttons[5],"They don't look so bad, right?",
-			"Help your people see just how nice those foreigners may be",600,8*weekLength,MiscInfo.variableTypes.publicOpinion,
-			StatsManager.instance.publicOpinionOnImmigrants*0.8));
+		possibleActions.Add(ActionConstructor.TheyDontLookSoBad());
 
 		possibleActions.Add (new PlayerAction (buttons[6],"Mikasa, su casa s2",
 			"Show the world you accept other peoples with open arms! Come on in, don't mind the mess.", 1000,
