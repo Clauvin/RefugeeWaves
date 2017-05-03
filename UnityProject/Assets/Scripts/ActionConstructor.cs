@@ -22,7 +22,7 @@ namespace Assets.Scripts
             300.0,
             4 * ActionsManager.instance.weekLength,
             MiscInfo.variableTypes.unemployementRate,
-            BuildUnnecessaryLandmarksResult());
+            BuildUnnecessaryLandmarksResult);
         }
         #endregion
 
@@ -44,9 +44,9 @@ namespace Assets.Scripts
             "Make those teenagers get off their phones and work a little",
             400, 3 * ActionsManager.instance.weekLength,
             MiscInfo.variableTypes.unemployementRate,
-            EncourageYoungProfessionalsFirstResult(),
+            EncourageYoungProfessionalsFirstResult,
             MiscInfo.variableTypes.baseTaxPerCitizen,
-            EncourageYoungProfessionalsSecondResult());
+            EncourageYoungProfessionalsSecondResult);
         }
         #endregion
 
