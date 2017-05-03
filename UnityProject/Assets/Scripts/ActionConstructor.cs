@@ -50,6 +50,24 @@ namespace Assets.Scripts
         }
         #endregion
 
+        #region Call The Police
+        public static double CallThePoliceResult()
+        {
+            return -0.2 * StatsManager.instance.criminalityRate;
+        }
+
+        public static PlayerAction CallThePolice()
+        {
+            return new PlayerAction(ActionsManager.instance.buttons[2],
+                "Call the police!",
+            "New police officers should be just what these recent crime waves need!",
+            600,
+            4 * ActionsManager.instance.weekLength,
+            MiscInfo.variableTypes.criminalityRate,
+            CallThePoliceResult);
+        }
+        #endregion
+
 
 
 

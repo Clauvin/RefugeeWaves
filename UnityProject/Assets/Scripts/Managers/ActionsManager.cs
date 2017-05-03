@@ -30,9 +30,7 @@ public class ActionsManager : MonoBehaviour {
 
 		possibleActions.Add(ActionConstructor.EncourageYoungProfessionals());
 
-		possibleActions.Add (new PlayerAction (buttons[2],"Call the police!",
-			"New police officers should be just what these recent crime waves need!", 600, 4 * weekLength,
-			MiscInfo.variableTypes.criminalityRate, -0.2*StatsManager.instance.criminalityRate));
+		possibleActions.Add (ActionConstructor.CallThePolice());
 
 		possibleActions.Add(new PlayerAction(buttons[3],"Can I haz some help?",
 			"Since the UN wants you to help, nothing is more fair than if they help with the bills."
