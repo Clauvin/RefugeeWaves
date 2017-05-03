@@ -28,10 +28,7 @@ public class ActionsManager : MonoBehaviour {
 		//'Research' actions
 		possibleActions.Add(ActionConstructor.BuildUnnecessaryLandmarks());
 
-		possibleActions.Add(new PlayerAction(buttons[1],"Encourage young professionals",
-			"Make those teenagers get off their phones and work a little",400,3*weekLength,MiscInfo.variableTypes.unemployementRate,
-			-1*0.07*StatsManager.instance.unemploymentRate,
-            MiscInfo.variableTypes.baseTaxPerCitizen,0.05*ResourceManager.instance.baseTaxPerCitizen));
+		possibleActions.Add(ActionConstructor.EncourageYoungProfessionals());
 
 		possibleActions.Add (new PlayerAction (buttons[2],"Call the police!",
 			"New police officers should be just what these recent crime waves need!", 600, 4 * weekLength,

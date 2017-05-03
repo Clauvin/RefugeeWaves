@@ -7,6 +7,7 @@ namespace Assets.Scripts
 {
     public static class ActionConstructor
     {
+        #region Build Unnecessary Landmarks
         public static double BuildUnnecessaryLandmarksResult()
         {
             return -1 * 0.1 * StatsManager.instance.unemploymentRate;
@@ -23,7 +24,31 @@ namespace Assets.Scripts
             MiscInfo.variableTypes.unemployementRate,
             BuildUnnecessaryLandmarksResult());
         }
+        #endregion
 
+        #region Encourage Young Professionals
+        public static double EncourageYoungProfessionalsFirstResult()
+        {
+            return -1 * 0.07 * StatsManager.instance.unemploymentRate;
+        }
+
+        public static double EncourageYoungProfessionalsSecondResult()
+        {
+            return 0.05 * ResourceManager.instance.baseTaxPerCitizen;
+        }
+
+        public static PlayerAction EncourageYoungProfessionals()
+        {
+            return new PlayerAction(ActionsManager.instance.buttons[1],
+                "Encourage young professionals",
+            "Make those teenagers get off their phones and work a little",
+            400, 3 * ActionsManager.instance.weekLength,
+            MiscInfo.variableTypes.unemployementRate,
+            EncourageYoungProfessionalsFirstResult(),
+            MiscInfo.variableTypes.baseTaxPerCitizen,
+            EncourageYoungProfessionalsSecondResult());
+        }
+        #endregion
 
 
 
