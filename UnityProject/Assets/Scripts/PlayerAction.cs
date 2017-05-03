@@ -15,12 +15,14 @@ public class PlayerAction {
 
 	public MiscInfo.variableTypes consequenceVar1;
 	public double consequenceValue1;
+    public delegate double consequenceFunction1();
 
 	public MiscInfo.variableTypes consequenceVar2;//if needed
 	public double consequenceValue2;//if needed
+    public delegate double consequenceFunction2();
 
 
-	public float actionCooldownPeriod;
+    public float actionCooldownPeriod;
 
 	public float timeLastUsed;//saves time action was last used
 	public bool isActive;//tells if action can be used or if it's cooling down
