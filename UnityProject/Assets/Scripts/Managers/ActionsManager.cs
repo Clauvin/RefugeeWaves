@@ -34,11 +34,7 @@ public class ActionsManager : MonoBehaviour {
 
 		possibleActions.Add(ActionConstructor.CanIHazSomeHelp());
 
-		possibleActions.Add(new PlayerAction(buttons[4],"Hola gringo!",
-            "Show people Wavestan is a nice place to live (and lure some professionals while you're at it",
-			1000,6*weekLength,MiscInfo.variableTypes.legalPopulation,1000,
-			MiscInfo.variableTypes.publicOpinion,
-			-0.15*StatsManager.instance.publicOpinionOnImmigrants));
+		possibleActions.Add(ActionConstructor.HolaGringo());
 
 		possibleActions.Add(new PlayerAction(buttons[5],"They don't look so bad, right?",
 			"Help your people see just how nice those foreigners may be",600,8*weekLength,MiscInfo.variableTypes.publicOpinion,

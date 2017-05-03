@@ -88,7 +88,30 @@ namespace Assets.Scripts
         }
         #endregion
 
-        
+        #region Hola Gringo
+
+        public static double HolaGringoFirstResult()
+        {
+            return 1000.0f;
+        }
+
+        public static double HolaGringoSecondResult()
+        {
+            return -0.15 * StatsManager.instance.publicOpinionOnImmigrants;
+        }
+
+        public static PlayerAction HolaGringo()
+        {
+            return new PlayerAction(ActionsManager.instance.buttons[4],
+                "Hola gringo!",
+            "Show people Wavestan is a nice place to live" +
+            " (and lure some professionals while you're at it",
+            1000, 6 * ActionsManager.instance.weekLength,
+            MiscInfo.variableTypes.legalPopulation, HolaGringoFirstResult,
+            MiscInfo.variableTypes.publicOpinion,
+            HolaGringoSecondResult);
+        }
+        #endregion
 
 
     }
