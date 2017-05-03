@@ -12,14 +12,15 @@ public class PlayerAction {
 	public double actionCost;
 
 	public GameObject assignedButton;//button assigned to this Action
+    public delegate double consequenceFunction();
 
-	public MiscInfo.variableTypes consequenceVar1;
+    public MiscInfo.variableTypes consequenceVar1;
 	public double consequenceValue1;
-    public delegate double consequenceFunction1();
+    public consequenceFunction consequenceFunction1;
 
-	public MiscInfo.variableTypes consequenceVar2;//if needed
+    public MiscInfo.variableTypes consequenceVar2;//if needed
 	public double consequenceValue2;//if needed
-    public delegate double consequenceFunction2();
+    public consequenceFunction consequenceFunction2;
 
 
     public float actionCooldownPeriod;
@@ -28,6 +29,30 @@ public class PlayerAction {
 	public bool isActive;//tells if action can be used or if it's cooling down
 
     #region Public Constructors
+    public PlayerAction(GameObject buttonGO, string name, string desc, double cost, float cooldown, MiscInfo.variableTypes varType1,
+        consequenceFunction function1Consequence,  MiscInfo.variableTypes varType2 = MiscInfo.variableTypes.NULL,
+                        consequenceFunction function2Consequence = null, bool active = true)
+    {
+        assignedButton = buttonGO;
+        actionName = name;
+        actionDescription = desc;
+        actionCost = cost;
+
+        actionCooldownPeriod = cooldown;
+
+        consequenceVar1 = varType1;
+        consequenceVar2 = varType2;
+
+        consequenceValue1 = 0.0f;
+        consequenceValue2 = 0.0f;
+
+        consequenceFunction1 = function1Consequence;
+        consequenceFunction2 = function2Consequence;
+
+        timeLastUsed = 0.0f;
+        isActive = active;
+    }
+
     public PlayerAction(GameObject buttonGO, string name, string desc, double cost, float cooldown, MiscInfo.variableTypes varType1,
         double var1Consequence, MiscInfo.variableTypes varType2 = MiscInfo.variableTypes.NULL,
                         double var2Consequence = 0.0, bool active = true)
@@ -45,9 +70,14 @@ public class PlayerAction {
         consequenceValue1 = var1Consequence;
         consequenceValue2 = var2Consequence;
 
+        consequenceFunction1 = null;
+        consequenceFunction2 = null;
+
         timeLastUsed = 0.0f;
         isActive = active;
     }
+
+
     #endregion
 
     public void applyConsequences()
