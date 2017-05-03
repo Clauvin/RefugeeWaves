@@ -7,7 +7,7 @@ namespace Assets.Scripts
 {
     public static class ActionConstructor
     {
-        #region Build Unnecessary Landmarks
+        #region Build Unnecessary Landmarks Functions
         public static double BuildUnnecessaryLandmarksResult()
         {
             return -1 * 0.1 * StatsManager.instance.unemploymentRate;
@@ -26,7 +26,7 @@ namespace Assets.Scripts
         }
         #endregion
 
-        #region Encourage Young Professionals
+        #region Encourage Young Professionals Functions
         public static double EncourageYoungProfessionalsFirstResult()
         {
             return -1 * 0.07 * StatsManager.instance.unemploymentRate;
@@ -50,7 +50,7 @@ namespace Assets.Scripts
         }
         #endregion
 
-        #region Call The Police
+        #region Call The Police Functions
         public static double CallThePoliceResult()
         {
             return -0.2 * StatsManager.instance.criminalityRate;
@@ -68,7 +68,7 @@ namespace Assets.Scripts
         }
         #endregion
 
-        #region Can I Haz Some Help
+        #region Can I Haz Some Help Functions
         public static double CanIHazSomeHelpResult()
         {
             return ResourceManager.instance.UNHelpBaseValue
@@ -88,7 +88,7 @@ namespace Assets.Scripts
         }
         #endregion
 
-        #region Hola Gringo
+        #region Hola Gringo Functions
         public static double HolaGringoFirstResult()
         {
             return 1000.0f;
@@ -112,7 +112,7 @@ namespace Assets.Scripts
         }
         #endregion
 
-        #region They Don't Look So Bad
+        #region They Don't Look So Bad Functions
         public static double TheyDontLookSoBadResult()
         {
             return StatsManager.instance.publicOpinionOnImmigrants * 0.8;
@@ -130,7 +130,7 @@ namespace Assets.Scripts
         }
         #endregion
 
-        #region MikasaSuCasa
+        #region MikasaSuCasa Functions
         public static double MikasaSuCasaResult()
         {
             return StatsManager.instance.internationalOpinion * 0.7;
