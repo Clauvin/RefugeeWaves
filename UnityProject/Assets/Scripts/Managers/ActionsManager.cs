@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,10 +26,7 @@ public class ActionsManager : MonoBehaviour {
 		//Create all possible actions
 
 		//'Research' actions
-		possibleActions.Add(new PlayerAction(buttons[0],"Build unnecessary landmarks",
-			"No, we don't need new bridges. But people like looking at them and need work, so we'll have one anyway",300.0,
-			4*weekLength,MiscInfo.variableTypes.unemployementRate,
-            -1*0.1*StatsManager.instance.unemploymentRate));
+		possibleActions.Add(ActionConstructor.BuildUnnecessaryLandmarks());
 
 		possibleActions.Add(new PlayerAction(buttons[1],"Encourage young professionals",
 			"Make those teenagers get off their phones and work a little",400,3*weekLength,MiscInfo.variableTypes.unemployementRate,
