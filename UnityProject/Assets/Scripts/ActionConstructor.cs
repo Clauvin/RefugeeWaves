@@ -130,5 +130,22 @@ namespace Assets.Scripts
         }
         #endregion
 
+        #region MikasaSuCasa
+        public static double MikasaSuCasaResult()
+        {
+            return StatsManager.instance.internationalOpinion * 0.7;
+        }
+
+        public static PlayerAction MikasaSuCasa()
+        {
+            return new PlayerAction(ActionsManager.instance.buttons[6],
+                "Mikasa, su casa s2",
+            "Show the world you accept other peoples with open arms!" +
+            " Come on in, don't mind the mess.",
+            1000,
+            5 * ActionsManager.instance.weekLength,
+            MiscInfo.variableTypes.internationalOpinion, MikasaSuCasaResult);
+        }
+        #endregion
     }
 }

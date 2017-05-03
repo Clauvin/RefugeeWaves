@@ -38,9 +38,7 @@ public class ActionsManager : MonoBehaviour {
 
 		possibleActions.Add(ActionConstructor.TheyDontLookSoBad());
 
-		possibleActions.Add (new PlayerAction (buttons[6],"Mikasa, su casa s2",
-			"Show the world you accept other peoples with open arms! Come on in, don't mind the mess.", 1000,
-			5 * weekLength, MiscInfo.variableTypes.internationalOpinion, StatsManager.instance.internationalOpinion * 0.7));
+		possibleActions.Add (ActionConstructor.MikasaSuCasa());
 
 		//Resource buildind actions
 		possibleActions.Add(new PlayerAction(buttons[7],"Build Houses","Get those puppies up so people can rest a little",
