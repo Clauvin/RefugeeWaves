@@ -27,10 +27,30 @@ public class PlayerAction {
 	public float timeLastUsed;//saves time action was last used
 	public bool isActive;//tells if action can be used or if it's cooling down
 
+    #region Public Constructors
+    public PlayerAction(GameObject buttonGO, string name, string desc, double cost, float cooldown, MiscInfo.variableTypes varType1,
+        double var1Consequence, MiscInfo.variableTypes varType2 = MiscInfo.variableTypes.NULL,
+                        double var2Consequence = 0.0, bool active = true)
+    {
+        assignedButton = buttonGO;
+        actionName = name;
+        actionDescription = desc;
+        actionCost = cost;
 
+        actionCooldownPeriod = cooldown;
 
+        consequenceVar1 = varType1;
+        consequenceVar2 = varType2;
 
-	public void applyConsequences()
+        consequenceValue1 = var1Consequence;
+        consequenceValue2 = var2Consequence;
+
+        timeLastUsed = 0.0f;
+        isActive = active;
+    }
+    #endregion
+
+    public void applyConsequences()
 	{
 		//always SUMS the consequence value with the consequence variable, so need to pass the right value
 		//right value to be passed will be seen in ACTIONSMANAGER
@@ -212,28 +232,5 @@ public class PlayerAction {
 		return false;
 
 	}
-
-	public PlayerAction(GameObject buttonGO, string name, string desc, double cost, float cooldown, MiscInfo.variableTypes varType1, 
-		double var1Consequence, MiscInfo.variableTypes varType2 = MiscInfo.variableTypes.NULL, 
-						double var2Consequence = 0.0, bool active = true)
-	{
-        assignedButton = buttonGO;
-		actionName = name;
-		actionDescription = desc;
-		actionCost = cost;
-
-		actionCooldownPeriod = cooldown;
-
-		consequenceVar1 = varType1;
-		consequenceVar2 = varType2;
-
-		consequenceValue1 = var1Consequence;
-		consequenceValue2 = var2Consequence;
-
-		timeLastUsed = 0.0f;
-		isActive = active;
-	}
-
-
 
 }
