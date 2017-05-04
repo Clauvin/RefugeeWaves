@@ -5,7 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class ImmigrantManager : MonoBehaviour {
 
-	public static ImmigrantManager instance;
+    #region Public Variables
+    public static ImmigrantManager instance;
 
 	public List<ImmigrantWave> legalWaves; //holds the waves of legal immigrants
 	public List<ImmigrantWave> illegalWaves;
@@ -15,7 +16,9 @@ public class ImmigrantManager : MonoBehaviour {
 	public int numberOfIllegalImmigrants;
 
 	public int numberOfNaturalizedImmigrants; //how many immigrants you have helped get citizenship
+    #endregion
 
+    #region Wave Functions
     public void WaveReceived(GameObject wave)
     {
 
@@ -92,8 +95,9 @@ public class ImmigrantManager : MonoBehaviour {
 		//add that to total legals
 		numberOfLegalImmigrants+= legalW.numberOfImmigrants;
 	}
+    #endregion
 
-	public void checkForLegalizedImmigrantsVisas()
+    public void checkForLegalizedImmigrantsVisas()
 	{
         //Beginning of a new month. Check if (legal) immigrants cn get visas
 		for(int i = 0; i < legalWaves.Count; i+=0)

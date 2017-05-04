@@ -6,7 +6,6 @@ public class MainMenuButtonManager : MonoBehaviour {
 
 	public GameObject creditsGO;
 
-
     public void LoadMainMenu()
     {
         Basics_2.LoadScene.LoadMainMenu();

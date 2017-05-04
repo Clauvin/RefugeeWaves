@@ -6,15 +6,16 @@ using UnityEngine.UI;
 //Saves Random Events and checks to see if they happen
 public class RandomEventManager : MonoBehaviour {
 
-	public static RandomEventManager instance;
-
 	List<RandomEvent> randomEvents = new List<RandomEvent>();//holds all events
 	List<RandomEvent> eventsYetToHappen = new List<RandomEvent>();//starts as a copy of all events; gets smaller as events happen
 
 	public GameObject randomEventPrefab;
 
-	//creates them all
-	public void CreateRandomEvents ()
+    public static RandomEventManager instance;
+
+    #region Creating Events
+    //creates them all
+    public void CreateRandomEvents ()
 	{
 		randomEvents.Add(new RandomEvent("Your mom called!", "Your mom is worried sick about you for never calling her!"+
 			"She nagged you on the phone so much, you missed an important call about some clandestine refugees" +
@@ -53,7 +54,6 @@ public class RandomEventManager : MonoBehaviour {
 		//must pause game at this point
 		TimeManager.instance.pauseGame();
 
-
 		//instantiates a prefab with the info of the event
 		GameObject newEvent = (GameObject)Instantiate(randomEventPrefab);
 
@@ -66,9 +66,10 @@ public class RandomEventManager : MonoBehaviour {
 		newEvent.transform.Find ("RandomEventPanel/EventDescription").GetComponent<Text>().text = description;
 
 	}
+    #endregion
 
-	//every week, this needs to be checked
-	public void CheckForRandomEvents()
+    //every week, this needs to be checked
+    public void CheckForRandomEvents()
 	{
 		//for now, simple mechanism: every end of month this method has 10% chance of getting a random event;
 		//if it gets one, choose one (that hasn't been chosen yet)
@@ -98,8 +99,6 @@ public class RandomEventManager : MonoBehaviour {
         //remove it from the list
         eventsYetToHappen.RemoveAt(eventToHappen);
     }
-
-
 
 	// Use this for initialization
 	void Start () {

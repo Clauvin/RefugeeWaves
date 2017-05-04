@@ -5,22 +5,25 @@ using UnityEngine;
 
 public class ActionsManager : MonoBehaviour {
 
-	public static ActionsManager instance;
+    #region Public Variables
+    public static ActionsManager instance;
 
 	public List<PlayerAction> possibleActions = new List<PlayerAction> ();
 
 	public List<GameObject> buttons;//buttons to be assigned to each action
 
 	public float weekLength = 15.0f;
+    #endregion
 
-	public void executeAction(int actionIndex)
+    public void executeAction(int actionIndex)
 	{
 		possibleActions[actionIndex-1].actionUsed ();
 	}
+    
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		instance = this;
 
 		//Create all possible actions
