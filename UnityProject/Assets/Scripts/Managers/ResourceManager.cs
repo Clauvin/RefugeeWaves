@@ -18,33 +18,38 @@ public class ResourceManager : MonoBehaviour {
     /// </remarks>
 	public long playerMonthlyBudget; //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
 
-	//invisible variables
-	public double baseTaxPerCitizen=10; //how much each citizen pays(base)
+    #region Invisible Variables
+    //invisible variables: the player doesn't see them, but they are used and manipulated by the game
+    public double baseTaxPerCitizen = 10; //how much each citizen pays(base)
 	public double realTaxPerCitizen; //How much they pay(with possible extra variation)
-	public double taxVariation=1; //i.e., inflation. Dumbass.
-	public double BudgetBaseValue=1000;
+	public double taxVariation = 1; //i.e., inflation. Dumbass.
+	public double BudgetBaseValue = 1000;
     public double UNHelpBaseValue = 4000; // how much the United Nations give when help is asked?
     public double UNHelpVariation = 1.0f; // how much the United Nations give more, or less using the base value?
+    #endregion
 
-	//Resources
+    //Resources
 
-	//open borders
-	public int numberOfAvailableHouses=0;//number of vacant houses for immigrants
+    #region Open Borders
+    //variables used for open borders, in other words, when the refugees start living in the country
+    public int numberOfAvailableHouses=0;//number of vacant houses for immigrants
 	public int numberOfTotalHouses=0; //total number of houses player has built for helping refugees
 	public int costOfHouse=100; 
 	public int socialResources=100; //number of social expenses 'units' player has to give out to refugees
 	public int costOfSocialResource = 20;
+    #endregion
 
-	//closed borders
-	public int numberOfAvailableBorderOfficers=0; //number of officers not busy at the moment
+    #region Closed Borders
+    //variables used for closed bordersin other words, when the refugees are pushed away
+    public int numberOfAvailableBorderOfficers=0; //number of officers not busy at the moment
 	public int numberOfTotalBorderOfficers=0; //total number of officers player currently has employed
 	public int costOfBorderOfficer = 30;
-
 	public int borderResources=100; //number of border expenses 'units' player has to maintain borders running
 	public int costOfBorderResource = 25;
+    #endregion
 
-	//Game Objects
-	public GameObject playerCurrentMoneyGO;
+    //Game Objects
+    public GameObject playerCurrentMoneyGO;
 	public GameObject playerMonthlyBudgetGO;
 	public GameObject realTaxPerCitizenGO;
 	public GameObject numberOfAvailableHousesGO;
