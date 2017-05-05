@@ -151,7 +151,7 @@ namespace Assets.Scripts
         #region Houses
         public static double HousesResult()
         {
-            ActionsManager.instance.createVisualCommerceEvent("teste", "teste");
+            //ActionsManager.instance.createVisualCommerceEvent("teste", "teste");
             return 1;
         }
 
