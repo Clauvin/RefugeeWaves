@@ -12,6 +12,8 @@ public class ActionsManager : MonoBehaviour {
 
 	public List<GameObject> buttons;//buttons to be assigned to each action
 
+    public GameObject commerceEventPrefab;
+
 	public float weekLength = 15.0f;
     #endregion
 
