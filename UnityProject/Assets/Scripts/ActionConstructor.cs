@@ -161,7 +161,7 @@ namespace Assets.Scripts
             "Get those houses up so people can rest a little",
             300,
             1.5f * ActionsManager.instance.weekLength,
-            MiscInfo.variableTypes.availableHouses, 1);
+            MiscInfo.variableTypes.availableHouses, HousesResult());
         }
         #endregion
 
@@ -182,8 +182,39 @@ namespace Assets.Scripts
         }
         #endregion
 
+        #region Border Officers
+        public static double BorderOfficersResult()
+        {
+            return 1;
+        }
 
+        public static PlayerAction BorderOfficers()
+        {
+            return new PlayerAction(ActionsManager.instance.buttons[9],
+                "Hire Border Officers",
+                "Those borders won't defend themselves",
+            125,
+            2 * ActionsManager.instance.weekLength,
+            MiscInfo.variableTypes.availableBO, BorderOfficersResult());
+        }
+        #endregion
 
+        #region Border Resources
+        public static double BorderResourcesResult()
+        {
+            return 1;
+        }
+
+        public static PlayerAction BorderResources()
+        {
+            return new PlayerAction(ActionsManager.instance.buttons[10],
+                "Build Border Resources", 
+                "Fuel and ammo aren't free, you know.",
+            75,
+            1 * ActionsManager.instance.weekLength,
+            MiscInfo.variableTypes.availableBO, BorderResourcesResult());
+        }
+        #endregion
 
     }
 }

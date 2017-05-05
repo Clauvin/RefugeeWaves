@@ -48,11 +48,9 @@ public class ActionsManager : MonoBehaviour {
 
 		possibleActions.Add(ActionConstructor.SocialResources());
 
-		possibleActions.Add(new PlayerAction(buttons[9],"Hire Border Officers","Those borders won't defend themselves",
-			125,2*weekLength,MiscInfo.variableTypes.availableBO,1));
+		possibleActions.Add(ActionConstructor.BorderOfficers());
 
-		possibleActions.Add(new PlayerAction(buttons[10],"Build Border Resources","Fuel and ammo aren't free, you know.",
-			75,1*weekLength,MiscInfo.variableTypes.borderResources,1));
+		possibleActions.Add(ActionConstructor.BorderResources());
 	}
 	
 	// Update is called once per frame
