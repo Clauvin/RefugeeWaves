@@ -151,6 +151,7 @@ namespace Assets.Scripts
         #region Houses
         public static double HousesResult()
         {
+            ActionsManager.instance.createVisualCommerceEvent("teste", "teste");
             return 1;
         }
 
@@ -161,7 +162,7 @@ namespace Assets.Scripts
             "Get those houses up so people can rest a little",
             300,
             1.5f * ActionsManager.instance.weekLength,
-            MiscInfo.variableTypes.availableHouses, HousesResult());
+            MiscInfo.variableTypes.availableHouses, HousesResult);
         }
         #endregion
 
@@ -178,7 +179,7 @@ namespace Assets.Scripts
                 "Everyone needs some soup and some soap",
             100,
             1 * ActionsManager.instance.weekLength,
-            MiscInfo.variableTypes.socialResources, 1);
+            MiscInfo.variableTypes.socialResources, SocialResourcesResult);
         }
         #endregion
 
@@ -195,7 +196,7 @@ namespace Assets.Scripts
                 "Those borders won't defend themselves",
             125,
             2 * ActionsManager.instance.weekLength,
-            MiscInfo.variableTypes.availableBO, BorderOfficersResult());
+            MiscInfo.variableTypes.availableBO, BorderOfficersResult);
         }
         #endregion
 
@@ -212,7 +213,7 @@ namespace Assets.Scripts
                 "Fuel and ammo aren't free, you know.",
             75,
             1 * ActionsManager.instance.weekLength,
-            MiscInfo.variableTypes.availableBO, BorderResourcesResult());
+            MiscInfo.variableTypes.availableBO, BorderResourcesResult);
         }
         #endregion
 
