@@ -43,9 +43,8 @@ public class ActionsManager : MonoBehaviour {
 
 		possibleActions.Add (ActionConstructor.MikasaSuCasa());
 
-		//Resource buildind actions
-		possibleActions.Add(new PlayerAction(buttons[7],"Build Houses","Get those puppies up so people can rest a little",
-			300,1.5f*weekLength,MiscInfo.variableTypes.availableHouses,1));
+		//Resource building actions
+		possibleActions.Add(ActionConstructor.Houses());
 
 		possibleActions.Add(new PlayerAction(buttons[8],"Purchase social resources","Everyone needs some soup and some soap",
 			100,1*weekLength,MiscInfo.variableTypes.socialResources,1));

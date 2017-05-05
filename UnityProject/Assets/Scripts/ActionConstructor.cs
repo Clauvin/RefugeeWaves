@@ -147,5 +147,26 @@ namespace Assets.Scripts
             MiscInfo.variableTypes.internationalOpinion, MikasaSuCasaResult);
         }
         #endregion
+
+        #region Houses
+        public static double HousesResult()
+        {
+            return 1;
+        }
+
+        public static PlayerAction Houses()
+        {
+            return new PlayerAction(ActionsManager.instance.buttons[7],
+                "Build/Sell Houses",
+            "Get those houses up so people can rest a little",
+            300,
+            1.5f * ActionsManager.instance.weekLength,
+            MiscInfo.variableTypes.availableHouses, 1);
+        }
+        #endregion
+
+
+
+
     }
 }
