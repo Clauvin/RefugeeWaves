@@ -1653,6 +1653,7 @@ MonoBehaviour:
   time_for_next: 0
   def_quant_of_refugees: 50
   def_time_in_seconds: 30
+  refugees_multiplier: 1
 --- !u!4 &278915675
 Transform:
   m_ObjectHideFlags: 0
@@ -4145,6 +4146,8 @@ MonoBehaviour:
   realTaxPerCitizen: 0
   taxVariation: 1
   BudgetBaseValue: 1000
+  UNHelpBaseValue: 4000
+  UNHelpVariation: 1
   numberOfAvailableHouses: 0
   numberOfTotalHouses: 0
   costOfHouse: 100
