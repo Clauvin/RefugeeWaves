@@ -165,6 +165,23 @@ namespace Assets.Scripts
         }
         #endregion
 
+        #region Social Resources
+        public static double SocialResourcesResult()
+        {
+            return 1;
+        }
+
+        public static PlayerAction SocialResources()
+        {
+            return new PlayerAction(ActionsManager.instance.buttons[8],
+                "Purchase social resources",
+                "Everyone needs some soup and some soap",
+            100,
+            1 * ActionsManager.instance.weekLength,
+            MiscInfo.variableTypes.socialResources, 1);
+        }
+        #endregion
+
 
 
 

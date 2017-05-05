@@ -46,8 +46,7 @@ public class ActionsManager : MonoBehaviour {
 		//Resource building actions
 		possibleActions.Add(ActionConstructor.Houses());
 
-		possibleActions.Add(new PlayerAction(buttons[8],"Purchase social resources","Everyone needs some soup and some soap",
-			100,1*weekLength,MiscInfo.variableTypes.socialResources,1));
+		possibleActions.Add(ActionConstructor.SocialResources());
 
 		possibleActions.Add(new PlayerAction(buttons[9],"Hire Border Officers","Those borders won't defend themselves",
 			125,2*weekLength,MiscInfo.variableTypes.availableBO,1));
