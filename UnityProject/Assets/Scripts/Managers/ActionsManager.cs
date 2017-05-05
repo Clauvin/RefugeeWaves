@@ -26,10 +26,11 @@ public class ActionsManager : MonoBehaviour {
     void Start () {
 		instance = this;
 
-		//Create all possible actions
+        //Create all possible actions
 
-		//'Research' actions
-		possibleActions.Add(ActionConstructor.BuildUnnecessaryLandmarks());
+        #region Research Actions
+        //'Research' actions
+        possibleActions.Add(ActionConstructor.BuildUnnecessaryLandmarks());
 
 		possibleActions.Add(ActionConstructor.EncourageYoungProfessionals());
 
@@ -42,16 +43,19 @@ public class ActionsManager : MonoBehaviour {
 		possibleActions.Add(ActionConstructor.TheyDontLookSoBad());
 
 		possibleActions.Add (ActionConstructor.MikasaSuCasa());
+        #endregion
 
-		//Resource building actions
-		possibleActions.Add(ActionConstructor.Houses());
+        #region Building Actions
+        //Resource building actions
+        possibleActions.Add(ActionConstructor.Houses());
 
 		possibleActions.Add(ActionConstructor.SocialResources());
 
 		possibleActions.Add(ActionConstructor.BorderOfficers());
 
 		possibleActions.Add(ActionConstructor.BorderResources());
-	}
+        #endregion
+    }
 	
 	// Update is called once per frame
 	void Update () {
