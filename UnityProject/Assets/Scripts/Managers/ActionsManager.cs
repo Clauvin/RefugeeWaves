@@ -17,13 +17,28 @@ public class ActionsManager : MonoBehaviour {
 	public float weekLength = 15.0f;
     #endregion
 
+    public void createVisualCommerceEvent(string title, string description)
+    {
+        //nope, no pausing, for tension reasons
+        //TimeManager.instance.pauseGame();
+
+        //instantiates a prefab with the info of the event
+        GameObject newEvent = (GameObject)Instantiate(commerceEventPrefab);
+
+        //make it a child of the MainCanvas and adjust its scale
+        newEvent.transform.SetParent(GameObject.Find("MainCanvas").transform, false);
+        //newEvent.transform.localScale = new Vector3 (1, 1, 1);
+
+        //change the values of the text boxes
+        newEvent.transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text = title;
+        newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
+    }
+
     public void executeAction(int actionIndex)
 	{
 		possibleActions[actionIndex-1].actionUsed ();
 	}
     
-
-
     // Use this for initialization
     void Start () {
 		instance = this;
