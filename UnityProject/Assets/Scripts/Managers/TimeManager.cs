@@ -9,20 +9,23 @@ public class TimeManager : MonoBehaviour {
 
 	public static TimeManager instance;
 
-	public bool gamePaused;
+    #region Public Variables
+    public bool gamePaused;
 	public float timeLastPaused, timeLastUnpaused; //when started counting again; new 0
 	public float timeElapsed; //saves time already elapsed in case user pauses
 	public float weekLength = 5.0f; //in seconds
 	public int year, month, week; // all start at 1
 	public int gameDuration = 2; //in years
 	public bool gameOver;
+    #endregion
 
+    //GO's and Text
+    #region GO - The UI GameObjects + UI Texts
+    public GameObject weekGO, monthGO, yearGO;
+	Text weekText, monthText, yearText;
+    #endregion
 
-	//GO's and Text
-
-	public GameObject weekGO, monthGO, yearGO;
-	Text weekText, monthText, yearText; 
-
+    #region Pause/Unpause Functions
     public void PauseOrUnpause()
     {
         if (!gamePaused) pauseGame();
@@ -53,9 +56,10 @@ public class TimeManager : MonoBehaviour {
 			timeLastUnpaused = Time.time;
 		}
 	}
+    #endregion
 
-
-	public void checkForPassageOfWeek()
+    #region Check For Passage Of Time Functions
+    public void checkForPassageOfWeek()
 	{
 		if (timeElapsed+ (Time.time-timeLastUnpaused)>=weekLength)
 		{
@@ -124,6 +128,7 @@ public class TimeManager : MonoBehaviour {
 			Debug.Log ("Game Over, time is up");
 		}
 	}
+    #endregion
 
     void Awake()
     {
