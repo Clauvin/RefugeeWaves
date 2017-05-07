@@ -5,15 +5,16 @@ using UnityEngine.UI;
 
 public class VisualManager : MonoBehaviour {
 
-    public GameObject moneyGO, actionsGO, houseGO, unemployementGO, criminalityGO,
-	BOGO, SocialResGO, BorderResGO;
-
 	public static VisualManager instance;
+
+    public GameObject moneyGO, actionsGO, houseGO, unemployementGO, criminalityGO,
+        BOGO, SocialResGO, BorderResGO;
 
     //At the moment, does nothing.
     public bool action_panel_is_active;
 
-	public void showMoneyPanel()
+    #region Show/Hide Money Panel Functions
+    public void showMoneyPanel()
     {
 		foreach(Transform t in moneyGO.transform)
 		{
@@ -26,8 +27,9 @@ public class VisualManager : MonoBehaviour {
 			t.gameObject.SetActive(false);
 		}
     }
+    #endregion
 
-	public void toggleActionsPanel()
+    public void toggleActionsPanel()
 	{
         //invert value of action_panel_is_active
         action_panel_is_active = action_panel_is_active != true;
@@ -49,7 +51,7 @@ public class VisualManager : MonoBehaviour {
     }
 
 
-
+    #region Show/Hide House Panel Functions
     public void showHousePanel()
 	{
 		foreach(Transform t in houseGO.transform)
@@ -64,8 +66,10 @@ public class VisualManager : MonoBehaviour {
 			t.gameObject.SetActive(false);
 		}
 	}
+    #endregion
 
-	public void showUnemploymentPanel()
+    #region Show/Hide Unemployment Panel Functions
+    public void showUnemploymentPanel()
 	{
 		foreach(Transform t in unemployementGO.transform)
 		{
@@ -79,50 +83,61 @@ public class VisualManager : MonoBehaviour {
 			t.gameObject.SetActive(false);
 		}
 	}
+    #endregion
 
-	public void showCriminalityPanel()
+    #region Show/Hide Criminality Panel Functions
+    public void showCriminalityPanel()
 	{
 		foreach(Transform t in criminalityGO.transform)
 		{
 			t.gameObject.SetActive(true);
 		}
 	}
+
 	public void hideCriminalityPanel() {
 		foreach(Transform t in criminalityGO.transform)
 		{
 			t.gameObject.SetActive(false);
 		}
 	}
+    #endregion
 
-	public void showBOPanel()
+    #region Show/Hide BO Panel Functions
+    public void showBOPanel()
 	{
 		foreach(Transform t in BOGO.transform)
 		{
 			t.gameObject.SetActive(true);
 		}
 	}
+
 	public void hideBOPanel() {
 		foreach(Transform t in BOGO.transform)
 		{
 			t.gameObject.SetActive(false);
 		}
 	}
+    #endregion
 
-	public void showBorderResPanel()
+    #region Show/Hide Border Res Panel Functions
+    public void showBorderResPanel()
 	{
 		foreach(Transform t in BorderResGO.transform)
 		{
 			t.gameObject.SetActive(true);
 		}
 	}
+
 	public void hideBorderResPanel() {
 		foreach(Transform t in BorderResGO.transform)
 		{
 			t.gameObject.SetActive(false);
 		}
 	}
+    #endregion
 
-	public void showSocialResPanel()
+    #region Show/Hide Social Res Panel Functions
+    public void showSocialResPanel()
 	{
 		foreach(Transform t in SocialResGO.transform)
 		{
@@ -135,9 +150,9 @@ public class VisualManager : MonoBehaviour {
 			t.gameObject.SetActive(false);
 		}
 	}
+    #endregion
 
-
-	public void hideAllPanels()
+    public void hideAllPanels()
 	{
 		toggleActionsPanel ();
 		hideCriminalityPanel ();
