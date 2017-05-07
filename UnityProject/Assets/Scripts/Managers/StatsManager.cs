@@ -10,24 +10,28 @@ public class StatsManager : MonoBehaviour {
 	public static StatsManager instance;
 
 
-	//Creates all global variables to be used by the Minister of Wavestan
+    #region Global Variables
+    //Creates all global variables to be used by the Minister of Wavestan
 
-	public int legalPopulation;//how many legal, tax paying ppl are living in your country atm
+    public int legalPopulation;//how many legal, tax paying ppl are living in your country atm
 
 	public double publicOpinionOnImmigrants; //goes from 0 to 1
 	public double internationalOpinion; //goes from 0 to 1, affects your chances of getting international help
 
 	public double unemploymentRate; //from 0 to 1(if 1, boy, are you screwed)
 	public double criminalityRate; //from 0 to 1(if 1, boy, are you dead)
+    #endregion
 
-    //GO's, Text, Sliders...
-
+    #region GO - The UI GameObjects
     public GameObject legalPopulationGO, publicOpinionOnImmigrantsGO, internationalOpinionGO;
     public GameObject unemploymentRateGO, criminalityRateGO;
+    #endregion
 
+    #region The UI Texts
     Text legalPopulationText;
     Slider publicOpinionOnImmigrantsSlider, internationalOpinionSlider;
     Text unemployementRateText, criminalityRateText;
+    #endregion
 
     public void randomizeStartingStats()
 	{
@@ -148,6 +152,7 @@ public class StatsManager : MonoBehaviour {
         return 1 - unemploymentRate;
     }
 
+    #region Update UI Functions
     public void UpdateFrontLegalPopulation() {
 
         legalPopulationText.text = legalPopulation.ToString();
@@ -176,8 +181,8 @@ public class StatsManager : MonoBehaviour {
 
         criminalityRateText.text = System.Math.Round(criminalityRate * 100, 1).ToString() + "%";
 
-
     }
+    #endregion
 
     void Awake()
     {
