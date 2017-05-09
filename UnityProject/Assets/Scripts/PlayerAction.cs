@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Actions the player can do, like researches, purchase of objects, etc
-public class PlayerAction {
-	//actions have names, descriptions(?), consequences and cooldown period
+/// <summary>
+/// Actions the player can do, like researches, purchase of objects, etc
+/// actions have names, descriptions(?), consequences and cooldown period
+/// </summary>
 
+public class PlayerAction {
+	
 	public string actionName;
 	public string actionDescription;
 	public double actionCost;
@@ -14,6 +17,7 @@ public class PlayerAction {
 	public GameObject assignedButton;//button assigned to this Action
     public delegate double consequenceFunction();
 
+    #region Consequence Variables
     public MiscInfo.variableTypes consequenceVar1;
 	public double consequenceValue1;
     public consequenceFunction consequenceFunction1;
@@ -21,12 +25,14 @@ public class PlayerAction {
     public MiscInfo.variableTypes consequenceVar2;//if needed
 	public double consequenceValue2;//if needed
     public consequenceFunction consequenceFunction2;
+    #endregion
 
-
+    #region Cooldown Variables
     public float actionCooldownPeriod;
 
 	public float timeLastUsed;//saves time action was last used
 	public bool isActive;//tells if action can be used or if it's cooling down
+    #endregion
 
     #region Public Constructors
     public PlayerAction(GameObject buttonGO, string name, string desc, double cost, float cooldown, MiscInfo.variableTypes varType1,
