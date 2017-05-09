@@ -7,14 +7,16 @@ public class RandomEvent {
 
 	public string name;
 	public string description;
-	//bool hasHappened { get; set; }//to say whether the event has already happened
+    //bool hasHappened { get; set; }//to say whether the event has already happened
 
-	MiscInfo.variableTypes consequenceVariable1;//Variable that suffers from this event
+    #region Consequence Variables
+    MiscInfo.variableTypes consequenceVariable1;//Variable that suffers from this event
 	float consequenceValue1;
 	MiscInfo.variableTypes consequenceVariable2;//Possible second variable that suffers from this event
 	float consequenceValue2;
+    #endregion
 
-	public void applyConsequences()
+    public void applyConsequences()
 	{
 		//always SUMS the consequence value with the consequence variable, so need to pass the right value
 		//Remember to update the displays after this happens
