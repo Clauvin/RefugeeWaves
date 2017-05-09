@@ -16,22 +16,29 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
     public int nextWaveId = 0;
 
+    #region Spawn Points and Spawn Objectives
     public GameObject refugees_exit_1, refugees_exit_2;
     public GameObject refugees_entrance_1, refugees_entrance_2;
+    #endregion
+
+    #region Public Variables
     public float present_time = 0.0f;
     public float last_time;
     public float time_for_next = 0.0f;
     public int def_quant_of_refugees = 50;
     public float def_time_in_seconds = 30.0f;
     public float refugees_multiplier = 1.0f; // this number multiplies the number of refugees in each new wave
+    #endregion
 
     private bool wave_instantiation_timer = true;
 
+    #region Instantiation Timer Functions
     public bool GetWaveInstantiationTimer() { return wave_instantiation_timer; }
 
     public void SetWaveInstantiationTimer(bool wit) { wave_instantiation_timer = wit; }
 
     public void ToggleWaveInstantiationTimer() { wave_instantiation_timer = !wave_instantiation_timer; }
+    #endregion
 
     void InstantiateNewRefugeeWave(int refugee_quantity, GameObject exit, GameObject entrance, float time_in_seconds,
             float scale = 1.0f)
