@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class MovingToTheObjective : MonoBehaviour {
 
+    #region Public Variables
     public Vector3 initial_position;
     public Vector3 final_objective;
     public float time_to_reach_objective;
     public float passed_time;
+    #endregion
+
     private float time_counted;
 
 	// Use this for initialization
