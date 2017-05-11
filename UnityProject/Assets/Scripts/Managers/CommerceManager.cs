@@ -9,8 +9,14 @@ using UnityEngine;
 /// </summary>
 public class CommerceManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    //Static Instance
+    //CommerceActions List
+    //Commerce Values
+    //Function to create Commerce Actions
+    //Function to exceute Commerce Actions
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
