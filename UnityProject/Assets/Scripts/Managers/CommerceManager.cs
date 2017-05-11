@@ -9,9 +9,33 @@ using UnityEngine;
 /// </summary>
 public class CommerceManager : MonoBehaviour {
 
-    //Static Instance
+    public static ActionsManager instance;
+
     //CommerceActions List
-    //Commerce Values
+    #region Buy/Sell Values
+    public double houses_buy_price = 300.0f;
+    public double houses_buy_multiplier = 1.0f;
+    public double houses_sell_price = 150.0f;
+    public double houses_sell_multiplier = 1.0f;
+
+    public double social_resources_buy_price = 100.0f;
+    public double social_resources_buy_multiplier = 1.0f;
+    public double social_resources_sell_price = 150.0f;
+    public double social_resources_sell_multiplier = 1.0f;
+
+    public double border_officers_buy_price = 125.0f;
+    public double border_officers_buy_multiplier = 1.0f;
+    public double border_officers_sell_price = 62.5f;
+    public double border_officers_sell_multiplier = 1.0f;
+
+    public double border_resources_buy_price = 75.0f;
+    public double border_resources_buy_multiplier = 1.0f;
+    public double border_resources_sell_price = 37.5f;
+    public double border_resources_sell_multiplier = 1.0f;
+    #endregion
+
+    public List<GameObject> buttons;//buttons to be assigned to each action
+
     //Function to create Commerce Actions
     //Function to exceute Commerce Actions
 
