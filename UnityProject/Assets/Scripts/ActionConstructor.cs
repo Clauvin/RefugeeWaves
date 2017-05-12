@@ -7,6 +7,9 @@ namespace Assets.Scripts
 {
     public static class ActionConstructor
     {
+        public static string housesTitle = "Build/Sell Houses";
+
+
         #region Build Unnecessary Landmarks Functions
         public static double BuildUnnecessaryLandmarksResult()
         {
@@ -151,14 +154,14 @@ namespace Assets.Scripts
         #region Houses
         public static double HousesResult()
         {
-            ActionsManager.instance.createVisualCommerceEvent("teste", "teste");
+            ActionsManager.instance.createVisualCommerceEvent(housesTitle, "teste");
             return 1;
         }
 
         public static PlayerAction Houses()
         {
             return new PlayerAction(ActionsManager.instance.buttons[7],
-                "Build/Sell Houses",
+                housesTitle,
             "Get those houses up so people can rest a little",
             300,
             1.5f * ActionsManager.instance.weekLength,
