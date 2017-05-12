@@ -258,7 +258,30 @@ public class PlayerAction {
 		applyConsequences ();
 	}
 
-	public bool checkIfCooledDown()
+    public void actionUsed(double cost)
+    {
+        Debug.Log("Did " + actionName);
+        //if it's still in cooldown, do nothing
+        if (!isActive)
+        {
+            Debug.Log("e está inativo");
+            return;
+        }
+
+
+        //deduct cost
+        ResourceManager.instance.playerCurrentMoney -= (long)cost;
+
+        //turn off button
+        assignedButton.SetActive(false);
+
+        //gets time used, make action inactive
+        timeLastUsed = Time.time;
+        isActive = false;
+        applyConsequences();
+    }
+
+    public bool checkIfCooledDown()
 	{
 		//compare current time with time last used, if bigger than cooldown period, can be used again
 		if (Time.time - timeLastUsed >= actionCooldownPeriod)
