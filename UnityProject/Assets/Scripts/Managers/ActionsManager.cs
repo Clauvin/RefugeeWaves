@@ -11,7 +11,9 @@ public class ActionsManager : MonoBehaviour {
 
 	public List<PlayerAction> possibleActions = new List<PlayerAction> ();
 
-	public List<GameObject> buttons;//buttons to be assigned to each action
+    public List<CommerceAction> possibleCommerceActions = new List<CommerceAction>();
+
+    public List<GameObject> buttons;//buttons to be assigned to each action
 
     public GameObject commerceEventPrefab;
 
@@ -73,6 +75,8 @@ public class ActionsManager : MonoBehaviour {
 
 		possibleActions.Add(ActionConstructor.BorderResources());
         #endregion
+
+        possibleCommerceActions.Add(ActionConstructor.CommerceHouses());
     }
 	
 	// Update is called once per frame
