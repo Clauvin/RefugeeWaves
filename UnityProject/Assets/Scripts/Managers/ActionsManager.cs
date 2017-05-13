@@ -41,7 +41,12 @@ public class ActionsManager : MonoBehaviour {
 	{
 		possibleActions[actionIndex-1].actionUsed ();
 	}
-    
+
+    public void executeCommerce(int commerceIndex)
+    {
+        possibleCommerceActions[commerceIndex - 1].createThisVisualCommerceEvent();
+    }
+
     // Use this for initialization
     void Start () {
 		instance = this;
