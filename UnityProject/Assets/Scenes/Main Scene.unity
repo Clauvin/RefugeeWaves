@@ -2913,12 +2913,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 821196382}
-        m_MethodName: executeAction
+        m_MethodName: executeCommerce
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2969,7 +2969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: 8
+  position: 1
 --- !u!1 &578990355
 GameObject:
   m_ObjectHideFlags: 0
@@ -4053,6 +4053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e6a636d18fc3f429851a0cd6106b38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  possibleCommerceActions: []
   buttons:
   - {fileID: 715060209}
   - {fileID: 1213029608}
