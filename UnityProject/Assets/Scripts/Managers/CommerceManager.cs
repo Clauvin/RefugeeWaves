@@ -9,7 +9,7 @@ using UnityEngine;
 /// </summary>
 public class CommerceManager : MonoBehaviour {
 
-    public static ActionsManager instance;
+    public static CommerceManager instance;
 
     //CommerceActions List
     #region Buy/Sell Values
