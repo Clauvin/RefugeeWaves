@@ -11,7 +11,7 @@ public class CommerceAction : MonoBehaviour {
 
     public GameObject assignedButton;
 
-    public delegate double consequenceFunction(int);
+    public delegate double consequenceFunction(int i);
 
     #region Consequence Variables
     public consequenceFunction buyValueFunction;
@@ -61,6 +61,11 @@ public class CommerceAction : MonoBehaviour {
         newEvent.transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text = title;
         newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
         newEvent.transform.Find("CommerceEventPanel/OkButton").GetComponent<Button>().onClick.AddListener(evento);
+    }
+
+    public void createThisVisualCommerceEvent()
+    {
+        createVisualCommerceEvent(actionName, actionDescription, null);
     }
 
     // Use this for initialization
