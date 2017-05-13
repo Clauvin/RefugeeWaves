@@ -11,7 +11,7 @@ public class CommerceAction : MonoBehaviour {
 
     public GameObject assignedButton;
 
-    public delegate void consequenceFunction();
+    public delegate double consequenceFunction(int);
 
     #region Consequence Variables
     public consequenceFunction buyValueFunction;
