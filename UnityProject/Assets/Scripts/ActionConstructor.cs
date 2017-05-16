@@ -179,7 +179,7 @@ namespace Assets.Scripts
 
         public static double HousesResult()
         {
-            ActionsManager.instance.createVisualCommerceEvent(housesTitle, "teste");
+            ActionsManager.instance.createVisualCommerceEvent(housesTitle, "teste", null);
             return 1;
         }
 
