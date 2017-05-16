@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ActionsManager : MonoBehaviour {
@@ -35,6 +36,23 @@ public class ActionsManager : MonoBehaviour {
         //change the values of the text boxes
         newEvent.transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text = title;
         newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
+    }
+
+    public void createVisualCommerceEvent(string title, string description, UnityAction evento)
+    {
+        //nope, no pausing, for tension reasons
+        //TimeManager.instance.pauseGame();
+
+        //instantiates a prefab with the info of the event
+        GameObject newEvent = (GameObject)Instantiate(ActionsManager.instance.commerceEventPrefab);
+
+        //make it a child of the MainCanvas and adjust its scale
+        newEvent.transform.SetParent(GameObject.Find("MainCanvas").transform, false);
+
+        //change the values of the text boxes
+        newEvent.transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text = title;
+        newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
+        newEvent.transform.Find("CommerceEventPanel/OkButton").GetComponent<Button>().onClick.AddListener(evento);
     }
 
     public void executeAction(int actionIndex)
