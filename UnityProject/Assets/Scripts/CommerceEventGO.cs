@@ -4,7 +4,18 @@ using UnityEngine;
 
 public class CommerceEventGO : MonoBehaviour {
 
-	public void PressedOKEventButton()
+    /*
+     * Delegate functions to store:
+     * 
+     * 1 - Check buy values;
+     * 2 - Check sell values;
+     * 3 - Buy;
+     * 4 - Sell;
+     * 5 - Close window;
+     * 
+     */
+
+    public void PressedOKEventButton()
 	{
 		//Destroy this Random Event Popup
 		Destroy(this.gameObject);
