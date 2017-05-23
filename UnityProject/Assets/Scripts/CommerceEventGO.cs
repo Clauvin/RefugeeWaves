@@ -5,17 +5,6 @@ using Basics_3;
 
 public class CommerceEventGO : MonoBehaviour {
 
-    /*
-     * Delegate functions to store:
-     * 
-     * 1 - Check buy values;
-     * 2 - Check sell values;
-     * 3 - Buy;
-     * 4 - Sell;
-     * 5 - Close window;
-     * 
-     */
-
     public delegate void BuyOrSellFunction(int quant);
     public delegate bool IsBuyableOrSellable();
 
