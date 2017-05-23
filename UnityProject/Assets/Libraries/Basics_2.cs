@@ -5,9 +5,9 @@ using UnityEngine;
 /// <summary>
 /// Library in progress for fast prototyping in Unity.
 /// 
-/// Version 2, created for use in the game 2, for the Global Game Jam 2017.
+/// Version 3. And needing to use semantic versioning.
 /// </summary>
-namespace Basics_2
+namespace Basics_3
 {
     /// <summary>
     /// Class LoadScene.

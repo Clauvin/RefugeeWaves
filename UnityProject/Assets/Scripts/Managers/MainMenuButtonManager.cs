@@ -8,17 +8,17 @@ public class MainMenuButtonManager : MonoBehaviour {
 
     public void LoadMainMenu()
     {
-        Basics_2.LoadScene.LoadMainMenu();
+        Basics_3.LoadScene.LoadMainMenu();
     }
 
     public void LoadMainGameplay()
     {
-        Basics_2.LoadScene.LoadMainGameplay();
+        Basics_3.LoadScene.LoadMainGameplay();
     }
 
     public void CloseGame()
     {
-        Basics_2.LoadScene.CloseGame();
+        Basics_3.LoadScene.CloseGame();
     }
 
 	public void ShowResponsibles()

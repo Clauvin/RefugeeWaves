@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Basics_2;
+using Basics_3;
 
 [System.Serializable]
 public class TimeManager : MonoBehaviour {
@@ -176,10 +176,10 @@ public class TimeManager : MonoBehaviour {
     {
         if (year >= 3)
         {
-            Basics_2.LoadScene.LoadVictoryScreen();
+            Basics_3.LoadScene.LoadVictoryScreen();
         } else if ((StatsManager.instance.criminalityRate >= 0.575f) && (StatsManager.instance.unemploymentRate >= 0.575f))
         {
-            Basics_2.LoadScene.LoadDefeatScreen();
+            Basics_3.LoadScene.LoadDefeatScreen();
         }
     }
 }
