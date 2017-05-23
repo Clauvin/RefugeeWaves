@@ -11,9 +11,16 @@ public class CommerceEventGO : MonoBehaviour {
 
 	}
 
+    public void PressedCancelEventButton()
+    {
+        //Destroy this Random Event Popup
+        Destroy(this.gameObject);
 
-	// Use this for initialization
-	void Start () {
+    }
+
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
