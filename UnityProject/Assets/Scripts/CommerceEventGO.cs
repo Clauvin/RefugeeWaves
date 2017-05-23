@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Basics_3;
 
 public class CommerceEventGO : MonoBehaviour {
 
@@ -14,6 +15,27 @@ public class CommerceEventGO : MonoBehaviour {
      * 5 - Close window;
      * 
      */
+
+    public delegate void BuyOrSellFunction(int quant);
+    public delegate bool IsBuyableOrSellable();
+
+    public BuyOrSellFunction buy_function;
+    public BuyOrSellFunction sell_function;
+
+    public IsBuyableOrSellable is_buyable;
+    public IsBuyableOrSellable is_sellable;
+
+    public Commerce_Actions acao_de_comercio = Commerce_Actions.Open_Commerce;
+
+    public void CheckBuyAction()
+    {
+
+    }
+
+    public void CheckSellAction()
+    {
+
+    }
 
     public void PressedOKEventButton()
 	{
