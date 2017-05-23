@@ -75,6 +75,15 @@ namespace Basics_3
         Victory_Screen = 2,
         Defeat_Screen = 3
     }
+
+    public enum Commerce_Actions
+    {
+        Open_Commerce = 0,
+        Closed_Commerce = 1,
+        Buying = 2,
+        Selling = 3,
+        Lending = 4
+    }
 }
 
 
