@@ -185,7 +185,7 @@ namespace Assets.Scripts
             return new CommerceAction(housesTitle, "Get those houses up so people can rest a little",
                 ActionsManager.instance.buttons[7],
                 buyHouses, sellHouses, AHouseBuyValue, AHouseSellValue,
-                1.5f * ActionsManager.instance.weekLength);
+                MiscInfo.variableTypes.availableHouses, 1.5f * ActionsManager.instance.weekLength);
         }
 
         public static double HousesResult()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Basics_3;
 
 public class CommerceAction : MonoBehaviour {
 
@@ -39,7 +40,7 @@ public class CommerceAction : MonoBehaviour {
     #region Public Constructors
     public CommerceAction(string actName, string actDescription, GameObject assignButton, consequenceFunction bFunction,
         consequenceFunction sFunction, CommerceEventGO.BuyOrSellValue b_value, CommerceEventGO.BuyOrSellValue s_value,
-        float actCoolPeriod)
+        MiscInfo.variableTypes whats_being_sold, float actCoolPeriod)
     {
         actionName = actName;
         actionDescription = actDescription;
@@ -55,6 +56,8 @@ public class CommerceAction : MonoBehaviour {
 
         timeLastUsed = 0.0f;
         isActive = true;
+
+        consequenceVar = whats_being_sold;
     }
     #endregion
 
@@ -74,6 +77,8 @@ public class CommerceAction : MonoBehaviour {
         newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
         newEvent.transform.GetComponent<CommerceEventGO>().buy_value = buy_value;
         newEvent.transform.GetComponent<CommerceEventGO>().sell_value = sell_value;
+        newEvent.transform.GetComponent<CommerceEventGO>().commerce_action = Commerce_Actions.Buying;
+        newEvent.transform.GetComponent<CommerceEventGO>().what_is_being_bought_sold = consequenceVar;
     }
 
     public void createThisVisualCommerceEvent()

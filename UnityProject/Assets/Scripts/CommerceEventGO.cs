@@ -20,7 +20,7 @@ public class CommerceEventGO : MonoBehaviour {
     public BuyOrSellValue buy_value;
     public BuyOrSellValue sell_value;
 
-    public Commerce_Actions commerce_action = Commerce_Actions.Open_Commerce;
+    public Commerce_Actions commerce_action;
 
     public MiscInfo.variableTypes what_is_being_bought_sold;
 
@@ -28,7 +28,7 @@ public class CommerceEventGO : MonoBehaviour {
     {
         if (IsBuyable())
         {
-            //buy_function();
+            Commerce();
             Destroy(this.gameObject);
         }
         else
@@ -48,10 +48,8 @@ public class CommerceEventGO : MonoBehaviour {
 
     public void PressedOKEventButton()
 	{
-       
-		
-
-	}
+        CheckBuyAction();
+    }
 
     public void PressedCancelEventButton()
     {
