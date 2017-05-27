@@ -184,8 +184,8 @@ namespace Assets.Scripts
         {
             return new CommerceAction(housesTitle, "Get those houses up so people can rest a little",
                 ActionsManager.instance.buttons[7],
-                buyHouses, sellHouses, ActionsManager.instance.possibleActions[6], AHouseBuyValue, AHouseSellValue,
-                1.5f * ActionsManager.instance.weekLength, );
+                buyHouses, sellHouses, AHouseBuyValue, AHouseSellValue,
+                1.5f * ActionsManager.instance.weekLength);
         }
 
         public static double HousesResult()
