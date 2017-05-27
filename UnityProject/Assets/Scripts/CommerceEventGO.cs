@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Basics_3;
+using UnityEngine.UI;
 
 public class CommerceEventGO : MonoBehaviour {
 
@@ -18,17 +19,30 @@ public class CommerceEventGO : MonoBehaviour {
 
     public void CheckBuyAction()
     {
+        if (true)
+        {
+            //buy_function();
+            Destroy(this.gameObject);
+        }
+        else
+        {
 
+        }
+        //se puder comprar, ótimo, usar buy_function para comprar e fechar a janela.
+        //se não puder comprar, avisar o porquê.
+        
     }
 
     public void CheckSellAction()
     {
-
+        //se puder vender, ótimo, usar sell_function para vender e fechar a janela.
+        //se não puder vender, avisar o porquê.
     }
 
     public void PressedOKEventButton()
 	{
-		//Destroy this Random Event Popup
+        //Destroy this Random Event Popup
+        Debug.Log(GetQuantity());
 		Destroy(this.gameObject);
 
 	}
@@ -38,6 +52,13 @@ public class CommerceEventGO : MonoBehaviour {
         //Destroy this Random Event Popup
         Destroy(this.gameObject);
 
+    }
+
+    private int GetQuantity()
+    {
+        string text = GetComponentInChildren<Image>().GetComponentInChildren<InputField>().text;
+        if (text == "") return 0;
+        else return int.Parse(text);
     }
 
 
