@@ -8,6 +8,15 @@ public class CommerceEventGO : MonoBehaviour {
 
     public delegate double BuyOrSellValue();
 
+    public GameObject assignedButton;
+
+    #region Cooldown Variables
+    public float actionCooldownPeriod;
+
+    public float timeLastUsed;//saves time action was last used
+    public bool isActive;//tells if action can be used or if it's cooling down
+    #endregion
+
     public BuyOrSellValue buy_value;
     public BuyOrSellValue sell_value;
 
