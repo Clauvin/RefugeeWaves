@@ -984,7 +984,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1186,7 +1186,7 @@ RectTransform:
   m_LocalScale: {x: 1.2237058, y: 1.2237058, z: 1.2237058}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2212,6 +2212,68 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 438908021}
+--- !u!1 &446546175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 446546176}
+  - component: {fileID: 446546177}
+  m_Layer: 0
+  m_Name: CommerceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &446546176
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 446546175}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1703455580}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &446546177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 446546175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbedbd62f9a5634f8760c8b4d5c3eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houses_buy_price: 300
+  houses_buy_multiplier: 1
+  houses_sell_price: 150
+  houses_sell_multiplier: 1
+  social_resources_buy_price: 100
+  social_resources_buy_multiplier: 1
+  social_resources_sell_price: 150
+  social_resources_sell_multiplier: 1
+  border_officers_buy_price: 125
+  border_officers_buy_multiplier: 1
+  border_officers_sell_price: 62.5
+  border_officers_sell_multiplier: 1
+  border_resources_buy_price: 75
+  border_resources_buy_multiplier: 1
+  border_resources_sell_price: 37.5
+  border_resources_sell_multiplier: 1
+  buttons: []
 --- !u!1 &461821770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,6 +2491,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 475777538}
+  - component: {fileID: 475777539}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -2448,13 +2511,41 @@ RectTransform:
   m_Children:
   - {fileID: 1456236510}
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &475777539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 475777537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbedbd62f9a5634f8760c8b4d5c3eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houses_buy_price: 300
+  houses_buy_multiplier: 1
+  houses_sell_price: 150
+  houses_sell_multiplier: 1
+  social_resources_buy_price: 100
+  social_resources_buy_multiplier: 1
+  social_resources_sell_price: 150
+  social_resources_sell_multiplier: 1
+  border_officers_buy_price: 125
+  border_officers_buy_multiplier: 1
+  border_officers_sell_price: 62.5
+  border_officers_sell_multiplier: 1
+  border_resources_buy_price: 75
+  border_resources_buy_multiplier: 1
+  border_resources_sell_price: 37.5
+  border_resources_sell_multiplier: 1
+  buttons: []
 --- !u!1 &494212932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4022,6 +4113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 821196381}
   - component: {fileID: 821196382}
+  - component: {fileID: 821196383}
   m_Layer: 0
   m_Name: ActionsManager
   m_TagString: Untagged
@@ -4069,6 +4161,34 @@ MonoBehaviour:
   commerceEventPrefab: {fileID: 1086854151638266, guid: e76472765f18f4f48acb187ffc2449dc,
     type: 2}
   weekLength: 5
+--- !u!114 &821196383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 821196380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbedbd62f9a5634f8760c8b4d5c3eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houses_buy_price: 300
+  houses_buy_multiplier: 1
+  houses_sell_price: 150
+  houses_sell_multiplier: 1
+  social_resources_buy_price: 100
+  social_resources_buy_multiplier: 1
+  social_resources_sell_price: 150
+  social_resources_sell_multiplier: 1
+  border_officers_buy_price: 125
+  border_officers_buy_multiplier: 1
+  border_officers_sell_price: 62.5
+  border_officers_sell_multiplier: 1
+  border_resources_buy_price: 75
+  border_resources_buy_multiplier: 1
+  border_resources_sell_price: 37.5
+  border_resources_sell_multiplier: 1
+  buttons: []
 --- !u!1 &825167793
 GameObject:
   m_ObjectHideFlags: 0
@@ -4096,7 +4216,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4181,7 +4301,7 @@ RectTransform:
   m_LocalScale: {x: 1.2237058, y: 1.2237058, z: 1.2237058}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5754,7 +5874,7 @@ RectTransform:
   m_LocalScale: {x: 1.2237058, y: 1.2237058, z: 1.2237058}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7509,7 +7629,7 @@ Transform:
   m_LocalScale: {x: 12.461245, y: 5.3228264, z: 36.955914}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1703455579
 GameObject:
@@ -7537,6 +7657,7 @@ RectTransform:
   m_LocalScale: {x: 0.027059268, y: 0.027059268, z: 0.027059268}
   m_Children:
   - {fileID: 821196381}
+  - {fileID: 446546176}
   - {fileID: 1683945152}
   - {fileID: 838516461}
   - {fileID: 1289387827}
