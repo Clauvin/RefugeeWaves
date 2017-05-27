@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class CommerceEventGO : MonoBehaviour {
 
     public delegate void BuyOrSellFunction(int quant);
-    public delegate bool IsBuyableOrSellable();
+    public delegate double BuyOrSellValue();
 
     public BuyOrSellFunction buy_function;
     public BuyOrSellFunction sell_function;
 
-    public IsBuyableOrSellable is_buyable;
-    public IsBuyableOrSellable is_sellable;
+    public BuyOrSellValue buy_value;
+    public BuyOrSellValue sell_value;
 
     public Commerce_Actions acao_de_comercio = Commerce_Actions.Open_Commerce;
 
@@ -59,6 +59,42 @@ public class CommerceEventGO : MonoBehaviour {
         string text = GetComponentInChildren<Image>().GetComponentInChildren<InputField>().text;
         if (text == "") return 0;
         else return int.Parse(text);
+    }
+
+    private bool IsBuyable()
+    {
+        int quantity = GetQuantity();
+
+        if (quantity > 0)
+        {
+            if (ResourceManager.instance.playerCurrentMoney - quantity * buy_value() >= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else return false;
+    }
+
+    private bool IsSellable()
+    {
+        /*int quantity = GetQuantity();
+
+        if (quantity > 0)
+        {
+            if (ResourceManager.instance.playerCurrentMoney - quantity * buy_value() >= 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else return false;*/
     }
 
 
