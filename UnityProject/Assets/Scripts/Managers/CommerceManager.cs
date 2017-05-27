@@ -39,6 +39,11 @@ public class CommerceManager : MonoBehaviour {
     //Function to create Commerce Actions
     //Function to exceute Commerce Actions
 
+    void Awake()
+    {
+        instance = new CommerceManager();
+    }
+
     // Use this for initialization
     void Start () {
 		
