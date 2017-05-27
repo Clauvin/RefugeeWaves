@@ -38,7 +38,8 @@ public class ActionsManager : MonoBehaviour {
         newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
     }
 
-    public void createVisualCommerceEvent(string title, string description, UnityAction evento)
+    public void createVisualCommerceEvent(string title, string description,
+        CommerceEventGO.BuyOrSellValue value_for_buying, CommerceEventGO.BuyOrSellValue value_for_selling)
     {
         //nope, no pausing, for tension reasons
         //TimeManager.instance.pauseGame();
@@ -52,7 +53,8 @@ public class ActionsManager : MonoBehaviour {
         //change the values of the text boxes
         newEvent.transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text = title;
         newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
-        newEvent.transform.Find("CommerceEventPanel/OkButton").GetComponent<Button>().onClick.AddListener(evento);
+        newEvent.GetComponent<CommerceEventGO>().buy_value = value_for_buying;
+        newEvent.GetComponent<CommerceEventGO>().sell_value = value_for_selling;
     }
 
     public void executeAction(int actionIndex)
