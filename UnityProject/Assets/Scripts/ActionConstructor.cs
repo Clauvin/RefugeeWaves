@@ -152,12 +152,22 @@ namespace Assets.Scripts
         #endregion
 
         #region Houses
+        public static double AHouseBuyValue()
+        {
+            return CommerceManager.instance.houses_buy_price * CommerceManager.instance.houses_buy_multiplier;
+        }
+
+        public static double AHouseSellValue()
+        {
+            return CommerceManager.instance.houses_sell_price * CommerceManager.instance.houses_sell_multiplier;
+        }
+
         public static double buyHouses(int quantity)
         {
             if (quantity <= 0) throw new Exception("Quantidade menor que zero");
             else
             {
-                return quantity * CommerceManager.instance.houses_buy_price * CommerceManager.instance.houses_buy_multiplier;
+                return quantity * AHouseBuyValue();
             }
         }
 
@@ -166,8 +176,7 @@ namespace Assets.Scripts
             if (quantity <= 0) throw new Exception("Quantidade menor que zero");
             else
             {
-                return -1 * quantity * CommerceManager.instance.houses_sell_price * 
-                    CommerceManager.instance.houses_sell_multiplier;
+                return -1 * quantity * AHouseSellValue();
             }
         }
 
