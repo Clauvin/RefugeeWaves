@@ -17,6 +17,9 @@ public class CommerceAction : MonoBehaviour {
     public consequenceFunction buyValueFunction;
     public consequenceFunction sellValueFunction;
 
+    public CommerceEventGO.BuyOrSellValue buy_value;
+    public CommerceEventGO.BuyOrSellValue sell_value;
+
     public PlayerAction doFunction;
     #endregion
 
@@ -29,7 +32,8 @@ public class CommerceAction : MonoBehaviour {
 
     #region Public Constructors
     public CommerceAction(string actName, string actDescription, GameObject assignButton, consequenceFunction bFunction,
-        consequenceFunction sFunction, PlayerAction dFunction, float actCoolPeriod)
+        consequenceFunction sFunction, PlayerAction dFunction, CommerceEventGO.BuyOrSellValue b_value,
+        CommerceEventGO.BuyOrSellValue s_value, float actCoolPeriod)
     {
         actionName = actName;
         actionDescription = actDescription;
@@ -37,6 +41,9 @@ public class CommerceAction : MonoBehaviour {
 
         buyValueFunction = bFunction;
         sellValueFunction = sFunction;
+
+        buy_value = b_value;
+        sell_value = s_value;
         doFunction = dFunction;
 
         actionCooldownPeriod = actCoolPeriod;
@@ -46,7 +53,7 @@ public class CommerceAction : MonoBehaviour {
     }
     #endregion
 
-    public void createVisualCommerceEvent(string title, string description, UnityAction evento)
+    public void createVisualCommerceEvent(string title, string description)
     {
         //nope, no pausing, for tension reasons
         //TimeManager.instance.pauseGame();
@@ -60,12 +67,14 @@ public class CommerceAction : MonoBehaviour {
         //change the values of the text boxes
         newEvent.transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text = title;
         newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
-        newEvent.transform.Find("CommerceEventPanel/OkButton").GetComponent<Button>().onClick.AddListener(evento);
+        CommerceEventGO test = newEvent.transform.GetComponent<CommerceEventGO>();
+        newEvent.transform.GetComponent<CommerceEventGO>().buy_value = buy_value;
+        newEvent.transform.GetComponent<CommerceEventGO>().sell_value = sell_value;
     }
 
     public void createThisVisualCommerceEvent()
     {
-        createVisualCommerceEvent(actionName, actionDescription, null);
+        createVisualCommerceEvent(actionName, actionDescription);
     }
 
     // Use this for initialization

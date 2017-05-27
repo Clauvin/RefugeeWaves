@@ -183,7 +183,7 @@ namespace Assets.Scripts
         public static CommerceAction CommerceHouses()
         {
             return new CommerceAction(housesTitle, "", ActionsManager.instance.buttons[7],
-                buyHouses, sellHouses, ActionsManager.instance.possibleActions[6], 0.0f);
+                buyHouses, sellHouses, ActionsManager.instance.possibleActions[6], AHouseBuyValue, AHouseSellValue, 0.0f);
         }
 
         public static double HousesResult()
