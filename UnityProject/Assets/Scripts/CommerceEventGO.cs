@@ -19,7 +19,7 @@ public class CommerceEventGO : MonoBehaviour {
 
     public void CheckBuyAction()
     {
-        if (true)
+        if (IsBuyable())
         {
             //buy_function();
             Destroy(this.gameObject);
@@ -42,8 +42,8 @@ public class CommerceEventGO : MonoBehaviour {
     public void PressedOKEventButton()
 	{
         //Destroy this Random Event Popup
-        Debug.Log(GetQuantity());
-		Destroy(this.gameObject);
+        Debug.Log(buy_value() * GetQuantity());
+		
 
 	}
 
@@ -81,6 +81,7 @@ public class CommerceEventGO : MonoBehaviour {
 
     private bool IsSellable()
     {
+        return false;
         /*int quantity = GetQuantity();
 
         if (quantity > 0)
