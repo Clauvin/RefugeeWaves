@@ -20,8 +20,14 @@ public class CommerceAction : MonoBehaviour {
     public CommerceEventGO.BuyOrSellValue buy_value;
     public CommerceEventGO.BuyOrSellValue sell_value;
 
-    public PlayerAction doFunction;
+    // of course, since this is a Commerce Window of one kind of product each time,
+    // we know that the first variable to deal with is money.
+
+    public MiscInfo.variableTypes consequenceVar;
+
     #endregion
+
+
 
     #region Cooldown Variables
     public float actionCooldownPeriod;
@@ -32,8 +38,8 @@ public class CommerceAction : MonoBehaviour {
 
     #region Public Constructors
     public CommerceAction(string actName, string actDescription, GameObject assignButton, consequenceFunction bFunction,
-        consequenceFunction sFunction, PlayerAction dFunction, CommerceEventGO.BuyOrSellValue b_value,
-        CommerceEventGO.BuyOrSellValue s_value, float actCoolPeriod)
+        consequenceFunction sFunction, CommerceEventGO.BuyOrSellValue b_value, CommerceEventGO.BuyOrSellValue s_value,
+        float actCoolPeriod)
     {
         actionName = actName;
         actionDescription = actDescription;
@@ -44,7 +50,6 @@ public class CommerceAction : MonoBehaviour {
 
         buy_value = b_value;
         sell_value = s_value;
-        doFunction = dFunction;
 
         actionCooldownPeriod = actCoolPeriod;
 
@@ -67,7 +72,6 @@ public class CommerceAction : MonoBehaviour {
         //change the values of the text boxes
         newEvent.transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text = title;
         newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
-        CommerceEventGO test = newEvent.transform.GetComponent<CommerceEventGO>();
         newEvent.transform.GetComponent<CommerceEventGO>().buy_value = buy_value;
         newEvent.transform.GetComponent<CommerceEventGO>().sell_value = sell_value;
     }
@@ -76,6 +80,8 @@ public class CommerceAction : MonoBehaviour {
     {
         createVisualCommerceEvent(actionName, actionDescription);
     }
+
+    
 
     // Use this for initialization
     void Start () {
