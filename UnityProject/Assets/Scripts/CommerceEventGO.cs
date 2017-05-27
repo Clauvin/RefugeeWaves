@@ -6,16 +6,14 @@ using UnityEngine.UI;
 
 public class CommerceEventGO : MonoBehaviour {
 
-    public delegate void BuyOrSellFunction(int quant);
     public delegate double BuyOrSellValue();
-
-    public BuyOrSellFunction buy_function;
-    public BuyOrSellFunction sell_function;
 
     public BuyOrSellValue buy_value;
     public BuyOrSellValue sell_value;
 
-    public Commerce_Actions acao_de_comercio = Commerce_Actions.Open_Commerce;
+    public Commerce_Actions commerce_action = Commerce_Actions.Open_Commerce;
+
+    public MiscInfo.variableTypes what_is_being_bought_sold;
 
     public void CheckBuyAction()
     {
@@ -41,8 +39,7 @@ public class CommerceEventGO : MonoBehaviour {
 
     public void PressedOKEventButton()
 	{
-        //Destroy this Random Event Popup
-        Debug.Log(buy_value() * GetQuantity());
+       
 		
 
 	}
@@ -98,6 +95,74 @@ public class CommerceEventGO : MonoBehaviour {
         else return false;*/
     }
 
+    public void Commerce()
+    {
+        switch (commerce_action)
+        {
+            case (Commerce_Actions.Buying):
+                BuyStuff();
+                break;
+            case (Commerce_Actions.Selling):
+                SellStuff();
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void BuyStuff()
+    {
+        double spent = buy_value() * GetQuantity();
+
+        ResourceManager.instance.playerCurrentMoney -= (int)spent;
+
+        switch (what_is_being_bought_sold)
+        {
+            case MiscInfo.variableTypes.availableBO:
+                ResourceManager.instance.numberOfAvailableBorderOfficers += GetQuantity();
+                ResourceManager.instance.numberOfTotalBorderOfficers += GetQuantity();
+                break;
+            case MiscInfo.variableTypes.availableHouses:
+                ResourceManager.instance.numberOfAvailableHouses += GetQuantity();
+                ResourceManager.instance.numberOfTotalHouses += GetQuantity();
+                break;
+            case MiscInfo.variableTypes.borderResources:
+                ResourceManager.instance.borderResources += GetQuantity();
+                break;
+            case MiscInfo.variableTypes.socialResources:
+                ResourceManager.instance.socialResources += GetQuantity(); ;
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void SellStuff()
+    {
+        double gained = sell_value() * GetQuantity();
+
+        ResourceManager.instance.playerCurrentMoney += (int)gained;
+
+        switch (what_is_being_bought_sold)
+        {
+            case MiscInfo.variableTypes.availableBO:
+                ResourceManager.instance.numberOfAvailableBorderOfficers -= GetQuantity();
+                ResourceManager.instance.numberOfTotalBorderOfficers -= GetQuantity();
+                break;
+            case MiscInfo.variableTypes.availableHouses:
+                ResourceManager.instance.numberOfAvailableHouses -= GetQuantity();
+                ResourceManager.instance.numberOfTotalHouses -= GetQuantity();
+                break;
+            case MiscInfo.variableTypes.borderResources:
+                ResourceManager.instance.borderResources -= GetQuantity();
+                break;
+            case MiscInfo.variableTypes.socialResources:
+                ResourceManager.instance.socialResources -= GetQuantity(); ;
+                break;
+            default:
+                break;
+        }
+    }
 
     // Use this for initialization
     void Start () {
