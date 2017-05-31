@@ -7,7 +7,8 @@ namespace Assets.Scripts
 {
     public static class ActionConstructor
     {
-        public static string housesTitle = "Build/Sell Houses";
+        public static string houses_title = "Build/Sell Houses";
+        public static string social_resources_title = "Build/Sell Social Resources";
 
 
         #region Build Unnecessary Landmarks Functions
@@ -182,7 +183,7 @@ namespace Assets.Scripts
 
         public static CommerceAction CommerceHouses()
         {
-            return new CommerceAction(housesTitle, "Get those houses up so people can rest a little",
+            return new CommerceAction(houses_title, "Get those houses up so people can rest a little",
                 ActionsManager.instance.buttons[7],
                 buyHouses, sellHouses, AHouseBuyValue, AHouseSellValue,
                 MiscInfo.variableTypes.availableHouses, 1.5f * ActionsManager.instance.weekLength);
@@ -190,14 +191,14 @@ namespace Assets.Scripts
 
         public static double HousesResult()
         {
-            ActionsManager.instance.createVisualCommerceEvent(housesTitle, "teste", AHouseBuyValue, AHouseSellValue);
+            ActionsManager.instance.createVisualCommerceEvent(houses_title, "teste", AHouseBuyValue, AHouseSellValue);
             return 1;
         }
 
         public static PlayerAction Houses()
         {
             return new PlayerAction(ActionsManager.instance.buttons[7],
-                housesTitle,
+                houses_title,
             "Get those houses up so people can rest a little",
             300,
             1.5f * ActionsManager.instance.weekLength,
@@ -206,6 +207,43 @@ namespace Assets.Scripts
         #endregion
 
         #region Social Resources
+        public static double SocialResourceBuyValue()
+        {
+            return CommerceManager.instance.social_resources_buy_price *
+                CommerceManager.instance.social_resources_buy_multiplier;
+        }
+
+        public static double SocialResourceSellValue()
+        {
+            return CommerceManager.instance.social_resources_sell_price *
+                CommerceManager.instance.social_resources_sell_multiplier;
+        }
+
+        public static double buySocialResources(int quantity)
+        {
+            if (quantity <= 0) throw new Exception("Quantidade menor que zero");
+            else
+            {
+                return quantity * SocialResourceBuyValue();
+            }
+        }
+
+        public static double sellSocialResources(int quantity)
+        {
+            if (quantity <= 0) throw new Exception("Quantidade menor que zero");
+            else
+            {
+                return -1 * quantity * SocialResourceSellValue();
+            }
+        }
+
+        public static CommerceAction CommerceSocialResource()
+        {
+            return new CommerceAction(social_resources_title, "What's needed to give support for refugees",
+                ActionsManager.instance.buttons[8],
+                buySocialResources, sellSocialResources, SocialResourceBuyValue, SocialResourceSellValue,
+                MiscInfo.variableTypes.socialResources, 1.5f * ActionsManager.instance.weekLength);
+        }
         public static double SocialResourcesResult()
         {
             return 1;
