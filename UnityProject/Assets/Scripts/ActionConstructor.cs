@@ -155,12 +155,12 @@ namespace Assets.Scripts
         #region Houses
         public static double AHouseBuyValue()
         {
-            return CommerceManager.instance.houses_buy_price * CommerceManager.instance.houses_buy_multiplier;
+            return CommerceManager.instance.house_buy_price * CommerceManager.instance.house_buy_multiplier;
         }
 
         public static double AHouseSellValue()
         {
-            return CommerceManager.instance.houses_sell_price * CommerceManager.instance.houses_sell_multiplier;
+            return CommerceManager.instance.house_sell_price * CommerceManager.instance.house_sell_multiplier;
         }
 
         public static double buyHouses(int quantity)
@@ -209,14 +209,14 @@ namespace Assets.Scripts
         #region Social Resources
         public static double SocialResourceBuyValue()
         {
-            return CommerceManager.instance.social_resources_buy_price *
-                CommerceManager.instance.social_resources_buy_multiplier;
+            return CommerceManager.instance.social_resource_buy_price *
+                CommerceManager.instance.social_resource_buy_multiplier;
         }
 
         public static double SocialResourceSellValue()
         {
-            return CommerceManager.instance.social_resources_sell_price *
-                CommerceManager.instance.social_resources_sell_multiplier;
+            return CommerceManager.instance.social_resource_sell_price *
+                CommerceManager.instance.social_resource_sell_multiplier;
         }
 
         public static double buySocialResources(int quantity)
@@ -261,6 +261,44 @@ namespace Assets.Scripts
         #endregion
 
         #region Border Officers
+        public static double BorderOfficeBuyValue()
+        {
+            return CommerceManager.instance.border_officer_buy_price *
+                CommerceManager.instance.social_resource_buy_multiplier;
+        }
+
+        public static double SocialResourceSellValue()
+        {
+            return CommerceManager.instance.social_resource_sell_price *
+                CommerceManager.instance.social_resource_sell_multiplier;
+        }
+
+        public static double buySocialResources(int quantity)
+        {
+            if (quantity <= 0) throw new Exception("Quantidade menor que zero");
+            else
+            {
+                return quantity * SocialResourceBuyValue();
+            }
+        }
+
+        public static double sellSocialResources(int quantity)
+        {
+            if (quantity <= 0) throw new Exception("Quantidade menor que zero");
+            else
+            {
+                return -1 * quantity * SocialResourceSellValue();
+            }
+        }
+
+        public static CommerceAction CommerceSocialResource()
+        {
+            return new CommerceAction(social_resources_title, "What's needed to give support for refugees",
+                ActionsManager.instance.buttons[8],
+                buySocialResources, sellSocialResources, SocialResourceBuyValue, SocialResourceSellValue,
+                MiscInfo.variableTypes.socialResources, 1.5f * ActionsManager.instance.weekLength);
+        }
+
         public static double BorderOfficersResult()
         {
             return 1;
