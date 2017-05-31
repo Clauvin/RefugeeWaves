@@ -4421,12 +4421,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 821196382}
-        m_MethodName: executeAction
+        m_MethodName: executeCommerce
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4477,7 +4477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: 10
+  position: 3
 --- !u!1 &929609464
 GameObject:
   m_ObjectHideFlags: 0
