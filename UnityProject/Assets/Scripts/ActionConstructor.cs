@@ -9,7 +9,7 @@ namespace Assets.Scripts
     {
         public static string houses_title = "Build/Sell Houses";
         public static string social_resources_title = "Buy/Sell Social Resources";
-        public static string border_officers_title = "Contract/Release Border Officers"
+        public static string border_officers_title = "Contract/Release Border Officers";
 
 
         #region Build Unnecessary Landmarks Functions
@@ -297,7 +297,7 @@ namespace Assets.Scripts
             return new CommerceAction(border_officers_title, "People to stop refugees",
                 ActionsManager.instance.buttons[9],
                 buyBorderOfficers, sellBorderOfficers, BorderOfficerBuyValue, BorderOfficerSellValue,
-                MiscInfo.variableTypes.borderResources, 1.5f * ActionsManager.instance.weekLength);
+                MiscInfo.variableTypes.availableBO, 1.5f * ActionsManager.instance.weekLength);
         }
 
         public static double BorderOfficersResult()
