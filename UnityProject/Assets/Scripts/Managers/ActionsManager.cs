@@ -101,7 +101,11 @@ public class ActionsManager : MonoBehaviour {
 		possibleActions.Add(ActionConstructor.BorderResources());
         #endregion
 
+        #region Commerce Actions
         possibleCommerceActions.Add(ActionConstructor.CommerceHouses());
+
+        possibleCommerceActions.Add(ActionConstructor.CommerceSocialResource());
+        #endregion
     }
 	
 	// Update is called once per frame
