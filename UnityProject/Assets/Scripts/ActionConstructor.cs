@@ -8,7 +8,8 @@ namespace Assets.Scripts
     public static class ActionConstructor
     {
         public static string houses_title = "Build/Sell Houses";
-        public static string social_resources_title = "Build/Sell Social Resources";
+        public static string social_resources_title = "Buy/Sell Social Resources";
+        public static string border_officers_title = "Contract/Release Border Officers"
 
 
         #region Build Unnecessary Landmarks Functions
@@ -261,42 +262,42 @@ namespace Assets.Scripts
         #endregion
 
         #region Border Officers
-        public static double BorderOfficeBuyValue()
+        public static double BorderOfficerBuyValue()
         {
             return CommerceManager.instance.border_officer_buy_price *
-                CommerceManager.instance.social_resource_buy_multiplier;
+                CommerceManager.instance.border_officer_buy_multiplier;
         }
 
-        public static double SocialResourceSellValue()
+        public static double BorderOfficerSellValue()
         {
-            return CommerceManager.instance.social_resource_sell_price *
-                CommerceManager.instance.social_resource_sell_multiplier;
+            return CommerceManager.instance.border_officer_sell_price *
+                CommerceManager.instance.border_officer_sell_multiplier;
         }
 
-        public static double buySocialResources(int quantity)
-        {
-            if (quantity <= 0) throw new Exception("Quantidade menor que zero");
-            else
-            {
-                return quantity * SocialResourceBuyValue();
-            }
-        }
-
-        public static double sellSocialResources(int quantity)
+        public static double buyBorderOfficers(int quantity)
         {
             if (quantity <= 0) throw new Exception("Quantidade menor que zero");
             else
             {
-                return -1 * quantity * SocialResourceSellValue();
+                return quantity * BorderOfficerBuyValue();
             }
         }
 
-        public static CommerceAction CommerceSocialResource()
+        public static double sellBorderOfficers(int quantity)
         {
-            return new CommerceAction(social_resources_title, "What's needed to give support for refugees",
-                ActionsManager.instance.buttons[8],
-                buySocialResources, sellSocialResources, SocialResourceBuyValue, SocialResourceSellValue,
-                MiscInfo.variableTypes.socialResources, 1.5f * ActionsManager.instance.weekLength);
+            if (quantity <= 0) throw new Exception("Quantidade menor que zero");
+            else
+            {
+                return -1 * quantity * BorderOfficerSellValue();
+            }
+        }
+
+        public static CommerceAction CommerceBorderOfficer()
+        {
+            return new CommerceAction(border_officers_title, "People to stop refugees",
+                ActionsManager.instance.buttons[9],
+                buyBorderOfficers, sellBorderOfficers, BorderOfficerBuyValue, BorderOfficerSellValue,
+                MiscInfo.variableTypes.borderResources, 1.5f * ActionsManager.instance.weekLength);
         }
 
         public static double BorderOfficersResult()
