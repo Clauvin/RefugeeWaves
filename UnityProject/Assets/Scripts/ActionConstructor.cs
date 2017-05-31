@@ -10,6 +10,7 @@ namespace Assets.Scripts
         public static string houses_title = "Build/Sell Houses";
         public static string social_resources_title = "Buy/Sell Social Resources";
         public static string border_officers_title = "Contract/Release Border Officers";
+        public static string border_resources_title = "Buy/Sell Border Resources";
 
 
         #region Build Unnecessary Landmarks Functions
@@ -317,6 +318,44 @@ namespace Assets.Scripts
         #endregion
 
         #region Border Resources
+        public static double BorderResourceBuyValue()
+        {
+            return CommerceManager.instance.border_resource_buy_price *
+                CommerceManager.instance.border_resource_buy_multiplier;
+        }
+
+        public static double BorderResourceSellValue()
+        {
+            return CommerceManager.instance.border_resource_sell_price *
+                CommerceManager.instance.border_resource_sell_multiplier;
+        }
+
+        public static double buyBorderResources(int quantity)
+        {
+            if (quantity <= 0) throw new Exception("Quantidade menor que zero");
+            else
+            {
+                return quantity * BorderResourceBuyValue();
+            }
+        }
+
+        public static double sellBorderResources(int quantity)
+        {
+            if (quantity <= 0) throw new Exception("Quantidade menor que zero");
+            else
+            {
+                return -1 * quantity * BorderResourceSellValue();
+            }
+        }
+
+        public static CommerceAction CommerceBorderResource()
+        {
+            return new CommerceAction(border_resources_title, "Basically... salary?",
+                ActionsManager.instance.buttons[10],
+                buyBorderResources, sellBorderResources, BorderResourceBuyValue, BorderResourceSellValue,
+                MiscInfo.variableTypes.borderResources, 1.5f * ActionsManager.instance.weekLength);
+        }
+
         public static double BorderResourcesResult()
         {
             return 1;

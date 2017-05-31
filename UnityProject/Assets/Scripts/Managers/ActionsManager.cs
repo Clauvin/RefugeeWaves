@@ -107,6 +107,8 @@ public class ActionsManager : MonoBehaviour {
         possibleCommerceActions.Add(ActionConstructor.CommerceSocialResource());
 
         possibleCommerceActions.Add(ActionConstructor.CommerceBorderOfficer());
+
+        possibleCommerceActions.Add(ActionConstructor.CommerceBorderResource());
         #endregion
     }
 	
