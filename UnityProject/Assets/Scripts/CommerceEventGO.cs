@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Basics_3;
 using UnityEngine.UI;
+using System;
 
 public class CommerceEventGO : MonoBehaviour {
 
@@ -48,7 +49,15 @@ public class CommerceEventGO : MonoBehaviour {
 
     public void PressedOKEventButton()
 	{
-        CheckBuyAction();
+        try
+        {
+            CheckBuyAction();
+        }
+        catch (FormatException e)
+        {
+            transform.Find("CommerceEventPanel/ProblemsDescription").GetComponent<Text>().text = e.Message;
+        }
+        
     }
 
     public void PressedCancelEventButton()
@@ -67,8 +76,18 @@ public class CommerceEventGO : MonoBehaviour {
 
     private bool IsBuyable()
     {
-        int quantity = GetQuantity();
+        int quantity;
 
+        try
+        {
+            quantity = GetQuantity();
+        }
+        catch(OverflowException oe)
+        {
+            throw new FormatException("Quantidade máxima permitida para compra é " +
+                int.MaxValue.ToString() + ".");
+        }
+       
         if (quantity > 0)
         {
             double total = ResourceManager.instance.playerCurrentMoney - quantity * buy_value();
@@ -79,11 +98,11 @@ public class CommerceEventGO : MonoBehaviour {
             }
             else
             {
-                throw new System.Exception("Faltam " + (total * -1).ToString() + " para você poder comprar" +
+                throw new FormatException("Faltam " + (total * -1).ToString() + " para você poder comprar" +
                     " essa quantidade.");
             }
         }
-        else throw new System.Exception("Quantidade negativa. Você pretendia vender?");
+        else throw new FormatException("Quantidade negativa. Você pretendia vender?");
     }
 
     private bool IsSellable()
