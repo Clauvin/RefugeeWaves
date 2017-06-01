@@ -71,16 +71,19 @@ public class CommerceEventGO : MonoBehaviour {
 
         if (quantity > 0)
         {
-            if (ResourceManager.instance.playerCurrentMoney - quantity * buy_value() >= 0)
+            double total = ResourceManager.instance.playerCurrentMoney - quantity * buy_value();
+
+            if (total >= 0)
             {
                 return true;
             }
             else
             {
-                return false;
+                throw new System.Exception("Faltam " + (total * -1).ToString() + " para você poder comprar" +
+                    " essa quantidade.");
             }
         }
-        else return false;
+        else throw new System.Exception("Quantidade negativa. Você pretendia vender?");
     }
 
     private bool IsSellable()
