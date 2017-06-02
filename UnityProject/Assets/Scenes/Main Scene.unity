@@ -4113,7 +4113,6 @@ GameObject:
   m_Component:
   - component: {fileID: 821196381}
   - component: {fileID: 821196382}
-  - component: {fileID: 821196383}
   m_Layer: 0
   m_Name: ActionsManager
   m_TagString: Untagged
@@ -4158,37 +4157,9 @@ MonoBehaviour:
   - {fileID: 344443940}
   - {fileID: 922459030}
   - {fileID: 1269837381}
-  commerceEventPrefab: {fileID: 1086854151638266, guid: e76472765f18f4f48acb187ffc2449dc,
+  commerceEventPrefab: {fileID: 1639081319552252, guid: e76472765f18f4f48acb187ffc2449dc,
     type: 2}
   weekLength: 5
---- !u!114 &821196383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 821196380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acbedbd62f9a5634f8760c8b4d5c3eda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  house_buy_price: 300
-  house_buy_multiplier: 1
-  house_sell_price: 150
-  house_sell_multiplier: 1
-  social_resource_buy_price: 100
-  social_resource_buy_multiplier: 1
-  social_resource_sell_price: 150
-  social_resource_sell_multiplier: 1
-  border_officer_buy_price: 125
-  border_officer_buy_multiplier: 1
-  border_officer_sell_price: 62.5
-  border_officer_sell_multiplier: 1
-  border_resource_buy_price: 75
-  border_resource_buy_multiplier: 1
-  border_resource_sell_price: 37.5
-  border_resource_sell_multiplier: 1
-  buttons: []
 --- !u!1 &825167793
 GameObject:
   m_ObjectHideFlags: 0
