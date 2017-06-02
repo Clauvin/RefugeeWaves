@@ -72,13 +72,20 @@ public class CommerceAction : MonoBehaviour {
         //make it a child of the MainCanvas and adjust its scale
         newEvent.transform.SetParent(GameObject.Find("MainCanvas").transform, false);
 
-        //change the values of the text boxes
-        newEvent.transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text = title;
-        newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
+        
         newEvent.transform.GetComponent<CommerceEventGO>().buy_value = buy_value;
         newEvent.transform.GetComponent<CommerceEventGO>().sell_value = sell_value;
         newEvent.transform.GetComponent<CommerceEventGO>().commerce_action = Commerce_Actions.Buying;
         newEvent.transform.GetComponent<CommerceEventGO>().what_is_being_bought_sold = consequenceVar;
+
+        //change the values of the text boxes
+        newEvent.transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text = title;
+        newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
+        newEvent.transform.Find("CommerceEventPanel/PricesDescription").GetComponent<Text>().text =
+            "Preço de compra de uma unidade: " + buy_value().ToString() + ".";
+        newEvent.transform.Find("CommerceEventPanel/PricesDescription").GetComponent<Text>().text +=
+            "\nPreço de venda de uma unidade: " + sell_value().ToString() + ".";
+
     }
 
     public void createThisVisualCommerceEvent()

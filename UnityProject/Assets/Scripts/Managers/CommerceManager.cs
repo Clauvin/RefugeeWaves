@@ -20,7 +20,7 @@ public class CommerceManager : MonoBehaviour {
 
     public double social_resource_buy_price = 100.0f;
     public double social_resource_buy_multiplier = 1.0f;
-    public double social_resource_sell_price = 150.0f;
+    public double social_resource_sell_price = 50.0f;
     public double social_resource_sell_multiplier = 1.0f;
 
     public double border_officer_buy_price = 125.0f;
