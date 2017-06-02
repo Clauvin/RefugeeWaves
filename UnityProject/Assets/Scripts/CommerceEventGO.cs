@@ -10,7 +10,6 @@ public class CommerceEventGO : MonoBehaviour {
     public delegate double BuyOrSellValue();
 
     public GameObject assignedButton;
-    public GameObject windowReference;
 
     #region Cooldown Variables
     public float actionCooldownPeriod;
@@ -64,13 +63,11 @@ public class CommerceEventGO : MonoBehaviour {
         {
             case Commerce_Actions.Buying:
                 commerce_action = Commerce_Actions.Selling;
-                windowReference.transform.Find("CommerceEventPanel/ChangeBuySellButton").
-                    GetComponent<Text>().text = "Muda para Compra";
+                transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Muda para Compra";
                 break;
             case Commerce_Actions.Selling:
                 commerce_action = Commerce_Actions.Buying;
-                windowReference.transform.Find("CommerceEventPanel/ChangeBuySellButton").
-                    GetComponent<Text>().text = "Muda para Venda";
+                transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Muda para Venda";
                 break;
         }
     }
