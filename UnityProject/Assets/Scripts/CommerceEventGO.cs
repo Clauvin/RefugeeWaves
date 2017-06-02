@@ -32,19 +32,17 @@ public class CommerceEventGO : MonoBehaviour {
             Commerce();
             Destroy(this.gameObject);
         }
-        else
-        {
-
-        }
-        //se puder comprar, ótimo, usar buy_function para comprar e fechar a janela.
-        //se não puder comprar, avisar o porquê.
-        
     }
 
     public void CheckSellAction()
     {
         //se puder vender, ótimo, usar sell_function para vender e fechar a janela.
         //se não puder vender, avisar o porquê.
+        if (IsSellable())
+        {
+            Commerce();
+            Destroy(this.gameObject);
+        }
     }
 
     public void PressedOKEventButton()
@@ -108,21 +106,31 @@ public class CommerceEventGO : MonoBehaviour {
 
     private bool IsSellable()
     {
-        return false;
-        /*int quantity = GetQuantity();
+        int quantity;
 
-        if (quantity > 0)
+        try
         {
-            if (ResourceManager.instance.playerCurrentMoney - quantity * buy_value() >= 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            quantity = GetQuantity();
         }
-        else return false;*/
+        catch (OverflowException oe)
+        {
+            throw new FormatException("Quantidade máxima permitida para venda é de " +
+                 DefineBuySellObjectQuantity().ToString() + DefineBuySellObject() + ".");
+        }
+
+        if (quantity > DefineBuySellObjectQuantity())
+        {
+            throw new FormatException("Quantidade máxima permitida para venda é de " +
+                 DefineBuySellObjectQuantity().ToString() + DefineBuySellObject() + ".");
+        }
+        else if (quantity < 0)
+        {
+            throw new FormatException("Não é possível vender quantidades negativas. Você queria comprar?");
+        }
+        else
+        {
+            return true;
+        }
     }
 
     public void Commerce()
@@ -191,6 +199,34 @@ public class CommerceEventGO : MonoBehaviour {
                 break;
             default:
                 break;
+        }
+    }
+
+    private string DefineBuySellObject()
+    {
+        switch (what_is_being_bought_sold)
+        {
+            case MiscInfo.variableTypes.availableBO: return "oficiais de fronteira";
+            case MiscInfo.variableTypes.availableHouses: return "casas";
+            case MiscInfo.variableTypes.borderResources: return "recursos de fronteira";
+            case MiscInfo.variableTypes.socialResources: return "recursos sociais";
+            default: return "";
+        }
+    }
+
+    private int DefineBuySellObjectQuantity()
+    {
+        switch (what_is_being_bought_sold)
+        {
+            case MiscInfo.variableTypes.availableBO:
+                return ResourceManager.instance.numberOfTotalBorderOfficers;
+            case MiscInfo.variableTypes.availableHouses:
+                return ResourceManager.instance.numberOfTotalHouses;
+            case MiscInfo.variableTypes.borderResources:
+                return ResourceManager.instance.borderResources;
+            case MiscInfo.variableTypes.socialResources:
+                return ResourceManager.instance.socialResources;
+            default: return 0;
         }
     }
 
