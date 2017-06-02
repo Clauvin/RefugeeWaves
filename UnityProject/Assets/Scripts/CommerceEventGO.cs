@@ -101,7 +101,7 @@ public class CommerceEventGO : MonoBehaviour {
                     " essa quantidade.");
             }
         }
-        else throw new FormatException("Quantidade negativa. Você pretendia vender?");
+        else throw new FormatException("Você não pretendia comprar alguma coisa?");
     }
 
     private bool IsSellable()
@@ -126,6 +126,10 @@ public class CommerceEventGO : MonoBehaviour {
         else if (quantity < 0)
         {
             throw new FormatException("Não é possível vender quantidades negativas. Você queria comprar?");
+        }
+        else if (quantity == 0)
+        {
+            throw new FormatException("Você não ia vender alguma coisa?");
         }
         else
         {
