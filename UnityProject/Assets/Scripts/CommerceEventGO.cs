@@ -10,6 +10,7 @@ public class CommerceEventGO : MonoBehaviour {
     public delegate double BuyOrSellValue();
 
     public GameObject assignedButton;
+    public GameObject windowReference;
 
     #region Cooldown Variables
     public float actionCooldownPeriod;
@@ -21,7 +22,7 @@ public class CommerceEventGO : MonoBehaviour {
     public BuyOrSellValue buy_value;
     public BuyOrSellValue sell_value;
 
-    public Commerce_Actions commerce_action;
+    public Commerce_Actions commerce_action = Commerce_Actions.Buying;
 
     public MiscInfo.variableTypes what_is_being_bought_sold;
 
@@ -55,7 +56,23 @@ public class CommerceEventGO : MonoBehaviour {
         {
             transform.Find("CommerceEventPanel/ProblemsDescription").GetComponent<Text>().text = e.Message;
         }
-        
+    }
+
+    public void PressedChangeActionButton()
+    {
+        switch (commerce_action)
+        {
+            case Commerce_Actions.Buying:
+                commerce_action = Commerce_Actions.Selling;
+                windowReference.transform.Find("CommerceEventPanel/ChangeBuySellButton").
+                    GetComponent<Text>().text = "Muda para Compra";
+                break;
+            case Commerce_Actions.Selling:
+                commerce_action = Commerce_Actions.Buying;
+                windowReference.transform.Find("CommerceEventPanel/ChangeBuySellButton").
+                    GetComponent<Text>().text = "Muda para Venda";
+                break;
+        }
     }
 
     public void PressedCancelEventButton()
