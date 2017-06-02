@@ -74,6 +74,7 @@ public class CommerceEventGO : MonoBehaviour {
         else return int.Parse(text);
     }
 
+
     private bool IsBuyable()
     {
         int quantity;
