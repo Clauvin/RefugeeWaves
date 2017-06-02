@@ -25,6 +25,12 @@ public class CommerceEventGO : MonoBehaviour {
 
     public MiscInfo.variableTypes what_is_being_bought_sold;
 
+    public void CheckObject()
+    {
+        if (commerce_action == Commerce_Actions.Buying) CheckBuyAction();
+        else if (commerce_action == Commerce_Actions.Selling) CheckSellAction();
+    }
+
     public void CheckBuyAction()
     {
         if (IsBuyable())
