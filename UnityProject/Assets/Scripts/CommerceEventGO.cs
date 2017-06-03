@@ -18,6 +18,10 @@ public class CommerceEventGO : MonoBehaviour {
     public bool isActive;//tells if action can be used or if it's cooling down
     #endregion
 
+    public string title;
+    public string buying_title;
+    public string selling_title;
+
     public BuyOrSellValue buy_value;
     public BuyOrSellValue sell_value;
 
@@ -70,10 +74,14 @@ public class CommerceEventGO : MonoBehaviour {
             case Commerce_Actions.Buying:
                 commerce_action = Commerce_Actions.Selling;
                 transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Change to Buy";
+                transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text =
+                    selling_title + " " + title;
                 break;
             case Commerce_Actions.Selling:
                 commerce_action = Commerce_Actions.Buying;
                 transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Change to Sell";
+                transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text =
+                    buying_title + " " + title;
                 break;
         }
     }

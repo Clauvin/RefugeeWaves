@@ -15,7 +15,7 @@ namespace Assets.Scripts
         public static string social_resources_sell_text_title = "Sell";
         public static string border_officers_title = "Border Officers";
         public static string border_officers_buy_text_title = "Contract";
-        public static string border_officers_sell_text_title = "Release";
+        public static string border_officers_sell_text_title = "Dismiss";
         public static string border_resources_title = "Border Resources";
         public static string border_resources_buy_text_title = "Buy";
         public static string border_resources_sell_text_title = "Sell";
@@ -194,7 +194,7 @@ namespace Assets.Scripts
         public static CommerceAction CommerceHouses()
         {
             return new CommerceAction(houses_title, "Get those houses up so people can rest a little",
-                ActionsManager.instance.buttons[7],
+                ActionsManager.instance.buttons[7], houses_title, houses_buy_text_title, houses_sell_text_title,
                 buyHouses, sellHouses, AHouseBuyValue, AHouseSellValue,
                 MiscInfo.variableTypes.availableHouses, 1.5f * ActionsManager.instance.weekLength);
         }
@@ -250,7 +250,8 @@ namespace Assets.Scripts
         public static CommerceAction CommerceSocialResource()
         {
             return new CommerceAction(social_resources_title, "What's needed to give support for refugees",
-                ActionsManager.instance.buttons[8],
+                ActionsManager.instance.buttons[8], 
+                social_resources_title, social_resources_buy_text_title, social_resources_sell_text_title,
                 buySocialResources, sellSocialResources, SocialResourceBuyValue, SocialResourceSellValue,
                 MiscInfo.variableTypes.socialResources, 1.5f * ActionsManager.instance.weekLength);
         }
@@ -305,6 +306,7 @@ namespace Assets.Scripts
         {
             return new CommerceAction(border_officers_title, "People to stop refugees",
                 ActionsManager.instance.buttons[9],
+                border_officers_title, border_officers_buy_text_title, border_officers_sell_text_title,
                 buyBorderOfficers, sellBorderOfficers, BorderOfficerBuyValue, BorderOfficerSellValue,
                 MiscInfo.variableTypes.availableBO, 1.5f * ActionsManager.instance.weekLength);
         }
@@ -360,6 +362,7 @@ namespace Assets.Scripts
         {
             return new CommerceAction(border_resources_title, "Basically... salary?",
                 ActionsManager.instance.buttons[10],
+                border_resources_title, border_resources_buy_text_title, border_resources_sell_text_title,
                 buyBorderResources, sellBorderResources, BorderResourceBuyValue, BorderResourceSellValue,
                 MiscInfo.variableTypes.borderResources, 1.5f * ActionsManager.instance.weekLength);
         }

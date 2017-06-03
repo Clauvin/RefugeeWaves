@@ -28,7 +28,9 @@ public class CommerceAction : MonoBehaviour {
 
     #endregion
 
-
+    public string commerce_title;
+    public string commerce_buying_title;
+    public string commerce_selling_title;
 
     #region Cooldown Variables
     public float actionCooldownPeriod;
@@ -38,13 +40,18 @@ public class CommerceAction : MonoBehaviour {
     #endregion
 
     #region Public Constructors
-    public CommerceAction(string actName, string actDescription, GameObject assignButton, consequenceFunction bFunction,
+    public CommerceAction(string actName, string actDescription, GameObject assignButton,
+        string title, string buying_title, string selling_title, consequenceFunction bFunction,
         consequenceFunction sFunction, CommerceEventGO.BuyOrSellValue b_value, CommerceEventGO.BuyOrSellValue s_value,
         MiscInfo.variableTypes whats_being_sold, float actCoolPeriod)
     {
         actionName = actName;
         actionDescription = actDescription;
         assignedButton = assignButton;
+
+        commerce_title = title;
+        commerce_buying_title = buying_title;
+        commerce_selling_title = selling_title;
 
         buyValueFunction = bFunction;
         sellValueFunction = sFunction;
@@ -72,14 +79,19 @@ public class CommerceAction : MonoBehaviour {
         //make it a child of the MainCanvas and adjust its scale
         newEvent.transform.SetParent(GameObject.Find("MainCanvas").transform, false);
 
-        
+        newEvent.transform.GetComponent<CommerceEventGO>().title = commerce_title;
+        newEvent.transform.GetComponent<CommerceEventGO>().buying_title = commerce_buying_title;
+        newEvent.transform.GetComponent<CommerceEventGO>().selling_title = commerce_selling_title;
+
+
         newEvent.transform.GetComponent<CommerceEventGO>().buy_value = buy_value;
         newEvent.transform.GetComponent<CommerceEventGO>().sell_value = sell_value;
         newEvent.transform.GetComponent<CommerceEventGO>().commerce_action = Commerce_Actions.Buying;
         newEvent.transform.GetComponent<CommerceEventGO>().what_is_being_bought_sold = consequenceVar;
 
         //change the values of the text boxes
-        newEvent.transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text = title;
+        newEvent.transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text =
+            commerce_buying_title + " " + title;
         newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
         newEvent.transform.Find("CommerceEventPanel/PricesDescription").GetComponent<Text>().text =
             "Preço de compra de uma unidade: " + buy_value().ToString() + ".";
