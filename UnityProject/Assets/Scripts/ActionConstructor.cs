@@ -7,10 +7,18 @@ namespace Assets.Scripts
 {
     public static class ActionConstructor
     {
-        public static string houses_title = "Build/Sell Houses";
-        public static string social_resources_title = "Buy/Sell Social Resources";
-        public static string border_officers_title = "Contract/Release Border Officers";
-        public static string border_resources_title = "Buy/Sell Border Resources";
+        public static string houses_title = "Houses";
+        public static string houses_buy_text_title = "Build";
+        public static string houses_sell_text_title = "Sell";
+        public static string social_resources_title = "Social Resources";
+        public static string social_resources_buy_text_title = "Buy";
+        public static string social_resources_sell_text_title = "Sell";
+        public static string border_officers_title = "Border Officers";
+        public static string border_officers_buy_text_title = "Contract";
+        public static string border_officers_sell_text_title = "Release";
+        public static string border_resources_title = "Border Resources";
+        public static string border_resources_buy_text_title = "Buy";
+        public static string border_resources_sell_text_title = "Sell";
 
 
         #region Build Unnecessary Landmarks Functions
