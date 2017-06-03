@@ -73,6 +73,16 @@ public class CommerceAction : MonoBehaviour {
         //nope, no pausing, for tension reasons
         //TimeManager.instance.pauseGame();
 
+        //erase other CommerceWindows
+        if (GameObject.FindGameObjectsWithTag("Commerce Window").GetLength(0) != 0)
+        {
+            GameObject[] lista = GameObject.FindGameObjectsWithTag("Commerce Window");
+            foreach (GameObject window in lista)
+            {
+                Destroy(window);
+            }
+        }
+
         //instantiates a prefab with the info of the event
         GameObject newEvent = (GameObject)Instantiate(ActionsManager.instance.commerceEventPrefab);
 
