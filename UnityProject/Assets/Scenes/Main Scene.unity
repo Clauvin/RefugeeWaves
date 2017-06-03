@@ -4157,7 +4157,7 @@ MonoBehaviour:
   - {fileID: 344443940}
   - {fileID: 922459030}
   - {fileID: 1269837381}
-  commerceEventPrefab: {fileID: 1606254744980692, guid: e76472765f18f4f48acb187ffc2449dc,
+  commerceEventPrefab: {fileID: 1364777799282328, guid: e76472765f18f4f48acb187ffc2449dc,
     type: 2}
   weekLength: 5
 --- !u!1 &825167793
