@@ -69,11 +69,11 @@ public class CommerceEventGO : MonoBehaviour {
         {
             case Commerce_Actions.Buying:
                 commerce_action = Commerce_Actions.Selling;
-                transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Muda para Compra";
+                transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Change to Buy";
                 break;
             case Commerce_Actions.Selling:
                 commerce_action = Commerce_Actions.Buying;
-                transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Muda para Venda";
+                transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Change to Sell";
                 break;
         }
     }
@@ -103,7 +103,7 @@ public class CommerceEventGO : MonoBehaviour {
         }
         catch(OverflowException oe)
         {
-            throw new FormatException("Quantidade máxima permitida para compra é " +
+            throw new FormatException("Max quantity allowed for buying is " +
                 int.MaxValue.ToString() + ".");
         }
        
@@ -117,11 +117,11 @@ public class CommerceEventGO : MonoBehaviour {
             }
             else
             {
-                throw new FormatException("Faltam " + (total * -1).ToString() + " para você poder comprar" +
-                    " essa quantidade.");
+                throw new FormatException("You lack " + (total * -1).ToString() + " of money to buy" +
+                    " this quantity.");
             }
         }
-        else throw new FormatException("Você não pretendia comprar alguma coisa?");
+        else throw new FormatException("Weren't you going to buy something?");
     }
 
     private bool IsSellable()
@@ -134,22 +134,22 @@ public class CommerceEventGO : MonoBehaviour {
         }
         catch (OverflowException oe)
         {
-            throw new FormatException("Quantidade máxima permitida para venda é de " +
+            throw new FormatException("Max quantity allowed for selling is " +
                  DefineBuySellObjectQuantity().ToString() + DefineBuySellObject() + ".");
         }
 
         if (quantity > DefineBuySellObjectQuantity())
         {
-            throw new FormatException("Quantidade máxima permitida para venda é de " +
+            throw new FormatException("Max quantity allowed for selling is " +
                  DefineBuySellObjectQuantity().ToString() + DefineBuySellObject() + ".");
         }
         else if (quantity < 0)
         {
-            throw new FormatException("Não é possível vender quantidades negativas. Você queria comprar?");
+            throw new FormatException("It isn't possible sell negative quantities. You wanted to buy?");
         }
         else if (quantity == 0)
         {
-            throw new FormatException("Você não ia vender alguma coisa?");
+            throw new FormatException("Weren't you going to sell something?");
         }
         else
         {
@@ -230,10 +230,10 @@ public class CommerceEventGO : MonoBehaviour {
     {
         switch (what_is_being_bought_sold)
         {
-            case MiscInfo.variableTypes.availableBO: return "oficiais de fronteira";
-            case MiscInfo.variableTypes.availableHouses: return "casas";
-            case MiscInfo.variableTypes.borderResources: return "recursos de fronteira";
-            case MiscInfo.variableTypes.socialResources: return "recursos sociais";
+            case MiscInfo.variableTypes.availableBO: return "frontier offices";
+            case MiscInfo.variableTypes.availableHouses: return "houses ";
+            case MiscInfo.variableTypes.borderResources: return "frontier resources";
+            case MiscInfo.variableTypes.socialResources: return "social resources";
             default: return "";
         }
     }
