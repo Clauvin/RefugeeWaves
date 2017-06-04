@@ -65,6 +65,7 @@ public class CommerceEventGO : MonoBehaviour {
         {
             transform.Find("CommerceEventPanel/ProblemsDescription").GetComponent<Text>().text = e.Message;
         }
+        //And here we activate the cooldown
     }
 
     public void PressedChangeActionButton()
