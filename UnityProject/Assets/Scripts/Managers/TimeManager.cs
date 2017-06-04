@@ -73,6 +73,10 @@ public class TimeManager : MonoBehaviour {
             {
                 pa.checkIfCooledDown();
             }
+            foreach (CommerceAction ca in ActionsManager.instance.possibleCommerceActions)
+            {
+                ca.checkIfCooledDown();
+            }
             ImmigrantManager.instance.checkForLegalizedImmigrantsVisas();
             ResourceManager.instance.UpdateResourcesSpentInBorderOfficers();
             ResourceManager.instance.UpdateResourcesSpentInSocialResources();
