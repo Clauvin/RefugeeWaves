@@ -59,7 +59,7 @@ public class ActionsManager : MonoBehaviour {
 
     public void executeAction(int actionIndex)
 	{
-		possibleActions[actionIndex-1].actionUsed ();
+		possibleActions[actionIndex-1].actionUsed();
 	}
 
     public void executeCommerce(int commerceIndex)
