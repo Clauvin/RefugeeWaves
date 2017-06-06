@@ -11,90 +11,51 @@ public class CommerceEventGO : MonoBehaviour {
 
     public CommerceAction ca;
 
-    #region Cooldown Variables
-    public float actionCooldownPeriod;
-
-    public float timeLastUsed;//saves time action was last used
-    public bool isActive;//tells if action can be used or if it's cooling down
-    #endregion
-
+    #region Titles
     public string title;
     public string buying_title;
     public string selling_title;
+    #endregion
 
+    #region Delegates For Product Values
     public BuyOrSellValue buy_value;
     public BuyOrSellValue sell_value;
+    #endregion
 
+    #region Enums
     public Commerce_Actions commerce_action = Commerce_Actions.Buying;
-
     public MiscInfo.variableTypes what_is_being_bought_sold;
+    #endregion
 
-    public void CheckObject()
+    #region Commerce Actions With Checks
+    public void DoCommerce()
     {
-        if (commerce_action == Commerce_Actions.Buying) CheckBuyAction();
-        else if (commerce_action == Commerce_Actions.Selling) CheckSellAction();
+            if (commerce_action == Commerce_Actions.Buying) BuyAction();
+            else if (commerce_action == Commerce_Actions.Selling) SellAction();
     }
 
-    public void CheckBuyAction()
+    public void BuyAction()
     {
         if (IsBuyable())
         {
             Commerce();
-            ActivateCooldown();
+            ca.activateCooldown();
             Destroy(this.gameObject);
         }
     }
 
-    public void CheckSellAction()
+    public void SellAction()
     {
         //se puder vender, ótimo, usar sell_function para vender e fechar a janela.
         //se não puder vender, avisar o porquê.
         if (IsSellable())
         {
             Commerce();
-            ActivateCooldown();
+            ca.activateCooldown();
             Destroy(this.gameObject);
         }
     }
-
-    public void PressedOKEventButton()
-	{
-        try
-        {
-            CheckBuyAction();
-        }
-        catch (FormatException e)
-        {
-            transform.Find("CommerceEventPanel/ProblemsDescription").GetComponent<Text>().text = e.Message;
-        }
-        //And here we activate the cooldown
-    }
-
-    public void PressedChangeActionButton()
-    {
-        switch (commerce_action)
-        {
-            case Commerce_Actions.Buying:
-                commerce_action = Commerce_Actions.Selling;
-                transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Change to Buy";
-                transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text =
-                    selling_title + " " + title;
-                break;
-            case Commerce_Actions.Selling:
-                commerce_action = Commerce_Actions.Buying;
-                transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Change to Sell";
-                transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text =
-                    buying_title + " " + title;
-                break;
-        }
-    }
-
-    public void PressedCancelEventButton()
-    {
-        //Destroy this Random Event Popup
-        Destroy(this.gameObject);
-
-    }
+    #endregion
 
     private int GetQuantity()
     {
@@ -103,7 +64,7 @@ public class CommerceEventGO : MonoBehaviour {
         else return int.Parse(text);
     }
 
-
+    #region Commerce Action Is Possible?
     private bool IsBuyable()
     {
         int quantity;
@@ -167,8 +128,10 @@ public class CommerceEventGO : MonoBehaviour {
             return true;
         }
     }
+    #endregion
 
-    public void Commerce()
+    #region Private Commerce Actions, Without Checks
+    private void Commerce()
     {
         switch (commerce_action)
         {
@@ -183,7 +146,7 @@ public class CommerceEventGO : MonoBehaviour {
         }
     }
 
-    public void BuyStuff()
+    private void BuyStuff()
     {
         double spent = buy_value() * GetQuantity();
 
@@ -210,7 +173,7 @@ public class CommerceEventGO : MonoBehaviour {
         }
     }
 
-    public void SellStuff()
+    private void SellStuff()
     {
         double gained = sell_value() * GetQuantity();
 
@@ -236,7 +199,9 @@ public class CommerceEventGO : MonoBehaviour {
                 break;
         }
     }
+    #endregion
 
+    #region Which Is Being Traded?
     private string DefineBuySellObject()
     {
         switch (what_is_being_bought_sold)
@@ -264,16 +229,46 @@ public class CommerceEventGO : MonoBehaviour {
             default: return 0;
         }
     }
+    #endregion
 
-    private void ActivateCooldown()
+    #region Pressed Button Functions
+    public void PressedOKEventButton()
     {
-        //turn off button
-        ca.assignedButton.SetActive(false);
-
-        //gets time used, make action inactive
-        ca.timeLastUsed = Time.time;
-        ca.isActive = false;
+        try
+        {
+            DoCommerce();
+        }
+        catch (FormatException e)
+        {
+            transform.Find("CommerceEventPanel/ProblemsDescription").GetComponent<Text>().text = e.Message;
+        }
     }
+
+    public void PressedChangeActionButton()
+    {
+        switch (commerce_action)
+        {
+            case Commerce_Actions.Buying:
+                commerce_action = Commerce_Actions.Selling;
+                transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Change to Buy";
+                transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text =
+                    selling_title + " " + title;
+                break;
+            case Commerce_Actions.Selling:
+                commerce_action = Commerce_Actions.Buying;
+                transform.Find("CommerceEventPanel/ChangeBuySellButton/Text").GetComponent<Text>().text = "Change to Sell";
+                transform.Find("CommerceEventPanel/EventTitle").GetComponent<Text>().text =
+                    buying_title + " " + title;
+                break;
+        }
+    }
+
+    public void PressedCancelEventButton()
+    {
+        //Destroy this Random Event Popup
+        Destroy(this.gameObject);
+    }
+    #endregion
 
     // Use this for initialization
     void Start () {
