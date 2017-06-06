@@ -9,7 +9,7 @@ public class CommerceEventGO : MonoBehaviour {
 
     public delegate double BuyOrSellValue();
 
-    public GameObject assignedButton;
+    public CommerceAction ca;
 
     #region Cooldown Variables
     public float actionCooldownPeriod;
@@ -40,6 +40,7 @@ public class CommerceEventGO : MonoBehaviour {
         if (IsBuyable())
         {
             Commerce();
+            ActivateCooldown();
             Destroy(this.gameObject);
         }
     }
@@ -51,6 +52,7 @@ public class CommerceEventGO : MonoBehaviour {
         if (IsSellable())
         {
             Commerce();
+            ActivateCooldown();
             Destroy(this.gameObject);
         }
     }
@@ -261,6 +263,16 @@ public class CommerceEventGO : MonoBehaviour {
                 return ResourceManager.instance.socialResources;
             default: return 0;
         }
+    }
+
+    private void ActivateCooldown()
+    {
+        //turn off button
+        ca.assignedButton.SetActive(false);
+
+        //gets time used, make action inactive
+        ca.timeLastUsed = Time.time;
+        ca.isActive = false;
     }
 
     // Use this for initialization

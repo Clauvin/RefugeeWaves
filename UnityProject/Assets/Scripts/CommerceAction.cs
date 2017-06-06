@@ -86,8 +86,12 @@ public class CommerceAction : MonoBehaviour {
         //instantiates a prefab with the info of the event
         GameObject newEvent = (GameObject)Instantiate(ActionsManager.instance.commerceEventPrefab);
 
+        
+
         //make it a child of the MainCanvas and adjust its scale
         newEvent.transform.SetParent(GameObject.Find("MainCanvas").transform, false);
+
+        newEvent.transform.GetComponent<CommerceEventGO>().ca = this;
 
         newEvent.transform.GetComponent<CommerceEventGO>().title = commerce_title;
         newEvent.transform.GetComponent<CommerceEventGO>().buying_title = commerce_buying_title;
