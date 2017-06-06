@@ -20,7 +20,6 @@ namespace Assets.Scripts
         public static string border_resources_buy_text_title = "Buy";
         public static string border_resources_sell_text_title = "Sell";
 
-
         #region Build Unnecessary Landmarks Functions
         public static double BuildUnnecessaryLandmarksResult()
         {
@@ -56,7 +55,8 @@ namespace Assets.Scripts
             return new PlayerAction(ActionsManager.instance.buttons[1],
                 "Encourage young professionals",
             "Make those teenagers get off their phones and work a little",
-            400, 3 * ActionsManager.instance.weekLength,
+            400,
+            3 * ActionsManager.instance.weekLength,
             MiscInfo.variableTypes.unemployementRate,
             EncourageYoungProfessionalsFirstResult,
             MiscInfo.variableTypes.baseTaxPerCitizen,
@@ -67,7 +67,7 @@ namespace Assets.Scripts
         #region Call The Police Functions
         public static double CallThePoliceResult()
         {
-            return -0.2 * StatsManager.instance.criminalityRate;
+            return -1 * 0.2 * StatsManager.instance.criminalityRate;
         }
 
         public static PlayerAction CallThePolice()
@@ -96,7 +96,8 @@ namespace Assets.Scripts
             "Since the UN wants you to help, nothing is more fair than" +
             " if they help with the bills."
             + "(Obs: This likely won't work if you've been a bad boy internationally)",
-            0, 24 * ActionsManager.instance.weekLength,
+            0,
+            24 * ActionsManager.instance.weekLength,
             MiscInfo.variableTypes.playerCurrentMoney,
             CanIHazSomeHelpResult);
         }
@@ -110,7 +111,7 @@ namespace Assets.Scripts
 
         public static double HolaGringoSecondResult()
         {
-            return -0.15 * StatsManager.instance.publicOpinionOnImmigrants;
+            return -1 * 0.15 * StatsManager.instance.publicOpinionOnImmigrants;
         }
 
         public static PlayerAction HolaGringo()
@@ -158,7 +159,8 @@ namespace Assets.Scripts
             " Come on in, don't mind the mess.",
             1000,
             5 * ActionsManager.instance.weekLength,
-            MiscInfo.variableTypes.internationalOpinion, MikasaSuCasaResult);
+            MiscInfo.variableTypes.internationalOpinion,
+            MikasaSuCasaResult);
         }
         #endregion
 
@@ -252,7 +254,8 @@ namespace Assets.Scripts
             return new CommerceAction(social_resources_title, "What's needed to give support for refugees",
                 ActionsManager.instance.buttons[8], 
                 social_resources_title, social_resources_buy_text_title, social_resources_sell_text_title,
-                buySocialResources, sellSocialResources, SocialResourceBuyValue, SocialResourceSellValue,
+                buySocialResources, sellSocialResources,
+                SocialResourceBuyValue, SocialResourceSellValue,
                 MiscInfo.variableTypes.socialResources, 1.5f * ActionsManager.instance.weekLength);
         }
         public static double SocialResourcesResult()
@@ -307,7 +310,8 @@ namespace Assets.Scripts
             return new CommerceAction(border_officers_title, "People to stop refugees",
                 ActionsManager.instance.buttons[9],
                 border_officers_title, border_officers_buy_text_title, border_officers_sell_text_title,
-                buyBorderOfficers, sellBorderOfficers, BorderOfficerBuyValue, BorderOfficerSellValue,
+                buyBorderOfficers, sellBorderOfficers,
+                BorderOfficerBuyValue, BorderOfficerSellValue,
                 MiscInfo.variableTypes.availableBO, 1.5f * ActionsManager.instance.weekLength);
         }
 
@@ -363,7 +367,8 @@ namespace Assets.Scripts
             return new CommerceAction(border_resources_title, "Basically... salary?",
                 ActionsManager.instance.buttons[10],
                 border_resources_title, border_resources_buy_text_title, border_resources_sell_text_title,
-                buyBorderResources, sellBorderResources, BorderResourceBuyValue, BorderResourceSellValue,
+                buyBorderResources, sellBorderResources,
+                BorderResourceBuyValue, BorderResourceSellValue,
                 MiscInfo.variableTypes.borderResources, 1.5f * ActionsManager.instance.weekLength);
         }
 
