@@ -119,20 +119,8 @@ public class CommerceAction : MonoBehaviour {
         createVisualCommerceEvent(actionName, actionDescription);
     }
 
-    public void actionUsed(double cost)
+    public void activateCooldown()
     {
-        Debug.Log("Did " + actionName);
-        //if it's still in cooldown, do nothing
-        if (!isActive)
-        {
-            Debug.Log("e está inativo");
-            return;
-        }
-
-
-        //deduct cost
-        ResourceManager.instance.playerCurrentMoney -= (long)cost;
-
         //turn off button
         assignedButton.SetActive(false);
 
