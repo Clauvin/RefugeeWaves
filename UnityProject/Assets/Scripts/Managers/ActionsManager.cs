@@ -90,17 +90,6 @@ public class ActionsManager : MonoBehaviour {
 		possibleActions.Add (ActionConstructor.MikasaSuCasa());
         #endregion
 
-        #region Building Actions
-        //Resource building actions
-        possibleActions.Add(ActionConstructor.Houses());
-
-		possibleActions.Add(ActionConstructor.SocialResources());
-
-		possibleActions.Add(ActionConstructor.BorderOfficers());
-
-		possibleActions.Add(ActionConstructor.BorderResources());
-        #endregion
-
         #region Commerce Actions
         possibleCommerceActions.Add(ActionConstructor.CommerceHouses());
 
