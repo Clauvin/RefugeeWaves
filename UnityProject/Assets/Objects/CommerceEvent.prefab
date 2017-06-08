@@ -495,10 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4621ef75553e67d45a35a68b2e6dd836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedButton: {fileID: 0}
-  actionCooldownPeriod: 0
-  timeLastUsed: 0
-  isActive: 0
+  ca: {fileID: 0}
   title: 
   buying_title: 
   selling_title: 
