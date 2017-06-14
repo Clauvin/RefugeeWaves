@@ -86,6 +86,7 @@ public class RandomEventManager : MonoBehaviour {
     public void AnEventHappens()
     {
         //get one random event of the group and makes it happen
+        if (eventsYetToHappen.Count <= 0) return;
         int eventToHappen = Random.Range(0, eventsYetToHappen.Count - 1);
         eventsYetToHappen[eventToHappen].applyConsequences();
 
