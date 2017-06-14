@@ -44,6 +44,8 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
             float scale = 1.0f)
     {
         GameObject icone = Instantiate<GameObject>(Resources.Load<GameObject>("Immigrant Wave Object"));
+
+        icone.transform.SetParent(GameObject.Find("WavesCanvas").transform);
         icone.transform.position = new Vector3(exit.transform.position.x,
                                                exit.transform.position.y,
                                                exit.transform.position.z);
