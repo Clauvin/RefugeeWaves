@@ -58,8 +58,8 @@ public class RandomEventManager : MonoBehaviour {
 		GameObject newEvent = (GameObject)Instantiate(randomEventPrefab);
 
 		//make it a child of the MainCanvas and adjust its scale
-		newEvent.transform.SetParent(GameObject.Find("MainCanvas").transform,false);
-		//newEvent.transform.localScale = new Vector3 (1, 1, 1);
+		newEvent.transform.SetParent(GameObject.Find("WindowsCanvas").transform,false);
+        newEvent.name = "Random Event Window";
 
 		//change the values of the text boxes
 		newEvent.transform.Find ("RandomEventPanel/EventTitle").GetComponent<Text>().text = title;
