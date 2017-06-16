@@ -12,23 +12,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     ///     d) Speed to reach
     /// </summary>
 
-    private static ImmigrantWaveLauncher _instance;
-
-    public static ImmigrantWaveLauncher instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = GameObject.FindObjectOfType<ImmigrantWaveLauncher>();
-
-                //Tell unity not to destroy this object when loading a new scene!
-                MonoBehaviour.DontDestroyOnLoad(_instance);
-            }
-
-            return _instance;
-        }
-    }
+    public static ImmigrantWaveLauncher instance;
 
     public int nextWaveId = 0;
 
@@ -131,7 +115,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
     void Awake()
     {
-        
+        instance = this;
     }
 
     // Use this for initialization
