@@ -131,7 +131,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
     void Awake()
     {
-        instance = this;
+        
     }
 
     // Use this for initialization

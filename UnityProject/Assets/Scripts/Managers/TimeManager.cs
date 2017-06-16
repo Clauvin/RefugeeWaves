@@ -7,7 +7,23 @@ using Basics_3;
 [System.Serializable]
 public class TimeManager : MonoBehaviour {
 
-	public static TimeManager instance;
+    private static TimeManager _instance;
+
+    public static TimeManager instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<TimeManager>();
+
+                //Tell unity not to destroy this object when loading a new scene!
+                MonoBehaviour.DontDestroyOnLoad(_instance);
+            }
+
+            return _instance;
+        }
+    }
 
     #region Public Variables
     public bool gamePaused;
@@ -136,7 +152,7 @@ public class TimeManager : MonoBehaviour {
 
     void Awake()
     {
-        instance = this;
+
     }
 
 	// Use this for initialization
