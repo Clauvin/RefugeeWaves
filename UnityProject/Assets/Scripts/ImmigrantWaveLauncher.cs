@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable()]
 public class ImmigrantWaveLauncher : MonoBehaviour {
 
     /// <summary>
@@ -80,22 +82,22 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
         if ((TimeManager.instance.year == 1) && (!super_wave))
         {
-            refugee_quantity = (int)(Random.Range(1.0f, 2.0f) * def_quant_of_refugees);
-            time_in_seconds = Random.Range(1.0f, 2.0f) * def_time_in_seconds;
+            refugee_quantity = (int)(UnityEngine.Random.Range(1.0f, 2.0f) * def_quant_of_refugees);
+            time_in_seconds = UnityEngine.Random.Range(1.0f, 2.0f) * def_time_in_seconds;
         }
-        else if ((Random.Range(0.0f, 1.0f) < 0.05f) || (super_wave))
+        else if ((UnityEngine.Random.Range(0.0f, 1.0f) < 0.05f) || (super_wave))
         {
-            refugee_quantity = (int)(Random.Range(15.0f, 20.0f) * def_quant_of_refugees);
-            time_in_seconds =  Random.Range(5.0f, 10.0f) * def_time_in_seconds;
+            refugee_quantity = (int)(UnityEngine.Random.Range(15.0f, 20.0f) * def_quant_of_refugees);
+            time_in_seconds = UnityEngine.Random.Range(5.0f, 10.0f) * def_time_in_seconds;
             scale *= 3;
         }
         else
         {
-            refugee_quantity = (int)(Random.Range(3.0f, 4.0f) * def_quant_of_refugees);
-            time_in_seconds = Random.Range(0.5f, 1.0f) * def_time_in_seconds;
+            refugee_quantity = (int)(UnityEngine.Random.Range(3.0f, 4.0f) * def_quant_of_refugees);
+            time_in_seconds = UnityEngine.Random.Range(0.5f, 1.0f) * def_time_in_seconds;
         }
 
-        if (Random.Range(0.0f, 1.0f) < 0.5f)
+        if (UnityEngine.Random.Range(0.0f, 1.0f) < 0.5f)
         {
             exit = refugees_exit_1; entrance = refugees_entrance_1;
         } else
@@ -120,7 +122,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        time_for_next = Random.Range(30.0f, 60.0f);
+        time_for_next = UnityEngine.Random.Range(30.0f, 60.0f);
         last_time = Time.time;
     }
 	
@@ -137,11 +139,11 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
                 present_time = 0.0f;
                 if (TimeManager.instance.year == 1)
                 {
-                    time_for_next = Random.Range(30.0f, 60.0f);
+                    time_for_next = UnityEngine.Random.Range(30.0f, 60.0f);
                 }
                 else
                 {
-                    time_for_next = Random.Range(15.0f, 30.0f);
+                    time_for_next = UnityEngine.Random.Range(15.0f, 30.0f);
                 }
             }
         }
