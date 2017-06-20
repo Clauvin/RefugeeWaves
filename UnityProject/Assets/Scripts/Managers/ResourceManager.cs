@@ -3,49 +3,161 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
 public class ResourceManager : MonoBehaviour {
 
-	public static ResourceManager instance;
+    public static ResourceManager instance;
+
+    #region Classe Para Salvar
+    [System.Serializable]
+    public class ResourceSavePackage
+    {
+        public long _playerCurrentMoney = 10000;
+        public long _playerMonthlyBudget;
+        public double _baseTaxPerCitizen = 10;
+        public double _realTaxPerCitizen;
+        public double _taxVariation = 1;
+        public double _BudgetBaseValue = 1000;
+        public double _UNHelpBaseValue = 4000;
+        public double _UNHelpVariation = 1.0f;
+
+        public int _numberOfAvailableHouses = 0;
+        public int _numberOfTotalHouses = 0;
+        public int _costOfHouse = 100;
+        public int _socialResources = 100;
+        public int _costOfSocialResource = 20;
+
+        public int _numberOfAvailableBorderOfficers = 0;
+        public int _numberOfTotalBorderOfficers = 0;
+        public int _costOfBorderOfficer = 30;
+        public int _borderResources = 100;
+        public int _costOfBorderResource = 25;
+    }
+
+    public ResourceSavePackage rs;
+
+    #endregion
 
     /// <remarks>
     /// This variable originally was a double, this can generate possible bugs in the future
     /// </remarks>
-	public long playerCurrentMoney = 0; //because the world revolves around it
+    //because the world revolves around it
+
+    public long playerCurrentMoney{
+        get { return rs._playerCurrentMoney; }
+        set { rs._playerCurrentMoney = value; }
+    }
 
     /// <remarks>
     /// This variable originally was a double, this can generate possible bugs in the future
     /// </remarks>
-	public long playerMonthlyBudget; //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
+    //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
+    public long playerMonthlyBudget{
+        get { return rs._playerMonthlyBudget; }
+        set { rs._playerMonthlyBudget = value; }
+    }
 
     #region Invisible Variables
     //invisible variables: the player doesn't see them, but they are used and manipulated by the game
-    public double baseTaxPerCitizen = 10; //how much each citizen pays(base)
-	public double realTaxPerCitizen; //How much they pay(with possible extra variation)
-	public double taxVariation = 1; //i.e., inflation. Dumbass.
-	public double BudgetBaseValue = 1000;
-    public double UNHelpBaseValue = 4000; // how much the United Nations give when help is asked?
-    public double UNHelpVariation = 1.0f; // how much the United Nations give more, or less using the base value?
+
+    //how much each citizen pays(base)
+    public double baseTaxPerCitizen{
+        get { return rs._baseTaxPerCitizen; }
+        set { rs._baseTaxPerCitizen = value; }
+    }
+
+    //How much they pay(with possible extra variation)
+    public double realTaxPerCitizen{
+        get { return rs._realTaxPerCitizen; }
+        set { rs._realTaxPerCitizen = value; }
+    }
+
+    //i.e., inflation. Dumbass.
+    public double taxVariation{
+        get { return rs._taxVariation; }
+        set { rs._taxVariation = value; }
+    }
+
+	public double BudgetBaseValue{
+        get { return rs._BudgetBaseValue; }
+        set { rs._BudgetBaseValue = value; }
+    }
+
+    // how much the United Nations give when help is asked?
+    public double UNHelpBaseValue {
+        get { return rs._UNHelpBaseValue; }
+        set { rs._UNHelpBaseValue = value; }
+    }
+
+    // how much the United Nations give more, or less using the base value?
+    public double UNHelpVariation {
+        get { return rs._UNHelpVariation; }
+        set { rs._UNHelpVariation = value; }
+    }
     #endregion
 
     //Resources
 
     #region Open Borders
     //variables used for open borders, in other words, when the refugees start living in the country
-    public int numberOfAvailableHouses=0;//number of vacant houses for immigrants
-	public int numberOfTotalHouses=0; //total number of houses player has built for helping refugees
-	public int costOfHouse=100; 
-	public int socialResources=100; //number of social expenses 'units' player has to give out to refugees
-	public int costOfSocialResource = 20;
+    //number of vacant houses for immigrants
+    public int numberOfAvailableHouses {
+        get { return rs._numberOfAvailableHouses; }
+        set { rs._numberOfAvailableHouses = value; }
+    }
+
+    //total number of houses player has built for helping refugees
+    public int numberOfTotalHouses {
+        get { return rs._numberOfTotalHouses; }
+        set { rs._numberOfTotalHouses = value; }
+    }
+
+    public int costOfHouse {
+        get { return rs._costOfHouse; }
+        set { rs._costOfHouse = value; }
+    }
+
+    //number of social expenses 'units' player has to give out to refugees
+    public int socialResources {
+        get { return rs._socialResources; }
+        set { rs._socialResources = value; }
+    }
+
+    public int costOfSocialResource {
+        get { return rs._costOfSocialResource; }
+        set { rs._costOfSocialResource = value; }
+    }
     #endregion
 
     #region Closed Borders
     //variables used for closed bordersin other words, when the refugees are pushed away
-    public int numberOfAvailableBorderOfficers=0; //number of officers not busy at the moment
-	public int numberOfTotalBorderOfficers=0; //total number of officers player currently has employed
-	public int costOfBorderOfficer = 30;
-	public int borderResources=100; //number of border expenses 'units' player has to maintain borders running
-	public int costOfBorderResource = 25;
+
+    //number of officers not busy at the moment
+    public int numberOfAvailableBorderOfficers {
+        get { return rs._numberOfAvailableBorderOfficers; }
+        set { rs._numberOfAvailableBorderOfficers = value; }
+    }
+
+    //total number of officers player currently has employed
+    public int numberOfTotalBorderOfficers {
+        get { return rs._numberOfTotalBorderOfficers; }
+        set { rs._numberOfTotalBorderOfficers = value; }
+    }
+
+    public int costOfBorderOfficer {
+        get { return rs._costOfBorderOfficer; }
+        set { rs._costOfBorderOfficer = value; }
+    }
+
+    //number of border expenses 'units' player has to maintain borders running
+    public int borderResources {
+        get { return rs._borderResources; }
+        set { rs._borderResources = value; }
+    } 
+
+	public int costOfBorderResource {
+        get { return rs._costOfBorderResource; }
+        set { rs._costOfBorderResource = value; }
+    } 
     #endregion
 
     //Game Objects
@@ -156,6 +268,7 @@ public class ResourceManager : MonoBehaviour {
     {
         instance = this;
 
+        rs = new ResourceSavePackage();
         textPlayerCurrentMoney = playerCurrentMoneyGO.GetComponent<Text>();
         textPlayerMonthlyBudget = playerMonthlyBudgetGO.GetComponent<Text>();
         textRealTaxPerCitizen = realTaxPerCitizenGO.GetComponent<Text>();
