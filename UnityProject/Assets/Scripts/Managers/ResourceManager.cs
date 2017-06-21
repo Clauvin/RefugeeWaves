@@ -33,16 +33,16 @@ public class ResourceManager : MonoBehaviour {
         public int _costOfBorderResource = 25;
     }
 
-    private ResourceSavePackage rs;
+    private ResourceSavePackage resource_save_package;
 
     public ResourceSavePackage GetResourceSavePackage()
     {
-        return rs;
+        return resource_save_package;
     }
 
     public void SetResourceSavePackage(ResourceSavePackage r)
     {
-        rs = r;
+        resource_save_package = r;
     }
 
     #endregion
@@ -53,8 +53,8 @@ public class ResourceManager : MonoBehaviour {
     //because the world revolves around it
 
     public long playerCurrentMoney{
-        get { return rs._playerCurrentMoney; }
-        set { rs._playerCurrentMoney = value; }
+        get { return resource_save_package._playerCurrentMoney; }
+        set { resource_save_package._playerCurrentMoney = value; }
     }
 
     /// <remarks>
@@ -62,8 +62,8 @@ public class ResourceManager : MonoBehaviour {
     /// </remarks>
     //how much the player will earn; depends on taxPerCitizen and BudgetBaseValue
     public long playerMonthlyBudget{
-        get { return rs._playerMonthlyBudget; }
-        set { rs._playerMonthlyBudget = value; }
+        get { return resource_save_package._playerMonthlyBudget; }
+        set { resource_save_package._playerMonthlyBudget = value; }
     }
 
     #region Invisible Variables
@@ -71,37 +71,37 @@ public class ResourceManager : MonoBehaviour {
 
     //how much each citizen pays(base)
     public double baseTaxPerCitizen{
-        get { return rs._baseTaxPerCitizen; }
-        set { rs._baseTaxPerCitizen = value; }
+        get { return resource_save_package._baseTaxPerCitizen; }
+        set { resource_save_package._baseTaxPerCitizen = value; }
     }
 
     //How much they pay(with possible extra variation)
     public double realTaxPerCitizen{
-        get { return rs._realTaxPerCitizen; }
-        set { rs._realTaxPerCitizen = value; }
+        get { return resource_save_package._realTaxPerCitizen; }
+        set { resource_save_package._realTaxPerCitizen = value; }
     }
 
     //i.e., inflation. Dumbass.
     public double taxVariation{
-        get { return rs._taxVariation; }
-        set { rs._taxVariation = value; }
+        get { return resource_save_package._taxVariation; }
+        set { resource_save_package._taxVariation = value; }
     }
 
 	public double BudgetBaseValue{
-        get { return rs._BudgetBaseValue; }
-        set { rs._BudgetBaseValue = value; }
+        get { return resource_save_package._BudgetBaseValue; }
+        set { resource_save_package._BudgetBaseValue = value; }
     }
 
     // how much the United Nations give when help is asked?
     public double UNHelpBaseValue {
-        get { return rs._UNHelpBaseValue; }
-        set { rs._UNHelpBaseValue = value; }
+        get { return resource_save_package._UNHelpBaseValue; }
+        set { resource_save_package._UNHelpBaseValue = value; }
     }
 
     // how much the United Nations give more, or less using the base value?
     public double UNHelpVariation {
-        get { return rs._UNHelpVariation; }
-        set { rs._UNHelpVariation = value; }
+        get { return resource_save_package._UNHelpVariation; }
+        set { resource_save_package._UNHelpVariation = value; }
     }
     #endregion
 
@@ -111,30 +111,30 @@ public class ResourceManager : MonoBehaviour {
     //variables used for open borders, in other words, when the refugees start living in the country
     //number of vacant houses for immigrants
     public int numberOfAvailableHouses {
-        get { return rs._numberOfAvailableHouses; }
-        set { rs._numberOfAvailableHouses = value; }
+        get { return resource_save_package._numberOfAvailableHouses; }
+        set { resource_save_package._numberOfAvailableHouses = value; }
     }
 
     //total number of houses player has built for helping refugees
     public int numberOfTotalHouses {
-        get { return rs._numberOfTotalHouses; }
-        set { rs._numberOfTotalHouses = value; }
+        get { return resource_save_package._numberOfTotalHouses; }
+        set { resource_save_package._numberOfTotalHouses = value; }
     }
 
     public int costOfHouse {
-        get { return rs._costOfHouse; }
-        set { rs._costOfHouse = value; }
+        get { return resource_save_package._costOfHouse; }
+        set { resource_save_package._costOfHouse = value; }
     }
 
     //number of social expenses 'units' player has to give out to refugees
     public int socialResources {
-        get { return rs._socialResources; }
-        set { rs._socialResources = value; }
+        get { return resource_save_package._socialResources; }
+        set { resource_save_package._socialResources = value; }
     }
 
     public int costOfSocialResource {
-        get { return rs._costOfSocialResource; }
-        set { rs._costOfSocialResource = value; }
+        get { return resource_save_package._costOfSocialResource; }
+        set { resource_save_package._costOfSocialResource = value; }
     }
     #endregion
 
@@ -143,30 +143,30 @@ public class ResourceManager : MonoBehaviour {
 
     //number of officers not busy at the moment
     public int numberOfAvailableBorderOfficers {
-        get { return rs._numberOfAvailableBorderOfficers; }
-        set { rs._numberOfAvailableBorderOfficers = value; }
+        get { return resource_save_package._numberOfAvailableBorderOfficers; }
+        set { resource_save_package._numberOfAvailableBorderOfficers = value; }
     }
 
     //total number of officers player currently has employed
     public int numberOfTotalBorderOfficers {
-        get { return rs._numberOfTotalBorderOfficers; }
-        set { rs._numberOfTotalBorderOfficers = value; }
+        get { return resource_save_package._numberOfTotalBorderOfficers; }
+        set { resource_save_package._numberOfTotalBorderOfficers = value; }
     }
 
     public int costOfBorderOfficer {
-        get { return rs._costOfBorderOfficer; }
-        set { rs._costOfBorderOfficer = value; }
+        get { return resource_save_package._costOfBorderOfficer; }
+        set { resource_save_package._costOfBorderOfficer = value; }
     }
 
     //number of border expenses 'units' player has to maintain borders running
     public int borderResources {
-        get { return rs._borderResources; }
-        set { rs._borderResources = value; }
+        get { return resource_save_package._borderResources; }
+        set { resource_save_package._borderResources = value; }
     } 
 
 	public int costOfBorderResource {
-        get { return rs._costOfBorderResource; }
-        set { rs._costOfBorderResource = value; }
+        get { return resource_save_package._costOfBorderResource; }
+        set { resource_save_package._costOfBorderResource = value; }
     } 
     #endregion
 
@@ -278,7 +278,7 @@ public class ResourceManager : MonoBehaviour {
     {
         instance = this;
 
-        rs = new ResourceSavePackage();
+        resource_save_package = new ResourceSavePackage();
         textPlayerCurrentMoney = playerCurrentMoneyGO.GetComponent<Text>();
         textPlayerMonthlyBudget = playerMonthlyBudgetGO.GetComponent<Text>();
         textRealTaxPerCitizen = realTaxPerCitizenGO.GetComponent<Text>();
