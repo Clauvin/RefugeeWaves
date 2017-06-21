@@ -24,7 +24,7 @@ public class SaveLoadManagerButtons : Editor
 
         if (GUILayout.Button(load_game))
         {
-
+            myScript.Load();
         }
     }
 }
