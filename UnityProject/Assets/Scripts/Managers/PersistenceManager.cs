@@ -12,7 +12,7 @@ public static class PersistenceManager {
 	{
         game = new GameInstance();
 		BinaryFormatter bf = new BinaryFormatter ();
-		FileStream file = File.Create (Application.persistentDataPath + "savedGames.waves");
+		FileStream file = File.Create (Application.persistentDataPath + "/savedGames.waves");
 		bf.Serialize (file, PersistenceManager.game);
 	}
 
