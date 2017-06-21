@@ -23,7 +23,7 @@ public class TimeManager : MonoBehaviour {
     }
     #endregion
 
-    private TimeSavePackage time_save_package;
+    public TimeSavePackage time_save_package;
 
     public TimeSavePackage GetTimeSavePackage()
     {
@@ -77,13 +77,20 @@ public class TimeManager : MonoBehaviour {
     }
 
     // start at 1
-    public int week
-    {
+    public int week {
         get { return time_save_package._week; }
         set { time_save_package._week = value; }
     }
-    public int gameDurationInYears = 2; //in years
-	public bool gameOver;
+
+    public int gameDurationInYears {
+        get { return time_save_package._gameDurationInYears; }
+        set { time_save_package._gameDurationInYears = value; }
+    } 
+
+    public bool gameOver {
+        get { return time_save_package._gameOver; }
+        set { time_save_package._gameOver = value; }
+    }
     #endregion
 
     //GO's and Text
