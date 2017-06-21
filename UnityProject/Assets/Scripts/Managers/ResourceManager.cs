@@ -33,7 +33,7 @@ public class ResourceManager : MonoBehaviour {
         public int _costOfBorderResource = 25;
     }
 
-    private ResourceSavePackage resource_save_package;
+    public ResourceSavePackage resource_save_package;
 
     public ResourceSavePackage GetResourceSavePackage()
     {
