@@ -18,6 +18,12 @@ public class GameInstance  {
         current = this;
     }
 
+    public void PlacingSavedFilesBack()
+    {
+        ResourceManager.instance.SetResourceSavePackage(current.resource_save_package);
+        TimeManager.instance.SetTimeSavePackage(current.time_save_package);
+    }
+
 
 
 }
