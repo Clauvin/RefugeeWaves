@@ -15,6 +15,7 @@ public static class PersistenceManager
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/savedGames.waves");
         bf.Serialize(file, PersistenceManager.game);
+        file.Close();
     }
 
     public static void loadGame()
