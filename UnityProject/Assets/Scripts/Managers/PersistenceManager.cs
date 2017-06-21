@@ -23,6 +23,7 @@ public static class PersistenceManager
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.OpenRead(Application.persistentDataPath + "/savedGames.waves");
         game = (GameInstance)bf.Deserialize(file);
+        game.PlacingSavedFilesBack();
         file.Close();
     }
 }
