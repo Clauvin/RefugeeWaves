@@ -9,10 +9,12 @@ public class GameInstance  {
 	public static GameInstance current;
 
     public ResourceManager.ResourceSavePackage resource_save_package;
+    public TimeManager.TimeSavePackage time_save_package;
 
     public GameInstance()
     {
         resource_save_package = ResourceManager.instance.GetResourceSavePackage();
+        time_save_package = TimeManager.instance.GetTimeSavePackage();
         current = this;
     }
 
