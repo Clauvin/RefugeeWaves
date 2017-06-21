@@ -4,16 +4,24 @@ using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-public static class PersistenceManager {
+public static class PersistenceManager
+{
 
     public static GameInstance game;
 
-	public static void saveGame()
-	{
+    public static void saveGame()
+    {
         game = new GameInstance();
-		BinaryFormatter bf = new BinaryFormatter ();
-		FileStream file = File.Create (Application.persistentDataPath + "/savedGames.waves");
-		bf.Serialize (file, PersistenceManager.game);
-	}
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/savedGames.waves");
+        bf.Serialize(file, PersistenceManager.game);
+    }
 
+    public static void loadGame()
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.OpenRead(Application.persistentDataPath + "/savedGames.waves");
+        game = (GameInstance)bf.Deserialize(file);
+        file.Close();
+    }
 }
