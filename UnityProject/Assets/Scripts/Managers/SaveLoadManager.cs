@@ -11,6 +11,11 @@ public class SaveLoadManager : MonoBehaviour {
         PersistenceManager.saveGame();
     }
 
+    public void Load()
+    {
+        PersistenceManager.loadGame();
+    }
+
     // Use this for initialization
     void Start () {
 
