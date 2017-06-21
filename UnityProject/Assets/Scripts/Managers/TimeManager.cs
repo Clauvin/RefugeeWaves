@@ -16,9 +16,9 @@ public class TimeManager : MonoBehaviour {
         public bool _gamePaused;
         public float _timeLastPaused, _timeLastUnpaused;
         public float _timeElapsed;
-        public float _weekLength = 5.0f;
+        public float _weekLengthInSeconds = 5.0f;
         public int _year, _month, _week;
-        public int _gameDuration = 2;
+        public int _gameDurationInYears = 2;
         public bool _gameOver;
     }
     #endregion
@@ -59,12 +59,30 @@ public class TimeManager : MonoBehaviour {
     }
 
     //in seconds
-    public float weekLength {
-        get { return time_save_package._weekLength; }
-        set { time_save_package._weekLength = value; }
+    public float weekLengthInSeconds {
+        get { return time_save_package._weekLengthInSeconds; }
+        set { time_save_package._weekLengthInSeconds = value; }
     }
-    public int year, month, week; // all start at 1
-	public int gameDuration = 2; //in years
+
+    // start at 1
+    public int year {
+        get { return time_save_package._year; }
+        set { time_save_package._year = value; }
+    }
+
+    // start at 1
+    public int month {
+        get { return time_save_package._month; }
+        set { time_save_package._month = value; }
+    }
+
+    // start at 1
+    public int week
+    {
+        get { return time_save_package._week; }
+        set { time_save_package._week = value; }
+    }
+    public int gameDurationInYears = 2; //in years
 	public bool gameOver;
     #endregion
 
@@ -110,7 +128,7 @@ public class TimeManager : MonoBehaviour {
     #region Check For Passage Of Time Functions
     public void checkForPassageOfWeek()
 	{
-		if (timeElapsed+ (Time.time-timeLastUnpaused)>=weekLength)
+		if (timeElapsed+ (Time.time-timeLastUnpaused)>=weekLengthInSeconds)
 		{
 			//reset counters, use timeLastUpaused as a checkpoint for next time period
 			timeElapsed=0.0f;
@@ -173,7 +191,7 @@ public class TimeManager : MonoBehaviour {
 	public void checkForEndOfGame()
 	{
 		//if x years have passed...
-		if (year > gameDuration)
+		if (year > gameDurationInYears)
 		{
 			//game over, time's up
 			gameOver=true;
