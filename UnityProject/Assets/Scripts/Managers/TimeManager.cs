@@ -4,17 +4,66 @@ using UnityEngine;
 using UnityEngine.UI;
 using Basics_3;
 
-[System.Serializable]
+
 public class TimeManager : MonoBehaviour {
 
     public static TimeManager instance;
 
+    #region Classe Para Salvar
+    [System.Serializable]
+    public class TimeSavePackage
+    {
+        public bool _gamePaused;
+        public float _timeLastPaused, _timeLastUnpaused;
+        public float _timeElapsed;
+        public float _weekLength = 5.0f;
+        public int _year, _month, _week;
+        public int _gameDuration = 2;
+        public bool _gameOver;
+    }
+    #endregion
+
+    private TimeSavePackage time_save_package;
+
+    public TimeSavePackage GetTimeSavePackage()
+    {
+        return time_save_package;
+    }
+
+    public void SetTimeSavePackage(TimeSavePackage r)
+    {
+        time_save_package = r;
+    }
+
     #region Public Variables
-    public bool gamePaused;
-	public float timeLastPaused, timeLastUnpaused; //when started counting again; new 0
-	public float timeElapsed; //saves time already elapsed in case user pauses
-	public float weekLength = 5.0f; //in seconds
-	public int year, month, week; // all start at 1
+    public bool gamePaused {
+        get { return time_save_package._gamePaused; }
+        set { time_save_package._gamePaused = value; }
+    }
+
+    //when started counting again; new 0
+    public float timeLastPaused {
+        get { return time_save_package._timeLastPaused; }
+        set { time_save_package._timeLastPaused = value; }
+    }
+
+    public float timeLastUnpaused {
+        get { return time_save_package._timeLastUnpaused; }
+        set { time_save_package._timeLastUnpaused = value; }
+    }
+
+    //saves time already elapsed in case user pauses
+    public float timeElapsed {
+        get { return time_save_package._timeElapsed; }
+        set { time_save_package._timeElapsed = value; }
+    }
+
+    //in seconds
+    public float weekLength {
+        get { return time_save_package._weekLength; }
+        set { time_save_package._weekLength = value; }
+    }
+    public int year, month, week; // all start at 1
 	public int gameDuration = 2; //in years
 	public bool gameOver;
     #endregion
@@ -141,7 +190,9 @@ public class TimeManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
+        time_save_package = new TimeSavePackage();
+
 		year = 1;
 		month = 1;
 		week = 1;
