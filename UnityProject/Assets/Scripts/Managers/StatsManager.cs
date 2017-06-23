@@ -227,6 +227,8 @@ public class StatsManager : MonoBehaviour {
     {
         instance = this;
 
+        stats_save_package = new StatsSavePackage();
+
         randomizeStartingStats();
 
         legalPopulationText = legalPopulationGO.GetComponent<Text>();
