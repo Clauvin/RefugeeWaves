@@ -3,23 +3,62 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
 public class StatsManager : MonoBehaviour {
 
 
 	public static StatsManager instance;
 
+    #region Classe Para Salvar
+    [System.Serializable]
+    public class StatsSavePackage
+    {
+        public int _legalPopulation;
+        public double _publicOpinionOnImmigrants;
+        public double _internationalOpinion;
+        public double _unemploymentRate;
+        public double _criminalityRate;
+    }
+    #endregion
+
+    public StatsSavePackage stats_save_package;
+
+    public StatsSavePackage GetStatsSavePackage()
+    {
+        return stats_save_package;
+    }
+
+    public void SetStatsSavePackage(StatsSavePackage r)
+    {
+        stats_save_package = r;
+    }
 
     #region Global Variables
     //Creates all global variables to be used by the Minister of Wavestan
 
-    public int legalPopulation;//how many legal, tax paying ppl are living in your country atm
+    public int legalPopulation {
+        get { return stats_save_package._legalPopulation; }
+        set { stats_save_package._legalPopulation = value; }
+    }
 
-	public double publicOpinionOnImmigrants; //goes from 0 to 1
-	public double internationalOpinion; //goes from 0 to 1, affects your chances of getting international help
+	public double publicOpinionOnImmigrants {
+        get { return stats_save_package._publicOpinionOnImmigrants; }
+        set { stats_save_package._publicOpinionOnImmigrants = value; }
+    }
 
-	public double unemploymentRate; //from 0 to 1(if 1, boy, are you screwed)
-	public double criminalityRate; //from 0 to 1(if 1, boy, are you dead)
+	public double internationalOpinion {
+        get { return stats_save_package._internationalOpinion; }
+        set { stats_save_package._internationalOpinion = value; }
+    }
+
+	public double unemploymentRate {
+        get { return stats_save_package._unemploymentRate; }
+        set { stats_save_package._unemploymentRate = value; }
+    }
+
+	public double criminalityRate {
+        get { return stats_save_package._criminalityRate; }
+        set { stats_save_package._criminalityRate = value; }
+    }
     #endregion
 
     #region GO - The UI GameObjects
