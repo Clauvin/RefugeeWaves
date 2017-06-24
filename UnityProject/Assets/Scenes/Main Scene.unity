@@ -1644,7 +1644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0acd61e59c7edfa49a635bba50d5c78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextWaveId: 0
+  nextWaveId: 1
   refugees_exit_1: {fileID: 1386134960}
   refugees_exit_2: {fileID: 461821770}
   refugees_entrance_1: {fileID: 750842164}
@@ -2275,18 +2275,6 @@ MonoBehaviour:
     _border_resource_buy_multiplier: 1
     _border_resource_sell_price: 37.5
     _border_resource_sell_multiplier: 1
-  social_resource_buy_price: 100
-  social_resource_buy_multiplier: 1
-  social_resource_sell_price: 150
-  social_resource_sell_multiplier: 1
-  border_officer_buy_price: 125
-  border_officer_buy_multiplier: 1
-  border_officer_sell_price: 62.5
-  border_officer_sell_multiplier: 1
-  border_resource_buy_price: 75
-  border_resource_buy_multiplier: 1
-  border_resource_sell_price: 37.5
-  border_resource_sell_multiplier: 1
   buttons: []
 --- !u!1 &461821770
 GameObject:
