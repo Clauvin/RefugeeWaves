@@ -137,14 +137,14 @@ public class CommerceManager : MonoBehaviour {
 
     void Awake()
     {
-        instance = new CommerceManager();
+        instance = this;
         commerce_save_package = new CommerceSavePackage();
     }
 
     // Use this for initialization
     void Start () {
-		
-	}
+        instance = this;
+    }
 	
 	// Update is called once per frame
 	void Update () {
