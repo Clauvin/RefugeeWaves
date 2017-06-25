@@ -108,8 +108,9 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
                                                exit.transform.position.y,
                                                exit.transform.position.z);
         icone.GetComponent<ImmigrantWave>().numberOfImmigrants = refugee_quantity;
-        icone.GetComponent<MovingToTheObjective>().final_objective = entrance.transform.position;
-        icone.GetComponent<MovingToTheObjective>().final_objective.z = 0;
+        Vector3 final_obj = entrance.transform.position;
+        final_obj.z = 0;
+        icone.GetComponent<MovingToTheObjective>().final_objective = final_obj;
         icone.GetComponent<MovingToTheObjective>().time_to_reach_objective = time_in_seconds;
         icone.name = "Refugee";
         if (scale > 1.0f)
