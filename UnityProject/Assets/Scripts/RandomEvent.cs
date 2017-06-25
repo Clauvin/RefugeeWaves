@@ -4,7 +4,6 @@ using UnityEngine;
 
 [System.Serializable]
 public class RandomEvent {
-	//Random event; Has a name, a description and a consequence
 
 	public string name;
 	public string description;
@@ -16,13 +15,14 @@ public class RandomEvent {
 	float consequenceValue2;
     #endregion
 
+    /// <summary>
+    /// always SUMS the consequence value with the consequence variable, so need to pass the right value
+    /// Remember to update the displays after this happens
+    /// </summary>
     public void applyConsequences()
 	{
-		//always SUMS the consequence value with the consequence variable, so need to pass the right value
-		//Remember to update the displays after this happens
 
-
-		switch (consequenceVariable1)
+        switch (consequenceVariable1)
 		{
 		case MiscInfo.variableTypes.availableBO:
 			ResourceManager.instance.numberOfAvailableBorderOfficers += (int)consequenceValue1;
