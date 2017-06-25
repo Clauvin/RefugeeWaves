@@ -2,8 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
 public class ImmigrantManager : MonoBehaviour {
+
+    [System.Serializable]
+    public class ImmigrantSavePackage
+    {
+        public int _numberOfLegalImmigrants;
+        public int _numberOfIllegalImmigrants;
+
+        public int _numberOfNaturalizedImmigrants;
+    }
+
+    public ImmigrantSavePackage immigrant_save_package;
 
     #region Public Variables
     public static ImmigrantManager instance;
@@ -11,11 +21,31 @@ public class ImmigrantManager : MonoBehaviour {
 	public List<ImmigrantWave> legalWaves; //holds the waves of legal immigrants
 	public List<ImmigrantWave> illegalWaves;
 
+    public ImmigrantSavePackage GetImmigrantSavePackage()
+    {
+        return immigrant_save_package;
+    }
 
-	public int numberOfLegalImmigrants;
-	public int numberOfIllegalImmigrants;
+    public void SetImmigrantSavePackage(ImmigrantSavePackage save_package)
+    {
+        immigrant_save_package = save_package;
+    }
 
-	public int numberOfNaturalizedImmigrants; //how many immigrants you have helped get citizenship
+	public int numberOfLegalImmigrants {
+        get { return immigrant_save_package._numberOfLegalImmigrants; }
+        set { immigrant_save_package._numberOfIllegalImmigrants = value; }
+    }
+
+	public int numberOfIllegalImmigrants {
+        get { return immigrant_save_package._numberOfIllegalImmigrants; }
+        set { immigrant_save_package._numberOfIllegalImmigrants = value; }
+    }
+
+    //how many immigrants you have helped get citizenship
+    public int numberOfNaturalizedImmigrants {
+        get { return immigrant_save_package._numberOfNaturalizedImmigrants; }
+        set { immigrant_save_package._numberOfNaturalizedImmigrants = value; }
+    }
     #endregion
 
     #region Wave Functions
@@ -123,6 +153,7 @@ public class ImmigrantManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        immigrant_save_package = new ImmigrantSavePackage();
 		legalWaves = new List<ImmigrantWave> ();
 		illegalWaves = new List<ImmigrantWave> ();
 		numberOfNaturalizedImmigrants = 0;
