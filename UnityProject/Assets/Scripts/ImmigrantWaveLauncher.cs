@@ -62,6 +62,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
             icone.name += " Super";
         }
         icone.name += " Wave - ID " + nextWaveId;
+        icone.tag = "Wave";
         nextWaveId++;
     }
 
