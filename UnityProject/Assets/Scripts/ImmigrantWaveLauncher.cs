@@ -116,13 +116,19 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
     public bool DeleteAllWaves()
     {
-        // Find all waves
-        // Put them in a list
-        // Delete all of them
-        // If any wave is found, return false
-        // Else, return true
-        return true;
-        
+        GameObject[] list_of_waves;
+        list_of_waves = GameObject.FindGameObjectsWithTag("Wave");
+
+        int quantity = list_of_waves.Length;
+
+        for (int i = quantity - 1; i >= 0; i--)
+        {
+            Destroy(list_of_waves[i]);
+        }
+
+        list_of_waves = GameObject.FindGameObjectsWithTag("Wave");
+        if (list_of_waves.Length == 0) return true;
+        else return false;
     }
 
     void Awake()
