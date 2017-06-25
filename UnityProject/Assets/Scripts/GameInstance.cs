@@ -10,6 +10,7 @@ public class GameInstance  {
     public StatsManager.StatsSavePackage stats_save_package;
     public CommerceManager.CommerceSavePackage commerce_save_package;
     public ImmigrantManager.ImmigrantSavePackage immigrant_save_package;
+    public ImmigrantWaveLauncher.ImmigrantWaveLauncherSavePackage immigrant_wave_launcher_save_package;
     public RandomEventManager.RandomEventSavePackage random_event_save_package;
     public List<ImmigrantWave.ImmigrantWaveSavePackage> list_immigrant_wave_save_package_legal;
     public List<ImmigrantWave.ImmigrantWaveSavePackage> list_immigrant_wave_save_package_illegal;
@@ -21,6 +22,7 @@ public class GameInstance  {
         stats_save_package = StatsManager.instance.GetStatsSavePackage();
         commerce_save_package = CommerceManager.instance.GetCommerceSavePackage();
         immigrant_save_package = ImmigrantManager.instance.GetImmigrantSavePackage();
+        immigrant_wave_launcher_save_package = ImmigrantWaveLauncher.instance.GetImmigrantWaveLauncherSavePackage();
         random_event_save_package = RandomEventManager.instance.GetRandomEventSavePackage();
         list_immigrant_wave_save_package_legal = new List<ImmigrantWave.ImmigrantWaveSavePackage>();
         list_immigrant_wave_save_package_illegal = new List<ImmigrantWave.ImmigrantWaveSavePackage>();
@@ -45,6 +47,7 @@ public class GameInstance  {
         StatsManager.instance.SetStatsSavePackage(stats_save_package);
         CommerceManager.instance.SetCommerceSavePackage(commerce_save_package);
         ImmigrantManager.instance.SetImmigrantSavePackage(immigrant_save_package);
+        ImmigrantWaveLauncher.instance.SetImmigrantWaveLauncherSavePackage(immigrant_wave_launcher_save_package);
         RandomEventManager.instance.SetRandomEventSavePackage(random_event_save_package);
 
         ImmigrantManager.instance.legalWaves = new List<ImmigrantWave>();
