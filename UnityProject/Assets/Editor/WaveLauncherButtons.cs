@@ -26,6 +26,11 @@ public class WaveLauncherButtons : Editor
             myScript.RandomInstantaneousWaveInstance(true);
         }
 
+        if (GUILayout.Button("Destroy All Travelling Waves"))
+        {
+            myScript.DeleteAllTravellingWaves();
+        }
+
         if (myScript.GetWaveInstantiationTimer())
         {
             which_string = deactivate_timer;
