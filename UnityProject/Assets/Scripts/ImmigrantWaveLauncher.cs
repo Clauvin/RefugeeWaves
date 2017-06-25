@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Creates an instance of a Immigrant Wave Object, with:
+///     a) Number of immigrants; (semi randomized based in values)
+///     b) Instance creation point
+///     c) Finish point
+///     d) Speed to reach
+/// </summary>
 public class ImmigrantWaveLauncher : MonoBehaviour {
 
-    /// <summary>
-    /// Creates an instance of a Immigrant Wave Object, with:
-    ///     a) Number of immigrants; (semi randomized based in values)
-    ///     b) Instance creation point
-    ///     c) Finish point
-    ///     d) Speed to reach
-    /// </summary>
+
 
     public static ImmigrantWaveLauncher instance;
 
