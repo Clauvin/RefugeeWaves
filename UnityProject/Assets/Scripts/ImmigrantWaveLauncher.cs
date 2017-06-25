@@ -12,8 +12,6 @@ using UnityEngine;
 /// </summary>
 public class ImmigrantWaveLauncher : MonoBehaviour {
 
-
-
     public static ImmigrantWaveLauncher instance;
 
     public int nextWaveId = 0;
@@ -113,6 +111,17 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         }
 
         InstantiateNewRefugeeWave(refugee_quantity, exit, entrance, time_in_seconds, scale);
+    }
+
+    public bool DeleteAllWaves()
+    {
+        // Find all waves
+        // Put them in a list
+        // Delete all of them
+        // If any wave is found, return false
+        // Else, return true
+        return true;
+        
     }
 
     void Awake()
