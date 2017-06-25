@@ -8,7 +8,6 @@ public class RandomEvent {
 
 	public string name;
 	public string description;
-    //bool hasHappened { get; set; }//to say whether the event has already happened
 
     #region Consequence Variables
     MiscInfo.variableTypes consequenceVariable1;//Variable that suffers from this event
