@@ -114,7 +114,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         InstantiateNewRefugeeWave(refugee_quantity, exit, entrance, time_in_seconds, scale);
     }
 
-    public bool DeleteAllWaves()
+    public bool DeleteAllTravellingWaves()
     {
         GameObject[] list_of_waves;
         list_of_waves = GameObject.FindGameObjectsWithTag("Wave");
