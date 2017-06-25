@@ -6,12 +6,41 @@ using UnityEngine.UI;
 //Saves Random Events and checks to see if they happen
 public class RandomEventManager : MonoBehaviour {
 
-	List<RandomEvent> randomEvents = new List<RandomEvent>();//holds all events
-	List<RandomEvent> eventsYetToHappen = new List<RandomEvent>();//starts as a copy of all events; gets smaller as events happen
+    [System.Serializable]
+    public class RandomEventSavePackage {
 
-	public GameObject randomEventPrefab;
+        public List<RandomEvent> _randomEvents = new List<RandomEvent>();
+        public List<RandomEvent> _eventsYetToHappen = new List<RandomEvent>();
+    }
+
+    public RandomEventSavePackage random_event_save_package;
+
+    //holds all events
+    public List<RandomEvent> randomEvents {
+        get { return random_event_save_package._randomEvents; }
+        set { random_event_save_package._randomEvents = value; }
+    }
+
+    //starts as a copy of all events; gets smaller as events happen
+    public List<RandomEvent> eventsYetToHappen
+    {
+        get { return random_event_save_package._eventsYetToHappen; }
+        set { random_event_save_package._eventsYetToHappen = value; }
+    }
+
+    public GameObject randomEventPrefab;
 
     public static RandomEventManager instance;
+
+    public RandomEventSavePackage GetRandomEventSavePackage()
+    {
+        return random_event_save_package;
+    }
+
+    public void SetRandomEventSavePackage(RandomEventSavePackage save_package)
+    {
+        random_event_save_package = save_package;
+    }
 
     #region Creating Events
     //creates them all
@@ -104,6 +133,7 @@ public class RandomEventManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		instance = this;
+        random_event_save_package = new RandomEventSavePackage();
 		CreateRandomEvents ();
 	}
 	
