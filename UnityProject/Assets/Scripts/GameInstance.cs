@@ -9,6 +9,7 @@ public class GameInstance  {
     public TimeManager.TimeSavePackage time_save_package;
     public StatsManager.StatsSavePackage stats_save_package;
     public CommerceManager.CommerceSavePackage commerce_save_package;
+    public ImmigrantManager.ImmigrantSavePackage immigrant_save_package;
     public List<ImmigrantWave.ImmigrantWaveSavePackage> list_immigrant_wave_save_package_legal;
     public List<ImmigrantWave.ImmigrantWaveSavePackage> list_immigrant_wave_save_package_illegal;
 
@@ -18,6 +19,7 @@ public class GameInstance  {
         time_save_package = TimeManager.instance.GetTimeSavePackage();
         stats_save_package = StatsManager.instance.GetStatsSavePackage();
         commerce_save_package = CommerceManager.instance.GetCommerceSavePackage();
+        immigrant_save_package = ImmigrantManager.instance.GetImmigrantSavePackage();
         list_immigrant_wave_save_package_legal = new List<ImmigrantWave.ImmigrantWaveSavePackage>();
         list_immigrant_wave_save_package_illegal = new List<ImmigrantWave.ImmigrantWaveSavePackage>();
 
@@ -40,6 +42,7 @@ public class GameInstance  {
         TimeManager.instance.SetTimeSavePackage(time_save_package);
         StatsManager.instance.SetStatsSavePackage(stats_save_package);
         CommerceManager.instance.SetCommerceSavePackage(commerce_save_package);
+        ImmigrantManager.instance.SetImmigrantSavePackage(immigrant_save_package);
 
         ImmigrantManager.instance.legalWaves = new List<ImmigrantWave>();
         foreach (ImmigrantWave.ImmigrantWaveSavePackage iwsp in list_immigrant_wave_save_package_legal)
