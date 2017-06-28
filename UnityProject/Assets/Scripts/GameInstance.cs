@@ -20,7 +20,7 @@ public class GameInstance  {
     public class WaveObjectSavePackage {
 
         public Vector3 _position;
-        public Vector3 _rotation;
+        public Quaternion _rotation;
         public Vector3 _scale;
 
         public ImmigrantWave.ImmigrantWaveSavePackage immigrant_wave_save_package;
@@ -61,6 +61,7 @@ public class GameInstance  {
         random_event_save_package = RandomEventManager.instance.GetRandomEventSavePackage();
         list_immigrant_wave_save_package_legal = new List<ImmigrantWave.ImmigrantWaveSavePackage>();
         list_immigrant_wave_save_package_illegal = new List<ImmigrantWave.ImmigrantWaveSavePackage>();
+        list_wave_object_save_package = new List<WaveObjectSavePackage>();
 
         List<ImmigrantWave> list_immigrant_wave = ImmigrantManager.instance.legalWaves;
         foreach (ImmigrantWave i in list_immigrant_wave)
@@ -73,7 +74,14 @@ public class GameInstance  {
             list_immigrant_wave_save_package_illegal.Add(i.immigrant_wave_save_package);
         }
 
-        list_wave_object_save_package = new List<WaveObjectSavePackage>();
+        /*GameObject[] list_of_game_object_waves = GameObject.FindGameObjectsWithTag("Wave");
+        foreach(GameObject go in list_of_game_object_waves)
+        {
+            WaveObjectSavePackage package = new WaveObjectSavePackage();
+            package._position = go.transform.position;
+            package._rotation = go.transform.rotation;
+            package._scale = go.transform.localScale;*/
+        }
 
     }
 
