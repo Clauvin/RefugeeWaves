@@ -5,6 +5,18 @@ using UnityEngine;
 [System.Serializable]
 public class GameInstance  {
 
+    [System.Serializable]
+    public class ToTheObjectiveSavePackage
+    {
+        public Vector3 _initial_position;
+        public Vector3 _final_objective;
+        public float _time_to_reach_objective;
+        public float _passed_time;
+
+        private float _time_counted;
+    }
+
+    [System.Serializable]
     public class WaveObjectSavePackage {
 
         public Vector3 _position;
@@ -12,7 +24,7 @@ public class GameInstance  {
         public Vector3 _scale;
 
         public ImmigrantWave.ImmigrantWaveSavePackage immigrant_wave_save_package;
-        public MovingToTheObjective.ToTheObjectiveSavePackage to_the_objective_save_package;
+        public ToTheObjectiveSavePackage to_the_objective_save_package;
 
     }
 
@@ -28,6 +40,8 @@ public class GameInstance  {
     public ImmigrantWaveLauncher.ImmigrantWaveLauncherSavePackage immigrant_wave_launcher_save_package;
     public List<ImmigrantWave.ImmigrantWaveSavePackage> list_immigrant_wave_save_package_legal;
     public List<ImmigrantWave.ImmigrantWaveSavePackage> list_immigrant_wave_save_package_illegal;
+
+    public List<WaveObjectSavePackage> list_wave_object_save_package;
 
     public RandomEventManager.RandomEventSavePackage random_event_save_package;
 
@@ -58,6 +72,8 @@ public class GameInstance  {
         {
             list_immigrant_wave_save_package_illegal.Add(i.immigrant_wave_save_package);
         }
+
+        list_wave_object_save_package = new List<WaveObjectSavePackage>();
 
     }
 
