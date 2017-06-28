@@ -13,7 +13,7 @@ public class GameInstance  {
         public float _time_to_reach_objective;
         public float _passed_time;
 
-        private float _time_counted;
+        public float _time_counted;
     }
 
     [System.Serializable]
@@ -45,7 +45,23 @@ public class GameInstance  {
 
     public RandomEventManager.RandomEventSavePackage random_event_save_package;
 
+    /*public WaveObjectSavePackage ExtractWaveObjectSavePackage(GameObject game_object)
+    {
+        WaveObjectSavePackage package = new WaveObjectSavePackage();
+        package._position = game_object.transform.position;
+        package._rotation = game_object.transform.rotation;
+        package._scale = game_object.transform.localScale;
+        package.immigrant_wave_save_package = game_object.GetComponent<ImmigrantWave>().GetImmigrantWaveSavePackage();
 
+        MovingToTheObjective objective = game_object.GetComponent<MovingToTheObjective>();
+        package.to_the_objective_save_package._initial_position = objective.initial_position;
+        package.to_the_objective_save_package._final_objective = objective.final_objective;
+        package.to_the_objective_save_package._time_to_reach_objective = objective.time_to_reach_objective;
+        package.to_the_objective_save_package._passed_time = objective.passed_time;
+        package.to_the_objective_save_package._time_counted
+
+
+    }*/
 
 
     
@@ -77,11 +93,7 @@ public class GameInstance  {
         GameObject[] list_of_game_object_waves = GameObject.FindGameObjectsWithTag("Wave");
         foreach(GameObject go in list_of_game_object_waves)
         {
-            WaveObjectSavePackage package = new WaveObjectSavePackage();
-            package._position = go.transform.position;
-            package._rotation = go.transform.rotation;
-            package._scale = go.transform.localScale;
-            package.immigrant_wave_save_package = go.GetComponent<ImmigrantWave>().GetImmigrantWaveSavePackage();
+            
 
         }
 
