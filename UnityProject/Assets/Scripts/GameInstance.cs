@@ -8,8 +8,14 @@ public class GameInstance  {
     [System.Serializable]
     public class ToTheObjectiveSavePackage
     {
-        public Vector3 _initial_position;
-        public Vector3 _final_objective;
+        public float _initial_position_x;
+        public float _initial_position_y;
+        public float _initial_position_z;
+
+        public float _final_objective_x;
+        public float _final_objective_y;
+        public float _final_objective_z;
+
         public float _time_to_reach_objective;
         public float _passed_time;
 
@@ -19,9 +25,9 @@ public class GameInstance  {
     [System.Serializable]
     public class WaveObjectSavePackage {
 
-        public Vector3 _position;
-        public Quaternion _rotation;
-        public Vector3 _scale;
+        public float _position_x, _position_y, _position_z;
+        public float _rotation_x, _rotation_y, _rotation_z, _rotation_w;
+        public float _scale_x, _scale_y, _scale_z;
 
         public ImmigrantWave.ImmigrantWaveSavePackage immigrant_wave_save_package;
         public ToTheObjectiveSavePackage to_the_objective_save_package;
@@ -48,17 +54,28 @@ public class GameInstance  {
     public WaveObjectSavePackage ExtractWaveObjectSavePackage(GameObject game_object)
     {
         WaveObjectSavePackage package = new WaveObjectSavePackage();
-        package._position = game_object.transform.position;
-        package._rotation = game_object.transform.rotation;
-        package._scale = game_object.transform.localScale;
+        package._position_x = game_object.transform.position.x;
+        package._position_y = game_object.transform.position.y;
+        package._position_z = game_object.transform.position.z;
+        package._rotation_x = game_object.transform.rotation.x;
+        package._rotation_y = game_object.transform.rotation.y;
+        package._rotation_z = game_object.transform.rotation.z;
+        package._rotation_w = game_object.transform.rotation.w;
+        package._scale_x = game_object.transform.localScale.x;
+        package._scale_y = game_object.transform.localScale.y;
+        package._scale_z = game_object.transform.localScale.z;
         package.immigrant_wave_save_package = game_object.GetComponent<ImmigrantWave>().GetImmigrantWaveSavePackage();
 
         MovingToTheObjective objective = game_object.GetComponent<MovingToTheObjective>();
 
         ToTheObjectiveSavePackage obj_save_package = new ToTheObjectiveSavePackage();
 
-        obj_save_package._initial_position = objective.initial_position;
-        obj_save_package._final_objective = objective.final_objective;
+        obj_save_package._initial_position_x = objective.initial_position.x;
+        obj_save_package._initial_position_y = objective.initial_position.y;
+        obj_save_package._initial_position_z = objective.initial_position.z;
+        obj_save_package._final_objective_x = objective.final_objective.x;
+        obj_save_package._final_objective_y = objective.final_objective.y;
+        obj_save_package._final_objective_z = objective.final_objective.z;
         obj_save_package._time_to_reach_objective = objective.time_to_reach_objective;
         obj_save_package._passed_time = objective.passed_time;
         obj_save_package._time_counted = objective.GetTimeCounted();
