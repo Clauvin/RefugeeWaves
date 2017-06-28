@@ -13,6 +13,10 @@ public class MovingToTheObjective : MonoBehaviour {
 
     private float time_counted;
 
+    public float GetTimeCounted() { return time_counted; }
+
+    public void SetTimeCounted(float tc) { time_counted = tc; }
+
 	// Use this for initialization
 	void Start () {
         //to_the_objective_save_package = new ToTheObjectiveSavePackage();
