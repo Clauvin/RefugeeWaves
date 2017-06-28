@@ -45,7 +45,7 @@ public class GameInstance  {
 
     public RandomEventManager.RandomEventSavePackage random_event_save_package;
 
-    /*public WaveObjectSavePackage ExtractWaveObjectSavePackage(GameObject game_object)
+    public WaveObjectSavePackage ExtractWaveObjectSavePackage(GameObject game_object)
     {
         WaveObjectSavePackage package = new WaveObjectSavePackage();
         package._position = game_object.transform.position;
@@ -58,10 +58,10 @@ public class GameInstance  {
         package.to_the_objective_save_package._final_objective = objective.final_objective;
         package.to_the_objective_save_package._time_to_reach_objective = objective.time_to_reach_objective;
         package.to_the_objective_save_package._passed_time = objective.passed_time;
-        package.to_the_objective_save_package._time_counted
+        package.to_the_objective_save_package._time_counted = objective.GetTimeCounted();
 
-
-    }*/
+        return package;
+    }
 
 
     
@@ -93,8 +93,7 @@ public class GameInstance  {
         GameObject[] list_of_game_object_waves = GameObject.FindGameObjectsWithTag("Wave");
         foreach(GameObject go in list_of_game_object_waves)
         {
-            
-
+            list_wave_object_save_package.Add(ExtractWaveObjectSavePackage(go));
         }
 
     }
