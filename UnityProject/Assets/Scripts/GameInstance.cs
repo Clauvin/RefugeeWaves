@@ -74,13 +74,15 @@ public class GameInstance  {
             list_immigrant_wave_save_package_illegal.Add(i.immigrant_wave_save_package);
         }
 
-        /*GameObject[] list_of_game_object_waves = GameObject.FindGameObjectsWithTag("Wave");
+        GameObject[] list_of_game_object_waves = GameObject.FindGameObjectsWithTag("Wave");
         foreach(GameObject go in list_of_game_object_waves)
         {
             WaveObjectSavePackage package = new WaveObjectSavePackage();
             package._position = go.transform.position;
             package._rotation = go.transform.rotation;
-            package._scale = go.transform.localScale;*/
+            package._scale = go.transform.localScale;
+            package.immigrant_wave_save_package = go.GetComponent<ImmigrantWave>().GetImmigrantWaveSavePackage();
+
         }
 
     }
