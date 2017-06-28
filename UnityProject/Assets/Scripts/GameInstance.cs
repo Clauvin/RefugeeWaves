@@ -54,11 +54,16 @@ public class GameInstance  {
         package.immigrant_wave_save_package = game_object.GetComponent<ImmigrantWave>().GetImmigrantWaveSavePackage();
 
         MovingToTheObjective objective = game_object.GetComponent<MovingToTheObjective>();
-        package.to_the_objective_save_package._initial_position = objective.initial_position;
-        package.to_the_objective_save_package._final_objective = objective.final_objective;
-        package.to_the_objective_save_package._time_to_reach_objective = objective.time_to_reach_objective;
-        package.to_the_objective_save_package._passed_time = objective.passed_time;
-        package.to_the_objective_save_package._time_counted = objective.GetTimeCounted();
+
+        ToTheObjectiveSavePackage obj_save_package = new ToTheObjectiveSavePackage();
+
+        obj_save_package._initial_position = objective.initial_position;
+        obj_save_package._final_objective = objective.final_objective;
+        obj_save_package._time_to_reach_objective = objective.time_to_reach_objective;
+        obj_save_package._passed_time = objective.passed_time;
+        obj_save_package._time_counted = objective.GetTimeCounted();
+
+        package.to_the_objective_save_package = obj_save_package;
 
         return package;
     }
