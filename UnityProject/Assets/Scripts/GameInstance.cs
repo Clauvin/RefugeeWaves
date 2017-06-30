@@ -25,6 +25,7 @@ public class GameInstance  {
     [System.Serializable]
     public class WaveObjectSavePackage {
 
+        public string name;
         public float _position_x, _position_y, _position_z;
         public float _rotation_x, _rotation_y, _rotation_z, _rotation_w;
         public float _scale_x, _scale_y, _scale_z;
@@ -81,6 +82,8 @@ public class GameInstance  {
         obj_save_package._time_counted = objective.GetTimeCounted();
 
         package.to_the_objective_save_package = obj_save_package;
+
+        package.name = game_object.name;
 
         return package;
     }
@@ -150,6 +153,11 @@ public class GameInstance  {
         }
 
         ImmigrantWaveLauncher.instance.DeleteAllTravellingWaves();
+
+        foreach (WaveObjectSavePackage pack in list_wave_object_save_package)
+        {
+            ImmigrantWaveLauncher.instance.InstantiateNewRefugeWave(pack);
+        }
     }
 
 
