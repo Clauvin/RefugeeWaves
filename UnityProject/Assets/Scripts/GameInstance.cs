@@ -148,6 +148,8 @@ public class GameInstance  {
             ImmigrantWave iw = new ImmigrantWave(iwsp);
             ImmigrantManager.instance.illegalWaves.Add(iw);
         }
+
+        ImmigrantWaveLauncher.instance.DeleteAllTravellingWaves();
     }
 
 
