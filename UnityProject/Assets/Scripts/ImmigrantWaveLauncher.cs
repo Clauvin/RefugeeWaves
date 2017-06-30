@@ -98,6 +98,41 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     public void ToggleWaveInstantiationTimer() { wave_instantiation_timer = !wave_instantiation_timer; }
     #endregion
 
+    public void InstantiateNewRefugeWave(GameInstance.WaveObjectSavePackage package)
+    {
+        GameObject icone = Instantiate<GameObject>(Resources.Load<GameObject>("Immigrant Wave Object"));
+        icone.transform.SetParent(GameObject.Find("WavesCanvas").transform);
+
+        icone.transform.position = new Vector3(package._position_x,
+                                               package._position_y,
+                                               package._position_z);
+        icone.transform.localScale = new Vector3(package._scale_x,
+                                                package._scale_y,
+                                                package._scale_z);
+        icone.transform.rotation = new Quaternion(package._rotation_x,
+                                                  package._rotation_y,
+                                                  package._rotation_z,
+                                                  package._rotation_w);
+        icone.GetComponent<ImmigrantWave>().SetImmigrantWaveSavePackage(package.immigrant_wave_save_package);
+        icone.GetComponent<MovingToTheObjective>().initial_position = new Vector3(
+                                                package.to_the_objective_save_package._initial_position_x,
+                                                package.to_the_objective_save_package._initial_position_y,
+                                                package.to_the_objective_save_package._initial_position_z);
+        icone.GetComponent<MovingToTheObjective>().final_objective = new Vector3(
+                                                package.to_the_objective_save_package._final_objective_x,
+                                                package.to_the_objective_save_package._final_objective_y,
+                                                package.to_the_objective_save_package._final_objective_z);
+        icone.GetComponent<MovingToTheObjective>().time_to_reach_objective = package.to_the_objective_save_package.
+            _time_to_reach_objective;
+        icone.GetComponent<MovingToTheObjective>().passed_time = package.to_the_objective_save_package._passed_time;
+        icone.GetComponent<MovingToTheObjective>().time_counted = package.to_the_objective_save_package.
+            _time_counted;
+
+
+        icone.name = package.name;
+
+    }
+
     void InstantiateNewRefugeeWave(int refugee_quantity, GameObject exit, GameObject entrance, float time_in_seconds,
             float scale = 1.0f)
     {
