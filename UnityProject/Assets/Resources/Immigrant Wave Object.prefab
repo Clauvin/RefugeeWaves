@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 82179543891329120}
   m_Layer: 0
   m_Name: Immigrant Wave Object
-  m_TagString: Untagged
+  m_TagString: Wave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,11 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e6f8795c5adedc43af94c96a649bfec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfImmigrants: 0
-  timeOfArrival: 0
-  timeToBecomeLegal: 0
-  isLegalWave: 0
-  becameCitizens: 0
+  immigrant_wave_save_package:
+    _numberOfImmigrants: 0
+    _timeOfArrival: 0
+    _timeToBecomeLegal: 0
+    _isLegalWave: 0
+    _becameCitizens: 0
 --- !u!114 &114783591952017092
 MonoBehaviour:
   m_ObjectHideFlags: 1
