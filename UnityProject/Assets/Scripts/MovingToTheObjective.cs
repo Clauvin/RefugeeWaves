@@ -11,7 +11,7 @@ public class MovingToTheObjective : MonoBehaviour {
     public float passed_time;
     #endregion
 
-    private float time_counted;
+    public float time_counted;
 
     public float GetTimeCounted() { return time_counted; }
 
