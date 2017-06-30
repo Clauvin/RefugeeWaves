@@ -90,6 +90,12 @@ public class GameInstance  {
 
     public GameInstance()
     {
+
+
+    }
+
+    public void PreparingSaveFile()
+    {
         resource_save_package = ResourceManager.instance.GetResourceSavePackage();
         time_save_package = TimeManager.instance.GetTimeSavePackage();
         stats_save_package = StatsManager.instance.GetStatsSavePackage();
@@ -113,11 +119,10 @@ public class GameInstance  {
         }
 
         GameObject[] list_of_game_object_waves = GameObject.FindGameObjectsWithTag("Wave");
-        foreach(GameObject go in list_of_game_object_waves)
+        foreach (GameObject go in list_of_game_object_waves)
         {
             list_wave_object_save_package.Add(ExtractWaveObjectSavePackage(go));
         }
-
     }
 
     public void PlacingSavedFilesBack()
