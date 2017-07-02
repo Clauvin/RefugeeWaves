@@ -32,11 +32,45 @@ public class CommerceAction : MonoBehaviour {
     public string commerce_buying_title;
     public string commerce_selling_title;
 
-    #region Cooldown Variables
-    public float actionCooldownPeriod;
+    #region Save Package
+    public class CommerceActionCooldownSavePackage
+    {
+        public float _actionCooldownPeriod;
 
-    public float timeLastUsed;//saves time action was last used
-    public bool isActive;//tells if action can be used or if it's cooling down
+        public float _timeLastUsed; //saves time action was last used
+        public bool _isActive; //tells if action can be used or if it's cooling down
+    }
+    #endregion
+
+    public CommerceActionCooldownSavePackage commerce_action_cooldown_save_package;
+
+    public CommerceActionCooldownSavePackage GetCommerceActionCooldownSavePackage()
+    {
+        return commerce_action_cooldown_save_package;
+    }
+
+    public void SetCommerceActionCooldownSavePackage(CommerceActionCooldownSavePackage save_package)
+    {
+        commerce_action_cooldown_save_package = save_package;
+    }
+
+    #region Cooldown Variables
+    public float actionCooldownPeriod
+    {
+        get { return commerce_action_cooldown_save_package._actionCooldownPeriod; }
+        set { commerce_action_cooldown_save_package._actionCooldownPeriod = value; }
+    }
+
+    public float timeLastUsed
+    {
+        get { return commerce_action_cooldown_save_package._timeLastUsed; }
+        set { commerce_action_cooldown_save_package._timeLastUsed = value; }
+    }
+    public bool isActive
+    {
+        get { return commerce_action_cooldown_save_package._isActive; }
+        set { commerce_action_cooldown_save_package._isActive = value; }
+    }
     #endregion
 
     #region Public Constructors
@@ -45,6 +79,7 @@ public class CommerceAction : MonoBehaviour {
         consequenceFunction sFunction, CommerceEventGO.BuyOrSellValue b_value, CommerceEventGO.BuyOrSellValue s_value,
         MiscInfo.variableTypes whats_being_sold, float actCoolPeriod)
     {
+        commerce_action_cooldown_save_package = new CommerceActionCooldownSavePackage();
         actionName = actName;
         actionDescription = actDescription;
         assignedButton = assignButton;
