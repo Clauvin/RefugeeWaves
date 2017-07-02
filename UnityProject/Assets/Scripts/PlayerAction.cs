@@ -28,6 +28,7 @@ public class PlayerAction {
     #endregion
 
     #region Save Package
+    [System.Serializable]
     public class PlayerActionCooldownSavePackage {
         public float _actionCooldownPeriod;
 

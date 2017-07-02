@@ -33,6 +33,7 @@ public class CommerceAction : MonoBehaviour {
     public string commerce_selling_title;
 
     #region Save Package
+    [System.Serializable]
     public class CommerceActionCooldownSavePackage
     {
         public float _actionCooldownPeriod;
