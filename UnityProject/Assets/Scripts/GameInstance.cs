@@ -52,6 +52,10 @@ public class GameInstance  {
 
     public RandomEventManager.RandomEventSavePackage random_event_save_package;
 
+    public List<PlayerAction.PlayerActionCooldownSavePackage> list_player_action_cooldown_save_package;
+
+    public List<CommerceAction.CommerceActionCooldownSavePackage> list_commerce_action_cooldown_save_package;
+
     public WaveObjectSavePackage ExtractWaveObjectSavePackage(GameObject game_object)
     {
         WaveObjectSavePackage package = new WaveObjectSavePackage();
@@ -109,6 +113,8 @@ public class GameInstance  {
         list_immigrant_wave_save_package_legal = new List<ImmigrantWave.ImmigrantWaveSavePackage>();
         list_immigrant_wave_save_package_illegal = new List<ImmigrantWave.ImmigrantWaveSavePackage>();
         list_wave_object_save_package = new List<WaveObjectSavePackage>();
+        list_player_action_cooldown_save_package = new List<PlayerAction.PlayerActionCooldownSavePackage>();
+        list_commerce_action_cooldown_save_package = new List<CommerceAction.CommerceActionCooldownSavePackage>();
 
         List<ImmigrantWave> list_immigrant_wave = ImmigrantManager.instance.legalWaves;
         foreach (ImmigrantWave i in list_immigrant_wave)
@@ -125,6 +131,16 @@ public class GameInstance  {
         foreach (GameObject go in list_of_game_object_waves)
         {
             list_wave_object_save_package.Add(ExtractWaveObjectSavePackage(go));
+        }
+
+        foreach(PlayerAction pa in ActionsManager.instance.possibleActions)
+        {
+            list_player_action_cooldown_save_package.Add(pa.GetPlayerActionCooldownSavePackage());
+        }
+
+        foreach (CommerceAction pa in ActionsManager.instance.possibleCommerceActions)
+        {
+            list_commerce_action_cooldown_save_package.Add(pa.GetCommerceActionCooldownSavePackage());
         }
     }
 
