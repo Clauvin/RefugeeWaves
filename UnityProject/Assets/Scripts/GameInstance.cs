@@ -174,6 +174,18 @@ public class GameInstance  {
         {
             ImmigrantWaveLauncher.instance.InstantiateNewRefugeWave(pack);
         }
+
+        for(int i = 0; i < list_player_action_cooldown_save_package.Count; i++)
+        {
+            ActionsManager.instance.possibleActions[i].SetPlayerActionCooldownSavePackage(
+                list_player_action_cooldown_save_package[i]);
+        }
+
+        for (int i = 0; i < list_commerce_action_cooldown_save_package.Count; i++)
+        {
+            ActionsManager.instance.possibleCommerceActions[i].SetCommerceActionCooldownSavePackage(
+                list_commerce_action_cooldown_save_package[i]);
+        }
     }
 
 
