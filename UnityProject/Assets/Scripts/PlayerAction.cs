@@ -27,11 +27,41 @@ public class PlayerAction {
     public consequenceFunction consequenceFunction2;
     #endregion
 
-    #region Cooldown Variables
-    public float actionCooldownPeriod;
+    #region Save Package
+    public class PlayerActionCooldownSavePackage {
+        public float _actionCooldownPeriod;
 
-	public float timeLastUsed;//saves time action was last used
-	public bool isActive;//tells if action can be used or if it's cooling down
+        public float _timeLastUsed; //saves time action was last used
+        public bool _isActive; //tells if action can be used or if it's cooling down
+    }
+    #endregion
+
+    public PlayerActionCooldownSavePackage player_action_cooldown_save_package;
+
+    public PlayerActionCooldownSavePackage GetPlayerActionCooldownSavePackage()
+    {
+        return player_action_cooldown_save_package;
+    }
+
+    public void SetPlayerActionCooldownSavePackage(PlayerActionCooldownSavePackage save_package)
+    {
+        player_action_cooldown_save_package = save_package;
+    }
+
+    #region Cooldown Variables
+    public float actionCooldownPeriod {
+        get { return player_action_cooldown_save_package._actionCooldownPeriod; }
+        set { player_action_cooldown_save_package._actionCooldownPeriod = value; }
+    }
+
+	public float timeLastUsed {
+        get { return player_action_cooldown_save_package._timeLastUsed; }
+        set { player_action_cooldown_save_package._timeLastUsed = value; }
+    }
+	public bool isActive {
+        get { return player_action_cooldown_save_package._isActive; }
+        set { player_action_cooldown_save_package._isActive = value; }
+    }
     #endregion
 
     #region Public Constructors
@@ -39,6 +69,7 @@ public class PlayerAction {
         consequenceFunction function1Consequence,  MiscInfo.variableTypes varType2 = MiscInfo.variableTypes.NULL,
                         consequenceFunction function2Consequence = null, bool active = true)
     {
+        player_action_cooldown_save_package = new PlayerActionCooldownSavePackage();
         assignedButton = buttonGO;
         actionName = name;
         actionDescription = desc;
@@ -63,6 +94,7 @@ public class PlayerAction {
         double var1Consequence, MiscInfo.variableTypes varType2 = MiscInfo.variableTypes.NULL,
                         double var2Consequence = 0.0, bool active = true)
     {
+        player_action_cooldown_save_package = new PlayerActionCooldownSavePackage();
         assignedButton = buttonGO;
         actionName = name;
         actionDescription = desc;
