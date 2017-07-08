@@ -29,8 +29,8 @@ public class MovingToTheObjective : MonoBehaviour {
 	void Update () {
         if (!TimeManager.instance.gamePaused) { 
 
-            passed_time += Time.time - time_counted;
-            time_counted = Time.time;
+            passed_time += TimerManager.time - time_counted;
+            time_counted = TimerManager.time;
             transform.position = Vector3.Lerp(initial_position, final_objective, passed_time / time_to_reach_objective);
 
             if (passed_time / time_to_reach_objective >= 1.0f)
