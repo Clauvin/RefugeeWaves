@@ -151,6 +151,7 @@ public class GameInstance  {
     {
         ResourceManager.instance.SetResourceSavePackage(resource_save_package);
         TimeManager.instance.SetTimeSavePackage(time_save_package);
+        TimeManager.instance.updateStringDate();
         TimerManager.LoadPackage(timer_save_package);
         StatsManager.instance.SetStatsSavePackage(stats_save_package);
         CommerceManager.instance.SetCommerceSavePackage(commerce_save_package);
@@ -190,6 +191,7 @@ public class GameInstance  {
             ActionsManager.instance.possibleCommerceActions[i].SetCommerceActionCooldownSavePackage(
                 list_commerce_action_cooldown_save_package[i]);
         }
+
     }
 
 

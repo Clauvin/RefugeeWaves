@@ -131,6 +131,15 @@ public class TimeManager : MonoBehaviour {
 	}
     #endregion
 
+    #region Update Data Time For Loading
+    public void updateStringDate()
+    {
+        yearText.text = year.ToString();
+        monthText.text = month.ToString();
+        weekText.text = week.ToString();
+    }
+    #endregion
+
     #region Check For Passage Of Time Functions
     public void checkForPassageOfWeek()
 	{
