@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Basics_3;
 
-
 public class TimeManager : MonoBehaviour {
 
     public static TimeManager instance;

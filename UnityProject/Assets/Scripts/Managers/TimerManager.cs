@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable()]
+
 public class TimerManager : MonoBehaviour {
 
     #region Public Variables
@@ -15,6 +15,7 @@ public class TimerManager : MonoBehaviour {
     }
     #endregion
 
+    [Serializable()]
     public class TimerSavePackage
     {
         public float _actual_time;
@@ -40,8 +41,18 @@ public class TimerManager : MonoBehaviour {
 
     public static void LoadPackage(TimerSavePackage t_s_p)
     {
-        timer_save_package = t_s_p;
+        instance.SetTimerSavePackage(t_s_p);
         last_time = Time.time;
+    }
+
+    public TimerSavePackage GetTimerSavePackage()
+    {
+        return timer_save_package;
+    }
+
+    public void SetTimerSavePackage(TimerSavePackage t_s_p)
+    {
+        timer_save_package = t_s_p;
     }
 
     TimerManager()

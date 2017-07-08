@@ -39,6 +39,8 @@ public class GameInstance  {
 
     public TimeManager.TimeSavePackage time_save_package;
 
+    public TimerManager.TimerSavePackage timer_save_package;
+
     public StatsManager.StatsSavePackage stats_save_package;
 
     public CommerceManager.CommerceSavePackage commerce_save_package;
@@ -105,6 +107,7 @@ public class GameInstance  {
     {
         resource_save_package = ResourceManager.instance.GetResourceSavePackage();
         time_save_package = TimeManager.instance.GetTimeSavePackage();
+        timer_save_package = TimerManager.instance.GetTimerSavePackage();
         stats_save_package = StatsManager.instance.GetStatsSavePackage();
         commerce_save_package = CommerceManager.instance.GetCommerceSavePackage();
         immigrant_save_package = ImmigrantManager.instance.GetImmigrantSavePackage();
@@ -148,6 +151,7 @@ public class GameInstance  {
     {
         ResourceManager.instance.SetResourceSavePackage(resource_save_package);
         TimeManager.instance.SetTimeSavePackage(time_save_package);
+        TimerManager.LoadPackage(timer_save_package);
         StatsManager.instance.SetStatsSavePackage(stats_save_package);
         CommerceManager.instance.SetCommerceSavePackage(commerce_save_package);
         ImmigrantManager.instance.SetImmigrantSavePackage(immigrant_save_package);
