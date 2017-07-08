@@ -72,11 +72,11 @@ public class TimerManager : MonoBehaviour {
 	void Update () {
 		if (!TimeManager.instance.gamePaused)
         {
-            actual_time += TimerManager.time - last_time;
-            last_time = TimerManager.time;
+            actual_time += Time.time - last_time;
+            last_time = Time.time;
         } else
         {
-            last_time = TimerManager.time;
+            last_time = Time.time;
         }
         the_time = actual_time;
         the_last_time = last_time;
