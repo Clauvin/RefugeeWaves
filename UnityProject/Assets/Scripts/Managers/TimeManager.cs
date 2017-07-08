@@ -113,8 +113,8 @@ public class TimeManager : MonoBehaviour {
 			Debug.Log ("Game Paused");
 			gamePaused = true;
 			//saves elapsed time
-			timeElapsed = Time.time - timeLastUnpaused;
-			timeLastPaused = Time.time;
+			timeElapsed = TimerManager.time - timeLastUnpaused;
+			timeLastPaused = TimerManager.time;
 		}
 	}
 
@@ -126,7 +126,7 @@ public class TimeManager : MonoBehaviour {
 			Debug.Log ("Game Unpaused");
 
 			gamePaused = false;
-			timeLastUnpaused = Time.time;
+			timeLastUnpaused = TimerManager.time;
 		}
 	}
     #endregion
@@ -134,11 +134,11 @@ public class TimeManager : MonoBehaviour {
     #region Check For Passage Of Time Functions
     public void checkForPassageOfWeek()
 	{
-		if (timeElapsed+ (Time.time-timeLastUnpaused)>=weekLengthInSeconds)
+		if (timeElapsed+ (TimerManager.time -timeLastUnpaused)>=weekLengthInSeconds)
 		{
 			//reset counters, use timeLastUpaused as a checkpoint for next time period
 			timeElapsed=0.0f;
-			timeLastUnpaused = Time.time;
+			timeLastUnpaused = TimerManager.time;
 			//one week has passed
 			week++;
 			weekText.text = week.ToString();

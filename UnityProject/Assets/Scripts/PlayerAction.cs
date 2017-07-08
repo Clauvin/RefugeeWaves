@@ -286,7 +286,7 @@ public class PlayerAction {
 		assignedButton.SetActive(false);
 
 		//gets time used, make action inactive
-		timeLastUsed= Time.time;
+		timeLastUsed= TimerManager.time;
 		isActive = false;
 		applyConsequences ();
 	}
@@ -309,7 +309,7 @@ public class PlayerAction {
         assignedButton.SetActive(false);
 
         //gets time used, make action inactive
-        timeLastUsed = Time.time;
+        timeLastUsed = TimerManager.time;
         isActive = false;
         applyConsequences();
     }
@@ -317,7 +317,7 @@ public class PlayerAction {
     public bool checkIfCooledDown()
 	{
 		//compare current time with time last used, if bigger than cooldown period, can be used again
-		if (Time.time - timeLastUsed >= actionCooldownPeriod)
+		if (TimerManager.time - timeLastUsed >= actionCooldownPeriod)
 		{
 			isActive = true;
             if (VisualManager.instance.action_panel_is_active)

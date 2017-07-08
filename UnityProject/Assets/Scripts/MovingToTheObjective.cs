@@ -22,7 +22,7 @@ public class MovingToTheObjective : MonoBehaviour {
         //to_the_objective_save_package = new ToTheObjectiveSavePackage();
         initial_position = new Vector2(transform.position.x, transform.position.y);
         passed_time = 0;
-        time_counted = Time.time;
+        time_counted = TimerManager.time;
 	}
 	
 	// Update is called once per frame

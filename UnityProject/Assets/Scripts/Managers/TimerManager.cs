@@ -42,7 +42,7 @@ public class TimerManager : MonoBehaviour {
     public static void LoadPackage(TimerSavePackage t_s_p)
     {
         instance.SetTimerSavePackage(t_s_p);
-        last_time = Time.time;
+        last_time = TimerManager.time;
     }
 
     public TimerSavePackage GetTimerSavePackage()
@@ -65,18 +65,18 @@ public class TimerManager : MonoBehaviour {
         instance = this;
         timer_save_package = new TimerSavePackage();
         actual_time = 0;
-        last_time = Time.time;
+        last_time = TimerManager.time;
     }
 	
 	// Update is called once per frame
 	void Update () {
 		if (!TimeManager.instance.gamePaused)
         {
-            actual_time += Time.time - last_time;
-            last_time = Time.time;
+            actual_time += TimerManager.time - last_time;
+            last_time = TimerManager.time;
         } else
         {
-            last_time = Time.time;
+            last_time = TimerManager.time;
         }
         the_time = actual_time;
         the_last_time = last_time;

@@ -66,13 +66,13 @@ public class ImmigrantManager : MonoBehaviour {
             {
                 //If yes, solved.
                 ResourceManager.instance.numberOfAvailableHouses -= immigrants_quantity;
-                legalWaveArrived(new ImmigrantWave(immigrants_quantity, Time.time, true));
+                legalWaveArrived(new ImmigrantWave(immigrants_quantity, TimerManager.time, true));
                 immigrants_quantity = 0;
             }
             else
             {
                 //If not, go ahead.
-                legalWaveArrived(new ImmigrantWave(ResourceManager.instance.numberOfAvailableHouses, Time.time, true));
+                legalWaveArrived(new ImmigrantWave(ResourceManager.instance.numberOfAvailableHouses, TimerManager.time, true));
                 immigrants_quantity -= ResourceManager.instance.numberOfAvailableHouses;
                 ResourceManager.instance.numberOfAvailableHouses = 0;
             }
@@ -105,7 +105,7 @@ public class ImmigrantManager : MonoBehaviour {
         //Do we have illegals?
         if (immigrants_quantity > 0)
         {
-            illegalWaveArrived(new ImmigrantWave(immigrants_quantity, Time.time, false));
+            illegalWaveArrived(new ImmigrantWave(immigrants_quantity, TimerManager.time, false));
         }
 
     }

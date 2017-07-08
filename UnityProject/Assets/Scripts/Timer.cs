@@ -15,14 +15,14 @@ public class Timer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        start_time = Time.time;
+        start_time = TimerManager.time;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        time_passed += Time.time - start_time;
-        start_time = Time.time;
+        time_passed += TimerManager.time - start_time;
+        start_time = TimerManager.time;
         while (time_passed >= 1.0f)
         {
             time -= 1;

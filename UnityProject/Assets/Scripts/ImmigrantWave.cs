@@ -61,7 +61,7 @@ public class ImmigrantWave : MonoBehaviour {
 
     public bool checkIfBecameLegal()
 	{
-		if (isLegalWave && Time.time - timeOfArrival >= timeToBecomeLegal)
+		if (isLegalWave && TimerManager.time - timeOfArrival >= timeToBecomeLegal)
 			return true;
 		return false;
 	}

@@ -234,15 +234,15 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     void Start () {
         immigrant_wave_launcher_save_package = new ImmigrantWaveLauncherSavePackage();
         time_for_next = UnityEngine.Random.Range(30.0f, 60.0f);
-        last_time = Time.time;
+        last_time = TimerManager.time;
     }
 	
 	// Update is called once per frame
 	void Update () {
         if ((!TimeManager.instance.gamePaused) && (wave_instantiation_timer))
         {
-            present_time += Time.time - last_time;
-            last_time = Time.time;
+            present_time += TimerManager.time - last_time;
+            last_time = TimerManager.time;
 
             if (present_time >= time_for_next)
             {
