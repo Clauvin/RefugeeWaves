@@ -208,6 +208,18 @@ public class TimeManager : MonoBehaviour {
 	}
     #endregion
 
+    void WinOrLose()
+    {
+        if (year >= 3)
+        {
+            Basics_3.LoadScene.LoadVictoryScreen();
+        }
+        else if ((StatsManager.instance.criminalityRate >= 0.575f) && (StatsManager.instance.unemploymentRate >= 0.575f))
+        {
+            Basics_3.LoadScene.LoadDefeatScreen();
+        }
+    }
+
     void Awake()
     {
         instance = this;
@@ -254,12 +266,6 @@ public class TimeManager : MonoBehaviour {
 
     void Update()
     {
-        if (year >= 3)
-        {
-            Basics_3.LoadScene.LoadVictoryScreen();
-        } else if ((StatsManager.instance.criminalityRate >= 0.575f) && (StatsManager.instance.unemploymentRate >= 0.575f))
-        {
-            Basics_3.LoadScene.LoadDefeatScreen();
-        }
+        WinOrLose();
     }
 }
