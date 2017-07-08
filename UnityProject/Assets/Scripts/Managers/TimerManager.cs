@@ -23,9 +23,12 @@ public class TimerManager : MonoBehaviour {
 
     public static TimerSavePackage timer_save_package;
 
+    public float the_time;
+    public float the_last_time;
+
     public static float actual_time
     {
-        get { return timer_save_package._actual_time;  }
+        get { return timer_save_package._actual_time; }
         set { timer_save_package._actual_time = value; }
     }
 
@@ -41,10 +44,15 @@ public class TimerManager : MonoBehaviour {
         last_time = Time.time;
     }
 
+    TimerManager()
+    {
+
+    }
 
     // Use this for initialization
-    void Start () {
+    void Awake () {
         instance = this;
+        timer_save_package = new TimerSavePackage();
         actual_time = 0;
         last_time = Time.time;
     }
@@ -59,5 +67,7 @@ public class TimerManager : MonoBehaviour {
         {
             last_time = Time.time;
         }
+        the_time = actual_time;
+        the_last_time = last_time;
 	}
 }
