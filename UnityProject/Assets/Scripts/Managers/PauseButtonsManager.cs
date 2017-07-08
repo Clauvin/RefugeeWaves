@@ -11,12 +11,12 @@ public class PauseButtonsManager : MonoBehaviour {
 
     public void LoadGame()
     {
-        Basics_3.LoadScene.LoadMainGameplay();
+        SaveLoadManager.instance.Load();
     }
 
     public void SaveGame()
     {
-        Basics_3.LoadScene.CloseGame();
+        SaveLoadManager.instance.Save();
     }
 
     // Use this for initialization
