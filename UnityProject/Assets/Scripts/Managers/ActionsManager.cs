@@ -6,6 +6,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+/// <summary>
+/// Warning: Actions take one more week than they should take.
+/// </summary>
 [Serializable()]
 public class ActionsManager : MonoBehaviour {
 
