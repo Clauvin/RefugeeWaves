@@ -47,6 +47,7 @@ public class PlayerAction {
     public void SetPlayerActionCooldownSavePackage(PlayerActionCooldownSavePackage save_package)
     {
         player_action_cooldown_save_package = save_package;
+        if (!isActive) assignedButton.SetActive(false);
     }
 
     #region Cooldown Variables
