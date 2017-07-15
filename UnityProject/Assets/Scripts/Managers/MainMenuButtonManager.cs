@@ -16,6 +16,13 @@ public class MainMenuButtonManager : MonoBehaviour {
         Basics_3.LoadScene.LoadMainGameplay();
     }
 
+    public void LoadMainWithSaveFile()
+    {
+        LoadMainGameplay();
+        
+        SaveLoadManager.instance.Load();
+    }
+
     public void CloseGame()
     {
         Basics_3.LoadScene.CloseGame();
