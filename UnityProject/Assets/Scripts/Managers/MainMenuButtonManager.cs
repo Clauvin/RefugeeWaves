@@ -22,6 +22,7 @@ public class MainMenuButtonManager : MonoBehaviour {
     {
         DontDestroyOnLoad(FindObjectOfType<LoadFromMainMenu>());
         LoadMainGameplay();
+        FindObjectOfType<LoadFromMainMenu>().only_once = true;
     }
 
     public void CloseGame()
