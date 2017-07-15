@@ -18,9 +18,8 @@ public class MainMenuButtonManager : MonoBehaviour {
 
     public void LoadMainWithSaveFile()
     {
+        DontDestroyOnLoad(FindObjectOfType<LoadFromMainMenu>());
         LoadMainGameplay();
-        
-        SaveLoadManager.instance.Load();
     }
 
     public void CloseGame()
