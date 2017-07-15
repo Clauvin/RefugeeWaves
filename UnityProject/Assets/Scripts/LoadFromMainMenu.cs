@@ -17,6 +17,7 @@ public class LoadFromMainMenu : MonoBehaviour {
             if (PersistenceManager.loadGame())
             {
                 only_once = false;
+                TimeManager.instance.unpauseGame();
                 DestroyObject(this.gameObject);
             }
             else
