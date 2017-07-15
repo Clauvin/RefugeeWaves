@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LoadFromMainMenu : MonoBehaviour {
 
+    public bool only_once = false;
 	// Use this for initialization
 	void Start () {
 		
@@ -11,6 +12,20 @@ public class LoadFromMainMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (only_once)
+        {
+            if (PersistenceManager.loadGame())
+            {
+                only_once = false;
+                Destroy(this);
+            }
+            else
+            {
+                Debug.Log("Loading bugged.");
+                only_once = false;
+                Destroy(this);
+            }
+        }
+
 	}
 }
