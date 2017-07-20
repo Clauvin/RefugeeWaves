@@ -77,6 +77,11 @@ public class TimerManager : MonoBehaviour {
         return result;
     }
 
+    public void AdjustTimeDifference()
+    {
+        t1 = t2 = Time.time;
+    }
+
     TimerManager()
     {
 
