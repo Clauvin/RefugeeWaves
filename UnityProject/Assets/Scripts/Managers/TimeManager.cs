@@ -127,6 +127,7 @@ public class TimeManager : MonoBehaviour {
 
 			gamePaused = false;
 			timeLastUnpaused = TimerManager.time;
+            TimerManager.instance.AdjustTimeDifference();
 		}
 	}
     #endregion
