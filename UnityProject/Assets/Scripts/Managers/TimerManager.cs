@@ -9,6 +9,9 @@ public class TimerManager : MonoBehaviour {
     #region Public Variables
     public static TimerManager instance;
 
+    private float t1 = 0.0f;
+    private float t2 = 0.0f;
+
     public static float time{
         get { return actual_time; }
         private set { actual_time = value; }
@@ -53,6 +56,25 @@ public class TimerManager : MonoBehaviour {
     public void SetTimerSavePackage(TimerSavePackage t_s_p)
     {
         timer_save_package = t_s_p;
+        the_time = timer_save_package._actual_time;
+        the_last_time = timer_save_package._last_time;
+    }
+
+    private float TimeDifference()
+    {
+        float result = 0.0f; 
+        if (!TimeManager.instance.gamePaused)
+        {
+            t1 = Time.time;
+            result = t1 - t2;
+        }
+        else
+        {
+            t1 = t2 = Time.time;
+        }
+        
+        t2 = t1;
+        return result;
     }
 
     TimerManager()
@@ -72,7 +94,7 @@ public class TimerManager : MonoBehaviour {
 	void Update () {
 		if (!TimeManager.instance.gamePaused)
         {
-            actual_time += Time.time - last_time;
+            actual_time += TimeDifference();
             last_time = Time.time;
         } else
         {
