@@ -139,21 +139,11 @@ public class ResourceManager : MonoBehaviour {
         set { resource_save_package._numberOfTotalBorderOfficers = value; }
     }
 
-    public int costOfBorderOfficer {
-        get { return resource_save_package._costOfBorderOfficer; }
-        set { resource_save_package._costOfBorderOfficer = value; }
-    }
-
     //number of border expenses 'units' player has to maintain borders running
     public int borderResources {
         get { return resource_save_package._borderResources; }
         set { resource_save_package._borderResources = value; }
-    } 
-
-	public int costOfBorderResource {
-        get { return resource_save_package._costOfBorderResource; }
-        set { resource_save_package._costOfBorderResource = value; }
-    } 
+    }
     #endregion
 
     //Game Objects
