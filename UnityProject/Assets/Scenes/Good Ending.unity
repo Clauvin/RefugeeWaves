@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditsGO: {fileID: 1920260853}
-  load_button: {fileID: 0}
+  load_button: {fileID: 1166263296}
 --- !u!4 &1964805
 Transform:
   m_ObjectHideFlags: 0
@@ -610,7 +610,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1964804}
-        m_MethodName: CarregaMenuPrincipal
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
