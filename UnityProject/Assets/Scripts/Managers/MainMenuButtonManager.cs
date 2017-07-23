@@ -42,11 +42,14 @@ public class MainMenuButtonManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        if (File.Exists(Application.persistentDataPath + "/savedGames.waves"))
+        if (load_button != null)
         {
-            load_button.SetActive(true);
+            if (File.Exists(Application.persistentDataPath + "/savedGames.waves"))
+            {
+                load_button.SetActive(true);
+            }
+            else load_button.SetActive(false);
         }
-        else load_button.SetActive(false);
 
     }
 	
