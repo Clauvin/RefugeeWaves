@@ -149,16 +149,20 @@ public class PlayerAction {
 			ResourceManager.instance.BudgetBaseValue += consequenceFinalValue1;
 			break;
 		case MiscInfo.variableTypes.costOfBO:
-			ResourceManager.instance.costOfBorderOfficer += (int)consequenceFinalValue1;
+            CommerceManager.instance.border_officer_buy_price += consequenceFinalValue1;
+            CommerceManager.instance.border_officer_sell_price += consequenceFinalValue1 / 2.0f;
 			break;
 		case MiscInfo.variableTypes.costOfBorderResources:
-			ResourceManager.instance.costOfBorderResource+=(int)consequenceFinalValue1;
+            CommerceManager.instance.border_resource_buy_price += consequenceFinalValue1;
+            CommerceManager.instance.border_resource_sell_price += consequenceFinalValue1 / 2.0f;
 			break;
 		case MiscInfo.variableTypes.costOfHouse:
-			ResourceManager.instance.costOfHouse+=(int)consequenceFinalValue1;
-			break;
+            CommerceManager.instance.house_buy_price += consequenceFinalValue1;
+			CommerceManager.instance.house_sell_price += consequenceFinalValue1 / 2.0f;
+            break;
 		case MiscInfo.variableTypes.costOfSocialResources:
-			ResourceManager.instance.costOfSocialResource+=(int)consequenceFinalValue1;
+            CommerceManager.instance.social_resource_buy_price += consequenceFinalValue1;
+            CommerceManager.instance.social_resource_sell_price += consequenceFinalValue1 / 2.0f;
 			break;
 		case MiscInfo.variableTypes.criminalityRate:
 			StatsManager.instance.criminalityRate += consequenceFinalValue1;
@@ -220,18 +224,22 @@ public class PlayerAction {
 			case MiscInfo.variableTypes.budgetBaseValue:
 				ResourceManager.instance.BudgetBaseValue += consequenceFinalValue2;
 				break;
-			case MiscInfo.variableTypes.costOfBO:
-				ResourceManager.instance.costOfBorderOfficer += (int)consequenceFinalValue2;
-				break;
-			case MiscInfo.variableTypes.costOfBorderResources:
-				ResourceManager.instance.costOfBorderResource += (int)consequenceFinalValue2;
-				break;
-			case MiscInfo.variableTypes.costOfHouse:
-				ResourceManager.instance.costOfHouse += (int)consequenceFinalValue2;
-				break;
-			case MiscInfo.variableTypes.costOfSocialResources:
-				ResourceManager.instance.costOfSocialResource += (int)consequenceFinalValue2;
-				break;
+		    case MiscInfo.variableTypes.costOfBO:
+                CommerceManager.instance.border_officer_buy_price += consequenceFinalValue2;
+                CommerceManager.instance.border_officer_sell_price += consequenceFinalValue2 / 2.0f;
+			    break;
+		    case MiscInfo.variableTypes.costOfBorderResources:
+                CommerceManager.instance.border_resource_buy_price += consequenceFinalValue2;
+                CommerceManager.instance.border_resource_sell_price += consequenceFinalValue2 / 2.0f;
+			    break;
+		    case MiscInfo.variableTypes.costOfHouse:
+                CommerceManager.instance.house_buy_price += consequenceFinalValue2;
+			    CommerceManager.instance.house_sell_price += consequenceFinalValue2 / 2.0f;
+                break;
+		    case MiscInfo.variableTypes.costOfSocialResources:
+                CommerceManager.instance.social_resource_buy_price += consequenceFinalValue2;
+                CommerceManager.instance.social_resource_sell_price += consequenceFinalValue2 / 2.0f;
+			    break;
 			case MiscInfo.variableTypes.criminalityRate:
 				StatsManager.instance.criminalityRate += consequenceFinalValue2;
 				break;
