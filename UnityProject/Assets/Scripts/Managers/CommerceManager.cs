@@ -20,9 +20,9 @@ public class CommerceManager : MonoBehaviour {
         public double _house_sell_price = 150.0f;
         public double _house_sell_multiplier = 1.0f;
 
-        public double _social_resource_buy_price = 100.0f;
+        public double _social_resource_buy_price = 10.0f;
         public double _social_resource_buy_multiplier = 1.0f;
-        public double _social_resource_sell_price = 50.0f;
+        public double _social_resource_sell_price = 5.0f;
         public double _social_resource_sell_multiplier = 1.0f;
 
         public double _border_officer_buy_price = 125.0f;
@@ -30,9 +30,9 @@ public class CommerceManager : MonoBehaviour {
         public double _border_officer_sell_price = 62.5f;
         public double _border_officer_sell_multiplier = 1.0f;
 
-        public double _border_resource_buy_price = 75.0f;
+        public double _border_resource_buy_price = 7.50f;
         public double _border_resource_buy_multiplier = 1.0f;
-        public double _border_resource_sell_price = 37.5f;
+        public double _border_resource_sell_price = 3.75f;
         public double _border_resource_sell_multiplier = 1.0f;
     }
     #endregion
