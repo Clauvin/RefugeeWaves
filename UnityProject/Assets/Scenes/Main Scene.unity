@@ -4391,12 +4391,12 @@ MonoBehaviour:
     _numberOfTotalHouses: 0
     _costOfHouse: 100
     _socialResources: 100
-    _costOfSocialResource: 20
+    _costOfSocialResource: 2
     _numberOfAvailableBorderOfficers: 0
     _numberOfTotalBorderOfficers: 0
     _costOfBorderOfficer: 30
     _borderResources: 100
-    _costOfBorderResource: 25
+    _costOfBorderResource: 5
   playerCurrentMoneyGO: {fileID: 1302042028}
   playerMonthlyBudgetGO: {fileID: 195145684}
   realTaxPerCitizenGO: {fileID: 413858917}
