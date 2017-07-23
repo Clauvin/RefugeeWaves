@@ -24,13 +24,13 @@ public class ResourceManager : MonoBehaviour {
         public int _numberOfTotalHouses = 0;
         public int _costOfHouse = 100;
         public int _socialResources = 100;
-        public int _costOfSocialResource = 20;
+        public int _costOfSocialResource = 2;
 
         public int _numberOfAvailableBorderOfficers = 0;
         public int _numberOfTotalBorderOfficers = 0;
         public int _costOfBorderOfficer = 30;
         public int _borderResources = 100;
-        public int _costOfBorderResource = 25;
+        public int _costOfBorderResource = 5;
     }
 
     public ResourceSavePackage resource_save_package;
