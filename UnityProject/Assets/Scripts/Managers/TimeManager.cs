@@ -219,7 +219,7 @@ public class TimeManager : MonoBehaviour {
 
     void WinOrLose()
     {
-        if (year >= 3)
+        if (year >= 2)
         {
             Basics_3.LoadScene.LoadVictoryScreen();
         }
