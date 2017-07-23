@@ -22,15 +22,11 @@ public class ResourceManager : MonoBehaviour {
 
         public int _numberOfAvailableHouses = 0;
         public int _numberOfTotalHouses = 0;
-        public int _costOfHouse = 100;
         public int _socialResources = 100;
-        public int _costOfSocialResource = 2;
 
         public int _numberOfAvailableBorderOfficers = 0;
         public int _numberOfTotalBorderOfficers = 0;
-        public int _costOfBorderOfficer = 30;
         public int _borderResources = 100;
-        public int _costOfBorderResource = 5;
     }
 
     public ResourceSavePackage resource_save_package;
@@ -121,20 +117,10 @@ public class ResourceManager : MonoBehaviour {
         set { resource_save_package._numberOfTotalHouses = value; }
     }
 
-    public int costOfHouse {
-        get { return resource_save_package._costOfHouse; }
-        set { resource_save_package._costOfHouse = value; }
-    }
-
     //number of social expenses 'units' player has to give out to refugees
     public int socialResources {
         get { return resource_save_package._socialResources; }
         set { resource_save_package._socialResources = value; }
-    }
-
-    public int costOfSocialResource {
-        get { return resource_save_package._costOfSocialResource; }
-        set { resource_save_package._costOfSocialResource = value; }
     }
     #endregion
 
