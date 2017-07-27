@@ -4389,14 +4389,10 @@ MonoBehaviour:
     _UNHelpVariation: 1
     _numberOfAvailableHouses: 0
     _numberOfTotalHouses: 0
-    _costOfHouse: 100
     _socialResources: 100
-    _costOfSocialResource: 2
     _numberOfAvailableBorderOfficers: 0
     _numberOfTotalBorderOfficers: 0
-    _costOfBorderOfficer: 30
     _borderResources: 100
-    _costOfBorderResource: 5
   playerCurrentMoneyGO: {fileID: 1302042028}
   playerMonthlyBudgetGO: {fileID: 195145684}
   realTaxPerCitizenGO: {fileID: 413858917}
@@ -4833,7 +4829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 996577580}
   m_Layer: 0
-  m_Name: Canvas de Xenophobia
+  m_Name: Xenophobia Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
