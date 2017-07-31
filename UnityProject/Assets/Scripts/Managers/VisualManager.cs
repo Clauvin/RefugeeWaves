@@ -167,7 +167,7 @@ public class VisualManager : MonoBehaviour {
     public void Start() {
 		instance = this;
 
-		hideAllPanels ();
+		//hideAllPanels ();
 
     }
 
