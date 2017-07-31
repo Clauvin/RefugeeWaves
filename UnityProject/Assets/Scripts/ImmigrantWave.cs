@@ -74,8 +74,8 @@ public class ImmigrantWave : MonoBehaviour {
 		timeOfArrival = time;
 		isLegalWave = is_legal_wave;
 		becameCitizens = false;//always starts with false
-        timeToBecomeLegal = TimerManager.time;
-        timeToBecomeLegal += TimeManager.instance.weekLengthInSeconds * time_to_become_legal_in_weeks;
+        //timeToBecomeLegal = TimerManager.time;
+        timeToBecomeLegal = TimeManager.instance.weekLengthInSeconds * time_to_become_legal_in_weeks;
 	}
 
     public ImmigrantWave(ImmigrantWaveSavePackage iwsp)
