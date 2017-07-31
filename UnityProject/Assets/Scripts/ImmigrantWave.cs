@@ -66,13 +66,15 @@ public class ImmigrantWave : MonoBehaviour {
 		return false;
 	}
 
-	public ImmigrantWave(int nImm, float t, bool legal)
+	public ImmigrantWave(int number_of_immigrants, float time, bool is_legal_wave)
 	{
         immigrant_wave_save_package = new ImmigrantWaveSavePackage();
-        numberOfImmigrants = nImm;
-		timeOfArrival = t;
-		isLegalWave = legal;
+        numberOfImmigrants = number_of_immigrants;
+		timeOfArrival = time;
+		isLegalWave = is_legal_wave;
 		becameCitizens = false;//always starts with false
+        /*timeToBecomeLegal = TimerManager.time;
+        timeToBecomeLegal += TimeManager.instance.weekLengthInSeconds * 4;*/
 	}
 
     public ImmigrantWave(ImmigrantWaveSavePackage iwsp)
