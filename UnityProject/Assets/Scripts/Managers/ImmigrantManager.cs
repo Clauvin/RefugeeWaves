@@ -32,7 +32,7 @@ public class ImmigrantManager : MonoBehaviour {
 
 	public int numberOfLegalImmigrants {
         get { return immigrant_save_package._legalImmigrantsNumber; }
-        set { immigrant_save_package._illegalImmigrantsNumber = value; }
+        set { immigrant_save_package._legalImmigrantsNumber = value; }
     }
 
 	public int numberOfIllegalImmigrants {
