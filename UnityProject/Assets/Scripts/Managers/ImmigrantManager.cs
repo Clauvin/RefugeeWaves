@@ -7,10 +7,9 @@ public class ImmigrantManager : MonoBehaviour {
     [System.Serializable]
     public class ImmigrantSavePackage
     {
-        public int _numberOfLegalImmigrants;
-        public int _numberOfIllegalImmigrants;
-
-        public int _numberOfNaturalizedImmigrants;
+        public int _legalImmigrantsNumber;
+        public int _illegalImmigrantsNumber;
+        public int _naturalizedImmigrantsNumber;
     }
 
     public ImmigrantSavePackage immigrant_save_package;
@@ -32,19 +31,19 @@ public class ImmigrantManager : MonoBehaviour {
     }
 
 	public int numberOfLegalImmigrants {
-        get { return immigrant_save_package._numberOfLegalImmigrants; }
-        set { immigrant_save_package._numberOfIllegalImmigrants = value; }
+        get { return immigrant_save_package._legalImmigrantsNumber; }
+        set { immigrant_save_package._illegalImmigrantsNumber = value; }
     }
 
 	public int numberOfIllegalImmigrants {
-        get { return immigrant_save_package._numberOfIllegalImmigrants; }
-        set { immigrant_save_package._numberOfIllegalImmigrants = value; }
+        get { return immigrant_save_package._illegalImmigrantsNumber; }
+        set { immigrant_save_package._illegalImmigrantsNumber = value; }
     }
 
     //how many immigrants you have helped get citizenship
     public int numberOfNaturalizedImmigrants {
-        get { return immigrant_save_package._numberOfNaturalizedImmigrants; }
-        set { immigrant_save_package._numberOfNaturalizedImmigrants = value; }
+        get { return immigrant_save_package._naturalizedImmigrantsNumber; }
+        set { immigrant_save_package._naturalizedImmigrantsNumber = value; }
     }
     #endregion
 
