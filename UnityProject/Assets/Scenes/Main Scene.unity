@@ -8263,9 +8263,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   immigrant_save_package:
-    _numberOfLegalImmigrants: 0
-    _numberOfIllegalImmigrants: 0
-    _numberOfNaturalizedImmigrants: 0
+    _legalImmigrantsNumber: 0
+    _illegalImmigrantsNumber: 0
+    _naturalizedImmigrantsNumber: 0
   legalWaves: []
   illegalWaves: []
 --- !u!4 &1683945152
