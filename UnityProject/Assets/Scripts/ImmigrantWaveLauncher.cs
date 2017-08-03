@@ -36,7 +36,10 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         public bool _wave_instantiation_timer = true;
     }
 
-    public ImmigrantWaveLauncherSavePackage immigrant_wave_launcher_save_package;
+    /// <summary>
+    /// Set this to public for debugging in the editor
+    /// </summary>
+    private ImmigrantWaveLauncherSavePackage immigrant_wave_launcher_save_package;
 
     public ImmigrantWaveLauncherSavePackage GetImmigrantWaveLauncherSavePackage()
     {
