@@ -20,7 +20,10 @@ public class StatsManager : MonoBehaviour {
     }
     #endregion
 
-    public StatsSavePackage stats_save_package;
+    /// <summary>
+    /// Set this to public for debugging in the editor
+    /// </summary>
+    private StatsSavePackage stats_save_package;
 
     public StatsSavePackage GetStatsSavePackage()
     {
