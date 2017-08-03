@@ -29,7 +29,10 @@ public class ResourceManager : MonoBehaviour {
         public int _borderResources = 100;
     }
 
-    public ResourceSavePackage resource_save_package;
+    /// <summary>
+    /// Set this to public for debugging in the editor
+    /// </summary>
+    private ResourceSavePackage resource_save_package;
 
     public ResourceSavePackage GetResourceSavePackage()
     {
