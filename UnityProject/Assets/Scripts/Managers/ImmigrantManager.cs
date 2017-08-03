@@ -12,7 +12,10 @@ public class ImmigrantManager : MonoBehaviour {
         public int _naturalizedImmigrantsNumber;
     }
 
-    public ImmigrantSavePackage immigrant_save_package;
+    /// <summary>
+    /// Set this to public for debugging in the editor
+    /// </summary>
+    private ImmigrantSavePackage immigrant_save_package;
 
     #region Public Variables
     public static ImmigrantManager instance;
