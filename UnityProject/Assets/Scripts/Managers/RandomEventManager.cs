@@ -13,7 +13,10 @@ public class RandomEventManager : MonoBehaviour {
         public List<RandomEvent> _eventsYetToHappen = new List<RandomEvent>();
     }
 
-    public RandomEventSavePackage random_event_save_package;
+    /// <summary>
+    /// Set this to public for debugging in the editor
+    /// </summary>
+    private RandomEventSavePackage random_event_save_package;
 
     //holds all events
     public List<RandomEvent> randomEvents {
