@@ -37,7 +37,10 @@ public class CommerceManager : MonoBehaviour {
     }
     #endregion
 
-    public CommerceSavePackage commerce_save_package;
+    /// <summary>
+    /// Set this to public for debugging in the editor
+    /// </summary>
+    private CommerceSavePackage commerce_save_package;
 
     //CommerceActions List
     #region Buy/Sell Values
