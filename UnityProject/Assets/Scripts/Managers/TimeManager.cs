@@ -22,7 +22,10 @@ public class TimeManager : MonoBehaviour {
     }
     #endregion
 
-    public TimeSavePackage time_save_package;
+    /// <summary>
+    /// Set this to public for debugging in the editor
+    /// </summary>
+    private TimeSavePackage time_save_package;
 
     public TimeSavePackage GetTimeSavePackage()
     {
