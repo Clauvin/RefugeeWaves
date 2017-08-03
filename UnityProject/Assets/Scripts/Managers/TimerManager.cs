@@ -25,7 +25,10 @@ public class TimerManager : MonoBehaviour {
         public float _last_time;
     }
 
-    public static TimerSavePackage timer_save_package;
+    /// <summary>
+    /// Set this to public for debugging in the editor
+    /// </summary>
+    private static TimerSavePackage timer_save_package;
 
     public float the_time;
     public float the_last_time;
