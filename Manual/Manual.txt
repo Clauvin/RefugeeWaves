@@ -1,0 +1,9 @@
+0 - Justifying the manual
+
+	So! A manual. What an unbelievable thing to have here, in the 21st century, where videogames, as a media, already have the capacity to show to the player through good railing how the game should be played? Why to have a manual to this game then?
+
+	BECAUSE this is the Alpha 0 version of the game: it's not a finished game, it's a baby game: it has all the essential features, but still a long way it has to grow and become a proper adult game, ready to interact with players and give them something meaningful.
+
+	In it's actual state, it's kinda boring, maybe buggy (even if efforts were made to squash bugs, some may be still lurking around, unseen by the developers) and maybe also hazy in how stuff works.
+
+	Thanks to that, this manual gives a basic explanation of the game and how it works. Enjoy!
