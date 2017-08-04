@@ -1,4 +1,12 @@
-0 - Justifying the manual
+0 - Index of Contents
+
+	1 - Justifying the manual
+	2 - Prologue
+	3 - The main menu
+	4 - How the game works
+	5 - For contacting developers...
+
+1 - Justifying the manual
 
 	So! A manual. What an unbelievable thing to have here, in the 21st century, where videogames, as a media, already have the capacity to show to the player through good railing how the game should be played? Why to have a manual to this game then?
 
