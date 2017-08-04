@@ -32,9 +32,22 @@
 
 3 - The Main Menu
 
-	
+	So, the Main Menu. It has four buttons.
+
+	Start Internship - start a new game.
+	Load Internship - load a saved game.
+	The Ones Responsible - shows a window with the developers' names and e-mails for contact.
+	Go Home - closes the game.
 
 4 - How the game works
+
+	The game revolves around you having the responsability of dealing with refugees coming to Ondestão. Your mission is simply to NOT. DESTROY. YOUR. COUNTRY.
+	How you are going to do it is up to yourself - fine, to us too, since we gave you the options in game.
+	They are:
+	
+	Creation of Public Works: makes the government starts new public works, which creates new jobs, and that lowers the unemployment.
+	Creation of Edicts For Start-Ups: new help for start ups also lowers unemployment.
+	Investments in Public
 
 5 - For contacting developers...
 
