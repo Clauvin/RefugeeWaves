@@ -41,13 +41,19 @@
 
 4 - How the game works
 
-	The game revolves around you having the responsability of dealing with refugees coming to Ondestão. Your mission is simply to NOT. DESTROY. YOUR. COUNTRY.
+	The game revolves around you having the responsability of dealing with refugees coming to Ondestão. Your mission is simply to NOT. DESTROY. THE. COUNTRY.
 	How you are going to do it is up to yourself - fine, to us too, since we gave you the options in game.
 	They are:
 	
 	Creation of Public Works: makes the government starts new public works, which creates new jobs, and that lowers the unemployment.
+		Cost: 300.
 	Creation of Edicts For Start-Ups: new help for start ups also lowers unemployment.
-	Investments in Public
+		Cost: 400.
+	Investments in Public Security: lowers crime.
+		Cost: 600.
+	Get International Help: PERHAPS other countries will help you giving some funds?
+		Gain: ???
+	Create Campaign In Favour of Noun-
 
 5 - For contacting developers...
 
