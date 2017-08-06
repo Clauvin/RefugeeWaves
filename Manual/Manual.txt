@@ -53,7 +53,16 @@
 		Cost: 600.
 	Get International Help: PERHAPS other countries will help you giving some funds?
 		Gain: ???
-	Create Campaign In Favour of Noun-
+	Create Campaign In Favour of Non-Refugee Immigrants: self-explanatory.
+		Cost: 1000.
+	Create Campaign In Favour of The Ondestão: it's a pro-Ondestão pride campaign, and the country ends less receptive of immigrants because of it.
+		Cost: 600.
+	Create Campaign Pro-Ondestao For The World: the fact is, how much the world will like the country depends of what Ondestão is in the first place.
+		Cost: 1000.
+
+	You can also invest in buying houses (for immigrants while they acclimate to the country), social expenses (to keep the houses), border officials (in fact, hiring them to block immigrants from entering Ondestão) and border expenses (to pay the officials).
+
+	Try to do a good job about the refugee crisis in one year! :)
 
 5 - For contacting developers...
 
