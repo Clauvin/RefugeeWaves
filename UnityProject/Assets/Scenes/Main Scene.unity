@@ -1204,17 +1204,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0afc53f7c15bc0e439e9ae5d1f8fe4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_save_package:
-    _gamePaused: 0
-    _timeLastPaused: 0
-    _timeLastUnpaused: 0
-    _timeElapsed: 0
-    _weekLengthInSeconds: 5
-    _year: 0
-    _month: 0
-    _week: 0
-    _gameDurationInYears: 2
-    _gameOver: 0
   weekGO: {fileID: 10568503}
   monthGO: {fileID: 50918866}
   yearGO: {fileID: 1224058660}
@@ -1648,15 +1637,6 @@ MonoBehaviour:
   refugees_exit_2: {fileID: 461821770}
   refugees_entrance_1: {fileID: 750842164}
   refugees_entrance_2: {fileID: 1813293234}
-  immigrant_wave_launcher_save_package:
-    _nextWaveId: 0
-    _present_time: 0
-    _last_time: 0
-    _time_for_next: 0
-    _def_quant_of_refugees: 50
-    _def_time_in_seconds: 30
-    _refugees_multiplier: 1
-    _wave_instantiation_timer: 1
 --- !u!4 &278915675
 Transform:
   m_ObjectHideFlags: 0
@@ -2259,23 +2239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acbedbd62f9a5634f8760c8b4d5c3eda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commerce_save_package:
-    _house_buy_price: 300
-    _house_buy_multiplier: 1
-    _house_sell_price: 150
-    _house_sell_multiplier: 1
-    _social_resource_buy_price: 100
-    _social_resource_buy_multiplier: 1
-    _social_resource_sell_price: 50
-    _social_resource_sell_multiplier: 1
-    _border_officer_buy_price: 125
-    _border_officer_buy_multiplier: 1
-    _border_officer_sell_price: 62.5
-    _border_officer_sell_multiplier: 1
-    _border_resource_buy_price: 75
-    _border_resource_buy_multiplier: 1
-    _border_resource_sell_price: 37.5
-    _border_resource_sell_multiplier: 1
   buttons: []
 --- !u!1 &461821770
 GameObject:
@@ -4346,9 +4309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aeef30ce4641e44a9585f557d241782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  random_event_save_package:
-    _randomEvents: []
-    _eventsYetToHappen: []
   randomEventPrefab: {fileID: 1040811418791926, guid: a0c9562a3e7072545ba4b602012235eb,
     type: 2}
 --- !u!1 &838516459
@@ -4378,21 +4338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f983dcbf5ac9f1d4f87e903c1d773a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resource_save_package:
-    _playerCurrentMoney: 10000
-    _playerMonthlyBudget: 0
-    _baseTaxPerCitizen: 10
-    _realTaxPerCitizen: 0
-    _taxVariation: 1
-    _BudgetBaseValue: 1000
-    _UNHelpBaseValue: 4000
-    _UNHelpVariation: 1
-    _numberOfAvailableHouses: 0
-    _numberOfTotalHouses: 0
-    _socialResources: 100
-    _numberOfAvailableBorderOfficers: 0
-    _numberOfTotalBorderOfficers: 0
-    _borderResources: 100
   playerCurrentMoneyGO: {fileID: 1302042028}
   playerMonthlyBudgetGO: {fileID: 195145684}
   realTaxPerCitizenGO: {fileID: 413858917}
@@ -6225,12 +6170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a004ad3b3d1ac594aace92ca146491ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats_save_package:
-    _legalPopulation: 0
-    _publicOpinionOnImmigrants: 0
-    _internationalOpinion: 0
-    _unemploymentRate: 0
-    _criminalityRate: 0
   legalPopulationGO: {fileID: 697671065}
   publicOpinionOnImmigrantsGO: {fileID: 78805681}
   internationalOpinionGO: {fileID: 1935425556}
@@ -6502,8 +6441,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Creation of Public Works\nCreation of Edicts for Start-ups\nInvestments
-    in Public Security \nGet International Help\nCreate Campaign In Favour of Noun-Refugee
-    Immigrant\nCreate Campaign In Favour of the Ondest\xE3o\nCreate Campaign Pro-Ondest\xE3o
+    in Public Security \nGet International Help\nCreate Campaign In Favour of Non-Refugee
+    Immigrants\nCreate Campaign In Favour of the Ondest\xE3o\nCreate Campaign Pro-Ondest\xE3o
     For The World\nInvestments In Houses\nInvestments In Social Expenses\nInvestments
     In Border Officials\nInvestments In Border Expenses"
 --- !u!222 &1376309139
@@ -8262,10 +8201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9fda190afc208b4bb9d516b9bc71264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  immigrant_save_package:
-    _legalImmigrantsNumber: 0
-    _illegalImmigrantsNumber: 0
-    _naturalizedImmigrantsNumber: 0
   legalWaves: []
   illegalWaves: []
 --- !u!4 &1683945152
