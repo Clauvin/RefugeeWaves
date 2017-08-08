@@ -32,7 +32,7 @@ namespace Assets.Scripts
                 "Build unnecessary landmarks",
             "No, we don't need new bridges. But people like looking at them and" +
             "need work, so we'll have one anyway",
-            300.0,
+            600.0,
             4 * ActionsManager.instance.weekLength,
             MiscInfo.variableTypes.unemployementRate,
             BuildUnnecessaryLandmarksResult);
@@ -55,7 +55,7 @@ namespace Assets.Scripts
             return new PlayerAction(ActionsManager.instance.buttons[1],
                 "Encourage young professionals",
             "Make those teenagers get off their phones and work a little",
-            400,
+            800,
             3 * ActionsManager.instance.weekLength,
             MiscInfo.variableTypes.unemployementRate,
             EncourageYoungProfessionalsFirstResult,
@@ -75,7 +75,7 @@ namespace Assets.Scripts
             return new PlayerAction(ActionsManager.instance.buttons[2],
                 "Call the police!",
             "New police officers should be just what these recent crime waves need!",
-            600,
+            1200,
             4 * ActionsManager.instance.weekLength,
             MiscInfo.variableTypes.criminalityRate,
             CallThePoliceResult);
@@ -120,7 +120,7 @@ namespace Assets.Scripts
                 "Hola gringo!",
             "Show people Wavestan is a nice place to live" +
             " (and lure some professionals while you're at it",
-            1000, 6 * ActionsManager.instance.weekLength,
+            2000, 6 * ActionsManager.instance.weekLength,
             MiscInfo.variableTypes.legalPopulation, HolaGringoFirstResult,
             MiscInfo.variableTypes.publicOpinion,
             HolaGringoSecondResult);
@@ -138,7 +138,7 @@ namespace Assets.Scripts
             return new PlayerAction(ActionsManager.instance.buttons[5],
                 "They don't look so bad, right?",
             "Help your people see just how nice those foreigners may be",
-            600,
+            1200,
             8 * ActionsManager.instance.weekLength,
             MiscInfo.variableTypes.publicOpinion,
             TheyDontLookSoBadResult);
@@ -157,7 +157,7 @@ namespace Assets.Scripts
                 "Mikasa, su casa s2",
             "Show the world you accept other peoples with open arms!" +
             " Come on in, don't mind the mess.",
-            1000,
+            2000,
             5 * ActionsManager.instance.weekLength,
             MiscInfo.variableTypes.internationalOpinion,
             MikasaSuCasaResult);
