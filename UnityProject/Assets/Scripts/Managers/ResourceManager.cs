@@ -11,7 +11,7 @@ public class ResourceManager : MonoBehaviour {
     [System.Serializable]
     public class ResourceSavePackage
     {
-        public long _playerCurrentMoney = 10000;
+        public long _playerCurrentMoney = 5000;
         public long _playerMonthlyBudget;
         public double _baseTaxPerCitizen = 10;
         public double _realTaxPerCitizen;
