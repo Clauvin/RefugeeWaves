@@ -143,9 +143,9 @@ public class CommerceAction : MonoBehaviour {
             commerce_buying_title + " " + title;
         newEvent.transform.Find("CommerceEventPanel/EventDescription").GetComponent<Text>().text = description;
         newEvent.transform.Find("CommerceEventPanel/PricesDescription").GetComponent<Text>().text =
-            "Preço de compra de uma unidade: " + buy_value().ToString() + ".";
+            "One unit's buying price: " + buy_value().ToString() + ".";
         newEvent.transform.Find("CommerceEventPanel/PricesDescription").GetComponent<Text>().text +=
-            "\nPreço de venda de uma unidade: " + sell_value().ToString() + ".";
+            "\nOne unit's selling price: " + sell_value().ToString() + ".";
 
     }
 
