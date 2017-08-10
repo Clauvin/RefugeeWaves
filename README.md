@@ -11,4 +11,4 @@ This project is under a [Creative Commons share, alter, no sell License](http://
 
 # Changelog
 
-Here, so far it only has the Alpha 0 information, so, only two lines: [Changelog](https://github.com/Clauvin/RefugeeWaves/blob/master/Changelog/Changelog.txt).
+It only has the Alpha 0 information by now, so only has two lines: [Changelog](https://github.com/Clauvin/RefugeeWaves/blob/master/Changelog/Changelog.txt).
