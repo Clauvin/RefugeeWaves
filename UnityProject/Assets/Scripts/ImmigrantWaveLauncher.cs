@@ -167,6 +167,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         icone.name += " Wave - ID " + nextWaveId;
         icone.tag = "Wave";
         nextWaveId++;
+        waves_sent++;
     }
 
     public void RandomInstantaneousWaveInstance(bool super_wave = false)
