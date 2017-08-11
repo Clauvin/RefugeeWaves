@@ -260,7 +260,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
                 present_time = 0.0f;
                 if (TimeManager.instance.year == 1)
                 {
-                    time_for_next = UnityEngine.Random.Range(30.0f, 60.0f);
+                    time_for_next = UnityEngine.Random.Range(30.0f, 60.0f) - waves_sent;
                 }
                 else
                 {
