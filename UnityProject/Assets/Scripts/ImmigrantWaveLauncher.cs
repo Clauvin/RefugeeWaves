@@ -23,6 +23,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     public class ImmigrantWaveLauncherSavePackage
     {
         public int _nextWaveId = 0;
+        public int _waves_sent = 0;
 
         #region Public Variables
         public float _present_time = 0.0f;
@@ -54,6 +55,11 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     public int nextWaveId {
         get { return immigrant_wave_launcher_save_package._nextWaveId; }
         set { immigrant_wave_launcher_save_package._nextWaveId = value; }
+    }
+
+    public int waves_sent {
+        get { return immigrant_wave_launcher_save_package._waves_sent; }
+        set { immigrant_wave_launcher_save_package._waves_sent = value; }
     }
 
     #region Public Variables
