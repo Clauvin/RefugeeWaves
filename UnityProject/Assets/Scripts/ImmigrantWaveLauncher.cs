@@ -185,8 +185,8 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
         if ((TimeManager.instance.year == 1) && (!super_wave))
         {
-            refugee_quantity = (int)(UnityEngine.Random.Range(1.0f, 2.0f) * def_quant_of_refugees);
-            time_in_seconds = UnityEngine.Random.Range(1.0f, 2.0f) * def_time_in_seconds;
+            refugee_quantity = (int)(UnityEngine.Random.Range(1.0f, 2.0f) * def_quant_of_refugees) + waves_sent;
+            time_in_seconds = UnityEngine.Random.Range(1.0f, 2.0f) * def_time_in_seconds - waves_sent;
         }
         else if ((UnityEngine.Random.Range(0.0f, 1.0f) < 0.05f) || (super_wave))
         {
@@ -196,8 +196,8 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         }
         else
         {
-            refugee_quantity = (int)(UnityEngine.Random.Range(3.0f, 4.0f) * def_quant_of_refugees);
-            time_in_seconds = UnityEngine.Random.Range(0.5f, 1.0f) * def_time_in_seconds;
+            refugee_quantity = (int)(UnityEngine.Random.Range(3.0f, 4.0f) * def_quant_of_refugees) + waves_sent;
+            time_in_seconds = UnityEngine.Random.Range(0.5f, 1.0f) * def_time_in_seconds - waves_sent;
         }
 
         if (UnityEngine.Random.Range(0.0f, 1.0f) < 0.5f)
