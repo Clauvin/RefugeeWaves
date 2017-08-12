@@ -54,10 +54,10 @@ public class RandomEventManager : MonoBehaviour {
             " wreaking havok in the capital."+
 			"\nConsequence: Criminality Rate +10%",MiscInfo.variableTypes.criminalityRate,0.1f));
 
-        randomEvents.Add(new RandomEvent("Interstellar war", "The until now unknown planet of Ondesterra entered in a" +
+        /*randomEvents.Add(new RandomEvent("Interstellar war", "The until now unknown planet of Ondesterra entered in a" +
             " World War, and their habitants are looking for a batter place to live." + 
             " They are landing in the Guerrestão. ...prepare yourself for more refugees. A lot of them." +
-            "\nConsequence: + 200% refugees", MiscInfo.variableTypes.waveVariation, 2.0f));
+            "\nConsequence: + 200% refugees", MiscInfo.variableTypes.waveVariation, 2.0f));*/
 
         //Need to be improved so Events change TWO or more fields.
         randomEvents.Add(new RandomEvent("Chemical Weapons", "The Guerrestão used" +
