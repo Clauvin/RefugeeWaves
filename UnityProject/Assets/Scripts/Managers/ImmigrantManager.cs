@@ -60,8 +60,9 @@ public class ImmigrantManager : MonoBehaviour {
         //How many immigrant do we have?
         int immigrants_quantity = immigrants.numberOfImmigrants;
 
-        //Do we have homes?
-        if (ResourceManager.instance.numberOfAvailableHouses > 0)
+        //Do we have homes AND resources for the homes?
+        if ((ResourceManager.instance.numberOfAvailableHouses > 0) &&
+            (ResourceManager.instance.socialResources > 0))
         {
             //Do we have ENOUGH homes?
             if (ResourceManager.instance.numberOfAvailableHouses >= immigrants_quantity)
