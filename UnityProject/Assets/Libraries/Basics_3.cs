@@ -75,10 +75,11 @@ namespace Basics_3
 
     public enum Game_Scenes
     {
-        Main_Menu = 0,
-        Main_GamePlay = 1,
-        Victory_Screen = 2,
-        Defeat_Screen = 3
+        Alpha_Warning = 0,
+        Main_Menu = 1,
+        Main_GamePlay = 2,
+        Victory_Screen = 3,
+        Defeat_Screen = 4
     }
 
     public enum Commerce_Actions
