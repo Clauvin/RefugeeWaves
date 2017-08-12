@@ -31,7 +31,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         public float _time_for_next = 0.0f;
         public int _def_quant_of_refugees = 5;
         public float _def_time_in_seconds = 30.0f;
-        public float _refugees_multiplier = 1.0f; // this number multiplies the number of refugees in each new wave
+        public float _refugees_multiplier = 2.5f; // this number multiplies the number of refugees in each new wave
         #endregion
 
         public bool _wave_instantiation_timer = true;
