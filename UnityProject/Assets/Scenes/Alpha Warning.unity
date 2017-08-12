@@ -91,6 +91,51 @@ NavMeshSettings:
     cellSize: 0.16666667
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &271755332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 271755333}
+  - component: {fileID: 271755334}
+  m_Layer: 0
+  m_Name: AlphaWarning
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &271755333
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 271755332}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.9730844, y: -121.75}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &271755334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 271755332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33dbb7c6d0ee394498b82f95e0d6dedb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1447463658
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +268,7 @@ Prefab:
     - target: {fileID: 224963333391244142, guid: 95381c8fe67d94243ae0ae9d04624af7,
         type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224963333391244142, guid: 95381c8fe67d94243ae0ae9d04624af7,
         type: 2}
@@ -302,6 +347,22 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114671151137547818, guid: 95381c8fe67d94243ae0ae9d04624af7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694357101577294, guid: 95381c8fe67d94243ae0ae9d04624af7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 271755334}
+    - target: {fileID: 114694357101577294, guid: 95381c8fe67d94243ae0ae9d04624af7,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PressedOKEventButton
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114671151137547818, guid: 95381c8fe67d94243ae0ae9d04624af7, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 95381c8fe67d94243ae0ae9d04624af7, type: 2}
   m_IsPrefabParent: 0
