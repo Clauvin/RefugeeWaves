@@ -111,7 +111,8 @@ public class StatsManager : MonoBehaviour {
 
         //If taxes variation +, unemployment +
         if (ResourceManager.instance.taxVariation > 1.1)
-            unemploymentRate += (ResourceManager.instance.taxVariation - 1.1) * 50f;
+            //unemploymentRate += (ResourceManager.instance.taxVariation - 1.1) * 50f;
+            unemploymentRate += (ResourceManager.instance.taxVariation - 1.1) * 25f;
 
         //If taxes variation -, unemployment -
         if (ResourceManager.instance.taxVariation < 0.9)
