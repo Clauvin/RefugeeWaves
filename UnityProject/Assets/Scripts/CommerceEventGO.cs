@@ -107,13 +107,13 @@ public class CommerceEventGO : MonoBehaviour {
         catch (OverflowException oe)
         {
             throw new FormatException("Max quantity allowed for selling is " +
-                 DefineBuySellObjectQuantity().ToString() + DefineBuySellObject() + ".");
+                 DefineBuySellObjectQuantity().ToString() + " " + DefineBuySellObject() + ".");
         }
 
         if (quantity > DefineBuySellObjectQuantity())
         {
             throw new FormatException("Max quantity allowed for selling is " +
-                 DefineBuySellObjectQuantity().ToString() + DefineBuySellObject() + ".");
+                 DefineBuySellObjectQuantity().ToString() + " " + DefineBuySellObject() + ".");
         }
         else if (quantity < 0)
         {
