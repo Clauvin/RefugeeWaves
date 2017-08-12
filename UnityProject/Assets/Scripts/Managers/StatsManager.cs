@@ -107,7 +107,7 @@ public class StatsManager : MonoBehaviour {
         //If border expenses < 0, crime 2x >
         //Yes, -10000 border resources = DOOM
         if (ResourceManager.instance.borderResources < 0)
-            criminalityRate += ResourceManager.instance.borderResources * 0.01f;
+            criminalityRate += ResourceManager.instance.borderResources * 0.01f * -1;
 
         //If taxes variation +, unemployment +
         if (ResourceManager.instance.taxVariation > 1.1)
