@@ -21,6 +21,11 @@ namespace Basics_3
             UnityEngine.SceneManagement.SceneManager.LoadScene(cena);
         }
 
+        public static void LoadAlphaWarning()
+        {
+            Load((int)Game_Scenes.Alpha_Warning);
+        }
+
         public static void LoadMainMenu()
         {
             Load((int)Game_Scenes.Main_Menu);
