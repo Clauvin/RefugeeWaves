@@ -4309,7 +4309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aeef30ce4641e44a9585f557d241782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomEventPrefab: {fileID: 1040811418791926, guid: a0c9562a3e7072545ba4b602012235eb,
+  randomEventPrefab: {fileID: 1372853254374452, guid: a0c9562a3e7072545ba4b602012235eb,
     type: 2}
 --- !u!1 &838516459
 GameObject:
