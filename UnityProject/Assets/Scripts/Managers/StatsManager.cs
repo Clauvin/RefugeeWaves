@@ -119,7 +119,6 @@ public class StatsManager : MonoBehaviour {
             unemploymentRate -= (0.9 - ResourceManager.instance.taxVariation) * 50f;
 
         //If unemployment +, taxes variation -
-        //CORRIGIR NO DIAGRAMA
         if (unemploymentRate > 0.1)
             ResourceManager.instance.taxVariation -= (unemploymentRate - 0.1) * 0.5;
 
