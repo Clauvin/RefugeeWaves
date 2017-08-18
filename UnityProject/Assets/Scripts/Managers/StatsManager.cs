@@ -13,7 +13,6 @@ public class StatsManager : MonoBehaviour {
     public class StatsSavePackage
     {
         public int _legalPopulation;
-        public int _illegalPopulation;
         public double _publicOpinionOnImmigrants;
         public double _internationalOpinion;
         public double _unemploymentRate;
@@ -42,12 +41,6 @@ public class StatsManager : MonoBehaviour {
     public int legalPopulation {
         get { return stats_save_package._legalPopulation; }
         set { stats_save_package._legalPopulation = value; }
-    }
-
-    public int illegalPopulation
-    {
-        get { return stats_save_package._illegalPopulation; }
-        set { stats_save_package._illegalPopulation = value; }
     }
 
     public double publicOpinionOnImmigrants {
