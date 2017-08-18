@@ -100,7 +100,7 @@ public class StatsManager : MonoBehaviour {
         //BYTHEWAY: magic number of illegal immigrants screwing the country by now: 10000
         if (ImmigrantManager.instance.numberOfIllegalImmigrants > 0)
         {
-            publicOpinionOnImmigrants -= ImmigrantManager.instance.numberOfIllegalImmigrants * 0.01f;
+            publicOpinionOnImmigrants -= ImmigrantManager.instance.numberOfIllegalImmigrants * 0.005f;
             criminalityRate += ImmigrantManager.instance.numberOfIllegalImmigrants * 0.0005f;
         }
 
