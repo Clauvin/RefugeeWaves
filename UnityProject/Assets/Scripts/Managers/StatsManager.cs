@@ -13,6 +13,7 @@ public class StatsManager : MonoBehaviour {
     public class StatsSavePackage
     {
         public int _legalPopulation;
+        public int _illegalPopulation;
         public double _publicOpinionOnImmigrants;
         public double _internationalOpinion;
         public double _unemploymentRate;
@@ -43,7 +44,13 @@ public class StatsManager : MonoBehaviour {
         set { stats_save_package._legalPopulation = value; }
     }
 
-	public double publicOpinionOnImmigrants {
+    public int illegalPopulation
+    {
+        get { return stats_save_package._illegalPopulation; }
+        set { stats_save_package._illegalPopulation = value; }
+    }
+
+    public double publicOpinionOnImmigrants {
         get { return stats_save_package._publicOpinionOnImmigrants; }
         set { stats_save_package._publicOpinionOnImmigrants = value; }
     }
@@ -80,6 +87,7 @@ public class StatsManager : MonoBehaviour {
 		//randomizes values of the starting stats
 		//TODO
 		legalPopulation = 40000 + (int)(20000 * Random.value);//from 40k to 60k
+        illegalPopulation = 0;
 		unemploymentRate = 0.04 + 0.04 * Random.value;//from 4% to 8%
 		criminalityRate = 0.02 + 0.02*Random.value; //from 2% to 4%
 		publicOpinionOnImmigrants = 0.3 + 0.4*Random.value;//from 30% to 70%
