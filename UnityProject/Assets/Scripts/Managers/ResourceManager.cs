@@ -193,8 +193,10 @@ public class ResourceManager : MonoBehaviour {
 	public void recalculateBudget()//recalculate budget based on taxPerCitizen and BudgetBaseValue
 	{
 		recalculateTax ();
-        playerMonthlyBudget =   (long)
-                                ((0.005f * StatsManager.instance.legalPopulation * StatsManager.instance.GetEmploymentRate())
+        playerMonthlyBudget = (long)
+                                (((0.005f * StatsManager.instance.legalPopulation * StatsManager.instance.GetEmploymentRate())
+                                + (0.001f * ImmigrantManager.instance.numberOfIllegalImmigrants * StatsManager.instance.GetEmploymentRate())
+                                + (0.005f * ImmigrantManager.instance.numberOfLegalImmigrants * StatsManager.instance.GetEmploymentRate()))
                                     * realTaxPerCitizen + BudgetBaseValue);
 	}
 
