@@ -151,6 +151,10 @@ public class ImmigrantManager : MonoBehaviour {
     void Awake()
     {
         instance = this;
+        immigrant_save_package = new ImmigrantSavePackage();
+        numberOfNaturalizedImmigrants = 0;
+        numberOfLegalImmigrants = 0;
+        numberOfIllegalImmigrants = 0;
     }
 
 	// Use this for initialization
@@ -159,9 +163,7 @@ public class ImmigrantManager : MonoBehaviour {
         immigrant_save_package = new ImmigrantSavePackage();
 		legalWaves = new List<ImmigrantWave> ();
 		illegalWaves = new List<ImmigrantWave> ();
-		numberOfNaturalizedImmigrants = 0;
-		numberOfLegalImmigrants = 0;
-		numberOfIllegalImmigrants = 0;
+		
 	}
 	
 	// Update is called once per frame
