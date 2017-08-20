@@ -8,7 +8,7 @@ public class VisualManager : MonoBehaviour {
 	public static VisualManager instance;
 
     public GameObject moneyGO, actionsGO, houseGO, unemployementGO, criminalityGO,
-        BOGO, SocialResGO, BorderResGO;
+        BOGO, SocialResGO, BorderResGO, pausebuttonGO;
 
     //At the moment, does nothing.
     public bool action_panel_is_active;
@@ -152,6 +152,23 @@ public class VisualManager : MonoBehaviour {
 	}
     #endregion
 
+    #region Show/Hide Pause Button Panel Functions
+    public void showPauseButtonPanel()
+    {
+        foreach (Transform t in pausebuttonGO.transform)
+        {
+            t.gameObject.SetActive(true);
+        }
+    }
+    public void hidePauseButtonPanel()
+    {
+        foreach (Transform t in pausebuttonGO.transform)
+        {
+            t.gameObject.SetActive(false);
+        }
+    }
+    #endregion
+
     public void hideAllPanels()
 	{
 		toggleActionsPanel ();
@@ -162,6 +179,7 @@ public class VisualManager : MonoBehaviour {
 		hideSocialResPanel ();
 		hideBorderResPanel ();
 		hideBOPanel ();
+        hidePauseButtonPanel();
 	}
 
     public void Start() {
