@@ -272,12 +272,13 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'This game has its basic features in place, but needs TONS of research about
-    the refugee crisis, changes, improvements, and bug fixing to become a good game.
+    the refugee crisis, changes, improvements, new features and bug fixing to become
+    a good game.
 
 
-    Also, as said in the license which comes together with the executable, the creators
+    As said in the license which comes together with the executable, the creators
     don''t hold responsibility for any kind of damages caused by this software. Of
-    course, damaging is not our intention.
+    course, to damage computers is not our intention.
 
 
     This version is a proof of concept. Considering all this, enjoy.'
