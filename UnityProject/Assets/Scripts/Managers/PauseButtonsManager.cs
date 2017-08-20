@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseButtonsManager : MonoBehaviour {
 
@@ -14,11 +15,13 @@ public class PauseButtonsManager : MonoBehaviour {
     public void LoadGame()
     {
         SaveLoadManager.instance.Load();
+        save_load_text.GetComponent<Text>().text = "Game loaded";
     }
 
     public void SaveGame()
     {
         SaveLoadManager.instance.Save();
+        save_load_text.GetComponent<Text>().text = "Game saved";
     }
 
     // Use this for initialization
