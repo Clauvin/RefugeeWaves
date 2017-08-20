@@ -14,14 +14,27 @@ public class PauseButtonsManager : MonoBehaviour {
 
     public void LoadGame()
     {
-        SaveLoadManager.instance.Load();
-        save_load_text.GetComponent<Text>().text = "Game loaded";
+        if (SaveLoadManager.instance.Load())
+        {
+            save_load_text.GetComponent<Text>().text = "Game loaded";
+        }
+        else
+        {
+            save_load_text.GetComponent<Text>().text = "Load error";
+        }
+        
     }
 
     public void SaveGame()
     {
-        SaveLoadManager.instance.Save();
-        save_load_text.GetComponent<Text>().text = "Game saved";
+        if (SaveLoadManager.instance.Save())
+        {
+            save_load_text.GetComponent<Text>().text = "Game saved";
+        }
+        else
+        {
+            save_load_text.GetComponent<Text>().text = "Save error";
+        }
     }
 
     public void EraseSaveLoadText()
