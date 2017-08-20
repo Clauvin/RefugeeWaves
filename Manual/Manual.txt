@@ -4,7 +4,9 @@
 	2 - Prologue
 	3 - The main menu
 	4 - How the game works
-	5 - For contacting developers...
+	5 - Folder for save file
+	6 - For contacting developers...
+
 
 1 - Justifying the manual
 
@@ -64,7 +66,11 @@
 
 	Try to do a good job about the refugee crisis in one year! :)
 
-5 - For contacting developers...
+5 - Folder for save file
+
+	The save file is stored in C:/Users/~user folder~/AppData/LocalLow/Refugee Waves/Refugee Waves.
+
+6 - For contacting developers...
 
 	So! You liked our game a lot, even being a baby game?
 	Or you have some criticism for us, so we can make it a better game?
@@ -77,3 +83,4 @@
 	Verônica Sakane: vsakane@gmail.com
 
 	This information can also be found in the button "The Ones Responsible" in the game's main menu.
+
