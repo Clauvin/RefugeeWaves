@@ -6,14 +6,14 @@ public class SaveLoadManager : MonoBehaviour {
 
     public static SaveLoadManager instance;
 
-    public void Save()
+    public bool Save()
     {
-        PersistenceManager.saveGame();
+        return PersistenceManager.saveGame();
     }
 
-    public void Load()
+    public bool Load()
     {
-        PersistenceManager.loadGame();
+        return PersistenceManager.loadGame();
     }
 
     // Use this for initialization
