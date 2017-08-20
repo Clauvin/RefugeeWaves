@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PauseButtonsManager : MonoBehaviour {
 
+    public GameObject save_load_text;
+
     public void LoadMainMenu()
     {
         Basics_3.LoadScene.LoadMainMenu();
