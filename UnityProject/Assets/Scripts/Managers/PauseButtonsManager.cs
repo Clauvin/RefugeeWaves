@@ -24,6 +24,11 @@ public class PauseButtonsManager : MonoBehaviour {
         save_load_text.GetComponent<Text>().text = "Game saved";
     }
 
+    public void EraseSaveLoadText()
+    {
+        save_load_text.GetComponent<Text>().text = "";
+    }
+
     // Use this for initialization
     void Start()
     {
