@@ -8,4 +8,6 @@ public class PositionInFunctionArray : MonoBehaviour {
 
     public int position;
 
+    public string action_or_commerce;
+
 }
