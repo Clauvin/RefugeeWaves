@@ -147,7 +147,7 @@ public class TimeManager : MonoBehaviour {
     #region Check For Passage Of Time Functions
     public void checkForPassageOfWeek()
 	{
-		if (timeElapsed+ (TimerManager.time -timeLastUnpaused)>=weekLengthInSeconds)
+		if (timeElapsed + (TimerManager.time - timeLastUnpaused) >= weekLengthInSeconds)
 		{
 			//reset counters, use timeLastUpaused as a checkpoint for next time period
 			timeElapsed=0.0f;
