@@ -1,6 +1,6 @@
 # How to contribute
 
-As it is now (2017 - 08 - 26) the project is in alpha state. There are some ways you can help (but first read the [Code of Conduct][https://github.com/Clauvin/RefugeeWaves/blob/master/CODE%20OF%20CONDUCT.md]:
+As it is now (2017 - 08 - 26) the project is in alpha state. There are some ways you can help (but first read the [https://github.com/Clauvin/RefugeeWaves/blob/master/CODE%20OF%20CONDUCT.md][Code of Conduct]:
 
 # Brainstorming
 
