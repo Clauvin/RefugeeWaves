@@ -6,6 +6,7 @@
 	4 - How the game works
 	5 - Folder for save file
 	6 - For contacting developers...
+	7 - If you want to join the project
 
 
 1 - Justifying the manual
@@ -84,3 +85,8 @@
 
 	This information can also be found in the button "The Ones Responsible" in the game's main menu.
 
+7 - If you want to join the project
+
+	This game is being created as an open source project. If you are interested to help somehow, nice!
+
+	Here's the project's link: https://github.com/Clauvin/RefugeeWaves
