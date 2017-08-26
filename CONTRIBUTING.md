@@ -25,4 +25,4 @@ The game will need testing as is made. Debugging conventions below:
 - Try to give as much information as possible in the issue. Version testes, what you did to trigger the bug, etc. Remember, it's through your information that someone will try to reproduce the bug to fix it.
 
 Thanks!
-@Clauvin, programmer.
+Clauvin, programmer.
