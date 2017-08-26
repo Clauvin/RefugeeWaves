@@ -1,0 +1,577 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     2165 MB
+    Driver:   10.18.14.4264
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.066 seconds
+Platform assembly: C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\DIVERSÃO\Documents\GitHub\RefugeeWaves\Executable\Refugee Waves_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.175475 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 10.471963 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 370.
+Total: 0.491802 ms (FindLiveObjects: 0.059016 ms CreateObjectMapping: 0.055167 ms MarkObjects: 0.369493 ms  DeleteObjects: 0.006842 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.085813 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 940.
+Total: 8.687363 ms (FindLiveObjects: 0.126157 ms CreateObjectMapping: 0.062009 ms MarkObjects: 1.576760 ms  DeleteObjects: 6.921579 ms)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Can I haz some help?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Hola gringo!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Event Happened.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Title: Your mom called!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Event Happened.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Title: Chemical Weapons
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Can I haz some help?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Hola gringo!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Event Happened.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Title: The world acts
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.887519 ms
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 409.
+Total: 6.589292 ms (FindLiveObjects: 0.084247 ms CreateObjectMapping: 0.041054 ms MarkObjects: 0.890803 ms  DeleteObjects: 5.572331 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.759085 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 475.
+Total: 8.588147 ms (FindLiveObjects: 0.063720 ms CreateObjectMapping: 0.029935 ms MarkObjects: 0.931002 ms  DeleteObjects: 7.562633 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.831359 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 943.
+Total: 8.107891 ms (FindLiveObjects: 0.138132 ms CreateObjectMapping: 0.047469 ms MarkObjects: 1.508335 ms  DeleteObjects: 6.411816 ms)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.544686 ms
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 475.
+Total: 6.493925 ms (FindLiveObjects: 0.132572 ms CreateObjectMapping: 0.049180 ms MarkObjects: 0.664146 ms  DeleteObjects: 5.647170 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.223090 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 943.
+Total: 9.425493 ms (FindLiveObjects: 0.130862 ms CreateObjectMapping: 0.065858 ms MarkObjects: 1.692226 ms  DeleteObjects: 7.535263 ms)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Event Happened.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Title: Your mom called!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.720451 ms
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 475.
+Total: 6.253584 ms (FindLiveObjects: 0.070135 ms CreateObjectMapping: 0.033357 ms MarkObjects: 0.832214 ms  DeleteObjects: 5.316594 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.712043 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 940.
+Total: 8.411098 ms (FindLiveObjects: 0.111190 ms CreateObjectMapping: 0.046614 ms MarkObjects: 1.172627 ms  DeleteObjects: 7.079384 ms)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Can I haz some help?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Event Happened.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Title: Chemical Weapons
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.841050 ms
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 475.
+Total: 5.943107 ms (FindLiveObjects: 0.071418 ms CreateObjectMapping: 0.028225 ms MarkObjects: 0.831359 ms  DeleteObjects: 5.011249 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.686384 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 943.
+Total: 7.259426 ms (FindLiveObjects: 0.111190 ms CreateObjectMapping: 0.044048 ms MarkObjects: 1.135421 ms  DeleteObjects: 5.967056 ms)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Event Happened.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Title: Your mom called!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Can I haz some help?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.797857 ms
+
+Unloading 42 unused Assets to reduce memory usage. Loaded Objects now: 409.
+Total: 6.786441 ms (FindLiveObjects: 0.078688 ms CreateObjectMapping: 0.032929 ms MarkObjects: 0.705201 ms  DeleteObjects: 5.967911 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.808266 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 475.
+Total: 10.072963 ms (FindLiveObjects: 0.068852 ms CreateObjectMapping: 0.044903 ms MarkObjects: 1.012256 ms  DeleteObjects: 8.945666 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.898073 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 940.
+Total: 8.653579 ms (FindLiveObjects: 0.103919 ms CreateObjectMapping: 0.048324 ms MarkObjects: 1.421094 ms  DeleteObjects: 7.078528 ms)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Can I haz some help?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.622091 ms
+
+Unloading 36 unused Assets to reduce memory usage. Loaded Objects now: 475.
+Total: 6.018802 ms (FindLiveObjects: 0.091945 ms CreateObjectMapping: 0.031646 ms MarkObjects: 0.723590 ms  DeleteObjects: 5.170336 ms)
+
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.721024 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 940.
+Total: 7.001551 ms (FindLiveObjects: 0.128296 ms CreateObjectMapping: 0.043620 ms MarkObjects: 1.182463 ms  DeleteObjects: 5.646315 ms)
+
+Game Paused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Game Unpaused
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Build unnecessary landmarks
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Encourage young professionals
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Call the police!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Did Can I haz some help?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 120f0 -> priority: 1 
