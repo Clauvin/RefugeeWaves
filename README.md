@@ -3,6 +3,8 @@ A trainee in Defense and International Management ends stuck in another country,
 
 Or help us in finding out too, this is a project under construction :D
 
+**Update:** after pushing the project to it's Alpha 0 status, my (Cláuvin) time to work in it will, unfornately, null for some months. Interested people in working on it is encouraged to create a fork and improve it from there. If and when I return, will take a look in any forks made to analyse improvements and add them to the project.
+
 # Code of Conduct
 Readable here: [Code of Conduct](https://github.com/Clauvin/RefugeeWaves/blob/master/CODE%20OF%20CONDUCT.md).
 
