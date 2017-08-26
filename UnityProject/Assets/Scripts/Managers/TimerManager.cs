@@ -94,7 +94,6 @@ public class TimerManager : MonoBehaviour {
     void Awake () {
         instance = this;
         timer_save_package = new TimerSavePackage();
-        actual_time = -5; // Yes, this is a McGuyverism.
         last_time = TimerManager.time;
     }
 	
