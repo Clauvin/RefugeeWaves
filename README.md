@@ -1,9 +1,9 @@
 # Refugee Waves
-A trainee in Defense and International Management ends stuck in another country, and to leave it, will have to deal with a very thorny crisis: the refugee crisis. How will he manage the situation, the country and his mom's calling in the phone? Find out!
+A trainee in Defense and International Management ends stuck in another country, and to leave it, will have to deal with the refugee crisis. How will he manage the situation, the country and his mom's calling in the phone? Find out!
 
 Or help us in finding out too, this is a project under construction :D
 
-**Update:** after pushing the project to it's Alpha 0 status, my (Cláuvin) time to work in it will, unfornately, null for some months. Interested people in working on it are encouraged to create a fork and improve it from there. When and if I return, will take a look in any forks made to analyse improvements and add them to the project.
+**Update:** after pushing the project to it's Alpha 0 status, my (Cláuvin) time to work in it will be, unfornately, null for an unforeseen amount of time. Interested people in working on it are encouraged to create a fork and improve it from there. When and if I return, will take a look in any forks made to analyse improvements and add them to the project.
 
 # Code of Conduct
 Readable here: [Code of Conduct](https://github.com/Clauvin/RefugeeWaves/blob/master/CODE%20OF%20CONDUCT.md).
