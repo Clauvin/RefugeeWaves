@@ -12,6 +12,8 @@ public class TimerManager : MonoBehaviour {
     private float t1 = 0.0f;
     private float t2 = 0.0f;
 
+    public bool timer_manager_started = false;
+
     public static float time{
         get { return actual_time; }
         private set { actual_time = value; }
@@ -102,6 +104,7 @@ public class TimerManager : MonoBehaviour {
 		if (!TimeManager.instance.gamePaused)
         {
             actual_time += TimeDifference();
+            timer_manager_started = true;
         }
         the_time = actual_time;
         the_last_time = last_time;

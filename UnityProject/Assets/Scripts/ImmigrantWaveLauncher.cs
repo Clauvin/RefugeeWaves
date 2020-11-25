@@ -260,19 +260,22 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         if ((!TimeManager.instance.gamePaused) && (wave_instantiation_timer))
         {
             Debug.Log(first_part_of_avoiding_spontaneous_wave_launching_at_start);
-            if ((first_part_of_avoiding_spontaneous_wave_launching_at_start) &&
+            if (TimerManager.instance.timer_manager_started)
+            {
+                if ((first_part_of_avoiding_spontaneous_wave_launching_at_start) &&
                     (second_part_of_avoiding_spontaneous_wave_launching_at_start))
-            {
-                last_time = TimerManager.time;
-                present_time = 0.0f;
-                first_part_of_avoiding_spontaneous_wave_launching_at_start = false;
-                second_part_of_avoiding_spontaneous_wave_launching_at_start = false;
-                Debug.Log("Pelo menos dispara = " + last_time);
-            }
-            else
-            {
-                present_time += TimerManager.time - last_time;
-                last_time = TimerManager.time;
+                {
+                    last_time = TimerManager.time;
+                    present_time = 0.0f;
+                    first_part_of_avoiding_spontaneous_wave_launching_at_start = false;
+                    second_part_of_avoiding_spontaneous_wave_launching_at_start = false;
+                    Debug.Log("Pelo menos dispara = " + last_time);
+                }
+                else
+                {
+                    present_time += TimerManager.time - last_time;
+                    last_time = TimerManager.time;
+                }
             }
 
             if (present_time >= time_for_next)
