@@ -14,6 +14,7 @@ using UnityEngine.SceneManagement;
 public class ImmigrantWaveLauncher : MonoBehaviour {
 
     public static ImmigrantWaveLauncher instance;
+    public bool avoiding_spontaneous_wave_launching_at_start;
 
     #region Spawn Points and Spawn Objectives
     public GameObject refugees_exit_1, refugees_exit_2;
@@ -41,7 +42,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     /// <summary>
     /// Set this to public for debugging in the editor
     /// </summary>
-    private ImmigrantWaveLauncherSavePackage immigrant_wave_launcher_save_package;
+    public ImmigrantWaveLauncherSavePackage immigrant_wave_launcher_save_package;
 
     public ImmigrantWaveLauncherSavePackage GetImmigrantWaveLauncherSavePackage()
     {
@@ -255,8 +256,19 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 	void Update () {
         if ((!TimeManager.instance.gamePaused) && (wave_instantiation_timer))
         {
-            present_time += TimerManager.time - last_time;
-            last_time = TimerManager.time;
+            Debug.Log(avoiding_spontaneous_wave_launching_at_start);
+            if (avoiding_spontaneous_wave_launching_at_start)
+            {
+                last_time = TimerManager.time;
+                present_time = 0.0f;
+                avoiding_spontaneous_wave_launching_at_start = false;
+                Debug.Log("Pelo menos dispara = " + last_time);
+            }
+            else
+            {
+                present_time += TimerManager.time - last_time;
+                last_time = TimerManager.time;
+            }
 
             if (present_time >= time_for_next)
             {
@@ -278,9 +290,12 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
     void onSceneLoaded(Scene scene, LoadSceneMode load_scene_mode)
     {
+        Debug.Log("Hum");
         if (SceneManager.GetActiveScene().name.Equals("Main Scene"))
         {
-            last_time = TimerManager.time;
+            Debug.Log("Hum 2");
+            avoiding_spontaneous_wave_launching_at_start = true;
+            Debug.Log(avoiding_spontaneous_wave_launching_at_start);
         }
     }
 }
