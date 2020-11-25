@@ -240,6 +240,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     void Awake()
     {
         instance = this;
+        SceneManager.sceneLoaded += onSceneLoaded;
     }
 
     // Use this for initialization
@@ -249,7 +250,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         last_time = TimerManager.time;
         Debug.Log("1 - " + present_time);
         Debug.Log("1.5 - " + last_time);
-        SceneManager.sceneLoaded += onSceneLoaded;
+
     }
 	
 	// Update is called once per frame
