@@ -14,7 +14,8 @@ using UnityEngine.SceneManagement;
 public class ImmigrantWaveLauncher : MonoBehaviour {
 
     public static ImmigrantWaveLauncher instance;
-    public bool avoiding_spontaneous_wave_launching_at_start;
+    public bool first_part_of_avoiding_spontaneous_wave_launching_at_start;
+    public bool second_part_of_avoiding_spontaneous_wave_launching_at_start;
 
     #region Spawn Points and Spawn Objectives
     public GameObject refugees_exit_1, refugees_exit_2;
@@ -248,21 +249,24 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         immigrant_wave_launcher_save_package = new ImmigrantWaveLauncherSavePackage();
         time_for_next = UnityEngine.Random.Range(30.0f, 60.0f);
         last_time = TimerManager.time;
-        Debug.Log("1 - " + present_time);
-        Debug.Log("1.5 - " + last_time);
-
+        if (first_part_of_avoiding_spontaneous_wave_launching_at_start)
+        {
+            second_part_of_avoiding_spontaneous_wave_launching_at_start = true;
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
         if ((!TimeManager.instance.gamePaused) && (wave_instantiation_timer))
         {
-            Debug.Log(avoiding_spontaneous_wave_launching_at_start);
-            if (avoiding_spontaneous_wave_launching_at_start)
+            Debug.Log(first_part_of_avoiding_spontaneous_wave_launching_at_start);
+            if ((first_part_of_avoiding_spontaneous_wave_launching_at_start) &&
+                    (second_part_of_avoiding_spontaneous_wave_launching_at_start))
             {
                 last_time = TimerManager.time;
                 present_time = 0.0f;
-                avoiding_spontaneous_wave_launching_at_start = false;
+                first_part_of_avoiding_spontaneous_wave_launching_at_start = false;
+                second_part_of_avoiding_spontaneous_wave_launching_at_start = false;
                 Debug.Log("Pelo menos dispara = " + last_time);
             }
             else
@@ -295,8 +299,8 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         if (SceneManager.GetActiveScene().name.Equals("Main Scene"))
         {
             Debug.Log("Hum 2");
-            avoiding_spontaneous_wave_launching_at_start = true;
-            Debug.Log(avoiding_spontaneous_wave_launching_at_start);
+            first_part_of_avoiding_spontaneous_wave_launching_at_start = true;
+            Debug.Log(first_part_of_avoiding_spontaneous_wave_launching_at_start);
         }
     }
 }
