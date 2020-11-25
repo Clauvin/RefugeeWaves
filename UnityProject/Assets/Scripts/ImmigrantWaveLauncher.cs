@@ -248,7 +248,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         last_time = TimerManager.time;
         Debug.Log("1 - " + present_time);
         Debug.Log("1.5 - " + last_time);
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneLoaded += onSceneLoaded;
     }
 	
 	// Update is called once per frame
@@ -276,7 +276,7 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         }
 	}
 
-    void onSceneLoaded()
+    void onSceneLoaded(Scene scene, LoadSceneMode load_scene_mode)
     {
         if (SceneManager.GetActiveScene().name.Equals("Main Scene"))
         {
