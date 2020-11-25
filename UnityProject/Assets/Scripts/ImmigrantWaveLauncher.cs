@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Creates an instance of a Immigrant Wave Object, with:
@@ -245,6 +246,9 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
         immigrant_wave_launcher_save_package = new ImmigrantWaveLauncherSavePackage();
         time_for_next = UnityEngine.Random.Range(30.0f, 60.0f);
         last_time = TimerManager.time;
+        Debug.Log("1 - " + present_time);
+        Debug.Log("1.5 - " + last_time);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 	
 	// Update is called once per frame
@@ -256,6 +260,8 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
             if (present_time >= time_for_next)
             {
+                Debug.Log("2 - " + present_time);
+                Debug.Log("3 - " + time_for_next);
                 RandomInstantaneousWaveInstance();
                 present_time = 0.0f;
                 if (TimeManager.instance.year == 1)
@@ -269,4 +275,12 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
             }
         }
 	}
+
+    void onSceneLoaded()
+    {
+        if (SceneManager.GetActiveScene().name.Equals("Main Scene"))
+        {
+            last_time = TimerManager.time;
+        }
+    }
 }
