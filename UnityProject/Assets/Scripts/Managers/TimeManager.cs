@@ -98,6 +98,7 @@ public class TimeManager : MonoBehaviour {
     //GO's and Text
     #region GO - The UI GameObjects + UI Texts
     public GameObject weekGO, monthGO, yearGO;
+    public GameObject pausePanel;
 	Text weekText, monthText, yearText;
     #endregion
 

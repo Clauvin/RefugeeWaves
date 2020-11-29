@@ -1209,6 +1209,7 @@ MonoBehaviour:
   weekGO: {fileID: 10568503}
   monthGO: {fileID: 50918866}
   yearGO: {fileID: 1224058660}
+  pausePanel: {fileID: 1313553690}
 --- !u!1 &169492497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,10 +1636,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0acd61e59c7edfa49a635bba50d5c78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  first_part_of_avoiding_spontaneous_wave_launching_at_start: 0
+  second_part_of_avoiding_spontaneous_wave_launching_at_start: 0
   refugees_exit_1: {fileID: 1386134960}
   refugees_exit_2: {fileID: 461821770}
   refugees_entrance_1: {fileID: 750842164}
   refugees_entrance_2: {fileID: 1813293234}
+  immigrant_wave_launcher_save_package:
+    _nextWaveId: 0
+    _waves_sent: 0
+    _present_time: 0
+    _last_time: 0
+    _time_for_next: 0
+    _def_quant_of_refugees: 5
+    _def_time_in_seconds: 30
+    _refugees_multiplier: 2.5
+    _wave_instantiation_timer: 1
 --- !u!4 &278915675
 Transform:
   m_ObjectHideFlags: 0
@@ -9244,6 +9257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2124ee107d040f641a0e0aa215be12be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer_manager_started: 0
   the_time: 0
   the_last_time: 0
 --- !u!1 &1828155934
