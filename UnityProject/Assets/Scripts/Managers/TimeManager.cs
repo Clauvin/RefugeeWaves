@@ -119,6 +119,7 @@ public class TimeManager : MonoBehaviour {
 			//saves elapsed time
 			timeElapsed = TimerManager.time - timeLastUnpaused;
 			timeLastPaused = TimerManager.time;
+            pausePanel.SetActive(true);
 		}
 	}
 
@@ -132,7 +133,8 @@ public class TimeManager : MonoBehaviour {
 			gamePaused = false;
 			timeLastUnpaused = TimerManager.time;
             TimerManager.instance.AdjustTimeDifference();
-		}
+            pausePanel.SetActive(false);
+        }
 	}
     #endregion
 
