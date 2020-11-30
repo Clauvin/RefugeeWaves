@@ -259,7 +259,6 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 	void Update () {
         if ((!TimeManager.instance.gamePaused) && (wave_instantiation_timer))
         {
-            Debug.Log(first_part_of_avoiding_spontaneous_wave_launching_at_start);
             if (TimerManager.instance.timer_manager_started)
             {
                 if ((first_part_of_avoiding_spontaneous_wave_launching_at_start) &&
@@ -269,7 +268,6 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
                     present_time = 0.0f;
                     first_part_of_avoiding_spontaneous_wave_launching_at_start = false;
                     second_part_of_avoiding_spontaneous_wave_launching_at_start = false;
-                    Debug.Log("Pelo menos dispara = " + last_time);
                 }
                 else
                 {
@@ -280,8 +278,6 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
             if (present_time >= time_for_next)
             {
-                Debug.Log("2 - " + present_time);
-                Debug.Log("3 - " + time_for_next);
                 RandomInstantaneousWaveInstance();
                 present_time = 0.0f;
                 if (TimeManager.instance.year == 1)
