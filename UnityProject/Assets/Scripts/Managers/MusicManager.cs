@@ -59,7 +59,8 @@ public class MusicManager : MonoBehaviour {
 	void Update () {
 		if ((!wave_jingle.isPlaying) && (play_wave_jingle == true))
         {
-
+            play_wave_jingle = false;
+            UnPauseLobbyMusic();
         }
 	}
 }
