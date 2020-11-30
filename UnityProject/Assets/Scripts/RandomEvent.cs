@@ -8,6 +8,8 @@ public class RandomEvent {
 	public string name;
 	public string description;
 
+    public readonly float minimum_multiplier_of_refugees = 0.1f;
+
     #region Consequence Variables
     MiscInfo.variableTypes consequenceVariable1;//Variable that suffers from this event
 	float consequenceValue1;
@@ -89,6 +91,10 @@ public class RandomEvent {
 			break;
         case MiscInfo.variableTypes.waveVariation:
             ImmigrantWaveLauncher.instance.refugees_multiplier += consequenceValue1;
+            if (ImmigrantWaveLauncher.instance.refugees_multiplier < minimum_multiplier_of_refugees)
+                {
+                    ImmigrantWaveLauncher.instance.refugees_multiplier = minimum_multiplier_of_refugees;
+                }
             break;
         case MiscInfo.variableTypes.unitedNationsHelpVariation:
             ResourceManager.instance.UNHelpVariation += consequenceValue1;
