@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour {
 
+    public static MusicManager instance;
+
     public AudioSource lobby_music;
     public AudioSource wave_jingle;
 
     bool play_lobby_music;
     bool play_wave_jingle;
 
-    void PlayLobbyMusic()
+    public void PlayLobbyMusic()
     {
         Play(lobby_music);
         Stop(wave_jingle);
         play_lobby_music = true;
     }
 
-    void UnPauseLobbyMusic()
+    public void UnPauseLobbyMusic()
     {
         UnPause(lobby_music);
         play_lobby_music = true;
     }
 
-    void PlayWaveJingle()
+    public void PlayWaveJingle()
     {
         Play(wave_jingle);
         Pause(lobby_music);
@@ -50,8 +52,13 @@ public class MusicManager : MonoBehaviour {
         audio_source.Stop();
     }
 
-	// Use this for initialization
-	void Start () {
+    void Awake()
+    {
+        instance = this;
+    }
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
