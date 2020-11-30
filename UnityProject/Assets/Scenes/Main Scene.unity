@@ -6826,10 +6826,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Creation of Public Works\nCreation of Edicts for Start-ups\nInvestments
-    in Public Security \nGet International Help\nCreate Campaign In Favour of Non-Refugee
-    Immigrants\nCreate Campaign In Favour of the Ondest\xE3o\nCreate Campaign Pro-Ondest\xE3o
-    For The World\nInvestments In Houses\nInvestments In Social Expenses\nInvestments
+  m_Text: "Creation of Public Works (COSTS 600)\nCreation of Edicts for Start-ups
+    (COSTS 800)\nInvestments in Public Security (COSTS 1200)\nGet International Help
+    (GAINS MONEY)\nCreate Campaign In Favour of Non-Refugee Immigrants (COSTS 2000)\nCreate
+    Campaign In Favour of the Ondest\xE3o (COSTS 1200)\nCreate Campaign Pro-Ondest\xE3o
+    For The World (COSTS 2000)\nInvestments In Houses\nInvestments In Social Expenses\nInvestments
     In Border Officials\nInvestments In Border Expenses"
 --- !u!222 &1376309139
 CanvasRenderer:
