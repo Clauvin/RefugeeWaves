@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212579389973466518}
   - component: {fileID: 114640830144643290}
   - component: {fileID: 114783591952017092}
+  - component: {fileID: 114101200761016180}
   m_Layer: 0
   m_Name: Immigrant Wave Object
   m_TagString: Wave
@@ -42,6 +43,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114101200761016180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1873704410136614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe22736b3d5a2a43b662c7b77be9cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114640830144643290
 MonoBehaviour:
   m_ObjectHideFlags: 1
