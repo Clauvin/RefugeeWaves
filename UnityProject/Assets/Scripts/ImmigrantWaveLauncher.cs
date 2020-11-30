@@ -22,6 +22,9 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
     public GameObject refugees_entrance_1, refugees_entrance_2;
     #endregion
 
+    public float size_of_wave_difficult_multiplier = 1.0f;
+    public float time_difficult_multiplier = 1.0f;
+
     [Serializable]
     public class ImmigrantWaveLauncherSavePackage
     {
@@ -188,19 +191,25 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
         if ((TimeManager.instance.year == 1) && (!super_wave))
         {
-            refugee_quantity = (int)(UnityEngine.Random.Range(1.0f, 2.0f) * def_quant_of_refugees) + waves_sent;
-            time_in_seconds = UnityEngine.Random.Range(1.0f, 2.0f) * def_time_in_seconds - waves_sent;
+            refugee_quantity = (int)(UnityEngine.Random.Range(1.0f, 2.0f) * def_quant_of_refugees *
+                size_of_wave_difficult_multiplier) + waves_sent;
+            time_in_seconds = UnityEngine.Random.Range(1.0f, 2.0f) * def_time_in_seconds *
+                time_difficult_multiplier - waves_sent;
         }
         else if ((UnityEngine.Random.Range(0.0f, 1.0f) < 0.05f) || (super_wave))
         {
-            refugee_quantity = (int)(UnityEngine.Random.Range(15.0f, 20.0f) * def_quant_of_refugees);
-            time_in_seconds = UnityEngine.Random.Range(5.0f, 10.0f) * def_time_in_seconds;
+            refugee_quantity = (int)(UnityEngine.Random.Range(15.0f, 20.0f) * def_quant_of_refugees *
+                size_of_wave_difficult_multiplier);
+            time_in_seconds = UnityEngine.Random.Range(5.0f, 10.0f) * def_time_in_seconds *
+                time_difficult_multiplier;
             scale *= 3;
         }
         else
         {
-            refugee_quantity = (int)(UnityEngine.Random.Range(3.0f, 4.0f) * def_quant_of_refugees) + waves_sent;
-            time_in_seconds = UnityEngine.Random.Range(0.5f, 1.0f) * def_time_in_seconds - waves_sent;
+            refugee_quantity = (int)(UnityEngine.Random.Range(3.0f, 4.0f) * def_quant_of_refugees *
+                size_of_wave_difficult_multiplier) + waves_sent;
+            time_in_seconds = UnityEngine.Random.Range(0.5f, 1.0f) * def_time_in_seconds *
+                time_difficult_multiplier - waves_sent;
         }
 
         if (UnityEngine.Random.Range(0.0f, 1.0f) < 0.5f)
