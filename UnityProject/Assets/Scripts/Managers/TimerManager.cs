@@ -89,6 +89,11 @@ public class TimerManager : MonoBehaviour {
         t1 = t2 = Time.time;
     }
 
+    public void SetTimeMultiplier(float multiplier)
+    {
+        if (multiplier > 0.1f) time_multiplier = multiplier;
+    }
+
     TimerManager()
     {
 
