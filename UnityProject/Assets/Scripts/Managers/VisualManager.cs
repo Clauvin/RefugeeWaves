@@ -8,7 +8,8 @@ public class VisualManager : MonoBehaviour {
 	public static VisualManager instance;
 
     public GameObject moneyGO, actionsGO, houseGO, unemployementGO, criminalityGO,
-        BOGO, SocialResGO, BorderResGO, pausebuttonGO;
+        BOGO, SocialResGO, BorderResGO, timeMultiplier1xGO, timeMultiplier2xGO,
+        timeMultiplier3xGO, pausebuttonGO;
 
     //At the moment, does nothing.
     public bool action_panel_is_active;
@@ -162,6 +163,60 @@ public class VisualManager : MonoBehaviour {
 		}
 	}
     #endregion
+
+    #region Show/Hide Time Multiplier 1x Panel Functions
+    public void showTimeMultiplier1xPanel()
+    {
+        foreach (Transform t in timeMultiplier1xGO.transform)
+        {
+            t.gameObject.SetActive(true);
+        }
+    }
+    public void hideTimeMultiplier1xPanel()
+    {
+        foreach (Transform t in timeMultiplier1xGO.transform)
+        {
+            t.gameObject.SetActive(false);
+        }
+    }
+
+    #endregion Show/Hide Time Multiplier 1x Panel Functions
+
+    #region Show/Hide Time Multiplier 2x Panel Functions
+    public void showTimeMultiplier2xPanel()
+    {
+        foreach (Transform t in timeMultiplier2xGO.transform)
+        {
+            t.gameObject.SetActive(true);
+        }
+    }
+    public void hideTimeMultiplier2xPanel()
+    {
+        foreach (Transform t in timeMultiplier2xGO.transform)
+        {
+            t.gameObject.SetActive(false);
+        }
+    }
+
+    #endregion Show/Hide Time Multiplier 2x Panel Functions
+
+    #region Show/Hide Time Multiplier 3x Panel Functions
+    public void showTimeMultiplier3xPanel()
+    {
+        foreach (Transform t in timeMultiplier3xGO.transform)
+        {
+            t.gameObject.SetActive(true);
+        }
+    }
+    public void hideTimeMultiplier3xPanel()
+    {
+        foreach (Transform t in timeMultiplier3xGO.transform)
+        {
+            t.gameObject.SetActive(false);
+        }
+    }
+
+    #endregion Show/Hide Time Multiplier 3x Panel Functions
 
     #region Show/Hide Pause Button Panel Functions
     public void showPauseButtonPanel()
