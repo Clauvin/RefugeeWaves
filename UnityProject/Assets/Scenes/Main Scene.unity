@@ -1011,6 +1011,9 @@ MonoBehaviour:
   BOGO: {fileID: 689775310}
   SocialResGO: {fileID: 129900219}
   BorderResGO: {fileID: 1891364053}
+  timeMultiplier1xGO: {fileID: 1890289699}
+  timeMultiplier2xGO: {fileID: 827551572}
+  timeMultiplier3xGO: {fileID: 1156108224}
   pausebuttonGO: {fileID: 2097084994}
   action_panel_is_active: 1
 --- !u!1 &157373057
@@ -4459,7 +4462,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 154338030}
-          m_MethodName: showPauseButtonPanel
+          m_MethodName: showTimeMultiplier2xPanel
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4476,7 +4479,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 154338030}
-          m_MethodName: hidePauseButtonPanel
+          m_MethodName: hideTimeMultiplier2xPanel
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6281,7 +6284,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 154338030}
-          m_MethodName: showPauseButtonPanel
+          m_MethodName: showTimeMultiplier3xPanel
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -6298,7 +6301,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 154338030}
-          m_MethodName: hidePauseButtonPanel
+          m_MethodName: hideTimeMultiplier3xPanel
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10524,7 +10527,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 154338030}
-          m_MethodName: showPauseButtonPanel
+          m_MethodName: showTimeMultiplier1xPanel
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10541,7 +10544,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 154338030}
-          m_MethodName: hidePauseButtonPanel
+          m_MethodName: hideTimeMultiplier1xPanel
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
