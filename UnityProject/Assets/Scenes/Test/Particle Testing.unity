@@ -473,7 +473,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.70980394, b: 1, a: 0.5058824}
+      maxColor: {r: 0, g: 0.7019608, b: 1, a: 0.5058824}
       minMaxState: 0
     startSize:
       scalar: 1
@@ -632,7 +632,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startRotationY:
-      scalar: 0
+      scalar: 3.1415925
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -712,7 +712,7 @@ ParticleSystem:
     randomizeRotationDirection: 0
     maxNumParticles: 10
     size3D: 0
-    rotation3D: 0
+    rotation3D: 1
     gravityModifier:
       scalar: 0
       maxCurve:
@@ -756,8 +756,8 @@ ParticleSystem:
     serializedVersion: 3
     enabled: 1
     type: 4
-    radius: 7
-    angle: 56.1
+    radius: 3.7532606
+    angle: 0
     length: 5
     boxX: 1
     boxY: 1
