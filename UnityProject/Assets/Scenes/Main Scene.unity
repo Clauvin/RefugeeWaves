@@ -624,8 +624,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 80614688}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 38.039997, y: -4.2400427, z: 0}
-  m_LocalScale: {x: 2.6500378, y: 2.6500447, z: 2.6500447}
+  m_LocalPosition: {x: 19.4, y: -4.2400594, z: 0}
+  m_LocalScale: {x: 2.6500378, y: 2.6500418, z: 2.6500418}
   m_Children: []
   m_Father: {fileID: 1580326071}
   m_RootOrder: 0
@@ -735,12 +735,12 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 243186256
+  randomSeed: 2002397870
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
-      scalar: 5
+      scalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1731,7 +1731,7 @@ ParticleSystem:
   VelocityModule:
     enabled: 1
     x:
-      scalar: -1
+      scalar: -0.7
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -7713,7 +7713,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1728931602
+  randomSeed: 253590880
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8124,7 +8124,7 @@ ParticleSystem:
       minMaxState: 0
     randomizeRotationDirection: 0
     maxNumParticles: 10
-    size3D: 0
+    size3D: 1
     rotation3D: 1
     gravityModifier:
       scalar: 0
@@ -11498,7 +11498,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &1127167913
 RectTransform:
@@ -12859,7 +12859,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1379392090
 RectTransform:
@@ -14052,7 +14052,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1580326071
 RectTransform:
@@ -15696,7 +15696,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1828155938
 RectTransform:
