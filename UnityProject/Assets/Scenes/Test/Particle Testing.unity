@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 2071249114}
   - component: {fileID: 2071249113}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Particle System To The Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,7 +300,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1424441005
+  randomSeed: -1568174064
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -473,7 +473,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.7019608, b: 1, a: 0.5058824}
+      maxColor: {r: 0.12941177, g: 0.15294118, b: 0.16078432, a: 0.5058824}
       minMaxState: 0
     startSize:
       scalar: 1
@@ -1294,9 +1294,9 @@ ParticleSystem:
     flipV: 0
     randomRow: 1
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
-      scalar: 0
+      scalar: -1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1374,7 +1374,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     z:
-      scalar: 0
+      scalar: -0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
