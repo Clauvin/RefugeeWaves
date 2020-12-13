@@ -120,13 +120,15 @@ public class VFXWaveLauncher : MonoBehaviour
                                                   package._rotation_y,
                                                   package._rotation_z,
                                                   package._rotation_w);
+        float y_noise_initial = UnityEngine.Random.Range(-1f, 1f);
         icone.GetComponent<MovingToTheObjective>().initial_position = new Vector3(
                                                 package.to_the_objective_save_package._initial_position_x,
-                                                package.to_the_objective_save_package._initial_position_y,
+                                                package.to_the_objective_save_package._initial_position_y + y_noise_initial,
                                                 package.to_the_objective_save_package._initial_position_z);
+        float y_noise_final = UnityEngine.Random.Range(-1f, 1f);
         icone.GetComponent<MovingToTheObjective>().final_objective = new Vector3(
                                                 package.to_the_objective_save_package._final_objective_x,
-                                                package.to_the_objective_save_package._final_objective_y,
+                                                package.to_the_objective_save_package._final_objective_y + y_noise_final,
                                                 package.to_the_objective_save_package._final_objective_z);
         icone.GetComponent<MovingToTheObjective>().time_to_reach_objective = package.to_the_objective_save_package.
             _time_to_reach_objective;
