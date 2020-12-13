@@ -35,10 +35,12 @@ public class MovingToTheObjective : MonoBehaviour {
 
             if (passed_time / time_to_reach_objective >= 1.0f)
             {
-                ImmigrantManager.instance.WaveReceived(this.gameObject);
+                if (this.gameObject.tag == "Wave")ImmigrantManager.instance.WaveReceived(this.gameObject);
                 Destroy(this.gameObject);
             }
 
         }
     }
+
+    
 }
