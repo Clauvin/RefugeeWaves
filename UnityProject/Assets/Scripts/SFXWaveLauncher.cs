@@ -22,9 +22,6 @@ public class SFXWaveLauncher : MonoBehaviour
     public GameObject refugees_entrance_1, refugees_entrance_2;
     #endregion
 
-    public float size_of_wave_difficult_multiplier = 1.0f;
-    public float time_difficult_multiplier = 1.0f;
-
     [Serializable]
     public class SFXWaveLauncherSavePackage
     {
@@ -35,10 +32,7 @@ public class SFXWaveLauncher : MonoBehaviour
         public float _present_time = 0.0f;
         public float _last_time;
         public float _time_for_next = 0.0f;
-        public int _def_quant_of_refugees = 5;
         public float _def_time_in_seconds = 30.0f;
-        public float _refugees_multiplier = 2.5f; // this number multiplies the number of refugees in each new wave
-        #endregion
 
         public bool _wave_instantiation_timer = true;
     }
@@ -46,72 +40,60 @@ public class SFXWaveLauncher : MonoBehaviour
     /// <summary>
     /// Set this to public for debugging in the editor
     /// </summary>
-    public SFXWaveLauncherSavePackage immigrant_wave_launcher_save_package;
+    public SFXWaveLauncherSavePackage vfx_wave_launcher_save_package;
 
     public SFXWaveLauncherSavePackage GetImmigrantWaveLauncherSavePackage()
     {
-        return immigrant_wave_launcher_save_package;
+        return vfx_wave_launcher_save_package;
     }
 
     public void SetImmigrantWaveLauncherSavePackage(SFXWaveLauncherSavePackage save_package)
     {
-        immigrant_wave_launcher_save_package = save_package;
+        vfx_wave_launcher_save_package = save_package;
     }
 
     public int nextWaveId
     {
-        get { return immigrant_wave_launcher_save_package._nextWaveId; }
-        set { immigrant_wave_launcher_save_package._nextWaveId = value; }
+        get { return vfx_wave_launcher_save_package._nextWaveId; }
+        set { vfx_wave_launcher_save_package._nextWaveId = value; }
     }
 
     public int waves_sent
     {
-        get { return immigrant_wave_launcher_save_package._waves_sent; }
-        set { immigrant_wave_launcher_save_package._waves_sent = value; }
+        get { return vfx_wave_launcher_save_package._waves_sent; }
+        set { vfx_wave_launcher_save_package._waves_sent = value; }
     }
 
     #region Public Variables
     public float present_time
     {
-        get { return immigrant_wave_launcher_save_package._present_time; }
-        set { immigrant_wave_launcher_save_package._present_time = value; }
+        get { return vfx_wave_launcher_save_package._present_time; }
+        set { vfx_wave_launcher_save_package._present_time = value; }
     }
 
     public float last_time
     {
-        get { return immigrant_wave_launcher_save_package._last_time; }
-        set { immigrant_wave_launcher_save_package._last_time = value; }
+        get { return vfx_wave_launcher_save_package._last_time; }
+        set { vfx_wave_launcher_save_package._last_time = value; }
     }
 
     public float time_for_next
     {
-        get { return immigrant_wave_launcher_save_package._time_for_next; }
-        set { immigrant_wave_launcher_save_package._time_for_next = value; }
-    }
-
-    public int def_quant_of_refugees
-    {
-        get { return immigrant_wave_launcher_save_package._def_quant_of_refugees; }
-        set { immigrant_wave_launcher_save_package._def_quant_of_refugees = value; }
+        get { return vfx_wave_launcher_save_package._time_for_next; }
+        set { vfx_wave_launcher_save_package._time_for_next = value; }
     }
 
     public float def_time_in_seconds
     {
-        get { return immigrant_wave_launcher_save_package._def_time_in_seconds; }
-        set { immigrant_wave_launcher_save_package._def_time_in_seconds = value; }
-    }
-
-    public float refugees_multiplier
-    {
-        get { return immigrant_wave_launcher_save_package._refugees_multiplier; }
-        set { immigrant_wave_launcher_save_package._refugees_multiplier = value; }
+        get { return vfx_wave_launcher_save_package._def_time_in_seconds; }
+        set { vfx_wave_launcher_save_package._def_time_in_seconds = value; }
     }
     #endregion
 
     private bool wave_instantiation_timer
     {
-        get { return immigrant_wave_launcher_save_package._wave_instantiation_timer; }
-        set { immigrant_wave_launcher_save_package._wave_instantiation_timer = value; }
+        get { return vfx_wave_launcher_save_package._wave_instantiation_timer; }
+        set { vfx_wave_launcher_save_package._wave_instantiation_timer = value; }
     }
 
     #region Instantiation Timer Functions
@@ -122,9 +104,9 @@ public class SFXWaveLauncher : MonoBehaviour
     public void ToggleWaveInstantiationTimer() { wave_instantiation_timer = !wave_instantiation_timer; }
     #endregion
 
-    public void InstantiateNewRefugeWave(GameInstance.WaveObjectSavePackage package)
+    public void InstantiateNewVFXWave(GameInstance.WaveObjectSavePackage package)
     {
-        GameObject icone = Instantiate<GameObject>(Resources.Load<GameObject>("Immigrant Wave Object"));
+        GameObject icone = Instantiate<GameObject>(Resources.Load<GameObject>("VFX Wave Object"));
         icone.transform.SetParent(GameObject.Find("WavesCanvas").transform);
 
         icone.transform.position = new Vector3(package._position_x,
@@ -137,7 +119,6 @@ public class SFXWaveLauncher : MonoBehaviour
                                                   package._rotation_y,
                                                   package._rotation_z,
                                                   package._rotation_w);
-        icone.GetComponent<ImmigrantWave>().SetImmigrantWaveSavePackage(package.immigrant_wave_save_package);
         icone.GetComponent<MovingToTheObjective>().initial_position = new Vector3(
                                                 package.to_the_objective_save_package._initial_position_x,
                                                 package.to_the_objective_save_package._initial_position_y,
@@ -157,69 +138,34 @@ public class SFXWaveLauncher : MonoBehaviour
 
     }
 
-    void InstantiateNewRefugeeWave(int refugee_quantity, GameObject exit, GameObject entrance, float time_in_seconds,
+    void InstantiateNewVFXWave(GameObject exit, GameObject entrance, float time_in_seconds,
             float scale = 1.0f)
     {
-        GameObject icone = Instantiate<GameObject>(Resources.Load<GameObject>("Immigrant Wave Object"));
+        GameObject icone = Instantiate<GameObject>(Resources.Load<GameObject>("VFX Wave Object"));
 
         icone.transform.SetParent(GameObject.Find("WavesCanvas").transform);
         icone.transform.position = new Vector3(exit.transform.position.x,
                                                exit.transform.position.y,
                                                exit.transform.position.z);
-        icone.GetComponent<ImmigrantWave>().numberOfImmigrants = refugee_quantity;
         Vector3 final_obj = entrance.transform.position;
         final_obj.z = 0;
         icone.GetComponent<MovingToTheObjective>().final_objective = final_obj;
         icone.GetComponent<MovingToTheObjective>().time_to_reach_objective = time_in_seconds;
-        icone.name = "Refugee";
-        if (scale > 1.0f)
-        {
-            icone.transform.localScale = new Vector3(icone.transform.localScale.x * scale,
-                                                     icone.transform.localScale.y * scale,
-                                                     1);
-            icone.name += " Super";
-        }
+        icone.name = "VFX Wave";
         icone.name += " Wave - ID " + nextWaveId;
-        icone.tag = "Wave";
+        icone.tag = "VFX";
         nextWaveId++;
         waves_sent++;
     }
 
-    public void RandomInstantaneousWaveInstance(bool super_wave = false)
+    public void RandomInstantaneousVFXWaveInstance(bool super_wave = false, float time_in_seconds)
     {
-        int refugee_quantity;
-        //Year 1: 50 to 150 refugees per wave.
-        //Year 2: 150 to 200 refugees per wave.
         GameObject exit, entrance;
-        float time_in_seconds;
         //Year 1: between 30 to 60 seconds.
         //Year 2: between 15 to 30 seconds.
         float scale = 1.0f;
 
         //Superwave: 750 to 1000 refugees, between 150 to 300 seconds. Sprite 3x bigger.
-
-        if ((TimeManager.instance.year == 1) && (!super_wave))
-        {
-            refugee_quantity = (int)(UnityEngine.Random.Range(1.0f, 2.0f) * def_quant_of_refugees *
-                size_of_wave_difficult_multiplier) + waves_sent;
-            time_in_seconds = UnityEngine.Random.Range(1.0f, 2.0f) * def_time_in_seconds *
-                time_difficult_multiplier - waves_sent;
-        }
-        else if ((UnityEngine.Random.Range(0.0f, 1.0f) < 0.05f) || (super_wave))
-        {
-            refugee_quantity = (int)(UnityEngine.Random.Range(15.0f, 20.0f) * def_quant_of_refugees *
-                size_of_wave_difficult_multiplier);
-            time_in_seconds = UnityEngine.Random.Range(5.0f, 10.0f) * def_time_in_seconds *
-                time_difficult_multiplier;
-            scale *= 3;
-        }
-        else
-        {
-            refugee_quantity = (int)(UnityEngine.Random.Range(3.0f, 4.0f) * def_quant_of_refugees *
-                size_of_wave_difficult_multiplier) + waves_sent;
-            time_in_seconds = UnityEngine.Random.Range(0.5f, 1.0f) * def_time_in_seconds *
-                time_difficult_multiplier - waves_sent;
-        }
 
         if (UnityEngine.Random.Range(0.0f, 1.0f) < 0.5f)
         {
@@ -230,20 +176,13 @@ public class SFXWaveLauncher : MonoBehaviour
             exit = refugees_exit_2; entrance = refugees_entrance_2;
         }
 
-        refugee_quantity = (int)(refugee_quantity * refugees_multiplier);
-
-        if (refugee_quantity >= 15.0f * def_quant_of_refugees)
-        {
-            scale *= 2;
-        }
-
-        InstantiateNewRefugeeWave(refugee_quantity, exit, entrance, time_in_seconds, scale);
+        InstantiateNewVFXWave(exit, entrance, time_in_seconds, scale);
     }
 
-    public bool DeleteAllTravellingWaves()
+    public bool DeleteAllVFX()
     {
         GameObject[] list_of_waves;
-        list_of_waves = GameObject.FindGameObjectsWithTag("Wave");
+        list_of_waves = GameObject.FindGameObjectsWithTag("VFX");
 
         int quantity = list_of_waves.Length;
 
@@ -252,7 +191,7 @@ public class SFXWaveLauncher : MonoBehaviour
             Destroy(list_of_waves[i]);
         }
 
-        list_of_waves = GameObject.FindGameObjectsWithTag("Wave");
+        list_of_waves = GameObject.FindGameObjectsWithTag("VFX");
         if (list_of_waves.Length == 0) return true;
         else return false;
     }
@@ -266,7 +205,7 @@ public class SFXWaveLauncher : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        immigrant_wave_launcher_save_package = new SFXWaveLauncherSavePackage();
+        vfx_wave_launcher_save_package = new SFXWaveLauncherSavePackage();
         time_for_next = UnityEngine.Random.Range(30.0f, 60.0f);
         last_time = TimerManager.time;
         if (first_part_of_avoiding_spontaneous_wave_launching_at_start)
@@ -299,7 +238,8 @@ public class SFXWaveLauncher : MonoBehaviour
 
             if (present_time >= time_for_next)
             {
-                RandomInstantaneousWaveInstance();
+                float random_value = UnityEngine.Random.Range(3.0f, 4.0f);
+                RandomInstantaneousVFXWaveInstance(false, 5.0f);
                 present_time = 0.0f;
                 if (TimeManager.instance.year == 1)
                 {
@@ -315,10 +255,8 @@ public class SFXWaveLauncher : MonoBehaviour
 
     void onSceneLoaded(Scene scene, LoadSceneMode load_scene_mode)
     {
-        Debug.Log("Hum");
         if (SceneManager.GetActiveScene().name.Equals("Main Scene"))
         {
-            Debug.Log("Hum 2");
             first_part_of_avoiding_spontaneous_wave_launching_at_start = true;
             Debug.Log(first_part_of_avoiding_spontaneous_wave_launching_at_start);
         }
