@@ -35,6 +35,7 @@ public class SFXWaveLauncher : MonoBehaviour
         public float _def_time_in_seconds = 30.0f;
 
         public bool _wave_instantiation_timer = true;
+        #endregion
     }
 
     /// <summary>
@@ -158,7 +159,7 @@ public class SFXWaveLauncher : MonoBehaviour
         waves_sent++;
     }
 
-    public void RandomInstantaneousVFXWaveInstance(bool super_wave = false, float time_in_seconds)
+    public void RandomInstantaneousVFXWaveInstance(float time_in_seconds, bool super_wave = false)
     {
         GameObject exit, entrance;
         //Year 1: between 30 to 60 seconds.
@@ -239,15 +240,15 @@ public class SFXWaveLauncher : MonoBehaviour
             if (present_time >= time_for_next)
             {
                 float random_value = UnityEngine.Random.Range(3.0f, 4.0f);
-                RandomInstantaneousVFXWaveInstance(false, 5.0f);
+                RandomInstantaneousVFXWaveInstance(random_value, false);
                 present_time = 0.0f;
                 if (TimeManager.instance.year == 1)
                 {
-                    time_for_next = UnityEngine.Random.Range(30.0f, 60.0f) - waves_sent;
+                    time_for_next = UnityEngine.Random.Range(5.0f, 10.0f);
                 }
                 else
                 {
-                    time_for_next = UnityEngine.Random.Range(15.0f, 30.0f);
+                    time_for_next = UnityEngine.Random.Range(5.0f, 7.0f);
                 }
             }
         }
