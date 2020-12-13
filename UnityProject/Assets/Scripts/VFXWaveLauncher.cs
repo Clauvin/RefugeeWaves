@@ -170,13 +170,28 @@ public class VFXWaveLauncher : MonoBehaviour
 
         //Superwave: 750 to 1000 refugees, between 150 to 300 seconds. Sprite 3x bigger.
 
-        if (UnityEngine.Random.Range(0.0f, 1.0f) < 0.5f)
+        float value_1 = UnityEngine.Random.Range(0.0f, 1.0f);
+        float value_2 = UnityEngine.Random.Range(0.0f, 1.0f);
+        if (value_1 < 0.5f)
         {
-            exit = refugees_exit_1; entrance = refugees_entrance_1;
+            if (value_2 < 0.5f)
+            {
+                exit = refugees_exit_1; entrance = refugees_entrance_1;
+            } else
+            {
+                exit = refugees_exit_1; entrance = refugees_entrance_2;
+            }
         }
         else
         {
-            exit = refugees_exit_2; entrance = refugees_entrance_2;
+            if (value_2 < 0.5f)
+            {
+                exit = refugees_exit_2; entrance = refugees_entrance_1;
+            }
+            else
+            {
+                exit = refugees_exit_2; entrance = refugees_entrance_2;
+            }
         }
 
         InstantiateNewVFXWave(exit, entrance, time_in_seconds, scale);
