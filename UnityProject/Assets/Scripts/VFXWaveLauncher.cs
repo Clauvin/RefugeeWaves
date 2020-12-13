@@ -10,10 +10,10 @@ using UnityEngine.SceneManagement;
 ///     c) Finish point
 ///     d) Speed to reach
 /// </summary>
-public class SFXWaveLauncher : MonoBehaviour
+public class VFXWaveLauncher : MonoBehaviour
 {
 
-    public static SFXWaveLauncher instance;
+    public static VFXWaveLauncher instance;
     public bool first_part_of_avoiding_spontaneous_wave_launching_at_start;
     public bool second_part_of_avoiding_spontaneous_wave_launching_at_start;
 
