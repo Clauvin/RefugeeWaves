@@ -18,17 +18,12 @@ public class VFXWaveLauncherButtons : Editor
         VFXWaveLauncher myScript = (VFXWaveLauncher)target;
         if (GUILayout.Button("New Wave"))
         {
-            myScript.RandomInstantaneousWaveInstance();
-        }
-
-        if (GUILayout.Button("New Super Wave"))
-        {
-            myScript.RandomInstantaneousWaveInstance(true);
+            myScript.RandomInstantaneousVFXWaveInstance(5.0F, false);
         }
 
         if (GUILayout.Button("Destroy All Travelling Waves"))
         {
-            myScript.DeleteAllTravellingWaves();
+            myScript.DeleteAllVFX();
         }
 
         if (myScript.GetWaveInstantiationTimer())

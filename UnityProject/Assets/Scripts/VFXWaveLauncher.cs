@@ -207,7 +207,7 @@ public class VFXWaveLauncher : MonoBehaviour
     void Start()
     {
         vfx_wave_launcher_save_package = new SFXWaveLauncherSavePackage();
-        time_for_next = UnityEngine.Random.Range(30.0f, 60.0f);
+        time_for_next = UnityEngine.Random.Range(7f, 9f);
         last_time = TimerManager.time;
         if (first_part_of_avoiding_spontaneous_wave_launching_at_start)
         {
