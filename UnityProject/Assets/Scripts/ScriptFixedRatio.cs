@@ -8,8 +8,8 @@ public class ScriptFixedRatio : MonoBehaviour
     //original code found in 
     // https://answers.unity.com/questions/674726/different-camera-views-in-different-devices.html
 
-    public float x_resolution_target = 1366.0f;
-    public float y_resolution_target = 768.0f;
+    public float x_resolution_target = 1280.0f;
+    public float y_resolution_target = 720.0f;
 
     // Use this for initialization
     void Start()
