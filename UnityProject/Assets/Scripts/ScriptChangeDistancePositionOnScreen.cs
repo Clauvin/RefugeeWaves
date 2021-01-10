@@ -15,6 +15,10 @@ public class ScriptChangeDistancePositionOnScreen : MonoBehaviour
         float percentage_of_x = camera.rect.x; float percentage_of_y = camera.rect.y;
 
         float extra_position_x = x * percentage_of_x; float extra_position_y = y * percentage_of_y;
+        Debug.LogError("x " + x);
+        Debug.LogError("percentage_of_x " + percentage_of_x);
+        Debug.LogError("y " + y);
+        Debug.LogError("percentage_of_y " + percentage_of_y);
         extra_position_y *= -1;
 
         Vector3 new_position = GetComponent<RectTransform>().position;
