@@ -1219,7 +1219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1255208341
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2288,7 +2288,7 @@ MonoBehaviour:
   m_Text: 'Brian Confessor - brian_confessor@poli.ufrj.br
 
 
-    Clauvin Erlan - clauvin_almeida@hotmail.com
+    Clauvin Erlan - almeidaclauvin@gmail.com
 
 
     Veronica Sakane - vsakane@gmail.com
