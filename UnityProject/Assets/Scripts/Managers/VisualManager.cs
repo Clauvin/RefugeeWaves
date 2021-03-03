@@ -37,7 +37,7 @@ public class VisualManager : MonoBehaviour {
 
         foreach (Transform t in actionsGO.transform)
         {
-            if ((t.GetComponent<Button>() != null) && (action_panel_is_active))
+            if ((t.GetComponent<Button>() != null) && (t.GetComponent<Text>() == null) && (action_panel_is_active))
             {
                 if (t.GetComponent<PositionInFunctionArray>().action_or_commerce == "Action")
                 {
