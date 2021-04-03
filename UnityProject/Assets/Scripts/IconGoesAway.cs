@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IconGoesAway : MonoBehaviour
 {
 
     bool it_disappeared_yet = false;
     public int month_to_disappear;
-    public SpriteRenderer icon_to_disappear_yet;
+    public Image icon_to_disappear_yet;
 
     // Use this for initialization
     void Start()
