@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IconShowsUp : MonoBehaviour {
 
     bool it_appeared_yet = false;
     public int month_to_appear;
-    public SpriteRenderer icon_to_show_up;
+    //public int week_to_appear;
+    public Image icon_to_show_up;
 
 	// Use this for initialization
 	void Start () {
