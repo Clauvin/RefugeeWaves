@@ -8,6 +8,7 @@ public class IconGoesAway : MonoBehaviour
 
     bool it_disappeared_yet = false;
     public int month_to_disappear;
+    public int week_to_disappear;
     public Image icon_to_disappear_yet;
 
     // Use this for initialization
@@ -21,7 +22,8 @@ public class IconGoesAway : MonoBehaviour
     {
         if (!it_disappeared_yet)
         {
-            if (month_to_disappear <= TimeManager.instance.month)
+            if (month_to_disappear <= TimeManager.instance.month &&
+                week_to_disappear <= TimeManager.instance.week)
             {
                 icon_to_disappear_yet.enabled = false;
                 it_disappeared_yet = true;
