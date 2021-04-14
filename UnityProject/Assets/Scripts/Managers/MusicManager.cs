@@ -10,7 +10,7 @@ public class MusicManager : MonoBehaviour {
     public AudioSource crisis_music;
 
     bool play_lobby_music;
-    bool play_wave_jingle;
+    bool play_crisis_music;
 
     public void PlayLobbyMusic()
     {
@@ -29,7 +29,7 @@ public class MusicManager : MonoBehaviour {
     {
         Play(crisis_music);
         Stop(lobby_music);
-        play_wave_jingle = true;
+        play_crisis_music = true;
     }
 
     private void Play(AudioSource audio_source)
@@ -81,6 +81,40 @@ public class MusicManager : MonoBehaviour {
             default:
                 break;
         }
+
+        if (month > 6) Stop(lobby_music);
+    }
+
+    private void ReadjustCrisisMusicVolume() {
+        ActOnCrisisMusicByMonthAndWeek(TimeManager.instance.month, TimeManager.instance.week);
+    }
+    
+    private void ActOnCrisisMusicByMonthAndWeek(int month, int week)
+    {
+        switch (month)
+        {
+            case 7:
+                if (week == 1) MusicManager.instance.crisis_music.volume = 0.0f;
+                if (week == 2) MusicManager.instance.crisis_music.volume = 0.1f;
+                if (week == 3) MusicManager.instance.crisis_music.volume = 0.2f;
+                if (week == 4) MusicManager.instance.crisis_music.volume = 0.3f;
+                break;
+            case 8:
+                if (week == 1) MusicManager.instance.crisis_music.volume = 0.4f;
+                if (week == 2) MusicManager.instance.crisis_music.volume = 0.5f;
+                if (week == 3) MusicManager.instance.crisis_music.volume = 0.6f;
+                if (week == 4) MusicManager.instance.crisis_music.volume = 0.7f;
+                break;
+            case 9:
+                if (week == 1) MusicManager.instance.crisis_music.volume = 0.8f;
+                if (week == 2) MusicManager.instance.crisis_music.volume = 0.9f;
+                if (week == 3) MusicManager.instance.crisis_music.volume = 1.0f;
+                break;
+            default:
+                break;
+        }
+
+
     }
 
     void Awake()
@@ -95,15 +129,20 @@ public class MusicManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if ((!crisis_music.isPlaying) && (play_wave_jingle == true))
-        {
-            play_wave_jingle = false;
-            UnPauseLobbyMusic();
-        }
 
         if (lobby_music.isPlaying)
         {
             ReadjustLobbyMusicVolume();
+        }
+
+        if ((!crisis_music.isPlaying) && (TimeManager.instance.month > 6))
+        {
+            Play(crisis_music);
+        }
+
+        if (crisis_music.isPlaying)
+        {
+            ReadjustCrisisMusicVolume();
         }
 
 	}
