@@ -49,20 +49,14 @@ public class RandomEventManager : MonoBehaviour {
     //creates them all
     public void CreateRandomEvents ()
 	{
-		randomEvents.Add(new RandomEvent("Your mom called!", "Your mom is worried sick about you for never calling her!"+
-			"She nagged you on the phone so much, you missed an important call about some clandestine refugees" +
-            " wreaking havok in the capital."+
-			"\nConsequence: Criminality Rate +10%",MiscInfo.variableTypes.criminalityRate,0.1f));
+        randomEvents.Add(new RandomEvent("Yet another war", "A neighbour country to Guerrestão is in civil war" +
+            " and their habitants are looking for a batter place to live." + 
+            " Their best chance is through Guerrestão... to your country." +
+            "\nConsequence: + 200% refugees", MiscInfo.variableTypes.waveVariation, 2.0f));
 
-        /*randomEvents.Add(new RandomEvent("Interstellar war", "The until now unknown planet of Ondesterra entered in a" +
-            " World War, and their habitants are looking for a batter place to live." + 
-            " They are landing in the Guerrestão. ...prepare yourself for more refugees. A lot of them." +
-            "\nConsequence: + 200% refugees", MiscInfo.variableTypes.waveVariation, 2.0f));*/
-
-        //Need to be improved so Events change TWO or more fields.
-        randomEvents.Add(new RandomEvent("Chemical Weapons", "The Guerrestão used" +
+        randomEvents.Add(new RandomEvent("Chemical Weapons", "Guerrestão used" +
             " chemical weapons in civilian areas. The use of deadly banned weapons by the United Nations since decades" +
-            "ago made more Guerrestão citzens consider leaving their country and the United Nations move." +
+            "ago made more Guerrestão citzens consider leaving their country and the United Nations act." +
             "\nConsequence: + 25% refugees, more money from UN", MiscInfo.variableTypes.waveVariation, 0.25f,
             MiscInfo.variableTypes.unitedNationsHelpVariation, 1.0f));
 
