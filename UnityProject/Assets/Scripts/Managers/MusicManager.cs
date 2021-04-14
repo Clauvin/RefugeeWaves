@@ -61,18 +61,18 @@ public class MusicManager : MonoBehaviour {
     {
         switch (month)
         {
-            case 4:
+            case 3:
                 if (week == 2) MusicManager.instance.lobby_music.volume = 1.0f;
                 if (week == 3) MusicManager.instance.lobby_music.volume = 0.9f;
                 if (week == 4) MusicManager.instance.lobby_music.volume = 0.8f;
                 break;
-            case 5:
+            case 4:
                 if (week == 1) MusicManager.instance.lobby_music.volume = 0.7f;
                 if (week == 2) MusicManager.instance.lobby_music.volume = 0.6f;
                 if (week == 3) MusicManager.instance.lobby_music.volume = 0.5f;
                 if (week == 4) MusicManager.instance.lobby_music.volume = 0.4f;
                 break;
-            case 6:
+            case 5:
                 if (week == 1) MusicManager.instance.lobby_music.volume = 0.3f;
                 if (week == 2) MusicManager.instance.lobby_music.volume = 0.2f;
                 if (week == 3) MusicManager.instance.lobby_music.volume = 0.1f;
@@ -93,19 +93,19 @@ public class MusicManager : MonoBehaviour {
     {
         switch (month)
         {
-            case 7:
+            case 6:
                 if (week == 1) MusicManager.instance.crisis_music.volume = 0.0f;
                 if (week == 2) MusicManager.instance.crisis_music.volume = 0.1f;
                 if (week == 3) MusicManager.instance.crisis_music.volume = 0.2f;
                 if (week == 4) MusicManager.instance.crisis_music.volume = 0.3f;
                 break;
-            case 8:
+            case 7:
                 if (week == 1) MusicManager.instance.crisis_music.volume = 0.4f;
                 if (week == 2) MusicManager.instance.crisis_music.volume = 0.5f;
                 if (week == 3) MusicManager.instance.crisis_music.volume = 0.6f;
                 if (week == 4) MusicManager.instance.crisis_music.volume = 0.7f;
                 break;
-            case 9:
+            case 8:
                 if (week == 1) MusicManager.instance.crisis_music.volume = 0.8f;
                 if (week == 2) MusicManager.instance.crisis_music.volume = 0.9f;
                 if (week == 3) MusicManager.instance.crisis_music.volume = 1.0f;
@@ -135,7 +135,7 @@ public class MusicManager : MonoBehaviour {
             ReadjustLobbyMusicVolume();
         }
 
-        if ((!crisis_music.isPlaying) && (TimeManager.instance.month > 6))
+        if ((!crisis_music.isPlaying) && (TimeManager.instance.month > 5))
         {
             Play(crisis_music);
         }
