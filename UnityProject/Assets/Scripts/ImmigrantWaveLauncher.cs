@@ -303,10 +303,8 @@ public class ImmigrantWaveLauncher : MonoBehaviour {
 
     void onSceneLoaded(Scene scene, LoadSceneMode load_scene_mode)
     {
-        Debug.Log("Hum");
         if (SceneManager.GetActiveScene().name.Equals("Main Scene"))
         {
-            Debug.Log("Hum 2");
             first_part_of_avoiding_spontaneous_wave_launching_at_start = true;
             Debug.Log(first_part_of_avoiding_spontaneous_wave_launching_at_start);
         }
