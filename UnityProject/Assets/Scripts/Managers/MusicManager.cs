@@ -65,21 +65,18 @@ public class MusicManager : MonoBehaviour {
                 if (week == 2) MusicManager.instance.lobby_music.volume = 1.0f;
                 if (week == 3) MusicManager.instance.lobby_music.volume = 0.9f;
                 if (week == 4) MusicManager.instance.lobby_music.volume = 0.8f;
-                Debug.Log("What");
                 break;
             case 5:
                 if (week == 1) MusicManager.instance.lobby_music.volume = 0.7f;
                 if (week == 2) MusicManager.instance.lobby_music.volume = 0.6f;
                 if (week == 3) MusicManager.instance.lobby_music.volume = 0.5f;
                 if (week == 4) MusicManager.instance.lobby_music.volume = 0.4f;
-                Debug.Log("What");
                 break;
             case 6:
                 if (week == 1) MusicManager.instance.lobby_music.volume = 0.3f;
                 if (week == 2) MusicManager.instance.lobby_music.volume = 0.2f;
                 if (week == 3) MusicManager.instance.lobby_music.volume = 0.1f;
                 if (week == 4) MusicManager.instance.lobby_music.volume = 0.0f;
-                Debug.Log("What");
                 break;
             default:
                 break;
@@ -104,7 +101,7 @@ public class MusicManager : MonoBehaviour {
             UnPauseLobbyMusic();
         }
 
-        if (crisis_music.isPlaying)
+        if (lobby_music.isPlaying)
         {
             ReadjustLobbyMusicVolume();
         }
