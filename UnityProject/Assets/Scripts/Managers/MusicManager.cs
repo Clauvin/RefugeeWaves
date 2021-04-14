@@ -7,7 +7,7 @@ public class MusicManager : MonoBehaviour {
     public static MusicManager instance;
 
     public AudioSource lobby_music;
-    public AudioSource wave_jingle;
+    public AudioSource crisis_music;
 
     bool play_lobby_music;
     bool play_wave_jingle;
@@ -15,7 +15,7 @@ public class MusicManager : MonoBehaviour {
     public void PlayLobbyMusic()
     {
         Play(lobby_music);
-        Stop(wave_jingle);
+        Stop(crisis_music);
         play_lobby_music = true;
     }
 
@@ -25,10 +25,10 @@ public class MusicManager : MonoBehaviour {
         play_lobby_music = true;
     }
 
-    public void PlayWaveJingle()
+    public void PlayCrisisMusic()
     {
-        Play(wave_jingle);
-        Pause(lobby_music);
+        Play(crisis_music);
+        Stop(lobby_music);
         play_wave_jingle = true;
     }
 
@@ -64,10 +64,16 @@ public class MusicManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if ((!wave_jingle.isPlaying) && (play_wave_jingle == true))
+		if ((!crisis_music.isPlaying) && (play_wave_jingle == true))
         {
             play_wave_jingle = false;
             UnPauseLobbyMusic();
         }
+
+        if (crisis_music.isPlaying)
+        {
+            ReadjustVolume();
+        }
+
 	}
 }
