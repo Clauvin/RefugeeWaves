@@ -229,7 +229,7 @@ public class TimeManager : MonoBehaviour {
         {
             Basics_3.LoadScene.LoadVictoryScreen();
         }
-        else if ((StatsManager.instance.criminalityRate >= 0.575f) && (StatsManager.instance.unemploymentRate >= 0.575f))
+        else if ((StatsManager.instance.criminalityRate >= 0.500f) && (StatsManager.instance.unemploymentRate >= 0.500f))
         {
             Basics_3.LoadScene.LoadDefeatScreen();
         }
