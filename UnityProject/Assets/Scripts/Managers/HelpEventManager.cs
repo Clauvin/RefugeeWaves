@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HelpEventManager : MonoBehaviour {
 
@@ -24,12 +25,39 @@ public class HelpEventManager : MonoBehaviour {
 
 
 	}
+	public void AHelpEventHappens(int which_one)
+	{
+		//For Debug purposes
+		Debug.Log("Event Happened.");
+		Debug.Log("Title: " + helpEvents[which_one].name);
+
+		//since event happened, need to show its popup
+		createVisualHelpEvent(helpEvents[which_one].name, helpEvents[which_one].description);
+
+	}
+
+	void createVisualHelpEvent(string name, string description)
+    {
+		TimeManager.instance.pauseGame();
+
+		GameObject newEvent = (GameObject)Instantiate(helpEventPrefab);
+
+		//make it a child of the MainCanvas and adjust its scale
+		newEvent.transform.SetParent(GameObject.Find("WindowsCanvas").transform, false);
+		newEvent.name = "Help Event Window";
+
+		//change the values of the text boxes
+		newEvent.transform.Find("HelpPanel/EventTitle").GetComponent<Text>().text = name;
+		newEvent.transform.Find("HelpPanel/EventDescription").GetComponent<Text>().text = description;
+	}
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start()
+	{
+		instance = this;
+		CreateHelpEvents();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		
