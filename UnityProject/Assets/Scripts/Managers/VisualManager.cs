@@ -39,7 +39,8 @@ public class VisualManager : MonoBehaviour {
         {
             if ((t.GetComponent<Button>() != null) && (t.GetComponent<Text>() == null) && (action_panel_is_active))
             {
-                if (t.GetComponent<PositionInFunctionArray>().action_or_commerce == "Action")
+                if (t.GetComponent<PositionInFunctionArray>() == null) t.gameObject.SetActive(action_panel_is_active);
+                else if (t.GetComponent<PositionInFunctionArray>().action_or_commerce == "Action")
                 {
                     if (ActionsManager.instance.possibleActions
                         [t.GetComponent<PositionInFunctionArray>().position - 1].isActive)
