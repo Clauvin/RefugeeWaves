@@ -19,11 +19,9 @@ public class HelpEventManager : MonoBehaviour {
 		helpEvents.Add(new HelpEvent("Investments in Public Security", "Public security measures reduce criminality."));
 		helpEvents.Add(new HelpEvent("Get International Help", "Given the refugee crisis, international help" +
 			" can be a boon. How much of a boon it will be depends of the public opinion about Ondestão."));
-		helpEvents.Add(new HelpEvent("", ""));
-		helpEvents.Add(new HelpEvent("", ""));
-		helpEvents.Add(new HelpEvent("", ""));
-
-
+		helpEvents.Add(new HelpEvent("Create Campaing In Favour Of Ondestão", "In this case, in favour of Ondestão " +
+			"and against refugees."));
+		Debug.Log(helpEvents[0].name);
 	}
 	public void AHelpEventHappens(int which_one)
 	{
