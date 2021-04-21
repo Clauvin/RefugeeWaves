@@ -37,15 +37,15 @@ public class HelpEventManager : MonoBehaviour {
     {
 		TimeManager.instance.pauseGame();
 
-		GameObject newEvent = (GameObject)Instantiate(helpEventPrefab);
+		GameObject newEvent = (GameObject)Instantiate(instance.helpEventPrefab);
 
 		//make it a child of the MainCanvas and adjust its scale
 		newEvent.transform.SetParent(GameObject.Find("WindowsCanvas").transform, false);
 		newEvent.name = "Help Event Window";
 
 		//change the values of the text boxes
-		newEvent.transform.Find("HelpPanel/EventTitle").GetComponent<Text>().text = name;
-		newEvent.transform.Find("HelpPanel/EventDescription").GetComponent<Text>().text = description;
+		newEvent.transform.Find("HelpEventPanel/EventTitle").GetComponent<Text>().text = name;
+		newEvent.transform.Find("HelpEventPanel/EventDescription").GetComponent<Text>().text = description;
 	}
 
 	// Use this for initialization
