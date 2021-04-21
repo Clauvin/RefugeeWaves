@@ -10,27 +10,26 @@ public class HelpEventManager : MonoBehaviour {
 	public GameObject helpEventPrefab;
 
 	public static HelpEventManager instance;
-	public void CreateHelpEvents()
+	static public void CreateHelpEvents()
 	{
-		helpEvents.Add(new HelpEvent("Creation of Public Works", "Public works need people to work on them, and that reduces " +
+		instance.helpEvents.Add(new HelpEvent("Creation of Public Works", "Public works need people to work on them, and that reduces " +
 			"unemployment."));
-		helpEvents.Add(new HelpEvent("Creation of Edicts for Start-Ups", "Start-ups need people to work on them," +
+		instance.helpEvents.Add(new HelpEvent("Creation of Edicts for Start-Ups", "Start-ups need people to work on them," +
 			" and that reduces unenployment and raises the economy."));
-		helpEvents.Add(new HelpEvent("Investments in Public Security", "Public security measures reduce criminality."));
-		helpEvents.Add(new HelpEvent("Get International Help", "Given the refugee crisis, international help" +
+		instance.helpEvents.Add(new HelpEvent("Investments in Public Security", "Public security measures reduce criminality."));
+		instance.helpEvents.Add(new HelpEvent("Get International Help", "Given the refugee crisis, international help" +
 			" can be a boon. How much of a boon it will be depends of the public opinion about Ondestão."));
-		helpEvents.Add(new HelpEvent("Create Campaing In Favour Of Ondestão", "In this case, in favour of Ondestão " +
+		instance.helpEvents.Add(new HelpEvent("Create Campaing In Favour Of Ondestão", "In this case, in favour of Ondestão " +
 			"and against refugees."));
-		Debug.Log(helpEvents[0].name);
 	}
 	public void AHelpEventHappens(int which_one)
 	{
 		//For Debug purposes
 		Debug.Log("Event Happened.");
-		Debug.Log("Title: " + helpEvents[which_one].name);
+		Debug.Log("Title: " + instance.helpEvents[which_one].name);
 
 		//since event happened, need to show its popup
-		createVisualHelpEvent(helpEvents[which_one].name, helpEvents[which_one].description);
+		createVisualHelpEvent(instance.helpEvents[which_one].name, instance.helpEvents[which_one].description);
 
 	}
 
@@ -53,11 +52,13 @@ public class HelpEventManager : MonoBehaviour {
 	void Start()
 	{
 		instance = this;
+		instance.helpEvents = new List<HelpEvent>();
 		CreateHelpEvents();
+
 	}
 
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 }
