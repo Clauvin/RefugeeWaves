@@ -14,12 +14,12 @@ public class HelpEventManager : MonoBehaviour {
 	{
 		instance.helpEvents.Add(new HelpEvent("Creation of Public Works", "Public works need people to work on them, and that reduces " +
 			"unemployment."));
-		instance.helpEvents.Add(new HelpEvent("Creation of Edicts for Start-Ups", "Start-ups need people to work on them," +
+		instance.helpEvents.Add(new HelpEvent("Creation of Edicts\nfor Start-Ups", "Start-ups need people to work on them," +
 			" and that reduces unenployment and raises the economy."));
-		instance.helpEvents.Add(new HelpEvent("Investments in Public Security", "Public security measures reduce criminality."));
+		instance.helpEvents.Add(new HelpEvent("Investments in\nPublic Security", "Public security measures reduce criminality."));
 		instance.helpEvents.Add(new HelpEvent("Get International Help", "Given the refugee crisis, international help" +
 			" can be a boon. How much of a boon it will be depends of the public opinion about Ondestão."));
-		instance.helpEvents.Add(new HelpEvent("Create Campaing In Favour Of Ondestão", "In this case, in favour of Ondestão " +
+		instance.helpEvents.Add(new HelpEvent("Create Campaing In\nFavour Of Ondestão", "In this case, in favour of Ondestão " +
 			"and against refugees."));
 	}
 	public void AHelpEventHappens(int which_one)
