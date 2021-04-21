@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HelpEventGO : MonoBehaviour {
 
-	void DestroyThis()
+	public void DestroyThis()
     {
 		Destroy(this.transform.parent.parent.gameObject);
 	}
