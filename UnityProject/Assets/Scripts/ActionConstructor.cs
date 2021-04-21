@@ -252,7 +252,8 @@ namespace Assets.Scripts
 
         public static CommerceAction CommerceSocialResource()
         {
-            return new CommerceAction(social_resources_title, "What's needed to give support for refugees",
+            return new CommerceAction(social_resources_title, "Kits for refugees that sustain them while they are in" +
+                "the temporary houses.",
                 ActionsManager.instance.buttons[8], 
                 social_resources_title, social_resources_buy_text_title, social_resources_sell_text_title,
                 buySocialResources, sellSocialResources,
@@ -308,7 +309,8 @@ namespace Assets.Scripts
 
         public static CommerceAction CommerceBorderOfficer()
         {
-            return new CommerceAction(border_officers_title, "People to stop refugees",
+            return new CommerceAction(border_officers_title, "Officers that stop and reject refugees that " +
+                "come from Guerrestão.",
                 ActionsManager.instance.buttons[9],
                 border_officers_title, border_officers_buy_text_title, border_officers_sell_text_title,
                 buyBorderOfficers, sellBorderOfficers,
@@ -365,7 +367,7 @@ namespace Assets.Scripts
 
         public static CommerceAction CommerceBorderResource()
         {
-            return new CommerceAction(border_resources_title, "Basically... salary?",
+            return new CommerceAction(border_resources_title, "Salary kits for the border officers working.",
                 ActionsManager.instance.buttons[10],
                 border_resources_title, border_resources_buy_text_title, border_resources_sell_text_title,
                 buyBorderResources, sellBorderResources,
