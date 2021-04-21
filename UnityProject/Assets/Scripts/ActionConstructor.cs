@@ -195,7 +195,8 @@ namespace Assets.Scripts
 
         public static CommerceAction CommerceHouses()
         {
-            return new CommerceAction(houses_title, "Get those houses up so people can rest a little",
+            return new CommerceAction(houses_title, "Houses as temporary residence for refugees so they can reestructure" +
+                " their lives in Ondestão. Once they do, they leave the houses for future refugees.",
                 ActionsManager.instance.buttons[7], houses_title, houses_buy_text_title, houses_sell_text_title,
                 buyHouses, sellHouses, AHouseBuyValue, AHouseSellValue,
                 MiscInfo.variableTypes.availableHouses, 1.5f * ActionsManager.instance.weekLength);
