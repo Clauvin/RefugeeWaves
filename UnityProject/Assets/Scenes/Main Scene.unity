@@ -1363,7 +1363,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1569,7 +1569,7 @@ RectTransform:
   m_LocalScale: {x: 1.2237058, y: 1.2237058, z: 1.2237058}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1685,7 +1685,6 @@ GameObject:
   - component: {fileID: 166872624}
   - component: {fileID: 166872623}
   - component: {fileID: 166872622}
-  - component: {fileID: 166872621}
   m_Layer: 0
   m_Name: Good Marketing Help Button
   m_TagString: Untagged
@@ -1712,19 +1711,6 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: -173}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &166872621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 166872619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 7
-  action_or_commerce: Action
 --- !u!114 &166872622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,8 +1750,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 821196382}
-        m_MethodName: executeAction
+      - m_Target: {fileID: 334587213}
+        m_MethodName: AHelpEventHappens
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2406,7 +2392,6 @@ GameObject:
   - component: {fileID: 279115439}
   - component: {fileID: 279115438}
   - component: {fileID: 279115437}
-  - component: {fileID: 279115436}
   m_Layer: 0
   m_Name: Public Works Help Button
   m_TagString: Untagged
@@ -2433,19 +2418,6 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: -51.999992}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &279115436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 279115434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 1
-  action_or_commerce: Action
 --- !u!114 &279115437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2485,8 +2457,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 821196382}
-        m_MethodName: executeAction
+      - m_Target: {fileID: 334587213}
+        m_MethodName: AHelpEventHappens
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2733,6 +2705,54 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &334587211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 334587212}
+  - component: {fileID: 334587213}
+  m_Layer: 0
+  m_Name: HelpEventManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &334587212
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 334587211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1703455580}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.00000166893}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &334587213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 334587211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d83cdc0ee18034ca0b871471d1ad69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  helpEvents: []
+  helpEventPrefab: {fileID: 1363865734373638, guid: ca5edbb8380ab7c47923b7590dc122fe,
+    type: 2}
 --- !u!1 &344443940
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,7 +2974,6 @@ GameObject:
   - component: {fileID: 380047807}
   - component: {fileID: 380047806}
   - component: {fileID: 380047805}
-  - component: {fileID: 380047804}
   m_Layer: 0
   m_Name: StartUps Help Button
   m_TagString: Untagged
@@ -2981,19 +3000,6 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: -71}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &380047804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 380047802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 2
-  action_or_commerce: Action
 --- !u!114 &380047805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3033,8 +3039,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 821196382}
-        m_MethodName: executeAction
+      - m_Target: {fileID: 334587213}
+        m_MethodName: AHelpEventHappens
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3549,7 +3555,6 @@ GameObject:
   - component: {fileID: 463691722}
   - component: {fileID: 463691721}
   - component: {fileID: 463691720}
-  - component: {fileID: 463691719}
   m_Layer: 0
   m_Name: Border Officials Help Button
   m_TagString: Untagged
@@ -3576,19 +3581,6 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: -233.00002}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &463691719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 463691717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 3
-  action_or_commerce: Commerce
 --- !u!114 &463691720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3857,7 +3849,7 @@ RectTransform:
   m_Children:
   - {fileID: 1456236510}
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5185,7 +5177,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6353,7 +6345,6 @@ GameObject:
   - component: {fileID: 752912310}
   - component: {fileID: 752912309}
   - component: {fileID: 752912308}
-  - component: {fileID: 752912307}
   m_Layer: 0
   m_Name: Pro-Immigrants Help Button
   m_TagString: Untagged
@@ -6380,19 +6371,6 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: -133.00002}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &752912307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 752912305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 5
-  action_or_commerce: Action
 --- !u!114 &752912308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6432,8 +6410,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 821196382}
-        m_MethodName: executeAction
+      - m_Target: {fileID: 334587213}
+        m_MethodName: AHelpEventHappens
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6846,7 +6824,6 @@ GameObject:
   - component: {fileID: 788551194}
   - component: {fileID: 788551193}
   - component: {fileID: 788551192}
-  - component: {fileID: 788551191}
   m_Layer: 0
   m_Name: Houses Help Button
   m_TagString: Untagged
@@ -6873,19 +6850,6 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: -194.00002}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &788551191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 788551189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 1
-  action_or_commerce: Commerce
 --- !u!114 &788551192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7054,7 +7018,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7367,7 +7331,7 @@ RectTransform:
   m_LocalScale: {x: 1.2237058, y: 1.2237058, z: 1.2237058}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8356,7 +8320,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8513,7 +8477,6 @@ GameObject:
   - component: {fileID: 1003059198}
   - component: {fileID: 1003059197}
   - component: {fileID: 1003059196}
-  - component: {fileID: 1003059195}
   m_Layer: 0
   m_Name: Border Expenses Help Button
   m_TagString: Untagged
@@ -8540,19 +8503,6 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: -254}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1003059195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1003059193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 4
-  action_or_commerce: Commerce
 --- !u!114 &1003059196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9295,119 +9245,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1106798067}
---- !u!1001 &1126538291
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1379392090}
-    m_Modifications:
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.026924
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1854797092620778, guid: e76472765f18f4f48acb187ffc2449dc, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1843528898515368, guid: e76472765f18f4f48acb187ffc2449dc, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114606652863669628, guid: e76472765f18f4f48acb187ffc2449dc,
-        type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 22
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e76472765f18f4f48acb187ffc2449dc, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1127167909
 GameObject:
   m_ObjectHideFlags: 0
@@ -10724,7 +10561,6 @@ GameObject:
   - component: {fileID: 1270580261}
   - component: {fileID: 1270580260}
   - component: {fileID: 1270580259}
-  - component: {fileID: 1270580258}
   m_Layer: 0
   m_Name: Public Security Help Button
   m_TagString: Untagged
@@ -10751,19 +10587,6 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: -92}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1270580258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1270580256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 3
-  action_or_commerce: Action
 --- !u!114 &1270580259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10803,8 +10626,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 821196382}
-        m_MethodName: executeAction
+      - m_Target: {fileID: 334587213}
+        m_MethodName: AHelpEventHappens
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10892,7 +10715,7 @@ RectTransform:
   m_LocalScale: {x: 1.2237058, y: 1.2237058, z: 1.2237058}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11058,7 +10881,6 @@ GameObject:
   - component: {fileID: 1330493949}
   - component: {fileID: 1330493948}
   - component: {fileID: 1330493947}
-  - component: {fileID: 1330493946}
   m_Layer: 0
   m_Name: Social Expenses Help Button
   m_TagString: Untagged
@@ -11085,19 +10907,6 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: -214}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1330493946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1330493944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 2
-  action_or_commerce: Commerce
 --- !u!114 &1330493947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11506,7 +11315,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 385935209}
-  - {fileID: 2086499328}
+  - {fileID: 1632968446}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13668,6 +13477,116 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1628166876}
+--- !u!1001 &1632968445
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1379392090}
+    m_Modifications:
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.026924
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114558909482355056, guid: ca5edbb8380ab7c47923b7590dc122fe,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 160973721}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ca5edbb8380ab7c47923b7590dc122fe, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1632968446 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224789046202353916, guid: ca5edbb8380ab7c47923b7590dc122fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1632968445}
 --- !u!1 &1656901703
 GameObject:
   m_ObjectHideFlags: 0
@@ -14023,7 +13942,7 @@ Transform:
   m_LocalScale: {x: 12.461245, y: 5.3228264, z: 36.955914}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1689700401
 GameObject:
@@ -14126,6 +14045,7 @@ RectTransform:
   m_Children:
   - {fileID: 821196381}
   - {fileID: 446546176}
+  - {fileID: 334587212}
   - {fileID: 1683945152}
   - {fileID: 971743406}
   - {fileID: 838516461}
@@ -14327,7 +14247,6 @@ GameObject:
   - component: {fileID: 1773477651}
   - component: {fileID: 1773477650}
   - component: {fileID: 1773477649}
-  - component: {fileID: 1773477648}
   m_Layer: 0
   m_Name: Anti-Immigrants Help Button
   m_TagString: Untagged
@@ -14354,19 +14273,6 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: -153.00002}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1773477648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1773477646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 6
-  action_or_commerce: Action
 --- !u!114 &1773477649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14406,8 +14312,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 821196382}
-        m_MethodName: executeAction
+      - m_Target: {fileID: 334587213}
+        m_MethodName: AHelpEventHappens
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14700,7 +14606,6 @@ GameObject:
   - component: {fileID: 1810446508}
   - component: {fileID: 1810446507}
   - component: {fileID: 1810446506}
-  - component: {fileID: 1810446505}
   m_Layer: 0
   m_Name: International Help Help Button
   m_TagString: Untagged
@@ -14727,19 +14632,6 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: -111.99999}
   m_SizeDelta: {x: 40, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1810446505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1810446503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd0b16af4b58e2045b6a07cee61b8c97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: 4
-  action_or_commerce: Action
 --- !u!114 &1810446506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14779,8 +14671,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 821196382}
-        m_MethodName: executeAction
+      - m_Target: {fileID: 334587213}
+        m_MethodName: AHelpEventHappens
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14984,7 +14876,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1703455580}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17472,11 +17364,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2076915451}
---- !u!224 &2086499328 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224508686235723092, guid: e76472765f18f4f48acb187ffc2449dc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1126538291}
 --- !u!1 &2092721405
 GameObject:
   m_ObjectHideFlags: 0
