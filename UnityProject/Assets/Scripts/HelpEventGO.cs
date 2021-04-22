@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class HelpEventGO : MonoBehaviour {
 
-	public void DestroyThis()
+	public void DeactivateThis()
     {
-		Destroy(this.transform.parent.parent.gameObject);
+		transform.parent.parent.gameObject.active = false;
 	}
 
 	// Use this for initialization
