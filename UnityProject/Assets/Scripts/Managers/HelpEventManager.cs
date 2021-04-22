@@ -5,32 +5,23 @@ using UnityEngine.UI;
 
 public class HelpEventManager : MonoBehaviour {
 
-	public List<HelpEvent> helpEvents;
+	public List<GameObject> helpEvents;
 
 	public GameObject helpEventPrefab;
 
 	public static HelpEventManager instance;
 	static public void CreateHelpEvents()
 	{
-		instance.helpEvents.Add(new HelpEvent("Creation of Public Works", "Public works need people to work on them, and that reduces " +
-			"unemployment."));
-		instance.helpEvents.Add(new HelpEvent("Creation of Edicts\nfor Start-Ups", "Start-ups need people to work on them," +
-			" and that reduces unenployment and raises the economy."));
-		instance.helpEvents.Add(new HelpEvent("Investments in\nPublic Security", "Public security measures reduce criminality."));
+		/*instance.helpEvents.Add(new HelpEvent("Investments in\nPublic Security", "Public security measures reduce criminality."));
 		instance.helpEvents.Add(new HelpEvent("Get International Help", "Given the refugee crisis, international help" +
 			" can be a boon. How much of a boon it will be depends of the public opinion about Ondestão."));
 		instance.helpEvents.Add(new HelpEvent("Create Campaing In\nFavour Of Ondestão", "In this case, in favour of Ondestão " +
-			"and against refugees."));
+			"and against refugees."));*/
 	}
 	public void AHelpEventHappens(int which_one)
 	{
-		//For Debug purposes
-		Debug.Log("Event Happened.");
-		Debug.Log("Title: " + instance.helpEvents[which_one].name);
-
-		//since event happened, need to show its popup
-		createVisualHelpEvent(instance.helpEvents[which_one].name, instance.helpEvents[which_one].description);
-
+		TimeManager.instance.pauseGame();
+		helpEvents[which_one].SetActive(true);
 	}
 
 	void createVisualHelpEvent(string name, string description)
@@ -52,9 +43,6 @@ public class HelpEventManager : MonoBehaviour {
 	void Start()
 	{
 		instance = this;
-		instance.helpEvents = new List<HelpEvent>();
-		CreateHelpEvents();
-
 	}
 
 	// Update is called once per frame
