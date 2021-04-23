@@ -12,11 +12,7 @@ public class HelpEventManager : MonoBehaviour {
 	public static HelpEventManager instance;
 	static public void CreateHelpEvents()
 	{
-		/*instance.helpEvents.Add(new HelpEvent("Investments in\nPublic Security", "Public security measures reduce criminality."));
-		instance.helpEvents.Add(new HelpEvent("Get International Help", "Given the refugee crisis, international help" +
-			" can be a boon. How much of a boon it will be depends of the public opinion about Ondestão."));
-		instance.helpEvents.Add(new HelpEvent("Create Campaing In\nFavour Of Ondestão", "In this case, in favour of Ondestão " +
-			"and against refugees."));*/
+
 	}
 	public void AHelpEventHappens(int which_one)
 	{
