@@ -1,2 +1,24 @@
+v0.2.0 - Alpha 1 (22/04/2021)
+	* Added seawaves to the screen;
+	* Added peace and war icons on Guerrestão;
+	* Added buttons to speed up the game 1x, 2x and 3x;
+	* Added prices to the action descriptions;
+	* Added music for second half of the game;
+	* Added warning about the current state of game (that it's a conceptual proof);
+	* Pressing P now pauses/unpauses the game;
+	* Updated the contact e-mails;
+	* Added help buttons that explain less intuitive actions;
+	
+	
+	* Removed most of the insensitive humor the game had;
+	* Removed the music that played when a refugee wave appears;
+
+	* Fixed the game resolution (to one only);
+	* Fixed refugee waves possibly having a non-positive number of refugees;
+	* Fixed refugee waves from a finished game appearing in a new game;
+	* Fixed game beginning in Year 1, Month 1, Week 2;
+	* Fixed bug where clicking on an action button closed the action menu;
+
+
 v0.1.0 - Alpha 0 (26/08/2017)
 	* Game has all main features, and its ready for the process of improvement and change that leads to v1.0.
