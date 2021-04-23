@@ -252,8 +252,8 @@ namespace Assets.Scripts
 
         public static CommerceAction CommerceSocialResource()
         {
-            return new CommerceAction(social_resources_title, "Kits for refugees that sustain them while they are in" +
-                "the temporary houses.",
+            return new CommerceAction(social_resources_title, "Resources to keep the temporary houses" +
+                "standing and functioning.",
                 ActionsManager.instance.buttons[8], 
                 social_resources_title, social_resources_buy_text_title, social_resources_sell_text_title,
                 buySocialResources, sellSocialResources,
