@@ -9,7 +9,6 @@ v0.2.0 - Alpha 1 (22/04/2021)
 	* Updated the contact e-mails;
 	* Added help buttons that explain less intuitive actions;
 	
-	
 	* Removed most of the insensitive humor the game had;
 	* Removed the music that played when a refugee wave appears;
 
