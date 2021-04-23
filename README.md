@@ -5,8 +5,6 @@ Or help us in finding out too, this is a project under construction :D
 
 **Update:** currently pushing the project to a better proof-of-concept state. Don't know if I will work on it after that state is reached, if you want to, create a fork and send me a message.
 
-Link for downloadable: https://clauvinalmeida.itch.io/refugee-waves
-
 # Code of Conduct
 Readable here: [Code of Conduct](https://github.com/Clauvin/RefugeeWaves/blob/master/CODE%20OF%20CONDUCT.md).
 
